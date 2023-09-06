@@ -39,7 +39,11 @@ const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
           } else {
             children = (
               <Button
-                className={type === 'previous' ? 'mr-2' : 'ml-2'}
+                className={
+                  type === 'previous'
+                    ? styles['pagination--item-button-prev']
+                    : styles['pagination--item-button-next']
+                }
                 variant="link-gray"
                 size="sm"
                 {...(item as any)}
@@ -63,12 +67,12 @@ const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
             <li
               // eslint-disable-next-line react/no-array-index-key
               key={index}
-              className={`list-none ${
+              className={`${styles['pagination--item-button']} ${
                 // eslint-disable-next-line no-nested-ternary
                 type === 'previous'
-                  ? 'mr-auto'
+                  ? styles['pagination--item-r-auto']
                   : type === 'next'
-                  ? 'ml-auto'
+                  ? styles['pagination--item-l-auto']
                   : ''
               }`}
             >

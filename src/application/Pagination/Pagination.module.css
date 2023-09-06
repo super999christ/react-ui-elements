@@ -5,6 +5,26 @@
   @apply gap-[2px];
 }
 
+.pagination--item-button-prev {
+  @apply mr-2
+}
+
+.pagination--item-button-next {
+  @apply ml-2
+}
+
+.pagination--item-button {
+  @apply list-none
+}
+
+.pagination--item-l-auto {
+  @apply ml-auto
+}
+
+.pagination--item-r-auto {
+  @apply mr-auto
+}
+
 .pagination--item {
   @apply rounded-lg;
   @apply text-gray-600;
