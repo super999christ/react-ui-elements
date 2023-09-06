@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/pickleballinc/react-ui/compare/v1.0.3...v1.0.4) (2023-09-06)
+
+
+### Bug Fixes
+
+* modal overlay background and custom class prop ([cf7fdcd](https://github.com/pickleballinc/react-ui/commit/cf7fdcd02a4dfba7a4a6eba0e73bbaf821a7ff78))
+
 ## [1.0.3](https://github.com/pickleballinc/react-ui/compare/v1.0.2...v1.0.3) (2023-09-06)
 
 
