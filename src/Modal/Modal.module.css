@@ -1,0 +1,7 @@
+.modal-overlay {
+  @apply z-50;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply bg-black/80;
+}

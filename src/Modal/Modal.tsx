@@ -13,6 +13,8 @@ import {
 import clsx from 'clsx';
 import React, { useId } from 'react';
 
+import stylesModule from './Modal.module.css';
+
 export interface ModalOptions {
   initialOpen?: boolean;
   open?: boolean;
@@ -135,9 +137,13 @@ export const ModalTrigger = React.forwardRef<
   );
 });
 
+interface ModalContentProps {
+  overlayClassName?: string;
+}
+
 export const ModalContent = React.forwardRef<
   HTMLDivElement,
-  React.HTMLProps<HTMLDivElement>
+  ModalContentProps & React.HTMLProps<HTMLDivElement>
 >(function ModalContent(props, propRef) {
   const { context: floatingContext, ...context } = useModalContext();
   const ref = useMergeRefs([context.refs.setFloating, propRef]);
@@ -152,14 +158,18 @@ export const ModalContent = React.forwardRef<
 
   if (!isMounted) return null;
 
-  const modalContentClasses = clsx('rounded-xl bg-white p-6 shadow-xl');
+  const modalContentClasses = clsx(
+    'rounded-xl bg-white p-6 shadow-xl',
+    props.className,
+  );
+  const overlayClasses = clsx(
+    stylesModule['modal-overlay'],
+    props.overlayClassName,
+  );
 
   return (
     <FloatingPortal>
-      <FloatingOverlay
-        className="z-50 flex items-center justify-center bg-black/80"
-        lockScroll
-      >
+      <FloatingOverlay className={overlayClasses} lockScroll>
         <FloatingFocusManager context={floatingContext}>
           <div style={{ ...styles }}>
             <div
