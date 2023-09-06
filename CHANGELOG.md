@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/pickleballinc/react-ui/compare/v1.0.0...v1.0.1) (2023-09-06)
+
+
+### Bug Fixes
+
+* button icon spacing and pagination alignment ([5f9bf98](https://github.com/pickleballinc/react-ui/commit/5f9bf9816998edb790700bf04106c5951f074d3d))
+* fix package lock dependencies ([82d309a](https://github.com/pickleballinc/react-ui/commit/82d309a6254d906ebdf07542f375ec59efdfd1a8))
+
 # 1.0.0 (2023-09-06)
 
 
