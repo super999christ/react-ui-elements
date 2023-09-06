@@ -13,6 +13,14 @@
   @apply not-italic;
 }
 
+.button-prefix--icon {
+  @apply mr-2
+}
+
+.button-suffix--icon {
+  @apply ml-2
+}
+
 .button:focus {
   @apply outline-none;
 }

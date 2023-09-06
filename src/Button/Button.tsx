@@ -66,9 +66,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...rest}
       >
-        {prefixIcon && <span className="mr-2">{prefixIcon}</span>}
+        {prefixIcon && (
+          <span className={styles['button-prefix--icon']}>{prefixIcon}</span>
+        )}
         {children}
-        {suffixIcon && <span className="ml-2">{suffixIcon}</span>}
+        {suffixIcon && (
+          <span className={styles['button-suffix--icon']}>{suffixIcon}</span>
+        )}
       </button>
     );
   },

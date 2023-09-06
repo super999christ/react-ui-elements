@@ -1,3 +1,10 @@
+.pagination {
+  @apply flex;
+  @apply w-full;
+  @apply items-center;
+  @apply gap-[2px];
+}
+
 .pagination--item {
   @apply rounded-lg;
   @apply text-gray-600;

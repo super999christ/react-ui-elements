@@ -4,6 +4,7 @@ import React, { forwardRef } from 'react';
 
 import Button from '../../Button';
 import { usePagination } from '../../utils/usePagination';
+import styles from './Pagination.module.css';
 import PaginationItem from './PaginationItem';
 
 export interface PaginationProps {
@@ -23,7 +24,7 @@ const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
     });
 
     return (
-      <div className="flex w-full items-center gap-[2px]" ref={ref}>
+      <div className={styles.pagination} ref={ref}>
         {items.map(({ type, page, selected, ...item }, index) => {
           let children = null;
 
