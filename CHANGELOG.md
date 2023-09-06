@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/pickleballinc/react-ui/compare/v1.0.2...v1.0.3) (2023-09-06)
+
+
+### Bug Fixes
+
+* state update in pagination on item click ([212f567](https://github.com/pickleballinc/react-ui/commit/212f567153f56f5003eedd6a36f3afd2622af59c))
+
 ## [1.0.2](https://github.com/pickleballinc/react-ui/compare/v1.0.1...v1.0.2) (2023-09-06)
 
 
