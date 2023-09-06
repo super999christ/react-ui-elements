@@ -1,6 +1,6 @@
 {
   "name": "@pickleballinc/react-ui",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "React UI lib for @pickleballinc npm projects.",
   "main": "dist/cjs/bundle.js",
   "module": "dist/esm/bundle.js",

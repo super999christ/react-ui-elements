@@ -1,3 +1,10 @@
+# 1.0.0 (2023-09-06)
+
+
+### Features
+
+* initial package release ([b085499](https://github.com/pickleballinc/react-ui/commit/b0854998cd6fb8b0dd9d3a3e01fa12e68eb7d1ec))
+
 ## [1.0.2](https://github.com/pickleballinc/react-ui/compare/v1.0.1...v1.0.2) (2023-09-06)
 
 
