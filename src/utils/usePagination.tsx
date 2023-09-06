@@ -104,9 +104,7 @@ export function usePagination(props: UsePaginationProps) {
   const [page, setPageState] = useState(pageProp ?? 1);
 
   const handleClick = (event: React.ChangeEvent<unknown>, value: number) => {
-    if (!pageProp) {
-      setPageState(value);
-    }
+    setPageState(value);
     if (handleChange) {
       handleChange(event, value);
     }

@@ -14,8 +14,5 @@ export default meta;
 type Story = StoryObj<typeof Pagination>;
 
 export const Primary: Story = {
-  args: {
-    count: 10,
-    onChange: (event, page) => console.log(event, page),
-  },
+ 
 };
