@@ -1,0 +1,71 @@
+.wrapper {
+  @apply px-[18px] min-w-[266px] w-full;
+}
+
+.player {
+  @apply flex gap-2 h-[157px] rounded-xl border border-solid overflow-hidden;
+}
+
+.about {
+  @apply max-w-[110px] flex flex-col justify-center gap-7 pl-[17px] pt-1;
+}
+
+.full__name {
+  @apply flex flex-col gap-0;
+}
+
+.name {
+  @apply text-left text-base font-semibold leading-6 tracking-normal text-white truncate;
+}
+
+.surname {
+  @apply text-left text-xl font-bold leading-7 tracking-normal text-white truncate;
+}
+
+.country__container {
+  @apply flex flex-row items-center gap-2;
+}
+
+.country {
+  @apply text-left text-sm font-normal leading-5 tracking-normal text-white;
+}
+
+.player__image {
+  @apply h-full w-full rounded-e-xl object-contain opacity-100;
+}
+
+.country__image {
+  @apply w-[28px] h-[15px];
+}
+
+.player__image--no-src, .country__image--no-src {
+  @apply border border-gray-400;
+}
+
+.ranking__container, .points__container {
+  @apply flex h-[46px] flex-row items-center justify-between border-b border-solid border-gray-200;
+}
+
+.ranking, .points, .sponsor {
+  @apply ps-0.5 text-left text-xs font-normal leading-4 tracking-normal text-gray-500;
+}
+
+.ranking__number, .points__number {
+  @apply pe-0.5 text-right text-xs font-bold leading-4 tracking-normal;
+}
+
+.sponsor__container {
+  @apply flex h-[46px] flex-row items-center justify-between;
+}
+
+.sponsor__container--last-features {
+  @apply border-b border-solid border-gray-200;
+}
+
+.sponsor__wrapper {
+  @apply pe-0.5;
+}
+
+.sponsor__link {
+  @apply hover:opacity-70;
+}

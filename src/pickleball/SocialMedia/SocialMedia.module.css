@@ -1,0 +1,27 @@
+.wrapper {
+  @apply flex w-full flex-col justify-center rounded-xl bg-white;
+}
+
+.headline {
+  @apply flex py-4 w-full items-center border-b border-solid border-gray-200 ps-4 text-left text-sm font-bold leading-5 tracking-normal;
+}
+
+.media {
+  @apply flex h-12 cursor-pointer hover:opacity-70;
+}
+
+.icon {
+  @apply flex min-w-[53px] items-center justify-center;
+}
+
+.name {
+  @apply flex w-full items-center text-left text-xs font-normal leading-[18px] tracking-normal text-gray-500;
+}
+
+.divider__container {
+  @apply flex justify-center px-4;
+}
+
+.divider {
+  @apply flex w-full content-center items-center justify-center self-center border-b border-solid border-gray-200;
+}

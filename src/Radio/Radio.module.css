@@ -1,0 +1,110 @@
+.wrapper {
+  @apply inline-flex;
+  @apply items-start;
+  @apply gap-3;
+}
+.wrapper--size-sm {
+  @apply gap-2;
+}
+
+.wrapper__radio {
+  @apply appearance-none;
+  @apply grid;
+  @apply place-content-center;
+  @apply m-0;
+  @apply w-5;
+  @apply h-5;
+  @apply mt-0.5;
+  @apply rounded-[10px];
+  @apply border;
+  @apply border-solid;
+  @apply border-gray-300;
+  @apply bg-white;
+}
+
+.wrapper__radio::before {
+  @apply content-[""];
+  @apply transition-[120ms];
+  @apply duration-[transform];
+  @apply ease-[ease-in-out];
+  @apply shadow-[inset_1em_1em_#254EDB];
+  @apply bg-[CanvasText]; 
+  @apply scale-0;
+  @apply w-2;
+  @apply h-2;
+  @apply rounded-[50%];
+}
+
+.wrapper__radio--size-sm::before {
+  @apply w-1.5;
+  @apply h-1.5;
+}
+
+.wrapper__radio:focus, 
+.wrapper__radio:active:hover {
+  @apply border-primary-300;
+  @apply bg-white;
+  @apply shadow-[0px_0px_0px_4px_#F4EBFF];
+}
+
+.wrapper__radio:checked {
+  @apply border-primary-600;
+  @apply bg-primary-50;
+}
+
+.wrapper__radio:checked::before {
+  @apply scale-100;
+}
+
+.wrapper__radio:hover {
+  @apply border-primary-600;
+  @apply bg-primary-100;
+}
+
+.wrapper__radio:checked:hover:active {
+  @apply border-primary-600;
+  @apply bg-primary-50;
+}
+
+.wrapper__radio:disabled,
+.wrapper__radio:disabled:active,
+.wrapper__radio:disabled:active:hover
+{
+  @apply border-gray-300;
+  @apply bg-gray-100;
+  @apply shadow-[none];
+}
+
+.wrapper__radio:disabled:checked::before {
+  @apply bg-gray-100;
+  @apply shadow-[inset_1em_1em_#D0D5DD];
+}
+
+.wrapper__radio--size-sm {
+  @apply w-4;
+  @apply h-4;
+  @apply rounded-[4px];
+  @apply rounded-lg;
+}
+
+.wrapper__text, .wrapper__supporting__text {
+  @apply text-base;
+  @apply not-italic;
+  @apply leading-6;
+  @apply self-stretch;
+}
+
+.wrapper__text {
+  @apply text-gray-700;
+  @apply font-medium;
+}
+
+.wrapper__supporting__text {
+  @apply text-gray-600;
+  @apply font-normal;
+}
+
+.wrapper__text--size-sm, .wrapper__supporting__text--size-sm {
+  @apply text-sm;
+  @apply leading-5;
+}

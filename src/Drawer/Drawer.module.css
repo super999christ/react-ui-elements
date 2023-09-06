@@ -1,0 +1,46 @@
+.backdrop {
+  @apply fixed top-0 right-0 z-[999] h-full w-full bg-transparent pointer-events-none;
+}
+
+.backdrop--open {
+  pointer-events: all;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+  @apply absolute -right-full w-[93%] h-full top-0 z-[9999] bg-gray-200;
+  transition: right 500ms, opacity 500ms;
+}
+
+.wrapper--position-left {
+  @apply -left-full right-[unset];
+  transition: left 500ms, opacity 500ms;
+}
+
+.wrapper--open {
+  @apply right-0;
+}
+
+.wrapper--open-position-left {
+  @apply left-0;
+}
+
+.header {
+  @apply flex justify-between items-center p-4;
+}
+
+.header--no-title {
+  @apply justify-end;
+}
+
+.title {
+  @apply text-gray-900 text-lg not-italic font-semibold leading-7;
+}
+
+.button {
+  @apply p-2.5 border border-solid border-gray-300 w-10 h-10;
+}
+
+.close__icon {
+  @apply text-gray-700 w-full h-full;
+}

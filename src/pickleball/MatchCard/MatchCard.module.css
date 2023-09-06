@@ -1,0 +1,109 @@
+.match__card {
+  @apply bg-white;
+  @apply border;
+  @apply border-gray-300;
+  @apply rounded;
+  @apply inline-flex;
+  @apply divide-x;
+  @apply divide-gray-300;
+}
+
+.match__card.match__card--compact {
+}
+
+.card__number {
+  @apply text-sm;
+  @apply text-gray-900;
+  @apply leading-5;
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply shrink-0;
+  @apply w-8;
+}
+
+.match__card.match__card--compact .card__number {
+  @apply w-[26px];
+}
+
+.card__body {
+  @apply flex-1;
+}
+
+.body__header {
+  @apply p-2;
+  @apply bg-gray-200;
+  @apply text-sm;
+  @apply text-gray-900;
+  @apply leading-5;
+  @apply font-semibold;
+  @apply rounded-tr;
+  @apply flex;
+  @apply flex-col;
+}
+
+.match__card.match__card--compact .body__header {
+  @apply p-1;
+  @apply text-xs;
+  @apply leading-[18px];
+}
+
+.body__details {
+  @apply py-2;
+  @apply flex;
+  @apply items-center;
+}
+
+.match__card.match__card--compact .body__details {
+  @apply py-1;
+}
+
+.details__list {
+  @apply flex;
+  @apply divide-x;
+  @apply divide-gray-300;
+  @apply text-sm;
+  @apply leading-5;
+  @apply text-gray-900;
+}
+
+.match__card.match__card--compact .details__list {
+  @apply text-xs;
+  @apply leading-[18px];
+}
+
+.details__list > * {
+  @apply px-2;
+}
+
+.match__card.match__card--compact .details__list > * {
+  @apply px-1;
+}
+
+.details__link {
+}
+
+.team__player {
+  @apply m-0;
+  @apply pl-1;
+  @apply h-10;
+  @apply flex;
+  @apply border-b;
+  @apply border-gray-300;
+  @apply first-of-type:border-t;
+}
+
+.body__footer {
+  @apply text-xs;
+  @apply leading-[18px];
+  @apply text-gray-900;
+  @apply font-normal;
+  @apply p-1;
+  @apply flex;
+  @apply items-center;
+}
+
+.body__footer svg {
+  @apply block;
+  @apply mr-1;
+}

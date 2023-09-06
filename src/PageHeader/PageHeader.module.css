@@ -1,0 +1,241 @@
+.wrapper {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  display: none;
+  @apply sm:flex;
+}
+
+.mobile__wrapper {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  @apply sm:hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 240px;
+  background-position: 50%;
+  background-size: cover;
+  background-image: url(/src/PageHeader/gradient.jpeg);
+  position: relative;
+}
+
+.mobile__banner {
+  width: 100%;
+  height: 160px;
+  background-position: 50%;
+  background-size: cover;
+  background-image: url(/src/PageHeader/gradient.jpeg);
+  position: relative;
+}
+
+.outer__container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 88%;
+  border-bottom: solid 1px var(--gray-200, #EAECF0);
+}
+
+.outer__container--variant-banner-simple-centered, .outer__container--variant-banner-avatar-centered {
+  justify-content: center;
+}
+
+.avatar {
+  position: relative;
+  margin-top: -44px;
+}
+
+.mobile__avatar {
+  position: absolute;
+  padding-left: 16px;
+  margin-top: 110px;
+}
+
+.mobile__avatar-centered {
+  padding-left: 0;
+  transform: translateX(180deg);
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.avatar--variant-banner-avatar-centered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 90%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  width: 88%;
+  padding-top: 0;
+  padding-bottom: 24px;
+}
+
+.mobile__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.mobile__container--variant-with-banner {
+  padding: 20px 16px;
+}
+
+.mobile__container--centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.back__button__container {
+  display: flex;
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+.back__button__container--variant-banner-avatar {
+  justify-content: flex-end;
+}
+
+.container--variant-simple-or-avatar {
+  width: 100%;
+}
+
+.container--variant-banner-simple-or-banner-avatar {
+  padding-top: 24px;
+}
+
+.container--variant-banner-simple-centered {
+  padding-top: 24px;
+  align-items: center;
+}
+
+.container--variant-banner-avatar-centered {
+  padding-top: 24px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.mobile__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.mobile__content-padding-top {
+  padding-top: 44px;
+}
+
+.mobile__content-centered {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content--variant-banner-simple-centered-or-banner-avatar-centered {
+  padding-top: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.content--no-breadcrum--variant-banner-avatar-centered {
+  padding-top: 90px;
+}
+
+.content--no-breadcrum--variant-banner-avatar {
+  padding-top: 20px;
+}
+
+.content--variant-banner-simple-centered {
+  padding-top: 0px;
+}
+
+.avatar__text__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+}
+
+.mobile__avatar__text__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.mobile__avatar__text__container-centered {
+  align-self: unset;
+}
+
+.avatar__text__container--variant-banner-avatar-centered {
+  flex-direction: column;
+}
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+}
+
+.mobile__text__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.mobile__text__container-centered {
+  align-items: center;
+}
+
+.text__container--variant-banner-simple-centered-banner-avatar-centered {
+  text-align: center;
+}
+
+.text {
+  align-self: stretch;
+  color: var(--gray-900, #101828);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.mobile__text {
+  color: var(--gray-900, #101828);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.supporting__text {
+  align-self: stretch;
+  color: var(--gray-600, #475467);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

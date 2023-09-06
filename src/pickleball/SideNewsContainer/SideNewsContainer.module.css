@@ -1,0 +1,19 @@
+.wrapper {
+  @apply flex w-full flex-col justify-center rounded-xl bg-white shadow-sm;
+}
+
+.headline {
+  @apply flex py-4 w-full items-center border-b border-solid border-gray-200 ps-4 text-left text-sm font-bold leading-5 tracking-normal;
+}
+
+.news__container {
+  @apply rounded-xl bg-white px-3 py-4;
+}
+
+.divider__container {
+  @apply flex w-full justify-center px-4;
+}
+
+.divider {
+  @apply flex w-full content-center items-center justify-center self-center border-b border-solid border-gray-200;
+}

@@ -1,0 +1,104 @@
+.badge {
+  @apply inline-flex;
+  @apply relative;
+  @apply font-medium;
+  @apply rounded-xl;
+  @apply items-center;
+  @apply select-none;
+}
+
+.badge--size-sm,
+.badge--size-md {
+  @apply py-[2px];
+}
+
+.badge--size-sm {
+  @apply text-xs;
+  @apply leading-[18px];
+  @apply px-2;
+  @apply font-medium;
+}
+
+.badge--size-md,
+.badge--size-lg {
+  @apply text-sm;
+  @apply leading-5;
+  @apply font-medium;
+}
+
+.badge--size-md {
+  @apply px-[10px];
+}
+
+.badge--size-lg {
+  @apply py-1;
+  @apply px-3;
+}
+
+/* COLORS START */
+.badge--color-gray {
+  @apply text-gray-700;
+  @apply bg-gray-100;
+}
+
+.badge--clickable.badge--color-gray:hover {
+  @apply bg-gray-200;
+}
+
+.badge--color-primary {
+  @apply text-primary-700;
+  @apply bg-primary-50;
+}
+
+.badge--clickable.badge--color-primary:hover {
+  @apply bg-primary-50;
+}
+
+.badge--color-error {
+  @apply text-error-700;
+  @apply bg-error-50;
+}
+
+.badge--clickable.badge--color-error:hover {
+  @apply bg-error-50;
+}
+
+.badge--color-warning {
+  @apply text-warning-700;
+  @apply bg-warning-50;
+}
+
+.badge--clickable.badge--color-warning:hover {
+  @apply bg-warning-50;
+}
+
+.badge--color-success {
+  @apply text-success-700;
+  @apply bg-success-50;
+}
+
+.badge--clickable.badge--color-success:hover {
+  @apply bg-success-50;
+}
+
+/* COLORS END */
+
+.badge--icon-prefix svg, .badge--icon-suffix svg {
+  @apply block;
+}
+
+.badge--clickable {
+  @apply cursor-pointer;
+}
+
+.badge--icon-prefix {
+  @apply mr-1;
+}
+
+.badge--icon-suffix {
+  @apply ml-1;
+}
+
+.badge--icon--hoverable {
+  @apply cursor-pointer;
+}

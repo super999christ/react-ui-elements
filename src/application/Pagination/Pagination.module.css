@@ -1,0 +1,14 @@
+.pagination--item {
+  @apply rounded-lg;
+  @apply text-gray-600;
+  @apply text-sm;
+  @apply font-medium;
+  @apply w-10;
+  @apply h-10;
+}
+
+.pagination--item:hover,
+.pagination--item-active {
+  @apply bg-gray-50;
+  @apply text-gray-900;
+}

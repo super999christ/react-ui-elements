@@ -1,0 +1,92 @@
+.menu {
+  /* z-50 bg-white shadow-lg border border-gray-200 rounded-lg outline-none */
+  @apply z-[9999];
+  @apply bg-white;
+  @apply shadow-lg;
+  @apply border;
+  @apply border-gray-200;
+  @apply rounded-lg;
+  @apply outline-none;
+  @apply font-semibold;
+  @apply py-1.5;
+}
+
+.list__arrow {
+  @apply fill-white;
+  @apply [&>path:first-of-type]:stroke-white;
+  @apply [&>path:last-of-type]:stroke-gray-200;
+  @apply relative;
+  @apply z-40;
+
+  @apply before:content-[""];
+}
+
+.list__overlay {
+  @apply bg-gray-700;
+  @apply bg-opacity-30;
+  @apply z-[10999];
+}
+
+.list__group {
+  @apply p-1;
+  @apply border-b;
+  @apply border-gray-200;
+  @apply last-of-type:border-b-0;
+}
+
+.list__item {
+  @apply px-[6px];
+  @apply text-sm;
+  @apply rounded;
+  @apply outline-none;
+}
+
+.item {
+  @apply px-2.5;
+  @apply py-[10px];
+  @apply flex;
+  @apply items-center;
+  @apply cursor-pointer;
+  @apply rounded-md;
+  @apply text-gray-700;
+  @apply select-none;
+  @apply font-medium;
+}
+
+.item:not(.item--disabled):hover {
+  @apply bg-gray-50;
+}
+
+.item:focus {
+  @apply outline-none;
+}
+
+.item--active {
+  @apply bg-gray-50;
+}
+
+.item--disabled {
+  @apply text-gray-300;
+  @apply cursor-default;
+}
+
+.item__content {
+  @apply flex;
+  @apply items-center;
+}
+
+.content__icon {
+  @apply mr-2;
+  @apply inline-flex;
+}
+
+.content__text {
+  @apply font-medium;
+}
+
+.item__description {
+  @apply ml-auto;
+  @apply pl-10;
+  @apply text-xs;
+  @apply text-gray-500;
+}

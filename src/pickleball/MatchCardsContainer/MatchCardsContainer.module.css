@@ -1,0 +1,12 @@
+.wrapper {
+  @apply mt-6 flex w-full flex-col gap-6 bg-white px-3;
+  @apply sm:px-6;
+}
+
+.headline {
+  @apply w-full text-left text-sm font-bold leading-5 tracking-normal;
+}
+
+.content {
+  @apply flex w-full flex-wrap items-center justify-center gap-2;
+}

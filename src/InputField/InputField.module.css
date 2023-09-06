@@ -1,0 +1,86 @@
+.wrapper {
+  @apply inline-flex;
+  @apply flex-col;
+  @apply items-start;
+  @apply gap-1.5;
+}
+
+.wrapper__label, .wrapper__hint, .wrapper__error {
+  @apply text-sm;
+  @apply not-italic;
+  @apply leading-5;
+}
+
+.wrapper__hint, .wrapper__error {
+  @apply self-stretch;
+  @apply font-normal;
+}
+
+.wrapper__label {
+  @apply text-gray-700;
+  @apply font-medium;
+}
+
+.wrapper__hint {
+  @apply text-gray-600;
+}
+
+.wrapper__error {
+  @apply text-error-500;
+}
+
+.wrapper__input__field__wrapper {
+  @apply flex;
+  @apply items-center;
+  @apply gap-2;
+  @apply self-stretch; 
+  @apply px-3.5;
+  @apply py-2.5;
+  @apply border;
+  @apply border-gray-300;
+  @apply shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)];
+  @apply rounded-lg;
+  @apply border-solid;
+  @apply bg-white;
+}
+
+.wrapper__input__field__wrapper:focus-within {
+  @apply border-primary-300;
+  @apply shadow-[0px_0px_0px_4px_#F4EBFF,0px_1px_2px_0px_rgba(16,24,40,0.05)];
+}
+
+.wrapper__input__field__wrapper--disabled {
+  @apply bg-gray-50;
+}
+
+.wrapper__input__field__wrapper--disabled > .wrapper__input__field__wrapper__input__field {
+  @apply text-gray-500;
+  @apply bg-gray-50;
+}
+
+.wrapper__input__field__wrapper--destructive {
+  @apply border-error-300;
+}
+
+.wrapper__input__field__wrapper--destructive:focus-within {
+  @apply shadow-[0px_0px_0px_4px_#FEE4E2,0px_1px_2px_0px_rgba(16,24,40,0.05)];
+  @apply border-error-300;
+}
+
+.wrapper__input__field__wrapper--size-sm {
+  @apply px-3;
+  @apply py-2;
+}
+
+.wrapper__input__field__wrapper__input__field {
+  @apply text-gray-900;
+  @apply text-base;
+  @apply not-italic;
+  @apply font-normal;
+  @apply leading-6;
+  @apply w-full;
+}
+
+.wrapper__input__field__wrapper__input__field:focus {
+  @apply outline-none;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  @apply flex w-full flex-col items-center rounded-xl bg-white shadow-sm;
+}
+
+.headline {
+  @apply w-full py-4 px-[18px] text-left text-sm font-bold leading-5 tracking-normal;
+}
+
+.divider {
+  @apply w-full border-t border-solid border-gray-200 pb-4;
+}
+
+.button {
+  @apply justify-center !bg-transparent !py-4 !text-experiment hover:underline;
+}

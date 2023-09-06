@@ -1,0 +1,43 @@
+.wrapper {
+  @apply rounded-xl bg-white shadow-sm;
+}
+
+.header {
+  @apply flex justify-center gap-4 border-b border-solid border-gray-200 px-4;
+}
+
+.image {
+  @apply flex min-h-[22px] min-w-[36px] items-center object-contain;
+}
+
+.headline {
+  @apply flex py-4 w-full items-center text-left text-sm font-bold leading-5 tracking-normal;
+}
+
+.buttons {
+  @apply flex items-center justify-center p-4;
+}
+
+.button {
+  @apply w-full justify-center !bg-experiment hover:!opacity-90;
+}
+
+.tour {
+  @apply flex h-12 cursor-pointer items-center gap-5 ps-4 hover:opacity-70;
+}
+
+.logo {
+  @apply max-h-[36px] max-w-[42px] object-contain;
+}
+
+.name {
+  @apply flex w-full items-center text-left text-xs font-normal leading-4 tracking-normal text-gray-500;
+}
+
+.divider__container {
+  @apply flex justify-center px-4;
+}
+
+.divider {
+  @apply flex w-full content-center items-center justify-center self-center border-b border-solid border-gray-200;
+}

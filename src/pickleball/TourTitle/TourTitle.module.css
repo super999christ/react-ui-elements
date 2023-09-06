@@ -1,0 +1,16 @@
+.wrapper {
+  @apply flex gap-3 border-b px-3 py-4 items-center;
+  @apply sm:px-6;
+}
+
+.wrapper--image-position-right {
+  @apply flex-row-reverse justify-between;
+}
+
+.image {
+  @apply max-h-[45px] max-w-[45px] object-contain;
+}
+
+.title {
+  @apply line-clamp-2 text-left text-lg font-semibold leading-7 tracking-normal self-center;
+}

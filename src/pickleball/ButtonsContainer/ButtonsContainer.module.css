@@ -1,0 +1,8 @@
+.wrapper {
+  @apply flex w-full flex-wrap items-center justify-center gap-1;
+  @apply sm:gap-7;
+}
+
+.button {
+  @apply justify-center text-experiment hover:!text-experiment;
+}

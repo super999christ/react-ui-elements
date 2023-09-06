@@ -1,0 +1,247 @@
+.button {
+  @apply px-4;
+  @apply py-[10px];
+  @apply text-base;
+  @apply font-semibold;
+  @apply leading-5;
+  @apply inline-flex;
+  @apply items-center;
+  @apply rounded-lg;
+  @apply transition-colors;
+  @apply duration-100;
+  @apply cursor-pointer;
+  @apply not-italic;
+}
+
+.button:focus {
+  @apply outline-none;
+}
+
+.button--size-sm {
+  @apply px-[14px];
+  @apply py-[8px];
+  @apply text-sm;
+}
+
+.button--size-lg {
+  @apply px-[18px];
+  @apply py-[10px];
+  @apply leading-6;
+}
+
+.button--size-xl {
+  @apply px-5;
+  @apply py-3;
+  @apply leading-6;
+}
+
+.button--size-2xl {
+  @apply px-7;
+  @apply py-4;
+  @apply text-lg;
+}
+
+.button--disabled {
+  @apply cursor-default;
+}
+
+.button--primary {
+  @apply bg-primary-600;
+  @apply text-white;
+}
+
+.button--primary:not(.button--disabled):hover {
+  @apply bg-primary-700;
+  @apply text-white;
+}
+
+.button--primary:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
+}
+
+.button--primary.button--disabled {
+  @apply bg-primary-200;
+  @apply text-white;
+}
+
+.button--primary.button--destructive {
+  @apply bg-error-600;
+  @apply text-white;
+}
+
+.button--primary.button--destructive:not(.button--disabled):hover {
+  @apply bg-error-700;
+  @apply text-white;
+}
+
+.button--primary.button--destructive:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.error.100/100%")];
+}
+
+.button--primary.button--destructive.button--disabled {
+  @apply bg-error-200;
+}
+
+.button--secondary {
+  @apply bg-white;
+  @apply text-gray-700;
+  @apply shadow-[inset_0_0_0_1px_theme("colors.gray.300/100%")];
+}
+
+.button--secondary:not(.button--disabled):hover {
+  @apply bg-gray-50;
+  @apply text-gray-800;
+}
+
+.button--secondary:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.gray.100/100%"),inset_0_0_0_1px_theme("colors.gray.300/100%")];
+}
+
+.button--secondary.button--disabled {
+  @apply bg-white;
+  @apply text-gray-300;
+  @apply shadow-[inset_0_0_0_1px_theme("colors.gray.200/100%")];
+}
+
+.button--secondary.button--destructive {
+  @apply shadow-[inset_0_0_0_1px_theme("colors.error.300/100%")];
+  @apply text-error-700;
+}
+
+.button--secondary.button--destructive:not(.button--disabled):hover {
+  @apply bg-error-50;
+  @apply text-error-800;
+}
+
+.button--secondary.button--destructive:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.error.100/100%"),inset_0_0_0_1px_theme("colors.error.300/100%")];
+}
+
+.button--secondary.button--destructive.button--disabled {
+  @apply shadow-[inset_0_0_0_1px_theme("colors.error.200/100%")];
+  @apply text-error-300;
+}
+
+.button--secondary-color {
+  @apply bg-primary-50;
+  @apply text-primary-700;
+  @apply shadow-[inset_0_0_0_1px_theme("colors.primary.50/100%")];
+}
+
+.button--secondary-color:not(.button--disabled):hover {
+  @apply bg-primary-100;
+  @apply text-primary-800;
+  @apply shadow-[inset_0_0_0_1px_theme("colors.primary.100/100%")];
+}
+
+.button--secondary-color:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
+}
+
+.button--secondary-color.button--disabled {
+  @apply bg-primary-25;
+  @apply text-primary-300;
+}
+
+.button--secondary-color.button--destructive {
+  @apply bg-error-50;
+  @apply shadow-[inset_0_0_0_1px_theme("colors.error.50/100%")];
+  @apply text-error-700;
+}
+
+.button--secondary-color.button--destructive:not(.button--disabled):hover {
+  @apply bg-error-100;
+  @apply shadow-[inset_0_0_0_1px_theme("colors.error.100/100%")];
+  @apply text-error-800;
+}
+
+.button--secondary-color.button--destructive:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.error.100/100%"),inset_0_0_0_1px_theme("colors.error.50/100%")];
+}
+
+.button--secondary-color.button--destructive.button--disabled {
+  @apply shadow-[inset_0_0_0_1px_theme("colors.error.200/100%")];
+  @apply text-error-300;
+  @apply bg-error-25;
+}
+
+.button--tertiary {
+  @apply text-gray-600;
+}
+
+.button--tertiary:not(.button--disabled):hover {
+  @apply bg-gray-50;
+  @apply text-gray-700;
+}
+
+.button--tertiary.button--disabled {
+  @apply bg-gray-300;
+}
+
+.button--tertiary-color {
+  @apply text-primary-700;
+}
+
+.button--tertiary-color:not(.button--disabled):hover {
+  @apply bg-primary-50;
+  @apply text-primary-800;
+}
+
+.button--tertiary-color.button--disabled {
+  @apply text-gray-300;
+}
+
+.button--tertiary.button--destructive,
+.button--tertiary-color.button--destructive {
+  @apply text-error-700;
+}
+
+.button--tertiary.button--destructive:not(.button--disabled):hover,
+.button--tertiary-color.button--destructive:not(.button--disabled):hover {
+  @apply bg-error-50;
+  @apply text-error-800;
+}
+
+.button--tertiary.button--destructive.button--disabled,
+.button--tertiary-color.button--destructive.button--disabled {
+  @apply bg-white;
+  @apply text-error-300;
+}
+
+.button--link {
+  @apply p-0;
+  @apply leading-5;
+  @apply text-primary-700;
+}
+
+.button--link:not(.button--disabled):hover {
+  @apply text-primary-800;
+}
+
+.button--link.button--link-gray {
+  @apply text-gray-600;
+}
+
+.button--link.button--link-gray:not(.button--disabled):hover {
+  @apply text-gray-700;
+}
+
+.button--link-gray.button--disabled {
+  @apply text-gray-300;
+}
+
+.button--link.button--destructive,
+.button--link-color.button--destructive {
+  @apply text-error-700;
+}
+
+.button--link.button--destructive:not(.button--disabled):hover,
+.button--link-color.button--destructive:not(.button--disabled):hover {
+  @apply text-error-800;
+}
+
+.button--link.button--destructive.button--disabled,
+.button--link-color.button--destructive.button--disabled {
+  @apply bg-white;
+  @apply text-error-300;
+}

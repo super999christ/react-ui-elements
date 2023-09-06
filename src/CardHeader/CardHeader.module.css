@@ -1,0 +1,33 @@
+.wrapper {
+  @apply bg-white flex flex-col items-start gap-4 self-stretch relative px-4 py-5;
+  @apply sm:w-full sm:px-6 sm:py-5 sm:flex-row;
+}
+
+.wrapper--with-header-line {
+  @apply border-t-8 border-t-primary-700 border-t-[solid];
+}
+
+.avatar__text__container {
+  @apply flex gap-2 flex-[1_0_0] items-center;
+  @apply sm:gap-4;
+}
+
+.text__container {
+  @apply flex flex-col justify-center items-start gap-1 flex-[1_0_0] self-stretch;
+}
+
+.text__badge__container {
+  @apply flex items-center gap-2 self-stretch;
+}
+
+.text {
+  @apply text-gray-900 text-lg not-italic font-semibold leading-7;
+}
+
+.supporting__text {
+  @apply text-gray-600 text-sm not-italic font-normal leading-5;
+}
+
+.dropdown {
+  @apply flex flex-col items-start absolute right-2 top-7 sm:relative sm:right-[unset] sm:top-[unset];
+}

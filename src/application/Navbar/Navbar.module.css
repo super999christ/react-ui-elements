@@ -1,0 +1,77 @@
+.nav {
+  @apply bg-gray-900;
+}
+
+.nav__container {
+  @apply max-w-[1200px];
+  @apply mx-auto;
+  @apply flex;
+  @apply h-14;
+  @apply px-0;
+  @apply sm:px-4;
+}
+
+.brand {
+  @apply bg-experiment;
+  @apply -skew-x-12;
+  @apply inline-flex;
+  @apply items-center;
+  @apply px-4;
+  @apply cursor-pointer;
+  @apply shrink-0;
+  @apply text-white;
+  @apply relative;
+
+  @apply first-of-type:before:content-[""];
+  @apply first-of-type:before:absolute;
+  @apply first-of-type:before:w-full;
+  @apply first-of-type:before:h-full;
+  @apply first-of-type:before:bg-experiment;
+  @apply first-of-type:before:skew-x-12;
+  @apply first-of-type:before:-left-1/2;
+
+  @apply sm:before:hidden;
+}
+
+.item {
+  @apply text-white;
+  @apply -skew-x-12;
+  @apply inline-flex;
+  @apply items-center;
+  @apply px-4;
+  @apply border-l;
+  @apply sm:border-r;
+  @apply border-gray-700;
+  @apply text-sm;
+  @apply font-semibold;
+  @apply leading-5;
+  @apply sm:border-experiment;
+  @apply sm:last-of-type:border-r;
+  @apply self-center;
+  @apply sm:self-stretch;
+  @apply -ml-[1px];
+  @apply cursor-pointer;
+
+  @apply first-of-type:border-l-0;
+  @apply sm:first-of-type:border-l;
+}
+
+.item--active {
+  @apply bg-experiment;
+  @apply border-l-experiment;
+  @apply z-30;
+
+  @apply last-of-type:before:content-[""];
+  @apply last-of-type:before:absolute;
+  @apply last-of-type:before:w-full;
+  @apply last-of-type:before:h-full;
+  @apply last-of-type:before:bg-experiment;
+  @apply last-of-type:before:skew-x-12;
+  @apply last-of-type:before:-right-1/2;
+  @apply self-stretch;
+}
+
+.item__content {
+  @apply relative;
+  @apply px-4;
+}

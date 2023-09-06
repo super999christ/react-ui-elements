@@ -1,0 +1,19 @@
+.wrapper {
+  @apply flex w-full flex-col items-center justify-center gap-7 rounded-xl bg-white pb-[54px] shadow-sm;
+}
+
+.headline {
+  @apply py-4 text-center text-sm font-bold leading-5 tracking-normal text-gray-900;
+}
+
+.content {
+  @apply flex w-full flex-col items-center justify-center gap-10 bg-white;
+}
+
+.link {
+  @apply hover:opacity-70 w-[40%];
+}
+
+.image {
+  @apply w-full;
+}

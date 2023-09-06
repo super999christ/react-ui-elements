@@ -1,0 +1,35 @@
+.wrapper {
+  @apply flex flex-col w-full gap-3;
+}
+
+.image {
+  @apply h-[140px] w-full rounded-t-lg bg-white object-cover bg-center;
+}
+
+.image--no-src {
+  @apply border border-gray-200;
+}
+
+.content {
+  @apply flex flex-col w-full gap-[5px];
+}
+
+.title {
+  @apply break-words text-left text-sm font-semibold leading-5 tracking-normal text-gray-900;
+}
+
+.description {
+  @apply break-words text-left text-sm font-normal leading-5 tracking-normal text-gray-500;
+}
+
+.icon__time {
+  @apply flex items-center gap-1;
+}
+
+.icon {
+  @apply -mt-0.5 text-gray-400;
+}
+
+.time {
+  @apply w-full break-words text-left text-xs font-normal leading-4 tracking-normal text-gray-400;
+}
