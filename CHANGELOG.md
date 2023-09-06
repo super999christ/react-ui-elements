@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/pickleballinc/react-ui/compare/v1.0.1...v1.0.2) (2023-09-06)
+
+
+### Bug Fixes
+
+* move pagination classes to module css ([9494b2c](https://github.com/pickleballinc/react-ui/commit/9494b2cb8991854166dd30fc934db977066a159e))
+
 ## [1.0.1](https://github.com/pickleballinc/react-ui/compare/v1.0.0...v1.0.1) (2023-09-06)
 
 
