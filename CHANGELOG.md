@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/pickleballinc/react-ui/compare/v1.0.4...v1.0.5) (2023-09-07)
+
+
+### Bug Fixes
+
+* modal flexbox center content ([56a22e5](https://github.com/pickleballinc/react-ui/commit/56a22e56a960757ea591d400e7782267c2070e38))
+
 ## [1.0.4](https://github.com/pickleballinc/react-ui/compare/v1.0.3...v1.0.4) (2023-09-06)
 
 
