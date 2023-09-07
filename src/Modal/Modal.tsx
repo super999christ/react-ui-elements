@@ -160,6 +160,7 @@ export const ModalContent = React.forwardRef<
 
   const modalContentClasses = clsx(
     'rounded-xl bg-white p-6 shadow-xl',
+    // eslint-disable-next-line react/prop-types
     props.className,
   );
   const overlayClasses = clsx(
@@ -171,20 +172,18 @@ export const ModalContent = React.forwardRef<
     <FloatingPortal>
       <FloatingOverlay className={overlayClasses} lockScroll>
         <FloatingFocusManager context={floatingContext}>
-          <div style={{ ...styles }}>
-            <div
-              ref={ref}
-              aria-labelledby={context.labelId}
-              aria-describedby={context.descriptionId}
-              {...context.getFloatingProps(props)}
-              className={modalContentClasses}
-              style={{
-                // eslint-disable-next-line react/prop-types
-                ...props.style,
-              }}
-            >
-              {props.children}
-            </div>
+          <div
+            ref={ref}
+            aria-labelledby={context.labelId}
+            aria-describedby={context.descriptionId}
+            {...context.getFloatingProps(props)}
+            className={modalContentClasses}
+            style={{
+              // eslint-disable-next-line react/prop-types
+              ...props.style,
+            }}
+          >
+            {props.children}
           </div>
         </FloatingFocusManager>
       </FloatingOverlay>
