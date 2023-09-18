@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/pickleballinc/react-ui/compare/v1.0.5...v1.1.0) (2023-09-18)
+
+
+### Features
+
+* 404 pages ([738bcbd](https://github.com/pickleballinc/react-ui/commit/738bcbd9ec03b482e45f258213ecbcb11dad6ca2))
+
 ## [1.0.5](https://github.com/pickleballinc/react-ui/compare/v1.0.4...v1.0.5) (2023-09-07)
 
 
