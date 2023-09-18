@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { faXmark } from '@fortawesome/pro-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import React from 'react';
 
-import Avatarr from '../Avatar/Avatar';
+import AvatarOriginal from '../Avatar/Avatar';
 import styles from './Notification.module.css';
 
 const PrimaryIcon = () => {
@@ -161,8 +163,10 @@ type NotificationTypeTypes =
 export interface NotificationProps extends React.HTMLProps<HTMLDivElement> {
   Avatar?: () => React.ReactNode;
   children?: React.ReactNode;
-  imageLink?: string;
+  CustomIcon?: () => React.ReactNode;
   imageAlt?: string;
+  imageLink?: string;
+  onClose?: () => void;
   ProgressIndicator?: () => React.ReactNode;
   SupportingText?: string | (() => React.ReactNode);
   Text: string | (() => React.ReactNode);
@@ -173,11 +177,13 @@ export interface NotificationProps extends React.HTMLProps<HTMLDivElement> {
 const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
   function Notification(props, ref) {
     const {
-      Avatar = () => <Avatarr size="md" />,
+      Avatar = () => <AvatarOriginal size="md" />,
       children,
       className,
-      imageLink,
+      CustomIcon,
       imageAlt,
+      imageLink,
+      onClose,
       ProgressIndicator,
       SupportingText,
       Text = 'Text',
@@ -237,15 +243,26 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
                 'success-icon',
               ].includes(type) && (
                 <div className={iconContainerClasses}>
-                  {type === 'primary-icon' && <PrimaryIcon />}
-                  {type === 'gray-icon' && <GrayIcon />}
-                  {type === 'progress-indicator' && <ProgressIndicatorIcon />}
-                  {type === 'error-icon' && <ErrorIcon />}
-                  {type === 'warning-icon' && <WarningIcon />}
-                  {type === 'success-icon' && <SuccesIcon />}
+                  {CustomIcon ? (
+                    CustomIcon()
+                  ) : (
+                    <>
+                      {type === 'primary-icon' && <PrimaryIcon />}
+                      {type === 'gray-icon' && <GrayIcon />}
+                      {type === 'progress-indicator' && (
+                        <ProgressIndicatorIcon />
+                      )}
+                      {type === 'error-icon' && <ErrorIcon />}
+                      {type === 'warning-icon' && <WarningIcon />}
+                      {type === 'success-icon' && <SuccesIcon />}
+                    </>
+                  )}
                 </div>
               )}
-              <div className={closeIconContainerClasses}>
+              <div
+                className={closeIconContainerClasses}
+                onClick={() => onClose && onClose()}
+              >
                 <FontAwesomeIcon
                   className={closeIconClasses}
                   icon={faXmark}
@@ -267,7 +284,10 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
                   {time && <span className={timeClasses}>{time}</span>}
                 </div>
                 {(type === 'no-icon' || type === 'image') && (
-                  <div className={closeIconContainerClassesNoIconOrImage}>
+                  <div
+                    className={closeIconContainerClassesNoIconOrImage}
+                    onClick={() => onClose && onClose()}
+                  >
                     <FontAwesomeIcon
                       className={closeIconClasses}
                       icon={faXmark}
@@ -313,12 +333,20 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
                 'success-icon',
               ].includes(type) && (
                 <div className={iconContainerClasses}>
-                  {type === 'primary-icon' && <PrimaryIcon />}
-                  {type === 'gray-icon' && <GrayIcon />}
-                  {type === 'progress-indicator' && <ProgressIndicatorIcon />}
-                  {type === 'error-icon' && <ErrorIcon />}
-                  {type === 'warning-icon' && <WarningIcon />}
-                  {type === 'success-icon' && <SuccesIcon />}
+                  {CustomIcon ? (
+                    CustomIcon()
+                  ) : (
+                    <>
+                      {type === 'primary-icon' && <PrimaryIcon />}
+                      {type === 'gray-icon' && <GrayIcon />}
+                      {type === 'progress-indicator' && (
+                        <ProgressIndicatorIcon />
+                      )}
+                      {type === 'error-icon' && <ErrorIcon />}
+                      {type === 'warning-icon' && <WarningIcon />}
+                      {type === 'success-icon' && <SuccesIcon />}
+                    </>
+                  )}
                 </div>
               )}
             </>
@@ -345,7 +373,10 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
               ProgressIndicator()}
             {children && children}
           </div>
-          <div className={closeIconContainerClasses}>
+          <div
+            className={closeIconContainerClasses}
+            onClick={() => onClose && onClose()}
+          >
             <FontAwesomeIcon
               className={closeIconClasses}
               icon={faXmark}

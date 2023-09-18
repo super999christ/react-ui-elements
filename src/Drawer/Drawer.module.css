@@ -4,11 +4,12 @@
 
 .backdrop--open {
   pointer-events: all;
-  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  /* @apply bg-[rgba(0,0,0,0.5)]; */
 }
 
 .wrapper {
-  @apply absolute -right-full w-[93%] h-full top-0 z-[9999] bg-gray-200;
+  @apply absolute -right-full w-[93%] h-full top-0 z-[9999] bg-white;
   transition: right 500ms, opacity 500ms;
 }
 

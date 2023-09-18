@@ -1,165 +1,123 @@
 .wrapper {
-  display: none;
-  padding: 16px;
-  align-items: flex-start;
-  gap: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--gray-300, #D0D5DD);
-  background: var(--gray-25, #FCFCFD);
+  @apply hidden p-4 items-start gap-3 rounded-xl border border-solid border-gray-300 bg-gray-25;
   @apply sm:flex;
 }
 
 .mobile__wrapper {
-  display: flex;
-  padding: 16px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--gray-300, #D0D5DD);
-  background: var(--gray-25, #FCFCFD);
+  @apply flex p-4 flex-col items-start gap-3 rounded-xl border border-solid border-gray-300 bg-gray-25;
   @apply sm:hidden;
 }
 
 .mobile__icons__container {
-  display: flex;
-  justify-content: space-between;
-  @apply w-full;
+  @apply flex justify-between w-full;
 }
 
 .wrapper--type-primary {
-  border: 1px solid var(--primary-300, #84A9FF);
-  background: var(--primary-25, #F2F6FF);
+  @apply border border-solid border-primary-300 bg-primary-25;
 }
 
 .wrapper--type-error {
-  border: 1px solid var(--error-300, #FDA29B);
-  background: var(--error-25, #FFFBFA);
+  @apply border border-solid border-error-300 bg-error-25;
 }
 
 .wrapper--type-warning {
-  border: 1px solid var(--warning-300, #FEC84B);
-  background: var(--warning-25, #FFFCF5);
+  @apply border border-solid border-warning-300 bg-warning-25;
 }
 
 .wrapper--type-success {
-  border: 1px solid var(--success-300, #6CE9A6);
-  background: var(--success-25, #F6FEF9);
+  @apply border border-solid border-success-300 bg-success-25;
 }
 
 .info__icon {
-  color: var(--gray-600);
+  @apply text-gray-600;
 }
 
 .info__icon--type-primary {
-  color: var(--primary-600, #254EDB);
+  @apply text-primary-600;
 }
 
 .info__icon--type-error {
-  color: var(--error-600, #D92D20);
+  @apply text-error-600;
 }
 
 .info__icon--type-warning {
-  color: var(--warning-600, #DC6803);
+  @apply text-warning-600;
 }
 
 .info__icon--type-success {
-  color: var(--success-600, #039855);
+  @apply text-success-600;
 }
 
 .content__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: center;
-  gap: 12px;
-  flex: 1 0 0;
+  @apply flex flex-col items-start self-center gap-3 flex-[1_0_0];
 }
 
 .mobile__content__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  align-self: stretch;
+  @apply flex flex-col items-start gap-3 self-stretch;
 }
 
 .text__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  align-self: stretch;
+  @apply flex flex-col items-start gap-1 self-stretch;
 }
 
 .text {
-  align-self: stretch;
-  color: var(--gray-700, #344054);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  @apply self-stretch text-gray-700 font-semibold text-sm not-italic leading-5;
 }
 
 .text--type-primary {
-  color: var(--primary-700, #1939B7);
+  @apply text-primary-700;
 }
 
 .text--type-error {
-  color: var(--error-700, #B42318);
+  @apply text-error-700;
 }
 
 .text--type-warning {
-  color: var(--warning-700, #B54708);
+  @apply text-warning-700;
 }
 
 .text--type-success {
-  color: var(--success-700, #027A48);
+  @apply text-success-700;
 }
 
 .supporting__text {
-  align-self: stretch;
-  color: var(--gray-600, #475467);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  @apply self-stretch text-gray-600 font-normal text-sm not-italic leading-5;
 }
 
 .supporting__text--type-primary {
-  color: var(--primary-700, #1939B7);
+  @apply text-primary-700;
 }
 
 .supporting__text--type-error {
-  color: var(--error-700, #B42318);
+  @apply text-error-700;
 }
 
 .supporting__text--type-warning {
-  color: var(--warning-700, #B54708);
+  @apply text-warning-700;
 }
 
 .supporting__text--type-success {
-  color: var(--success-700, #027A48);
+  @apply text-success-700;
 }
 
 .close__icon {
-  color: var(--gray-500, #667085);
+  @apply text-gray-500;
 }
 
 .close__icon--type-primary {
-  color: var(--primary-500, #3366FF);
+  @apply text-primary-500;
 }
 
 .close__icon--type-error {
-  color: var(--error-500, #F04438);
+  @apply text-error-500;
 }
 
 .close__icon--type-warning {
-  color: var(--warning-500, #F79009);
+  @apply text-warning-500;
 }
 
 .close__icon--type-success {
-  color: var(--success-500, #12B76A);
+  @apply text-success-500;
 }
 
 .icon__container {
@@ -168,6 +126,7 @@
   @apply w-5;
   @apply items-center;
   @apply justify-center;
+  @apply cursor-pointer;
 }
 
 .icon__container--type-default {

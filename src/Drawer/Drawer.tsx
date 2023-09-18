@@ -13,11 +13,11 @@ type DrawerPositionTypes = 'left' | 'right';
 export interface DrawerProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
-  disableCloseOnBackdropClick?: boolean;
+  onBackdropClick?: () => void;
   onClose?: () => void;
   open: boolean;
   position?: DrawerPositionTypes;
-  Title?: string | (() => React.ReactNode);
+  title?: string;
   wrapperClassname?: string;
 }
 
@@ -26,11 +26,11 @@ const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
     const {
       children,
       className,
-      disableCloseOnBackdropClick = false,
+      onBackdropClick,
       onClose,
       open,
       position = 'right',
-      Title,
+      title,
       wrapperClassname,
       ...rest
     } = props;
@@ -52,7 +52,7 @@ const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
       wrapperClassname,
     );
     const headerClasses = clsx(styles.header, {
-      [styles['header--no-title']]: !Title,
+      [styles['header--no-title']]: !title,
     });
     const titleClasses = clsx(styles.title);
     const buttonClasses = clsx(styles.button);
@@ -60,10 +60,7 @@ const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
 
     return (
       <div
-        onClick={() => {
-          if (disableCloseOnBackdropClick) return;
-          if (open && onClose) onClose();
-        }}
+        onClick={() => open && onBackdropClick && onBackdropClick()}
         className={backdropClasses}
         ref={ref}
         {...rest}
@@ -74,14 +71,9 @@ const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
         >
           {onClose && (
             <div className={headerClasses}>
-              {Title &&
-                (typeof Title === 'string' ? (
-                  <h1 className={titleClasses}>{Title}</h1>
-                ) : (
-                  Title()
-                ))}
+              {title && <h1 className={titleClasses}>{title}</h1>}
               <Button
-                onClick={() => onClose && onClose()}
+                onClick={() => onClose()}
                 variant="secondary-color"
                 className={buttonClasses}
               >

@@ -1,41 +1,27 @@
 .progress__bar {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
+  @apply inline-flex items-center gap-3 w-full;
 }
 
 .progress__bar--label-placement-bottom {
-  flex-direction: column;
-  gap: 8px;
+  @apply flex-col gap-2;
 }
 
 .progress__bar__progress__container {
-  width: 100%;
-  min-height: 8px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background: var(--gray-200, #EAECF0);
+  @apply flex-[1_0_0] min-h-[8px] shrink-0 rounded-[4px] bg-gray-200;
+}
+
+.progress__bar__progress__container--label-placement-bottom {
+  @apply w-full flex-[unset];
 }
 
 .progress__bar__progress__container_progress {
-  flex-shrink: 0;
-  height: 8px;
-  border-radius: 4px;
-  background: var(--primary-600, #254EDB);
+  @apply shrink-0 h-2 rounded-[4px] bg-primary-600;
 }
 
 .progress__bar__description__container {
-  align-self: stretch;
-  color: var(--gray-700, #344054);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
+  @apply self-stretch text-gray-700 text-sm not-italic font-medium leading-5;
 }
 
 .progress__bar__description__container--label-placement-bottom {
-  display: flex;
-  align-self: stretch;
-  justify-content: flex-end;
+  @apply flex self-stretch justify-end;
 }

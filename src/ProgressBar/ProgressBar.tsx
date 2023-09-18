@@ -37,6 +37,10 @@ const ProgressBar = forwardRef<HTMLDivElement, ProgressBarProps>(
     );
     const progressContainerClasses = clsx(
       styles.progress__bar__progress__container,
+      {
+        [styles['progress__bar__progress__container--label-placement-bottom']]:
+          labelPlacement === 'bottom',
+      },
     );
     const progressClasses = clsx(
       styles.progress__bar__progress__container_progress,

@@ -14,8 +14,45 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Switch>;
 
-export const Primary: Story = {
+export const SwitchSM: Story = {
   args: {
+    id: 'switch_1',
+    size: 'sm',
+    onChange: undefined
+  }
+};
+
+export const SwitchSMDisabled: Story = {
+  args: {
+    id: 'switch_1',
+    size: 'sm',
+    disabled: true,
+    onChange: undefined
+  }
+};
+
+export const SwitchMD: Story = {
+  args: {
+    id: 'switch_2',
+    size: 'md',
+    onChange: undefined
+  }
+};
+
+export const SwitchMDDisabled: Story = {
+  args: {
+    id: 'switch_2',
+    size: 'md',
+    disabled: true,
+    onChange: undefined
+  }
+};
+
+export const SwitchMDWithOffset: Story = {
+  args: {
+    id: 'switch_2',
+    size: 'md',
+    offset: 10, // Offset is for the inner floating circle
     onChange: undefined,
-  },
+  }
 };

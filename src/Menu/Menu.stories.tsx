@@ -5,6 +5,8 @@ import { Button, Menu } from '..';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/pro-light-svg-icons';
 
+import React from 'react';
+
 const meta = {
   title: 'Design System/Dropdown',
   component: Dropdown,

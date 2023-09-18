@@ -7,7 +7,7 @@ export interface CardHeaderProps extends React.HTMLProps<HTMLDivElement> {
   Avatar?: () => React.ReactNode;
   Badge?: () => React.ReactNode;
   children?: React.ReactNode;
-  DropDown?: () => React.ReactNode;
+  Dropdown?: () => React.ReactNode;
   SupportingText?: string | (() => React.ReactNode);
   Text: string | (() => React.ReactNode);
   withHeaderLine?: boolean;
@@ -20,7 +20,7 @@ const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(
       Badge,
       children,
       className,
-      DropDown,
+      Dropdown,
       SupportingText,
       Text = 'Text',
       withHeaderLine,
@@ -63,7 +63,7 @@ const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(
           </div>
         </div>
         {children}
-        <div className={dropdownClasses}>{DropDown && DropDown()}</div>
+        {Dropdown && <div className={dropdownClasses}>{Dropdown()}</div>}
       </div>
     );
   },

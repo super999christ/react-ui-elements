@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-nested-ternary */
 import { faCircleCheck } from '@fortawesome/pro-light-svg-icons';
 import {
@@ -20,21 +22,23 @@ type AlertTypeTypes =
   | 'success';
 
 export interface AlertProps {
-  CustomFooter?: () => React.ReactNode;
+  children?: React.ReactNode;
   FeaturedIcon?: () => React.ReactNode;
   SupportingText?: string | (() => React.ReactNode);
   Text: string | (() => React.ReactNode);
   type?: AlertTypeTypes;
+  onClose?: () => void;
 }
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   function Alert(props, ref) {
     const {
-      CustomFooter,
+      children,
       FeaturedIcon,
       SupportingText,
       Text = 'Text',
       type = 'default',
+      onClose,
       ...rest
     } = props;
 
@@ -113,7 +117,10 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
                 />
               )}
             </div>
-            <div className={iconContainerClasses}>
+            <div
+              className={iconContainerClasses}
+              onClick={() => onClose && onClose()}
+            >
               <FontAwesomeIcon
                 className={closeIconClasses}
                 icon={faXmark}
@@ -136,7 +143,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
                   SupportingText()
                 ))}
             </div>
-            {CustomFooter && CustomFooter()}
+            {children}
           </div>
         </div>
         <div className={wrapperClasses}>
@@ -172,9 +179,12 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
                   SupportingText()
                 ))}
             </div>
-            {CustomFooter && CustomFooter()}
+            {children}
           </div>
-          <div className={iconContainerClasses}>
+          <div
+            className={iconContainerClasses}
+            onClick={() => onClose && onClose()}
+          >
             <FontAwesomeIcon
               className={closeIconClasses}
               icon={faXmark}

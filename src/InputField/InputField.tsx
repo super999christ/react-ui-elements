@@ -11,7 +11,7 @@ export interface InputFieldProps
   disabled?: boolean;
   ErrorMessage?: string | (() => React.ReactNode);
   HintMessage?: string | (() => React.ReactNode);
-  label?: string | (() => React.ReactNode);
+  Label?: string | (() => React.ReactNode);
   placeholder?: string;
   PrefixIcon?: () => React.ReactNode;
   size?: InputFieldSizeTypes;
@@ -19,6 +19,8 @@ export interface InputFieldProps
   value?: string | number | readonly string[];
 }
 
+// NOTE: If you want to control the width of the InputField, wrap it in a div and give a width to that div
+// Example: <div classname='w-[320px]'><InputField /></div>
 const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   function InputField(props, ref) {
     const {
@@ -28,7 +30,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       ErrorMessage,
       HintMessage,
       id = 'inputField',
-      label,
+      Label,
       placeholder,
       PrefixIcon,
       size = 'md',
@@ -56,13 +58,13 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
 
     return (
       <div className={wrapperClasses}>
-        {label &&
-          (typeof label === 'string' ? (
+        {Label &&
+          (typeof Label === 'string' ? (
             <label className={labelClasses} htmlFor={id}>
-              {label}
+              {Label}
             </label>
           ) : (
-            label()
+            Label()
           ))}
         <div className={inputFieldWrapperClasses}>
           {PrefixIcon && PrefixIcon()}

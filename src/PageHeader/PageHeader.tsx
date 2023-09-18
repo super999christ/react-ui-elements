@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 
-import type { AvatarSizeTypes } from '../Avatar';
-import Avatar from '../Avatar';
 import styles from './PageHeader.module.css';
 
 type PageHeaderVariantTypes =
@@ -13,12 +11,13 @@ type PageHeaderVariantTypes =
   | 'banner-simple-centered'
   | 'banner-avatar-centered';
 
-export interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
-  Avatarr?: (size: AvatarSizeTypes) => React.ReactNode; // NOTE: return type needs to be <Avatar /> Component
+interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
+  Avatar?: () => React.ReactNode;
   BackButton?: () => React.ReactNode;
+  background?: string;
   Breadcrumb?: () => React.ReactNode;
   children: React.ReactNode;
-  Search?: () => React.ReactNode;
+  MobileAvatar?: () => React.ReactNode;
   supportingText?: string;
   text: string;
   variant: PageHeaderVariantTypes;
@@ -27,12 +26,13 @@ export interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
 const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
   function PageHeader(props, ref) {
     const {
-      Avatarr,
+      Avatar,
       BackButton,
+      background,
       Breadcrumb,
       children,
       className,
-      Search,
+      MobileAvatar,
       supportingText,
       text = 'Text',
       variant = 'simple',
@@ -96,7 +96,7 @@ const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
     const mobileContainerClasses = clsx(styles.mobile__container, {
       [styles['mobile__container--variant-with-banner']]:
         variant !== 'simple' && variant !== 'avatar',
-      [styles['mobile__container-centered']]:
+      [styles['mobile__container--centered']]:
         variant === 'banner-simple-centered' ||
         variant === 'banner-avatar-centered',
     });
@@ -136,26 +136,28 @@ const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
       <div className={className} ref={ref} {...rest}>
         <div className={wrapperClasses}>
           {variant !== 'simple' && variant !== 'avatar' && (
-            <div className={bannerClasses}>
-              {variant === 'banner-avatar-centered' && (
+            <div
+              className={bannerClasses}
+              style={{ background: `${background}` }}
+            >
+              {variant === 'banner-avatar-centered' && Avatar && (
                 <div className={avatarClasses}>
-                  {Avatarr ? Avatarr('4xl') : <Avatar size="4xl" />}
+                  {Avatar()} {/* 4xl */}
                 </div>
               )}
             </div>
           )}
           <div className={outerContainerClasses}>
-            {variant === 'banner-avatar' && (
+            {variant === 'banner-avatar' && Avatar && (
               <div className={avatarClasses}>
-                {Avatarr ? Avatarr('4xl') : <Avatar size="4xl" />}
+                {Avatar()} {/* 4xl */}
               </div>
             )}
             <div className={containerClasses}>
               {Breadcrumb && Breadcrumb()}
               <div className={contentClasses}>
                 <div className={avatarTextContainerClasses}>
-                  {variant === 'avatar' &&
-                    (Avatarr ? Avatarr('2xl') : <Avatar size="2xl" />)}
+                  {variant === 'avatar' && Avatar && Avatar()} {/* 2xl */}
                   <div className={textContainerClasses}>
                     <div className={textClasses}>{text}</div>
                     {supportingText && (
@@ -165,8 +167,7 @@ const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
                     )}
                   </div>
                 </div>
-                {children && children}
-                {Search && Search()}
+                {children}
                 <div />
               </div>
             </div>
@@ -174,13 +175,17 @@ const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
         </div>
         <div className={mobileWrapperClasses}>
           {variant !== 'simple' && variant !== 'avatar' && (
-            <div className={mobileBannerClasses}>
+            <div
+              className={mobileBannerClasses}
+              style={{ background: `${background}` }}
+            >
               {(variant === 'banner-avatar' ||
-                variant === 'banner-avatar-centered') && (
-                <div className={mobileAvatarClasses}>
-                  {Avatarr ? Avatarr('3xl') : <Avatar size="3xl" />}
-                </div>
-              )}
+                variant === 'banner-avatar-centered') &&
+                MobileAvatar && (
+                  <div className={mobileAvatarClasses}>
+                    {MobileAvatar()} {/* 3xl */}
+                  </div>
+                )}
             </div>
           )}
           <div className={mobileContainerClasses}>
@@ -189,8 +194,8 @@ const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
             )}
             <div className={mobileContentClasses}>
               <div className={mobileAvatarTextContainerClasses}>
-                {variant === 'avatar' &&
-                  (Avatarr ? Avatarr('xl') : <Avatar size="xl" />)}
+                {variant === 'avatar' && MobileAvatar && MobileAvatar()}
+                {/* xl */}
                 <div className={mobileTextContainerClasses}>
                   <div className={mobileTextClasses}>{text}</div>
                   {supportingText && (
@@ -201,8 +206,7 @@ const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>(
                 </div>
               </div>
             </div>
-            {children && children}
-            {Search && Search()}
+            {children}
           </div>
         </div>
       </div>

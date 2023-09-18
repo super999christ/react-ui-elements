@@ -1,5 +1,5 @@
 .wrapper {
-  @apply inline-flex;
+  @apply flex;
   @apply flex-col;
   @apply items-start;
   @apply gap-1.5;
@@ -33,7 +33,7 @@
   @apply flex;
   @apply items-center;
   @apply gap-2;
-  @apply self-stretch; 
+  @apply self-stretch;
   @apply px-3.5;
   @apply py-2.5;
   @apply border;
