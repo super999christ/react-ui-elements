@@ -7,7 +7,7 @@ import styles from './ProgressBar.module.css';
 type LabelPlacementTypes = 'bottom' | 'right';
 /* | 'top floating'| 'bottom floating'; */
 
-interface ProgressBarProps
+export interface ProgressBarProps
   extends Omit<React.HTMLProps<HTMLDivElement>, 'size'> {
   label?: string;
   labelPlacement?: LabelPlacementTypes;

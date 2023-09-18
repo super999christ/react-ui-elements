@@ -1,5 +1,7 @@
-import React, { forwardRef } from 'react';
+/* eslint-disable react/button-has-type */
 import clsx from 'clsx';
+import React, { forwardRef } from 'react';
+
 import styles from './Pagination.module.css';
 
 interface PaginationItemProps
@@ -17,7 +19,7 @@ const PaginationItem = forwardRef<HTMLButtonElement, PaginationItemProps>(
       {
         [styles['pagination--item-active']]: selected,
       },
-      className
+      className,
     );
 
     return (
@@ -30,7 +32,7 @@ const PaginationItem = forwardRef<HTMLButtonElement, PaginationItemProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 export default PaginationItem;

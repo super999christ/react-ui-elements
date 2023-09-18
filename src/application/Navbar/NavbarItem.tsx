@@ -1,5 +1,6 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
+
 import styles from './Navbar.module.css';
 
 interface NavbarItemProps extends React.HTMLProps<HTMLDivElement> {
@@ -12,11 +13,11 @@ export const NavbarItem = React.forwardRef<HTMLDivElement, NavbarItemProps>(
     const { active, className, children, ...rest } = props;
 
     const navbarItemClasses = clsx(
-      styles['item'],
+      styles.item,
       {
         [styles['item--active']]: active,
       },
-      className
+      className,
     );
 
     return (
@@ -24,5 +25,5 @@ export const NavbarItem = React.forwardRef<HTMLDivElement, NavbarItemProps>(
         <div className="skew-x-12">{children}</div>
       </div>
     );
-  }
+  },
 );

@@ -147,7 +147,7 @@ export const ModalContent = React.forwardRef<
 >(function ModalContent(props, propRef) {
   const { context: floatingContext, ...context } = useModalContext();
   const ref = useMergeRefs([context.refs.setFloating, propRef]);
-  const { isMounted, styles } = useTransitionStyles(floatingContext, {
+  const { isMounted } = useTransitionStyles(floatingContext, {
     initial: {
       opacity: 0,
     },

@@ -13,7 +13,7 @@ type PageHeaderVariantTypes =
   | 'banner-simple-centered'
   | 'banner-avatar-centered';
 
-interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
+export interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
   Avatarr?: (size: AvatarSizeTypes) => React.ReactNode; // NOTE: return type needs to be <Avatar /> Component
   BackButton?: () => React.ReactNode;
   Breadcrumb?: () => React.ReactNode;

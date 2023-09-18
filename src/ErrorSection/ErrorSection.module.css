@@ -1,0 +1,67 @@
+.wrapper {
+  @apply w-full h-full flex flex-col gap-8 items-center;
+  @apply sm:flex-row sm:gap-8 sm:justify-center;
+}
+
+.wrapper--mobile-reversed {
+  @apply flex-col-reverse;
+  @apply sm:flex-row;
+}
+
+.wrapper--reversed {
+  @apply sm:flex-row-reverse;
+}
+
+.container {
+  @apply flex flex-col gap-8 flex-[1];
+  @apply sm:gap-12;
+}
+
+.header {
+  @apply w-full h-full flex flex-col gap-4 pt-4 px-4;
+  @apply sm:gap-6 sm:pt-8 sm:px-8;
+}
+
+.header--mobile-reversed {
+  @apply pt-0;
+}
+
+.reason {
+  @apply flex flex-col items-start gap-3 self-stretch;
+}
+
+.header--mobile-centered, .reason--mobile-centered {
+  @apply items-center;
+  @apply sm:items-start;
+}
+
+.header--centered, .reason--centered {
+  @apply sm:items-center;
+}
+
+.subheading {
+  @apply text-primary-700 text-base not-italic font-semibold leading-6;
+}
+
+.heading {
+  @apply text-gray-900 text-4xl not-italic font-semibold leading-[44px] tracking-[-0.72px];
+  @apply sm:text-6xl sm:leading-[72px] sm:tracking-[-1.2px];
+}
+
+.supporting__text {
+  @apply text-gray-600 text-lg not-italic font-normal leading-7;
+  @apply sm:text-xl sm:leading-[30px];
+}
+
+.subheading--mobile-centered, .heading--mobile-centered, .supporting__text--mobile-centered {
+  @apply text-center;
+  @apply sm:text-left;
+}
+
+.subheading--centered, .heading--centered, .supporting__text--centered {
+  @apply sm:text-center;
+}
+
+.image {
+  @apply flex flex-[1] items-center justify-center;
+}

@@ -4,7 +4,7 @@ import React, { forwardRef } from 'react';
 
 import styles from './ProgressCircle.module.css';
 
-interface CircleProps {
+export interface CircleProps {
   color: string;
   diameter: number;
   percentage: number;
