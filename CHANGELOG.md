@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/pickleballinc/react-ui/compare/v1.1.0...v1.2.0) (2023-09-18)
+
+
+### Features
+
+* adding storybooks ([36f9da4](https://github.com/pickleballinc/react-ui/commit/36f9da41be79edb575e5c2bb637b82cdb28a3b78))
+
 # [1.1.0](https://github.com/pickleballinc/react-ui/compare/v1.0.5...v1.1.0) (2023-09-18)
 
 
