@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/pickleballinc/react-ui/compare/v1.2.1...v1.3.0) (2023-09-19)
+
+
+### Features
+
+* adding v1 tooltip using react floating ui ([319e9ae](https://github.com/pickleballinc/react-ui/commit/319e9aec056f4f69beb20dc5ff0fabab482795f8))
+
 ## [1.2.1](https://github.com/pickleballinc/react-ui/compare/v1.2.0...v1.2.1) (2023-09-19)
 
 
