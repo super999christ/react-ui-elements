@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/pickleballinc/react-ui/compare/v1.2.0...v1.2.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* storybook stories ([70fdb8b](https://github.com/pickleballinc/react-ui/commit/70fdb8b192012ec6d2d3c6b4abc48c560744b962))
+
 # [1.2.0](https://github.com/pickleballinc/react-ui/compare/v1.1.0...v1.2.0) (2023-09-18)
 
 
