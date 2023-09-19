@@ -28,6 +28,10 @@ export * from './Modal';
 export { default as Switch } from './Switch';
 export * from './Switch';
 
+// Tooltip
+export { default as Tooltip } from './Tooltip';
+export * from './Tooltip';
+
 // application
 // Navbar
 export { default as Navbar } from './application/Navbar';
