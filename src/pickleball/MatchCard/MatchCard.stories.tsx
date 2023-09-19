@@ -1,30 +1,65 @@
-// Button.stories.ts|tsx
-
 import type { Meta, StoryObj } from '@storybook/react';
-import { useArgs } from '@storybook/preview-api';
 
 import MatchCard from './MatchCard';
+import React from 'react';
 
-const meta: Meta<typeof MatchCard> = {
+const meta = {
+  title: 'Pickleball/MatchCard',
   component: MatchCard,
-  title: 'Pickleball/Match/Card',
-};
+  tags: ['autodocs'],
+  parameters: {
+    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
+  },
+} satisfies Meta<typeof MatchCard>;
 
 export default meta;
 type Story = StoryObj<typeof MatchCard>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
 export const Primary: Story = {
   args: {
+    className: "w-full",
     compact: true,
-    court: 3,
-    matchNumber: 12,
-    matchTime: new Date(),
+    court: 12,
     round: 3,
-    style: { minWidth: 420 },
-  },
+    matchTime: "10:45 AM",
+    detailsUrl: 
+      <a
+        href="/"
+        className="px-2 text-xs font-semibold text-experiment hover:underline"
+      >
+        See details
+      </a>
+    ,
+    teams: [
+      {
+        players: [{ id: 1, firstName: 'B', lastName: 'Jones' }],
+        winningPercentage: 10,
+        scores: [
+          {
+            value: 5,
+            winner: false,
+          },
+          {
+            value: 9,
+            winner: false,
+          },
+        ],
+      },
+      {
+        players: [{ id: 1, firstName: 'AJ', lastName: 'Koller' }],
+        winningPercentage: 90,
+        scores: [
+          {
+            value: 11,
+            winner: true,
+          },
+          {
+            value: 11,
+            winner: true,
+          },
+        ],
+      },
+    ],
+    matchDateTime: "Jun 16 - 10:00 AM EDT"
+  }
 };

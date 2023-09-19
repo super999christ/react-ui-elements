@@ -40,7 +40,7 @@ export const Image: Story = {
         <Button className='!text-primary-700' size='sm' variant='link'>Changelog</Button>
       </div>,
     imageAlt: 'From Figma UI-kit',
-    imageLink: 'https://s3-alpha-sig.figma.com/img/1025/58f7/37a8f1342388b36fe617cf0368ec6e92?Expires=1694995200&Signature=mIzAF-OBkiRMhqFYrTeYbVnKVbqhSnv1R7GL9BbhlqSk-eN1Gf0s80vZvzxHSANk7wAtsUNLHFNmXIG5txq1j0Tix2k1PI7sqmI2lIKTFuCJrVWd3XK8WaflNOkPHfkgKoLGyW-sEbhizjo~K5epzfnLnza4ren3ZZafFehkQhtk3cDB4xVP-DQR8SWc9OtqyLXRac6ncYVV7vukV6xXuci3jNrUGlxC6navapnx6LGsVpg5I7KFA3Q1kJzhFUGRV67KxgCPpw4ggQNCwzVuoL1WuiBGkAD4waipYmCPyRFUSNjMCGKTu909FBrvnOxzWcLePUqnAX1QWTlZW0EcKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+    imageLink: 'https://smgmt.org/wp-content/uploads/2023/08/pickleball-image.jpg',
     SupportingText: 'Check out the all new dashboard view. Pages and exports now load faster.',
     Text: 'We’ve just released a new update!',
     type: 'image'

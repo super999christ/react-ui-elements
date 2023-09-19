@@ -4,8 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Button } from '..';
-import {
-  Modal,
+import Modal, {
   ModalClose,
   ModalContent,
   ModalDescription,
@@ -20,12 +19,12 @@ export const ModalControlled = () => {
       <Button onClick={() => setOpen(true)} size="sm">
         Open
       </Button>
-      <Modal open={open} onOpenChange={(opened) => setOpen(opened)}>
+      <Modal open={open} onOpenChange={(opened) => setOpen(false)}>
         <ModalContent
-          className="flex items-center justify-center"
+          className="flex flex-col justify-center"
           style={{ width: 400 }}
         >
-          <ModalHeading className="flex items-center">
+          <ModalHeading className="w-full flex items-center justify-between">
             <div className="flex-1 text-lg font-semibold leading-7">
               Delete blog post
             </div>
@@ -41,7 +40,7 @@ export const ModalControlled = () => {
             Are you sure you want to delete this post?
           </ModalDescription>
           <div className="flex justify-end gap-2 pt-6">
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="sm" onClick={() => setOpen(false)}>
               Cancel
             </Button>
             <Button variant="primary" size="sm" destructive>
