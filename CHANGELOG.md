@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/pickleballinc/react-ui/compare/v1.3.2...v1.3.3) (2023-09-19)
+
+
+### Bug Fixes
+
+* switch uncontrolled prop and fix falsy on checked ([c496434](https://github.com/pickleballinc/react-ui/commit/c496434215daabf946cf176eb7439043aa578964))
+
 ## [1.3.2](https://github.com/pickleballinc/react-ui/compare/v1.3.1...v1.3.2) (2023-09-19)
 
 
