@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/pickleballinc/react-ui/compare/v1.3.0...v1.3.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* export tooltip from package ([d34ed77](https://github.com/pickleballinc/react-ui/commit/d34ed7758bd8ee9e5f4bccd2d59d5febab8ccfc5))
+
 # [1.3.0](https://github.com/pickleballinc/react-ui/compare/v1.2.1...v1.3.0) (2023-09-19)
 
 
