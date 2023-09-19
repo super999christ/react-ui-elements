@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/pickleballinc/react-ui/compare/v1.3.1...v1.3.2) (2023-09-19)
+
+
+### Bug Fixes
+
+* switch to use first controlled and then uncontrolled prop ([73eb5f5](https://github.com/pickleballinc/react-ui/commit/73eb5f5c59f476593f64a126daef5b8e92b7abc1))
+
 ## [1.3.1](https://github.com/pickleballinc/react-ui/compare/v1.3.0...v1.3.1) (2023-09-19)
 
 
