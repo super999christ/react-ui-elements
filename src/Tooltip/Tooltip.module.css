@@ -1,0 +1,8 @@
+.tooltip {
+  @apply bg-black/70;
+  @apply px-2;
+  @apply py-1;
+  @apply text-white;
+  @apply rounded-md;
+  @apply text-sm;
+}
