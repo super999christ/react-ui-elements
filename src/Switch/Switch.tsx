@@ -54,7 +54,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const isDragging = useRef(false);
 
   const [uncontrolled, setUncontrolled] = useState(false);
-  const isChecked = uncontrolled ?? props.checked;
+  const isChecked = props.checked || uncontrolled;
 
   const [isMounted, setIsMounted] = useState(false);
   const [hasOutline, setHasOutline] = useState(false);
@@ -83,9 +83,8 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   ) => {
     if (props.onChange) {
       props.onChange(!isChecked, event, props.id);
-    } else {
-      setUncontrolled(!uncontrolled);
     }
+    setUncontrolled(!uncontrolled);
   };
 
   const onClick = (event: React.MouseEvent<Element, MouseEvent>) => {
