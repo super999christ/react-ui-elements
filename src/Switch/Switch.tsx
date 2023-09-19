@@ -4,7 +4,7 @@ import React, { forwardRef, useEffect, useRef, useState } from 'react';
 
 import styles from './Switch.module.css';
 
-type SwitchSize = 'sm' | 'md';
+type SwitchSize = 'xs' | 'sm' | 'md';
 
 export interface SwitchProps {
   checked?: boolean;
@@ -23,6 +23,10 @@ export interface SwitchProps {
 }
 
 const SWITCH_SIZES = {
+  xs: {
+    WIDTH: 26,
+    HEIGHT: 16,
+  },
   sm: {
     WIDTH: 36,
     HEIGHT: 20,
@@ -54,13 +58,10 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const isDragging = useRef(false);
 
   const [uncontrolled, setUncontrolled] = useState(false);
-  const isChecked = props.checked || uncontrolled;
+  const isChecked = props.checked !== undefined ? props.checked : uncontrolled;
 
   const [isMounted, setIsMounted] = useState(false);
-  const [hasOutline, setHasOutline] = useState(false);
   const [pos, setPos] = useState(isChecked ? checkedPos : uncheckedPos);
-  // eslint-disable-next-line no-console
-  console.log(hasOutline);
 
   useEffect(() => {
     setIsMounted(true);
@@ -99,7 +100,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
       // Prevent clicking label, but not key activation from setting outline to true - yes, this is absurd
       if (Date.now() - lastKeyUpAt.current > 50) {
         if (isMounted) {
-          setHasOutline(true);
+          //
         }
       }
     }
@@ -109,7 +110,6 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
     inputRef.current?.focus();
     startX.current = clientX;
     dragStartTime.current = Date.now();
-    setHasOutline(true);
   };
 
   const onDrag = (clientX: number) => {
@@ -146,7 +146,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
 
     if (isMounted) {
       isDragging.current = false;
-      setHasOutline(false);
+      // setHasOutline(false);
     }
 
     lastDragAt.current = Date.now();

@@ -12,6 +12,10 @@ export * from './Badge';
 export { default as Button } from './Button';
 export * from './Button';
 
+// Button
+export { default as Checkbox } from './Checkbox';
+export * from './Checkbox';
+
 // Switch
 export { default as Drawer } from './Drawer';
 export * from './Drawer';
