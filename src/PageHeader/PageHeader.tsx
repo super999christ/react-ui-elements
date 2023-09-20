@@ -11,7 +11,7 @@ type PageHeaderVariantTypes =
   | 'banner-simple-centered'
   | 'banner-avatar-centered';
 
-interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
+export interface PageHeaderProps extends React.HTMLProps<HTMLDivElement> {
   Avatar?: () => React.ReactNode;
   BackButton?: () => React.ReactNode;
   background?: string;
