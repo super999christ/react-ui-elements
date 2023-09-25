@@ -84,5 +84,74 @@ export * from './application/Pagination';
 // MatchCard
 export { default as MatchCard } from './pickleball/MatchCard';
 export * from './pickleball/MatchCard';
+
+// ButtonsContainer
+export { default as ButtonsContainer } from './pickleball/ButtonsContainer';
+export * from './pickleball/ButtonsContainer';
+
+// ExtraSmallNewsCard
+export { default as ExtraSmallNewsCard } from './pickleball/ExtraSmallNewsCard';
+export * from './pickleball/ExtraSmallNewsCard';
+
+// FeaturedPlayer
+export { default as FeaturedPlayer } from './pickleball/FeaturedPlayer';
+export * from './pickleball/FeaturedPlayer';
+
+// FeaturedPlayersContainer
+export { default as FeaturedPlayersContainer } from './pickleball/FeaturedPlayersContainer';
+export * from './pickleball/FeaturedPlayersContainer';
+
+// LoginCard
+export { default as LoginCard } from './pickleball/LoginCard';
+export * from './pickleball/LoginCard';
+
+// MatchCardsContainer
+export { default as MatchCardsContainer } from './pickleball/MatchCardsContainer';
+export * from './pickleball/MatchCardsContainer';
+
+// NewsCard
+export { default as NewsCard } from './pickleball/NewsCard';
+export * from './pickleball/NewsCard';
+
+// NewsList
+export { default as NewsList } from './pickleball/NewsList';
+export * from './pickleball/NewsList';
+
+// Partners
+export { default as Partners } from './pickleball/Partners';
+export * from './pickleball/Partners';
+
+// ResultCard
+export { default as ResultCard } from './pickleball/ResultCard';
+export * from './pickleball/ResultCard';
+
+// SideNewsContainer
+export { default as SideNewsContainer } from './pickleball/SideNewsContainer';
+export * from './pickleball/SideNewsContainer';
+
+// SmallNewsCard
+export { default as SmallNewsCard } from './pickleball/SmallNewsCard';
+export * from './pickleball/SmallNewsCard';
+
+// SocialMedia
+export { default as SocialMedia } from './pickleball/SocialMedia';
+export * from './pickleball/SocialMedia';
+
+// Standings
+export { default as Standings } from './pickleball/Standings';
+export * from './pickleball/Standings';
+
+// ToursList
+export { default as ToursList } from './pickleball/ToursList';
+export * from './pickleball/ToursList';
+
+// TourTitle
+export { default as TourTitle } from './pickleball/TourTitle';
+export * from './pickleball/TourTitle';
+
+// TVChannelCard
+export { default as TVChannelCard } from './pickleball/TVChannelCard';
+export * from './pickleball/TVChannelCard';
+
 // utils
 export * from './utils';
