@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import FeaturedPlayer from './FeaturedPlayer';
-import shutterstock2 from '../assets/shutterstock-2.png';
+const shutterstock2 = '/static/media/public/assets/shutterstock-2.png';
 
 const meta = {
   title: 'Pickleball/FeaturedPlayer',

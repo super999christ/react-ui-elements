@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import ToursList from './ToursList';
-import pickleballPlusLogo from '../assets/pickleball-plus-experiment.svg';
+const pickleballPlusLogo = '/static/media/public/assets/pickleball-plus-experiment.svg';
 
 const meta = {
   title: 'Pickleball/ToursList',

@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import LoginCard from './LoginCard';
 
-import pickleballTV from './../assets/pickleball-tv.svg';
-import pickleballPlus from './../assets/pickleball-plus.svg';
-import shutterstock1 from './../assets/shutterstock-1.png';
-import shutterstock2 from './../assets/shutterstock-2.png';
+const pickleballTV = '/static/media/public/assets/pickleball-tv.svg';
+const pickleballPlus = '/static/media/public/assets/pickleball-plus.svg';
+const shutterstock1 = '/static/media/public/assets/shutterstock-1.png';
+const shutterstock2 = '/static/media/public/assets/shutterstock-2.png';
 
 import React from 'react';
 
