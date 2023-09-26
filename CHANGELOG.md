@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/pickleballinc/react-ui/compare/v1.3.4...v1.3.5) (2023-09-26)
+
+
+### Bug Fixes
+
+* add terser to rollup build and compress bundle ([157f6a3](https://github.com/pickleballinc/react-ui/commit/157f6a3ce34269e9a764106fecef024c27b6876e))
+
 ## [1.3.4](https://github.com/pickleballinc/react-ui/compare/v1.3.3...v1.3.4) (2023-09-26)
 
 
