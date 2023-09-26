@@ -7,50 +7,53 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import gzipPlugin from 'rollup-plugin-gzip'
+import preserveDirectives from "rollup-plugin-preserve-directives";
+
 
 import pkg from "./package.json" assert { type: "json" };
 
 export default [
   {
     input: "src/index.ts",
-    output: [
+    output: [ 
       {
-        file: pkg.main,
-        format: "cjs",
-        sourcemap: true,
-      },
-      {
-        file: pkg.module,
+        dir: './dist',
         format: "esm",
         sourcemap: true,
+        preserveModules: true,
       },
     ],
+    onwarn(warning, warn) {
+      if (
+        warning.code === 'MODULE_LEVEL_DIRECTIVE' &&
+        warning.message.includes(`use client`)
+      ) {
+        return;
+      }
+      warn(warning);
+    },
     plugins: [
       peerDepsExternal(),
       postcss({
         minimize: true,
         modules: true,
-        use: {
-          sass: null,
-          stylus: null,
-          less: { javascriptEnabled: true },
-        },
-        extract: true,
+        inject: true,
+        extract: false,
       }),
-      /* preserveDirectives(), */
+      preserveDirectives({
+        supressPreserveModulesWarning: true
+      }),
       resolve(),
       commonjs(),
       typescript({
         tsconfig: "./tsconfig.json",
       }),
-      /* terser(), */
+      terser({
+        compress: {
+          directives: false
+        }
+      }),
       gzipPlugin()
     ],
-  },
-  {
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts()],
-    external: [/\.(css|less|scss)$/],
-  },
+  }
 ];
