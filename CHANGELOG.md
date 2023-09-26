@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/pickleballinc/react-ui/compare/v1.3.3...v1.3.4) (2023-09-26)
+
+
+### Bug Fixes
+
+* exported all components ([a4f508e](https://github.com/pickleballinc/react-ui/commit/a4f508e52995fd067326e0b7ddc4662cc8ba2004))
+
 ## [1.3.3](https://github.com/pickleballinc/react-ui/compare/v1.3.2...v1.3.3) (2023-09-19)
 
 
