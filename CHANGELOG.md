@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/pickleballinc/react-ui/compare/v1.3.5...v1.3.6) (2023-09-26)
+
+
+### Bug Fixes
+
+* rollupconfig to enable terser and preserve module directives ([afad5a7](https://github.com/pickleballinc/react-ui/commit/afad5a7c8d7afdeeb56796a61141b7b0e83b5e00))
+
 ## [1.3.5](https://github.com/pickleballinc/react-ui/compare/v1.3.4...v1.3.5) (2023-09-26)
 
 

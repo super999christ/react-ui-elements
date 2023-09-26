@@ -1,6 +1,6 @@
 {
   "name": "@pickleballinc/react-ui",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "React UI lib for @pickleballinc npm projects.",
   "module": "dist/src/index.js",
   "types": "dist/types/index.d.ts",
