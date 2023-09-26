@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import placeholder from '../../public/assets/placeholder.jpg';
-
 interface EventCardProps extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
   onClick?: () => void;
@@ -47,9 +45,7 @@ const Image = React.forwardRef<HTMLDivElement, EventCardImageProps>(
     }, [image]);
 
     const fallbackSrc =
-      placeholder || 'static/media/public/assets/placeholder.jpg';
-
-    console.log(imgSrc);
+      'https://images.pickleball.com/placeholder/pickleball.png';
 
     return (
       <div className={classes} ref={ref}>
