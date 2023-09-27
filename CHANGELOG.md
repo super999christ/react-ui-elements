@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/pickleballinc/react-ui/compare/v1.4.0...v1.4.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* add build to git ignore and use client directive to index file ([8917f57](https://github.com/pickleballinc/react-ui/commit/8917f57dbf1d195d6b7126ad3fff5c878d58754c))
+
 # [1.4.0](https://github.com/pickleballinc/react-ui/compare/v1.3.6...v1.4.0) (2023-09-27)
 
 
