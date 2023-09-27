@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/pickleballinc/react-ui/compare/v1.4.1...v1.4.2) (2023-09-27)
+
+
+### Bug Fixes
+
+* menu li item custom class prop ([4cd8c9f](https://github.com/pickleballinc/react-ui/commit/4cd8c9feeae3a3aaacaff974a39990ef34784736))
+
 ## [1.4.1](https://github.com/pickleballinc/react-ui/compare/v1.4.0...v1.4.1) (2023-09-27)
 
 
