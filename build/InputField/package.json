@@ -1,0 +1,6 @@
+{
+  "sideEffects": false,
+  "module": "./index.js",
+  "main": "../node/InputField/index.js",
+  "types": "./index.d.ts"
+}

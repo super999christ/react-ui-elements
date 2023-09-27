@@ -1,0 +1,105 @@
+## [1.3.5](https://github.com/pickleballinc/react-ui/compare/v1.3.4...v1.3.5) (2023-09-26)
+
+
+### Bug Fixes
+
+* add terser to rollup build and compress bundle ([157f6a3](https://github.com/pickleballinc/react-ui/commit/157f6a3ce34269e9a764106fecef024c27b6876e))
+
+## [1.3.4](https://github.com/pickleballinc/react-ui/compare/v1.3.3...v1.3.4) (2023-09-26)
+
+
+### Bug Fixes
+
+* exported all components ([a4f508e](https://github.com/pickleballinc/react-ui/commit/a4f508e52995fd067326e0b7ddc4662cc8ba2004))
+
+## [1.3.3](https://github.com/pickleballinc/react-ui/compare/v1.3.2...v1.3.3) (2023-09-19)
+
+
+### Bug Fixes
+
+* switch uncontrolled prop and fix falsy on checked ([c496434](https://github.com/pickleballinc/react-ui/commit/c496434215daabf946cf176eb7439043aa578964))
+
+## [1.3.2](https://github.com/pickleballinc/react-ui/compare/v1.3.1...v1.3.2) (2023-09-19)
+
+
+### Bug Fixes
+
+* switch to use first controlled and then uncontrolled prop ([73eb5f5](https://github.com/pickleballinc/react-ui/commit/73eb5f5c59f476593f64a126daef5b8e92b7abc1))
+
+## [1.3.1](https://github.com/pickleballinc/react-ui/compare/v1.3.0...v1.3.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* export tooltip from package ([d34ed77](https://github.com/pickleballinc/react-ui/commit/d34ed7758bd8ee9e5f4bccd2d59d5febab8ccfc5))
+
+# [1.3.0](https://github.com/pickleballinc/react-ui/compare/v1.2.1...v1.3.0) (2023-09-19)
+
+
+### Features
+
+* adding v1 tooltip using react floating ui ([319e9ae](https://github.com/pickleballinc/react-ui/commit/319e9aec056f4f69beb20dc5ff0fabab482795f8))
+
+## [1.2.1](https://github.com/pickleballinc/react-ui/compare/v1.2.0...v1.2.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* storybook stories ([70fdb8b](https://github.com/pickleballinc/react-ui/commit/70fdb8b192012ec6d2d3c6b4abc48c560744b962))
+
+# [1.2.0](https://github.com/pickleballinc/react-ui/compare/v1.1.0...v1.2.0) (2023-09-18)
+
+
+### Features
+
+* adding storybooks ([36f9da4](https://github.com/pickleballinc/react-ui/commit/36f9da41be79edb575e5c2bb637b82cdb28a3b78))
+
+# [1.1.0](https://github.com/pickleballinc/react-ui/compare/v1.0.5...v1.1.0) (2023-09-18)
+
+
+### Features
+
+* 404 pages ([738bcbd](https://github.com/pickleballinc/react-ui/commit/738bcbd9ec03b482e45f258213ecbcb11dad6ca2))
+
+## [1.0.5](https://github.com/pickleballinc/react-ui/compare/v1.0.4...v1.0.5) (2023-09-07)
+
+
+### Bug Fixes
+
+* modal flexbox center content ([56a22e5](https://github.com/pickleballinc/react-ui/commit/56a22e56a960757ea591d400e7782267c2070e38))
+
+## [1.0.4](https://github.com/pickleballinc/react-ui/compare/v1.0.3...v1.0.4) (2023-09-06)
+
+
+### Bug Fixes
+
+* modal overlay background and custom class prop ([cf7fdcd](https://github.com/pickleballinc/react-ui/commit/cf7fdcd02a4dfba7a4a6eba0e73bbaf821a7ff78))
+
+## [1.0.3](https://github.com/pickleballinc/react-ui/compare/v1.0.2...v1.0.3) (2023-09-06)
+
+
+### Bug Fixes
+
+* state update in pagination on item click ([212f567](https://github.com/pickleballinc/react-ui/commit/212f567153f56f5003eedd6a36f3afd2622af59c))
+
+## [1.0.2](https://github.com/pickleballinc/react-ui/compare/v1.0.1...v1.0.2) (2023-09-06)
+
+
+### Bug Fixes
+
+* move pagination classes to module css ([9494b2c](https://github.com/pickleballinc/react-ui/commit/9494b2cb8991854166dd30fc934db977066a159e))
+
+## [1.0.1](https://github.com/pickleballinc/react-ui/compare/v1.0.0...v1.0.1) (2023-09-06)
+
+
+### Bug Fixes
+
+* button icon spacing and pagination alignment ([5f9bf98](https://github.com/pickleballinc/react-ui/commit/5f9bf9816998edb790700bf04106c5951f074d3d))
+* fix package lock dependencies ([82d309a](https://github.com/pickleballinc/react-ui/commit/82d309a6254d906ebdf07542f375ec59efdfd1a8))
+
+# 1.0.0 (2023-09-06)
+
+
+### Features
+
+* initial package release ([b085499](https://github.com/pickleballinc/react-ui/commit/b0854998cd6fb8b0dd9d3a3e01fa12e68eb7d1ec))

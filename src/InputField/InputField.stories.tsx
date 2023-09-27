@@ -128,7 +128,6 @@ export const InputFieldFullExampleWithState: Story = {
             placeholder='Type in your email here'
             ErrorMessage='Email input field is empty.'
             destructive={text ? text.length === 0 : true}
-            onChange={(event) => setText(event.target.value)}
           />
         </div>
       </div>

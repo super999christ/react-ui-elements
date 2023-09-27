@@ -20,7 +20,6 @@ export default [
         dir: './dist',
         format: "esm",
         sourcemap: true,
-        preserveModules: true,
       },
     ],
     onwarn(warning, warn) {
@@ -35,10 +34,8 @@ export default [
     plugins: [
       peerDepsExternal(),
       postcss({
-        minimize: true,
-        modules: true,
-        inject: true,
-        extract: false,
+        extract: true,
+        config: "./postcss.config.js"
       }),
       preserveDirectives({
         supressPreserveModulesWarning: true

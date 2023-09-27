@@ -1,0 +1,6 @@
+{
+  "sideEffects": false,
+  "module": "./index.js",
+  "main": "../node/ProgressCircle/index.js",
+  "types": "./index.d.ts"
+}
