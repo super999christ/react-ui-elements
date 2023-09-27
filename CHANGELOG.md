@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/pickleballinc/react-ui/compare/v1.3.6...v1.4.0) (2023-09-27)
+
+
+### Features
+
+* switch to babel and gulp from rollup ([3b12a0f](https://github.com/pickleballinc/react-ui/commit/3b12a0f51e12ee2262e16d031ce2d75945e60b59))
+
 ## [1.3.6](https://github.com/pickleballinc/react-ui/compare/v1.3.5...v1.3.6) (2023-09-26)
 
 
