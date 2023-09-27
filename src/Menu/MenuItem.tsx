@@ -17,7 +17,9 @@ export interface MenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
       | React.MouseEvent<HTMLElement, MouseEvent>
       | React.KeyboardEvent<HTMLElement>,
   ) => void;
-  rootClassName?: string;
+  components?: {
+    class?: string
+  }
   value?: string | number;
 }
 
@@ -26,7 +28,7 @@ export const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(
     const { children, disabled, helper, icon, isActive, onClick, ...rest } =
       props;
 
-    const listItemClasses = clsx(styles.list__item, props.rootClassName);
+    const listItemClasses = clsx(styles.list__item, props.components?.class);
     const itemClasses = clsx(
       styles.item,
       {
@@ -47,7 +49,7 @@ export const MenuItem = forwardRef<HTMLDivElement, MenuItemProps>(
         >
           <div className={styles.item__content}>
             {icon && <span className={styles.content__icon}>{icon}</span>}
-            <span className={styles.content__text}>{children}</span>
+            {children}
           </div>
           {helper && <div className={styles.item__description}>{helper}</div>}
         </div>

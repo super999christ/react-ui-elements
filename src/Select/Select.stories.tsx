@@ -9,6 +9,8 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ]
 
+const ErrorMessage = () => (<div>Error</div>)
+
 export const SelectPrimary = () => {
   return (
     <Select options={options} isMulti />
