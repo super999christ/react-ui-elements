@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/pickleballinc/react-ui/compare/v1.4.2...v1.4.3) (2023-10-02)
+
+
+### Bug Fixes
+
+* news card image background missing string ([e51d2b7](https://github.com/pickleballinc/react-ui/commit/e51d2b72baaf47cd92570c476c1a7f9d040af0d4))
+
 ## [1.4.2](https://github.com/pickleballinc/react-ui/compare/v1.4.1...v1.4.2) (2023-09-27)
 
 
