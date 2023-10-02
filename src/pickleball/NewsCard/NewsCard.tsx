@@ -38,7 +38,7 @@ const NewsCard = ({
   return (
     <div className={wrapperClasses}>
       <div
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url("${image}")` }}
         className={imageClasses}
       >
         {video && (
