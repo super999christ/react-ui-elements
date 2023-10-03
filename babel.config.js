@@ -21,6 +21,13 @@ function resolveAliasPath(relativeToBabelConf) {
 
 const productionPlugins = [
   /* ["babel-plugin-react-remove-properties", { properties: ["data-mui-test"] }], */
+  [
+    "css-modules-transform",
+    {
+      generateScopedName: generateScopedNameFactory("pbui-[hash:base64:5]"),
+      /* preprocessCss: "./scripts/preprocess-css.js"  */
+    },
+  ],
 ];
 
 module.exports = function getBabelConfig(api) {
@@ -83,13 +90,6 @@ module.exports = function getBabelConfig(api) {
       "babel-plugin-transform-react-remove-prop-types",
       {
         mode: "unsafe-wrap",
-      },
-    ],
-    [
-      "css-modules-transform",
-      {
-        generateScopedName: generateScopedNameFactory("pbui-[hash:base64:5]"),
-        /* preprocessCss: "./scripts/preprocess-css.js"  */
       },
     ],
   ];

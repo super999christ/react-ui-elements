@@ -1,0 +1,69 @@
+.thumbnail {
+  @apply relative;
+  @apply overflow-hidden;
+}
+
+.thumbnail--overlay {
+  @apply absolute;
+  @apply inset-0;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+}
+
+.overlay--button {
+  @apply bg-black/80;
+  @apply w-10;
+  @apply h-10;
+  @apply rounded-full;
+  @apply inline-flex;
+  @apply cursor-pointer;
+  @apply hover:bg-black/90;
+  @apply items-center;
+  @apply justify-center;
+  @apply text-white;
+}
+
+.dropzone-wrapper {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-2;
+}
+
+.dropzone {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply rounded-lg;
+  @apply border;
+  @apply border-dashed;
+  @apply border-gray-300;
+  @apply p-4;
+  @apply text-sm;
+  @apply text-gray-700;
+  @apply outline-none;
+  @apply transition;
+  @apply duration-150;
+  @apply hover:border-gray-400;
+}
+
+.dropzone--disabled {
+  @apply opacity-40;
+  @apply cursor-not-allowed;
+}
+
+.dropzone--input {
+  @apply outline-none;
+}
+
+.dropzone--underline {
+  @apply underline;
+}
+
+.processed-files--wrapper {
+  @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply gap-2;
+}

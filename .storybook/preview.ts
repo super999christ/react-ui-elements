@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import "@pqina/pintura/pintura.css";
 import "../src/globals.css"
 
 const preview: Preview = {
