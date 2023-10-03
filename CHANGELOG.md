@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/pickleballinc/react-ui/compare/v1.5.0...v1.5.1) (2023-10-03)
+
+
+### Bug Fixes
+
+* remove unused css files ([66f6218](https://github.com/pickleballinc/react-ui/commit/66f62186e7f2bc3dc6fc80bdb66f34c0b0e4d6ee))
+
 # [1.5.0](https://github.com/pickleballinc/react-ui/compare/v1.4.3...v1.5.0) (2023-10-03)
 
 
