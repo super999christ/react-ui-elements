@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/pickleballinc/react-ui/compare/v1.4.3...v1.5.0) (2023-10-03)
+
+
+### Bug Fixes
+
+* add pqina secret token for npm ([881edd1](https://github.com/pickleballinc/react-ui/commit/881edd18ae30798b6a1863427d3c0366d4e14650))
+
+
+### Features
+
+* adding image uploader and editor ([eecacea](https://github.com/pickleballinc/react-ui/commit/eecaceaf02b12ee5a219d2c09395514072d76da7))
+
 ## [1.4.3](https://github.com/pickleballinc/react-ui/compare/v1.4.2...v1.4.3) (2023-10-02)
 
 
