@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/pickleballinc/react-ui/compare/v1.5.3...v1.5.4) (2023-10-04)
+
+
+### Bug Fixes
+
+* modal overflow scroll issue ([8c366f7](https://github.com/pickleballinc/react-ui/commit/8c366f759463775425b0ee3b6722c3bd442b67d8))
+
 ## [1.5.3](https://github.com/pickleballinc/react-ui/compare/v1.5.2...v1.5.3) (2023-10-04)
 
 
