@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/pickleballinc/react-ui/compare/v1.5.1...v1.5.2) (2023-10-04)
+
+
+### Bug Fixes
+
+* implement input fields ([61f39ce](https://github.com/pickleballinc/react-ui/commit/61f39cef0474a5aa37092fa82d9e875e3a4bef57))
+
 ## [1.5.1](https://github.com/pickleballinc/react-ui/compare/v1.5.0...v1.5.1) (2023-10-03)
 
 
