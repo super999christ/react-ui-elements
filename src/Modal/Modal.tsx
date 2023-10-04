@@ -9,11 +9,11 @@ import {
   useMergeRefs,
   useRole,
   useTransitionStyles,
-} from '@floating-ui/react';
-import clsx from 'clsx';
-import React, { useId } from 'react';
+} from "@floating-ui/react";
+import clsx from "clsx";
+import React, { useId } from "react";
 
-import stylesModule from './Modal.module.css';
+import stylesModule from "./Modal.module.css";
 
 export interface ModalOptions {
   initialOpen?: boolean;
@@ -45,7 +45,7 @@ export function useModal({
   const click = useClick(context, {
     enabled: controlledOpen == null,
   });
-  const dismiss = useDismiss(context, { outsidePressEvent: 'mousedown' });
+  const dismiss = useDismiss(context, { outsidePressEvent: "mousedown" });
   const role = useRole(context);
 
   const interactions = useInteractions([click, dismiss, role]);
@@ -61,7 +61,7 @@ export function useModal({
       setLabelId,
       setDescriptionId,
     }),
-    [open, setOpen, interactions, data, labelId, descriptionId],
+    [open, setOpen, interactions, data, labelId, descriptionId]
   );
 }
 
@@ -80,7 +80,7 @@ export const useModalContext = () => {
   const context = React.useContext(ModalContext);
 
   if (context == null) {
-    throw new Error('Modal components must be wrapped in <Modal />');
+    throw new Error("Modal components must be wrapped in <Modal />");
   }
 
   return context;
@@ -119,8 +119,8 @@ export const ModalTrigger = React.forwardRef<
         ref,
         ...props,
         ...children.props,
-        'data-state': context.open ? 'open' : 'closed',
-      }),
+        "data-state": context.open ? "open" : "closed",
+      })
     );
   }
 
@@ -129,7 +129,7 @@ export const ModalTrigger = React.forwardRef<
       type="button"
       ref={ref}
       // The user can style the trigger based on the state
-      data-state={context.open ? 'open' : 'closed'}
+      data-state={context.open ? "open" : "closed"}
       {...context.getReferenceProps(props)}
     >
       {children}
@@ -158,14 +158,14 @@ export const ModalContent = React.forwardRef<
 
   if (!isMounted) return null;
 
-  const modalContentClasses = clsx(
-    'rounded-xl bg-white p-6 shadow-xl',
-    // eslint-disable-next-line react/prop-types
-    props.className,
-  );
   const overlayClasses = clsx(
-    stylesModule['modal-overlay'],
-    props.overlayClassName,
+    stylesModule["modal-overlay"],
+    props.overlayClassName
+  );
+  const modalContentClasses = clsx(
+    stylesModule["modal-content"],
+    // eslint-disable-next-line react/prop-types
+    props.className
   );
 
   return (

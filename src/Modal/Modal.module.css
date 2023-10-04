@@ -1,7 +1,15 @@
 .modal-overlay {
   @apply z-50;
   @apply flex;
-  @apply items-center;
   @apply justify-center;
   @apply bg-black/80;
+  @apply py-5;
+}
+
+.modal-content {
+  @apply rounded-xl;
+  @apply bg-white;
+  @apply p-6;
+  @apply shadow-xl;
+  @apply m-auto;
 }

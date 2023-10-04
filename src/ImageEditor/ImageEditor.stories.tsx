@@ -3,12 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Documetation from './Documentation.mdx';
 
 import ImageEditor from "./ImageEditor";
-import { createS3ImageStore } from "./S3";
-
-const s3ImageStore = createS3ImageStore({
-  bucketPath: "sponsors-test",
-  uploadUrl: "https://images-uploader.pickleballdev.net/request",
-});
 
 const ImageEditorWrapper = () => {
   return (
