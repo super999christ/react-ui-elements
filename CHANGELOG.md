@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/pickleballinc/react-ui/compare/v1.5.2...v1.5.3) (2023-10-04)
+
+
+### Bug Fixes
+
+* image editor dynamic vars and fix storybooks ([7494610](https://github.com/pickleballinc/react-ui/commit/749461029226ede3371db7e0857a4cad3909afcb))
+
 ## [1.5.2](https://github.com/pickleballinc/react-ui/compare/v1.5.1...v1.5.2) (2023-10-04)
 
 
