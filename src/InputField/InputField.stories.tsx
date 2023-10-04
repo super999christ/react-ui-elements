@@ -3,9 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import InputField from './InputField';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faInfoCircle } from '@fortawesome/pro-light-svg-icons';
-
 const meta = {
   title: 'Design System/InputField',
   component: InputField,
@@ -42,75 +39,33 @@ export const CustomWidth: Story = {
   )
 };
 
-export const WithPrefixIcon: Story = {
+export const withLabel: Story = {
   args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />
+    label: 'Email'
   }
 };
 
-export const WithPrefixIconAndPlaceholder: Story = {
+export const withLabelAndHintMessage: Story = {
   args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />,
-    placeholder: 'Email'
+    label: 'Email',
+    hint: 'Type in your email above.'
   }
 };
 
-export const WithSuffixIcon: Story = {
+export const withLabelAndHintMessageDisabled: Story = {
   args: {
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />
-  }
-};
-
-export const WithSuffixIconAndPlaceholder: Story = {
-  args: {
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />,
-    placeholder: 'Email'
-  }
-};
-
-export const WithPrefixIconAndSuffixIconAndPlaceholder: Story = {
-  args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />,
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />,
-    placeholder: 'Email'
-  }
-};
-
-export const WithPrefixIconAndSuffixIconAndLabel: Story = {
-  args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />,
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />,
-    Label: 'Email'
-  }
-};
-
-export const WithPrefixIconAndSuffixIconAndLabelAndHintMessage: Story = {
-  args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />,
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />,
-    Label: 'Email',
-    HintMessage: 'Type in your email above.'
-  }
-};
-
-export const WithPrefixIconAndSuffixIconAndLabelAndHintMessageDisabled: Story = {
-  args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />,
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />,
-    Label: 'Email',
-    HintMessage: 'Type in your email above.',
+    label: 'Email',
+    hint: 'Type in your email above.',
     disabled: true
   }
 };
 
-export const WithPrefixIconAndSuffixIconAndLabelAndPlaceholderAndErrorMessage: Story = {
+export const withLabelAndPlaceholderAndErrorMessage: Story = {
   args: {
-    PrefixIcon: () => <FontAwesomeIcon icon={faEnvelope} />,
-    SuffixIcon: () => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />,
-    Label: 'Email',
+    label: 'Email',
     placeholder: 'Type in your email here',
-    ErrorMessage: 'This is an error message.',
-    destructive: true
+    hint: 'This is an error message.',
+    hasError: true,
   }
 };
 
@@ -122,12 +77,11 @@ export const InputFieldFullExampleWithState: Story = {
         Text: {text}
         <div className='w-1/2'>
           <InputField
-            PrefixIcon={() => <FontAwesomeIcon icon={faEnvelope} />}
-            SuffixIcon={() => <FontAwesomeIcon icon={faInfoCircle} onClick={() => console.log('Do something...')} />}
-            Label='Email'
+            onChange={(e) => setText(e.target.value)}
+            label='Email'
             placeholder='Type in your email here'
-            ErrorMessage='Email input field is empty.'
-            destructive={text ? text.length === 0 : true}
+            hint={(text && text.length === 0) || !text ? 'Email input field is empty.' : undefined}
+            hasError={(text && text.length === 0) || !text ? true : false}
           />
         </div>
       </div>

@@ -1,86 +1,31 @@
-.wrapper {
-  @apply flex;
-  @apply flex-col;
-  @apply items-start;
-  @apply gap-1.5;
+.hint {
+  @apply mt-[6px] text-sm font-normal leading-5 text-gray-600;
 }
 
-.wrapper__label, .wrapper__hint, .wrapper__error {
-  @apply text-sm;
-  @apply not-italic;
-  @apply leading-5;
-}
-
-.wrapper__hint, .wrapper__error {
-  @apply self-stretch;
-  @apply font-normal;
-}
-
-.wrapper__label {
-  @apply text-gray-700;
-  @apply font-medium;
-}
-
-.wrapper__hint {
+.hint--no-error {
   @apply text-gray-600;
 }
 
-.wrapper__error {
-  @apply text-error-500;
+.hint--has-error {
+  @apply text-error-600;
 }
 
-.wrapper__input__field__wrapper {
-  @apply flex;
-  @apply items-center;
-  @apply gap-2;
-  @apply self-stretch;
-  @apply px-3.5;
-  @apply py-2.5;
-  @apply border;
-  @apply border-gray-300;
-  @apply shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)];
-  @apply rounded-lg;
-  @apply border-solid;
-  @apply bg-white;
+.label {
+  @apply mb-[6px] block text-sm font-medium leading-5 text-gray-700;
 }
 
-.wrapper__input__field__wrapper:focus-within {
-  @apply border-primary-300;
-  @apply shadow-[0px_0px_0px_4px_#F4EBFF,0px_1px_2px_0px_rgba(16,24,40,0.05)];
+.container {
+  @apply flex flex-col;
 }
 
-.wrapper__input__field__wrapper--disabled {
-  @apply bg-gray-50;
+.input {
+  @apply disabled:bg-gray-50 w-full rounded border bg-white px-[10px] py-2 text-sm font-normal text-gray-900 transition-all duration-150 placeholder:text-gray-500 focus:outline-none;
 }
 
-.wrapper__input__field__wrapper--disabled > .wrapper__input__field__wrapper__input__field {
-  @apply text-gray-500;
-  @apply bg-gray-50;
+.input--no-error {
+  @apply border-gray-200 focus:border-primary-300 focus:shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
 }
 
-.wrapper__input__field__wrapper--destructive {
-  @apply border-error-300;
-}
-
-.wrapper__input__field__wrapper--destructive:focus-within {
-  @apply shadow-[0px_0px_0px_4px_#FEE4E2,0px_1px_2px_0px_rgba(16,24,40,0.05)];
-  @apply border-error-300;
-}
-
-.wrapper__input__field__wrapper--size-sm {
-  @apply px-3;
-  @apply py-2;
-}
-
-.wrapper__input__field__wrapper__input__field {
-  @apply text-gray-900;
-  @apply text-base;
-  @apply not-italic;
-  @apply font-normal;
-  @apply leading-6;
-  @apply w-full;
-}
-
-.wrapper__input__field__wrapper__input__field:focus {
-  @apply outline-none;
+.input--has-error {
+  @apply border-error-300 focus:shadow-[0_0_0_4px_theme("colors.error.100/100%")];
 }
