@@ -16,9 +16,10 @@ interface ImageEditorProps {
   height?: number;
   disabled?: boolean;
   multiple?: boolean;
-  store?: ImageStore;
+  store?: ImageStore; // store to upload image
   editorConfig?: EditorConfig;
   token?: string;
+  uploadUrl?: string
   initialImages?: string[];
   onImageUpload?: (response: DoneCallback) => void;
 }
@@ -32,6 +33,7 @@ export default function ImageEditor({
   token,
   initialImages,
   onImageUpload,
+  uploadUrl
 }: ImageEditorProps) {
   const [files, setFiles] = useState<FileType[]>([]);
   const [processedFiles, setProcessedFiles] = useState<string[]>(() => {
@@ -62,22 +64,29 @@ export default function ImageEditor({
       editImage(
         files[0],
         (response) => {
+          console.log(response)
           if (onImageUpload) {
             onImageUpload(response);
           }
-          if (response.pintura.store.uploadURL) {
+          if (response.pintura.store && response.pintura.store.uploadURL) {
             setProcessedFiles([
               ...processedFiles,
               response.pintura.store.uploadURL,
+            ]);
+          } else {
+            setProcessedFiles([
+              ...processedFiles,
+              URL.createObjectURL(response.pintura.dest),
             ]);
           }
         },
         store,
         editorConfig,
-        token
+        token,
+        uploadUrl
       );
     }
-  }, [files, token]);
+  }, [files, token, uploadUrl]);
 
   const derivedProcessedFiles = processedFiles || initialImages;
 
@@ -103,6 +112,14 @@ export default function ImageEditor({
       </div>
     );
   });
+
+  useEffect(
+    () => () => {
+        // Make sure to revoke the Object URL to avoid memory leaks
+        processedFiles.forEach((file) => URL.revokeObjectURL(file));
+    },
+    [processedFiles]
+);
 
   useEffect(
     () => () => {

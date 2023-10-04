@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Avatar from '.';
+import Avatar from './Avatar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSoccerBall } from '@fortawesome/pro-light-svg-icons';

@@ -3,6 +3,7 @@ import {
 } from "@pqina/pintura";
 
 export interface ImageStoreConfig {
+  uploadUrl?: string
   token?: string;
   bucketPath: string;
 }
@@ -16,5 +17,5 @@ export abstract class ImageStore {
 
   abstract _upload(file: File): Promise<any>;
 
-  abstract init(state: PinturaDefaultImageWriterStoreState, token?: string): Promise<any>;
+  abstract init(state: PinturaDefaultImageWriterStoreState, token?: string, uploadUrl?: string): Promise<any>;
 }

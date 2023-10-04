@@ -1,6 +1,5 @@
 // This function is called when the user select an image
 import {
-  PinturaDefaultImageWriterOptions,
   openEditor,
   createDefaultImageReader,
   createDefaultImageWriter,
@@ -16,7 +15,6 @@ import {
   plugin_crop,
   plugin_finetune,
   setPlugins,
-  PinturaDefaultImageWriterStoreState,
 } from "@pqina/pintura";
 import { DoneCallback, EditorConfig, OnImageProcess, PinturaImageFile } from "./types";
 import { ImageStore } from "./ImageStore";
@@ -30,7 +28,8 @@ export const editImage = (
   done: (dest: DoneCallback) => void,
   store?: ImageStore,
   editorConfig?: EditorConfig,
-  token?: string
+  token?: string,
+  uploadUrl?: string
 ) => {
   const imageFile = image.pintura ? image.pintura.file : image;
   const imageState = image.pintura ? image.pintura.data : {};
@@ -42,8 +41,10 @@ export const editImage = (
     imageWriter: createDefaultImageWriter({
       targetSize: editorConfig?.targetSize,
       quality: editorConfig?.quality ?? 100,
-      store: async (state) => store?.init(state, token) 
+      ...(store && { store: async (state) => store?.init(state, token, uploadUrl) })
     }),
+
+    ...(editorConfig?.aspectRatio && { imageCropAspectRatio: editorConfig.aspectRatio }),
 
     // Set Markup Editor defaults
     ...markup_editor_defaults,

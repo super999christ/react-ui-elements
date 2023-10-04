@@ -15,7 +15,7 @@ class PickleballS3ImageStore extends ImageStore {
 
   async _getPresignedUrl(key: string, contentType: string) {
     const psUrl = await fetch(
-      "https://images-uploader.pickleballdev.net/request",
+      `${this._config.uploadUrl}`,
       {
         method: "POST",
         body: JSON.stringify({
@@ -69,12 +69,20 @@ class PickleballS3ImageStore extends ImageStore {
 
   async init(
     state: PinturaDefaultImageWriterStoreState,
-    token: string
+    token?: string,
+    uploadUrl?: string
   ): Promise<ImageWriterStoreState> {
     if (token) this._config.token = token
+    if (uploadUrl) this._config.uploadUrl = uploadUrl
 
     if (!this._config.token) {
+      console.error("Missing user token in upload request. Provide it through the store or as props in ImageEditor component.")
       throw new Error("Missing user token in request.")
+    }
+
+    if (!this._config.uploadUrl) {
+      console.error("Missing upload URL to obtain presigned S3 upload URL. Provide it in store or as prop in ImageEditor component.")
+      throw new Error("Missing upload URL in config.")
     }
 
     const { dest } = state;

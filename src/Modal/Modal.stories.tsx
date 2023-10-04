@@ -9,7 +9,7 @@ import Modal, {
   ModalContent,
   ModalDescription,
   ModalHeading,
-} from '.';
+} from './Modal';
 
 export const ModalControlled = () => {
   const [open, setOpen] = useState(false);

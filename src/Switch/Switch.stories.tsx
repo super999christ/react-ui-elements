@@ -9,7 +9,6 @@ const SwitchWrapper = () => {
   const derived = checked !== undefined ? checked : authorName && authorName.length > 0 ? true : !!authorName
 
   return <>
-    {String(derived)}
     <Switch size='xs' id="switch" checked={derived} onChange={(checked) => setChecked(checked)} />
   </>
 }
