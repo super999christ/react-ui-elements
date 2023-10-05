@@ -3,6 +3,11 @@
   @apply overflow-hidden;
 }
 
+.thumbnail img {
+  @apply w-full;
+  @apply max-w-[100%];
+}
+
 .thumbnail--overlay {
   @apply absolute;
   @apply inset-0;

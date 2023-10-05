@@ -5,7 +5,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "build:rollup": "rimraf dist && rollup -c",
-    "build": "rm -rf build && rm -rf tsconfig.build.tsbuildinfo && npm run build:legacy && npm run build:modern && npm run build:node && npm run build:stable && npm run build:types && npm run build:copy-files && npm run build:css",
+    "build": "rm -rf build && rm -rf tsconfig.build.tsbuildinfo && npm run build:stable && npm run build:types && npm run build:copy-files && npm run build:css",
     "build:legacy": "cross-env NODE_ENV=production node ./scripts/build.mjs legacy",
     "build:modern": "cross-env NODE_ENV=production node ./scripts/build.mjs modern",
     "build:node": "cross-env NODE_ENV=production node ./scripts/build.mjs node",
