@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/pickleballinc/react-ui/compare/v1.5.5...v1.5.6) (2023-10-05)
+
+
+### Bug Fixes
+
+* match card css module ([0e6f395](https://github.com/pickleballinc/react-ui/commit/0e6f395f231e94948ed01269a4c902a6cabc4e85))
+
 ## [1.5.5](https://github.com/pickleballinc/react-ui/compare/v1.5.4...v1.5.5) (2023-10-05)
 
 
