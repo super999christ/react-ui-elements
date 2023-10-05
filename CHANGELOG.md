@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/pickleballinc/react-ui/compare/v1.5.4...v1.5.5) (2023-10-05)
+
+
+### Bug Fixes
+
+* disable node, legacy and modern build and leave only ESM modules ([bbcb7d4](https://github.com/pickleballinc/react-ui/commit/bbcb7d40ccf3d3c39b57b33abc31801e78bbad5b))
+
 ## [1.5.4](https://github.com/pickleballinc/react-ui/compare/v1.5.3...v1.5.4) (2023-10-04)
 
 
