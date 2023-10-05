@@ -1,14 +1,17 @@
-import clsx from 'clsx';
-import React, { useEffect, useRef } from 'react';
+import clsx from "clsx";
+import React, { useEffect, useRef } from "react";
 
-import { mergeRefs } from '../../utils';
-import styles from './MatchCard.module.css';
-import { PlayerAvatar } from './PlayerAvatar';
-import type { TeamInfo } from './types';
+import { mergeRefs } from "../../utils";
+import styles from "./MatchCard.module.css";
+import { PlayerAvatar } from "./PlayerAvatar";
+import type { TeamInfo } from "./types";
 
-const EMPTY_STRING_PLACE = '_';
+const EMPTY_STRING_PLACE = "_";
 
-export const MatchCardTeam = ({ ...team }: TeamInfo) => {
+export const MatchCardTeam = ({
+  oppositeTeam,
+  ...team
+}: { oppositeTeam: TeamInfo } & TeamInfo) => {
   return (
     <div className={styles.team__player}>
       <div className={styles.match__card_team_container}>
@@ -21,10 +24,16 @@ export const MatchCardTeam = ({ ...team }: TeamInfo) => {
           {team.players.map((player) => (
             <div key={player.id} className={styles.match__card_player_name}>
               {player.firstName.length > 0
-                ? `${player.firstName.charAt(0)}${player.lastName ? ', ' : ''}`
+                ? `${player.firstName.charAt(0).toUpperCase()}${
+                    player.lastName ? ", " : ""
+                  }`
                 : `${EMPTY_STRING_PLACE}, `}
               {player.lastName.length > 0 ? (
-                <span className={styles.match__card_player_name_semibold}>{player.lastName}</span>
+                <span
+                  className={styles.match__card_player_name_semibold}
+                >{`${player.lastName
+                  .charAt(0)
+                  .toUpperCase()}${player.lastName.substring(1)}`}</span>
               ) : (
                 EMPTY_STRING_PLACE
               )}
@@ -35,14 +44,14 @@ export const MatchCardTeam = ({ ...team }: TeamInfo) => {
           className={`${styles.match__card_player_name_winning} ${
             team.winningPercentage && team.winningPercentage > 50
               ? styles.match__card_player_name_winning
-              : ''
+              : ""
           }`}
         >
           {`${team.winningPercentage}%`}
         </span>
       </div>
       <div className={styles.match__card_player_auto}>
-        {team.scores?.map((score) => {
+        {team.scores?.map((score, index) => {
           return (
             <div
               key={score.value}
@@ -52,7 +61,7 @@ export const MatchCardTeam = ({ ...team }: TeamInfo) => {
                   : styles.match__card_player_name_results_isnotwinner
               }`}
             >
-              {score.value}
+              {score.value === 0 && oppositeTeam.scores && oppositeTeam.scores[index].value === 0 ? '-' : score.value}
             </div>
           );
         })}
@@ -98,7 +107,7 @@ const MatchCard = React.forwardRef<HTMLDivElement, MatchCardProps>(
 
     let renderCourtMatchTime: string | undefined;
     if (matchTime) {
-      if (typeof matchTime === 'string') {
+      if (typeof matchTime === "string") {
         renderCourtMatchTime = matchTime;
       } else {
         renderCourtMatchTime = matchTime.toISOString();
@@ -108,9 +117,9 @@ const MatchCard = React.forwardRef<HTMLDivElement, MatchCardProps>(
     const matchCardClasses = clsx(
       styles.match__card,
       {
-        [styles['match__card--compact']]: compact,
+        [styles["match__card--compact"]]: compact,
       },
-      className,
+      className
     );
 
     useEffect(() => {
@@ -129,7 +138,7 @@ const MatchCard = React.forwardRef<HTMLDivElement, MatchCardProps>(
           {(tournament || event) && (
             <div className={styles.body__header}>
               {tournament && (
-                <div className={styles.card__title} style={{ width: '100%' }}>
+                <div className={styles.card__title} style={{ width: "100%" }}>
                   {tournament}
                 </div>
               )}
@@ -148,22 +157,23 @@ const MatchCard = React.forwardRef<HTMLDivElement, MatchCardProps>(
                 <div>{renderCourtMatchTime}</div>
               </div>
               {detailsUrl && (
-                <div className={styles.card__details_url}>
-                  {detailsUrl}
-                </div>
+                <div className={styles.card__details_url}>{detailsUrl}</div>
               )}
             </div>
           )}
           <div className={styles.card__team}>
-            {teams?.map((team) => (
-              <MatchCardTeam key={team.winningPercentage} {...team} />
-            ))}
+            {teams && teams[0] && (
+              <MatchCardTeam {...teams[0]} oppositeTeam={teams[1]} />
+            )}
+             {teams && teams[1] && (
+              <MatchCardTeam {...teams[1]} oppositeTeam={teams[0]} />
+            )}
           </div>
-          <div className={styles.body__footer}>{matchDateTime || ''}</div>
+          <div className={styles.body__footer}>{matchDateTime || ""}</div>
         </div>
       </div>
     );
-  },
+  }
 );
 
 export default MatchCard;
