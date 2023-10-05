@@ -6,13 +6,13 @@ import styles from './Textarea.module.css';
 import { Hint } from './Hint';
 import { Label } from './Label';
 
-interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   hasError?: boolean;
   hint?: string;
   label?: string;
 }
 
-const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   function Textarea(props, ref) {
     const { className, label, hasError, hint, ...rest } = props;
 
@@ -37,4 +37,4 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   },
 );
 
-export default Textarea;
+export default TextArea;

@@ -72,6 +72,10 @@ export * from "./Radio";
 export { default as Switch } from "./Switch";
 export * from "./Switch";
 
+// TextArea 
+export { default as TextArea } from "./TextArea";
+export * from "./TextArea";
+
 // Tooltip
 export { default as Tooltip } from "./Tooltip";
 export * from "./Tooltip";
