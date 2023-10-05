@@ -11,20 +11,20 @@ const EMPTY_STRING_PLACE = '_';
 export const MatchCardTeam = ({ ...team }: TeamInfo) => {
   return (
     <div className={styles.team__player}>
-      <div className="flex flex-1 items-center gap-1">
-        <div className="flex gap-1">
+      <div className={styles.match__card_team_container}>
+        <div className={styles.match__card_team_avatar}>
           {team.players.map((player) => {
             return <PlayerAvatar key={player.id} size="xs" />;
           })}
         </div>
-        <div className="">
+        <div>
           {team.players.map((player) => (
-            <div key={player.id} className="text-xs leading-none text-gray-800">
+            <div key={player.id} className={styles.match__card_player_name}>
               {player.firstName.length > 0
                 ? `${player.firstName.charAt(0)}${player.lastName ? ', ' : ''}`
                 : `${EMPTY_STRING_PLACE}, `}
               {player.lastName.length > 0 ? (
-                <span className="font-semibold">{player.lastName}</span>
+                <span className={styles.match__card_player_name_semibold}>{player.lastName}</span>
               ) : (
                 EMPTY_STRING_PLACE
               )}
@@ -32,24 +32,24 @@ export const MatchCardTeam = ({ ...team }: TeamInfo) => {
           ))}
         </div>
         <span
-          className={`px-1 text-[10px] font-semibold leading-none ${
+          className={`${styles.match__card_player_name_winning} ${
             team.winningPercentage && team.winningPercentage > 50
-              ? 'text-success-500'
-              : 'text-gray-500'
+              ? styles.match__card_player_name_winning
+              : ''
           }`}
         >
           {`${team.winningPercentage}%`}
         </span>
       </div>
-      <div className="ml-auto flex">
+      <div className={styles.match__card_player_auto}>
         {team.scores?.map((score) => {
           return (
             <div
               key={score.value}
-              className={`inline-flex w-6 items-center justify-center border-x text-xs font-semibold last-of-type:border-r-0 ${
+              className={`${styles.match__card_player_name_results} ${
                 score.winner
-                  ? 'z-30 border-white bg-success-50 text-success-700'
-                  : 'border-gray-200 bg-white text-gray-500'
+                  ? styles.match__card_player_name_results_iswinner
+                  : styles.match__card_player_name_results_isnotwinner
               }`}
             >
               {score.value}
@@ -129,12 +129,12 @@ const MatchCard = React.forwardRef<HTMLDivElement, MatchCardProps>(
           {(tournament || event) && (
             <div className={styles.body__header}>
               {tournament && (
-                <div className="grow truncate" style={{ width: '100%' }}>
+                <div className={styles.card__title} style={{ width: '100%' }}>
                   {tournament}
                 </div>
               )}
               {event && (
-                <div className="grow truncate" style={{ width: 360 }}>
+                <div className={styles.card__title} style={{ width: 360 }}>
                   {event}
                 </div>
               )}
@@ -148,7 +148,7 @@ const MatchCard = React.forwardRef<HTMLDivElement, MatchCardProps>(
                 <div>{renderCourtMatchTime}</div>
               </div>
               {detailsUrl && (
-                <div className="ml-auto flex items-center pr-2">
+                <div className={styles.card__details_url}>
                   {detailsUrl}
                 </div>
               )}

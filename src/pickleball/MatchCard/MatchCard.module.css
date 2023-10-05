@@ -107,3 +107,78 @@
   @apply block;
   @apply mr-1;
 }
+
+.card__title {
+  @apply grow;
+  @apply truncate;
+}
+
+.card__details_url {
+  @apply ml-auto;
+  @apply flex;
+  @apply items-center;
+  @apply pr-2;
+}
+
+.match__card_team_container {
+  @apply flex;
+  @apply flex-1;
+  @apply items-center;
+  @apply gap-1;
+}
+
+.match__card_team_avatar {
+  @apply flex;
+  @apply gap-1;
+}
+
+.match__card_player_name {
+  @apply text-xs;
+  @apply leading-none;
+  @apply text-gray-800;
+}
+
+.match__card_player_name_semibold {
+  @apply font-semibold
+}
+
+.match__card_player_name_winning {
+  @apply px-1;
+  @apply text-[10px];
+  @apply font-semibold;
+  @apply leading-none;
+  @apply text-gray-500
+}
+
+.match__card_player_name_winning.success {
+  @apply text-success-500;
+}
+
+.match__card_player_name_results {
+  @apply inline-flex;
+  @apply w-6;
+  @apply items-center;
+  @apply justify-center;
+  @apply border-x;
+  @apply text-xs;
+  @apply font-semibold;
+  @apply last-of-type:border-r-0
+}
+
+.match__card_player_name_results_iswinner {
+  @apply z-30;
+  @apply border-white;
+  @apply bg-success-50;
+  @apply text-success-700
+}
+
+.match__card_player_name_results_isnotwinner {
+  @apply border-gray-200;
+  @apply bg-white;
+  @apply text-gray-500
+}
+
+.match__card_player_auto {
+  @apply ml-auto;
+  @apply flex;
+}
