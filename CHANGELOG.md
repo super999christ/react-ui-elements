@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/pickleballinc/react-ui/compare/v1.5.6...v1.5.7) (2023-10-05)
+
+
+### Bug Fixes
+
+* match card name camel case and null scores ([6d8a2c1](https://github.com/pickleballinc/react-ui/commit/6d8a2c1425a493a4f6b7d233cbc987c843848944))
+
 ## [1.5.6](https://github.com/pickleballinc/react-ui/compare/v1.5.5...v1.5.6) (2023-10-05)
 
 
