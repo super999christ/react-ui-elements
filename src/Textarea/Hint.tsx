@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import styles from './Textarea.module.css';
+import styles from './TextArea.module.css';
 
 interface HintProps {
   children: React.ReactNode;

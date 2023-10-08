@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Textarea.module.css';
+import styles from './TextArea.module.css';
 
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode;

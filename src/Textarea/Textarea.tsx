@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 
-import styles from './Textarea.module.css';
+import styles from './TextArea.module.css';
 
 import { Hint } from './Hint';
 import { Label } from './Label';

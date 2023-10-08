@@ -159,23 +159,21 @@
   @apply w-6;
   @apply items-center;
   @apply justify-center;
-  @apply border-x;
   @apply text-xs;
   @apply font-semibold;
-  @apply last-of-type:border-r-0
+  @apply last-of-type:border-r-0;
+  @apply border-l;
+  @apply border-gray-200;
 }
 
 .match__card_player_name_results_iswinner {
-  @apply z-30;
-  @apply border-white;
   @apply bg-success-50;
-  @apply text-success-700
+  @apply text-success-700;
 }
 
 .match__card_player_name_results_isnotwinner {
-  @apply border-gray-200;
   @apply bg-white;
-  @apply text-gray-500
+  @apply text-gray-500;
 }
 
 .match__card_player_auto {

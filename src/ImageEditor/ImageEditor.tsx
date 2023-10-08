@@ -13,14 +13,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/pro-light-svg-icons";
 
 interface ImageEditorProps {
-  height?: number;
   disabled?: boolean;
+  editorConfig?: EditorConfig;
+  height?: number;
+  initialImages?: string[];
   multiple?: boolean;
   store?: ImageStore; // store to upload image
-  editorConfig?: EditorConfig;
   token?: string;
   uploadUrl?: string
-  initialImages?: string[];
   onImageUpload?: (response: DoneCallback) => void;
 }
 

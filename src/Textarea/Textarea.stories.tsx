@@ -1,19 +1,19 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Textarea from './Textarea';
+import TextArea from './TextArea';
 
 const meta = {
-  title: 'Design System/Textarea',
-  component: Textarea,
+  title: 'Design System/TextArea',
+  component: TextArea,
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
   },
-} satisfies Meta<typeof Textarea>;
+} satisfies Meta<typeof TextArea>;
 
 export default meta;
-type Story = StoryObj<typeof Textarea>;
+type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
   args: {}
@@ -34,7 +34,7 @@ export const WithPlaceholder: Story = {
 export const CustomWidth: Story = {
   render: () => (
     <div className='w-80'>
-      <Textarea />
+      <TextArea />
     </div>
   )
 };
@@ -79,14 +79,14 @@ export const withLabelAndPlaceholderAndErrorMessageCustomRows: Story = {
   }
 };
 
-export const TextareaFullExampleWithState: Story = {
+export const TextAreaFullExampleWithState: Story = {
   render: () => {
     const [text, setText] = React.useState<string | undefined>();
     return (
       <div className='w-full flex flex-col gap-2'>
         Text: {text}
         <div className='w-1/2'>
-          <Textarea
+          <TextArea
             onChange={(e) => setText(e.target.value)}
             label='Email'
             placeholder='Type in your email here'
