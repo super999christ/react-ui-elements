@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/pickleballinc/react-ui/compare/v1.5.8...v1.5.9) (2023-10-08)
+
+
+### Bug Fixes
+
+* add missing dependencies ([f820e66](https://github.com/pickleballinc/react-ui/commit/f820e665a8982746db6f47f51969e31e74a1047f))
+
 ## [1.5.8](https://github.com/pickleballinc/react-ui/compare/v1.5.7...v1.5.8) (2023-10-08)
 
 
