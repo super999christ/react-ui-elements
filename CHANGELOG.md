@@ -1,3 +1,12 @@
+## [1.5.8](https://github.com/pickleballinc/react-ui/compare/v1.5.7...v1.5.8) (2023-10-08)
+
+
+### Bug Fixes
+
+* add textarea export to index ([5ebe4ed](https://github.com/pickleballinc/react-ui/commit/5ebe4ed6bae2ddfd219413cb767906cf597efc42))
+* match cards and textarea fix ([2e36a6d](https://github.com/pickleballinc/react-ui/commit/2e36a6d96e905f6cd6dcc340e86f9c91d25043db))
+* rename case sensitive textarea ([77b65c4](https://github.com/pickleballinc/react-ui/commit/77b65c4322bb6f44cde2e3c63ffdb0e38b41011c))
+
 ## [1.5.7](https://github.com/pickleballinc/react-ui/compare/v1.5.6...v1.5.7) (2023-10-05)
 
 
