@@ -12,9 +12,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 import React, {
-  CSSProperties,
   useEffect,
-  useMemo,
   useRef,
   useState,
 } from "react";

@@ -2,8 +2,10 @@
 import { faAngleDown, faTimes } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import type { Props as SelectProps } from "react-select";
+import type { Props as ReactSelectProps } from "react-select";
 import ReactSelect from "react-select";
+
+export interface SelectProps extends ReactSelectProps {}
 
 const CaretDownIcon = () => {
   return <FontAwesomeIcon icon={faAngleDown} className="px-2" size="sm" />;

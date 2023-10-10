@@ -24,6 +24,10 @@ export * from "./CardHeader";
 export { default as Checkbox } from "./Checkbox";
 export * from "./Checkbox";
 
+// DatePicker 
+export { default as DatePicker } from "./DatePicker";
+export * from "./DatePicker";
+
 // Drawer
 export { default as Drawer } from "./Drawer";
 export * from "./Drawer";
@@ -67,6 +71,10 @@ export * from "./ProgressCircle";
 // Radio
 export { default as Radio } from "./Radio";
 export * from "./Radio";
+
+// Select 
+export { default as Select } from "./Select";
+export * from "./Select";
 
 // Switch
 export { default as Switch } from "./Switch";
