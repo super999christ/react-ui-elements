@@ -8,6 +8,7 @@ import {
   useInteractions,
   Placement,
   autoPlacement,
+  shift,
 } from "@floating-ui/react";
 import { faAngleLeft, faAngleRight } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -134,9 +135,7 @@ const DatePicker = ({
         fallbackAxisSideDirection: "none",
         padding: 5,
       }),
-      autoPlacement({
-        crossAxis: true,
-      })
+      shift({ padding: 5 })
     ],
   });
 
@@ -204,7 +203,7 @@ const DatePicker = ({
                 });
                 return (
                   <div className={styles["header-container"]}>
-                    <div className={styles["left-arrow-container "]}>
+                    <div className={styles["left-arrow-container"]}>
                       <span
                         aria-hidden="true"
                         className={styles["header-navigate-month"]}
