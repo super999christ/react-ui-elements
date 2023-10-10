@@ -1,3 +1,11 @@
+## [1.6.2](https://github.com/pickleballinc/react-ui/compare/v1.6.1...v1.6.2) (2023-10-10)
+
+
+### Bug Fixes
+
+* alignment on datepicker header ([93df5ab](https://github.com/pickleballinc/react-ui/commit/93df5ab13bf83ac3719448003e9eac24dd0a69e8))
+* datepicker and select css module ([52541cb](https://github.com/pickleballinc/react-ui/commit/52541cb4d83599178da6f4e10ac8b909db8dee18))
+
 ## [1.6.1](https://github.com/pickleballinc/react-ui/compare/v1.6.0...v1.6.1) (2023-10-10)
 
 
