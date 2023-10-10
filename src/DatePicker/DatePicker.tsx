@@ -7,6 +7,7 @@ import {
   useFloating,
   useInteractions,
   Placement,
+  autoPlacement,
 } from "@floating-ui/react";
 import { faAngleLeft, faAngleRight } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -133,6 +134,9 @@ const DatePicker = ({
         fallbackAxisSideDirection: "none",
         padding: 5,
       }),
+      autoPlacement({
+        crossAxis: true,
+      })
     ],
   });
 
