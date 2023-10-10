@@ -11,11 +11,7 @@ import {
 import { faAngleLeft, faAngleRight } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
-import React, {
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import type { ReactDatePickerProps } from "react-datepicker";
 import ReactDatePicker from "react-datepicker";
 import styles from "./DatePicker.module.css";
@@ -203,21 +199,21 @@ const DatePicker = ({
                   return { label: month, value: index };
                 });
                 return (
-                  <div className="flex items-center justify-center gap-2 py-3 text-sm font-medium text-gray-600">
-                    <div className="mr-auto pl-2">
+                  <div className={styles["header-container"]}>
+                    <div className={styles["left-arrow-container "]}>
                       <span
                         aria-hidden="true"
-                        className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
+                        className={styles["header-navigate-month"]}
                         onClick={() => decreaseMonth()}
                       >
                         <FontAwesomeIcon
                           icon={faAngleLeft}
-                          className="text-gray-700"
+                          className={styles['header-navigate-month-icon']}
                           size="sm"
                         />
                       </span>
                     </div>
-                    <div className="w-[120px]">
+                    <div className={styles['header-dropdown-month']}>
                       <Select
                         instanceId="month"
                         id="month"
@@ -230,7 +226,7 @@ const DatePicker = ({
                         styles={selectStyles}
                       />
                     </div>
-                    <div className="w-[86px]">
+                    <div className={styles['header-dropdown-year']}>
                       <Select
                         instanceId="year"
                         id="year"
@@ -244,15 +240,15 @@ const DatePicker = ({
                         styles={selectStyles}
                       />
                     </div>
-                    <div className="ml-auto pr-2">
+                    <div className={styles["right-arrow-container"]}>
                       <span
                         aria-hidden="true"
-                        className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
+                        className={styles["header-navigate-month"]}
                         onClick={() => increaseMonth()}
                       >
                         <FontAwesomeIcon
                           icon={faAngleRight}
-                          className="text-gray-700"
+                          className={styles['header-navigate-month-icon']}
                           size="sm"
                         />
                       </span>

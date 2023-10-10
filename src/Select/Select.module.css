@@ -1,0 +1,21 @@
+.caret-icon-svg {
+  @apply px-2;
+}
+
+.clear-icon {
+  @apply ml-1;
+  @apply flex;
+  @apply h-[20px];
+  @apply w-[20px];
+  @apply cursor-pointer;
+  @apply items-center;
+  @apply justify-center;
+  @apply rounded-full;
+  @apply hover:bg-error-200;
+}
+
+.clear-icon-svg {
+  @apply cursor-pointer;
+  @apply px-2;
+  @apply text-gray-600;
+}

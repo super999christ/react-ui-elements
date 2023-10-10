@@ -4,22 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import type { Props as ReactSelectProps } from "react-select";
 import ReactSelect from "react-select";
+import styles from "./Select.module.css";
 
 export interface SelectProps extends ReactSelectProps {}
 
 const CaretDownIcon = () => {
-  return <FontAwesomeIcon icon={faAngleDown} className="px-2" size="sm" />;
+  return (
+    <FontAwesomeIcon
+      icon={faAngleDown}
+      className={styles["caret-icon-svg"]}
+      size="sm"
+    />
+  );
 };
 
 const ClearIcon = ({ innerProps }: any) => {
   return (
-    <div
-      {...innerProps}
-      className="ml-1 flex h-[20px] w-[20px] cursor-pointer items-center justify-center rounded-full hover:bg-error-200"
-    >
+    <div {...innerProps} className={styles["clear-icon"]}>
       <FontAwesomeIcon
         icon={faTimes}
-        className="cursor-pointer px-2 text-gray-600"
+        className={styles["clear-icon-svg"]}
         size="xs"
       />
     </div>

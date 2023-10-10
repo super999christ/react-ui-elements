@@ -10,3 +10,48 @@
   @apply bg-white;
   @apply shadow-xs;;
 }
+
+.header-container {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply gap-2;
+  @apply py-3;
+  @apply text-sm;
+  @apply font-medium;
+  @apply text-gray-600;
+}
+
+.left-arrow-container {
+  @apply mr-auto;
+  @apply pl-2;
+}
+
+.right-arrow-container {
+  @apply ml-auto;
+  @apply pr-2;
+}
+
+.header-navigate-month {
+  @apply inline-flex;
+  @apply h-8;
+  @apply w-8;
+  @apply cursor-pointer;
+  @apply items-center;
+  @apply justify-center;
+  @apply rounded-full;
+  @apply bg-gray-100;
+  @apply hover:bg-gray-200;
+}
+
+.header-navigate-month-icon {
+  @apply text-gray-700;
+}
+
+.header-dropdown-month {
+  @apply w-[120px];
+}
+
+.header-dropdown-year {
+  @apply w-[86px];
+}
