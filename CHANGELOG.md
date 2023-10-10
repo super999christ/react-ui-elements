@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/pickleballinc/react-ui/compare/v1.6.0...v1.6.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* add missing peer dependency ([cff7bb7](https://github.com/pickleballinc/react-ui/commit/cff7bb794e83b82b32b491f3ab01b2a5bc7ba626))
+
 # [1.6.0](https://github.com/pickleballinc/react-ui/compare/v1.5.9...v1.6.0) (2023-10-10)
 
 
