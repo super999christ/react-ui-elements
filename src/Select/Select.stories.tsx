@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Select from '.';
+import Select from './Select';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -9,11 +9,9 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ]
 
-const ErrorMessage = () => (<div>Error</div>)
-
 export const SelectPrimary = () => {
   return (
-    <Select options={options} isMulti />
+    <Select options={options} />
   )
 }
 

@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 import "@pqina/pintura/pintura.css";
 import "../src/globals.css"
+import "../src/datepicker.css"
 
 const preview: Preview = {
   parameters: {

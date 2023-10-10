@@ -1,0 +1,12 @@
+.datepicker--wrapper {
+  @apply absolute;
+  @apply left-0;
+  @apply top-full;
+  @apply z-40;
+  @apply overflow-hidden;
+  @apply rounded-xl;
+  @apply border;
+  @apply border-gray-200;
+  @apply bg-white;
+  @apply shadow-xs;;
+}

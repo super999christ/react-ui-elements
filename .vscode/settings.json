@@ -50,5 +50,8 @@
     "titleBar.inactiveBackground": "#0d375e99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#0d375e" // Don't run prettier for files listed in .gitignore
+  "peacock.color": "#0d375e",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  } // Don't run prettier for files listed in .gitignore
 }
