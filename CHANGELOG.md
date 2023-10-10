@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/pickleballinc/react-ui/compare/v1.5.9...v1.6.0) (2023-10-10)
+
+
+### Bug Fixes
+
+* add datepicker and select to exports ([d6c5d96](https://github.com/pickleballinc/react-ui/commit/d6c5d96f248ec771470f2421f038fa2cdab67c72))
+
+
+### Features
+
+* add datepicker and select dropdown ([1a78cab](https://github.com/pickleballinc/react-ui/commit/1a78cab05c493e5017af112cb0175ce146ae5d34))
+
 ## [1.5.9](https://github.com/pickleballinc/react-ui/compare/v1.5.8...v1.5.9) (2023-10-08)
 
 
