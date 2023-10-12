@@ -33,7 +33,6 @@ const ClearIcon = ({ innerProps }: any) => {
 const Select = ({ ...props }: SelectProps) => {
   return (
     <ReactSelect
-      menuPortalTarget={document.body || null}
       components={{
         DropdownIndicator: CaretDownIcon,
         MultiValueRemove: ClearIcon,
