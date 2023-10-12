@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/pickleballinc/react-ui/compare/v1.6.2...v1.6.3) (2023-10-12)
+
+
+### Bug Fixes
+
+* remove document menu portal target from select ([ae7267e](https://github.com/pickleballinc/react-ui/commit/ae7267ef6d98116375ea7058acdae3e5c5916236))
+
 ## [1.6.2](https://github.com/pickleballinc/react-ui/compare/v1.6.1...v1.6.2) (2023-10-10)
 
 
