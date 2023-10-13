@@ -143,7 +143,7 @@
 }
 
 .scores-container {
-  @apply flex ml-auto;
+  @apply flex ml-auto overflow-hidden;
 }
 
 .scores {
@@ -167,7 +167,7 @@
 }
 
 .card--footer {
-  @apply flex border-t border-gray-200 px-[6px] h-10;
+  @apply flex border-t border-gray-300 px-[6px] h-10;
 }
 
 .match-card--compact .card--footer {
