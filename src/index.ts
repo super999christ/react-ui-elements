@@ -101,6 +101,10 @@ export * from "./application/Pagination";
 export { default as MatchCard } from "./pickleball/MatchCard";
 export * from "./pickleball/MatchCard";
 
+// MatchCard
+export { default as MatchCardV2 } from "./pickleball/MatchCardV2";
+export * from "./pickleball/MatchCardV2";
+
 // ButtonsContainer
 export { default as ButtonsContainer } from "./pickleball/ButtonsContainer";
 export * from "./pickleball/ButtonsContainer";

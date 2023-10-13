@@ -69,6 +69,8 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         onlineIndicator !== undefined
       ) {
         return <div className={indicatorClasses} />;
+      } else {
+        return onlineIndicator
       }
 
       return null;
