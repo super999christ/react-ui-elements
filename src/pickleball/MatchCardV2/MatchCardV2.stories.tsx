@@ -31,13 +31,15 @@ export const Default: Story = {
         isWinner: true,
         percentage: 90,
         players: [
-          { playerId: "1", name: "John Smith" },
+          { playerId: "1", name: "John Smitadsasdad" },
+          { playerId: "3", name: "John Smithada" },
         ],
         scores: [11, 10, 0],
       },
       team2: {
         players: [
           { playerId: "2", name: "Amelia Borges" },
+          { playerId: "4", name: "John Smith" },
         ],
         scores: [2, 5, 0],
       },

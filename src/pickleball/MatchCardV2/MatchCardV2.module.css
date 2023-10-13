@@ -103,7 +103,7 @@
 }
 
 .player-names {
-  @apply flex flex-col items-center;
+  @apply flex flex-col;
 }
 
 .player-info-name {
