@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/pickleballinc/react-ui/compare/v1.7.2...v1.7.3) (2023-10-13)
+
+
+### Bug Fixes
+
+* match card v2 names alignment left ([2053950](https://github.com/pickleballinc/react-ui/commit/205395059fd64fe0f0813affe5d2c9f94eafb84b))
+
 ## [1.7.2](https://github.com/pickleballinc/react-ui/compare/v1.7.1...v1.7.2) (2023-10-13)
 
 
