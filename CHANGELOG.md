@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/pickleballinc/react-ui/compare/v1.7.1...v1.7.2) (2023-10-13)
+
+
+### Bug Fixes
+
+* match card v2 border and overflow issue ([f9071e5](https://github.com/pickleballinc/react-ui/commit/f9071e53ed4c0476595bf1e1ecc31e343a8ecbaf))
+
 ## [1.7.1](https://github.com/pickleballinc/react-ui/compare/v1.7.0...v1.7.1) (2023-10-13)
 
 
