@@ -83,8 +83,12 @@
 }
 
 .player-percentage {
-  @apply text-xs text-gray-500;
+  @apply text-xs text-gray-500 flex items-center;
 }
+
+.player-names-wrapper {
+  @apply flex gap-0.5 text-gray-900;
+} 
 
 .match-card--compact .player-percentage {
   @apply text-[10px];
@@ -103,7 +107,7 @@
 }
 
 .player-info-name {
-  @apply inline-flex shrink-0 items-center gap-2 text-sm;
+  @apply inline-flex shrink-0 gap-2 text-sm;
 }
 
 .player-info-name-wrapper {

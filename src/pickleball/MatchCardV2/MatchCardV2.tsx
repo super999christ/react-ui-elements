@@ -163,7 +163,7 @@ const TeamInfoRow = ({
                   key={player.playerId}
                   className={styles["player-info-name"]}
                 >
-                  <div className="flex gap-0.5 text-gray-900">
+                  <div className={styles['player-names-wrapper']}>
                     {name[0] && (
                       <span className={nameClasses}>
                         {shortenName ? `${name[0].charAt(0)}.` : name[0]}
