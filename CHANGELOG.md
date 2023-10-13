@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/pickleballinc/react-ui/compare/v1.6.3...v1.7.0) (2023-10-13)
+
+
+### Features
+
+* matchcard v2 and fix avatar component ([8a4fcb9](https://github.com/pickleballinc/react-ui/commit/8a4fcb9fade733741a16466e7381b351caac301c))
+
 ## [1.6.3](https://github.com/pickleballinc/react-ui/compare/v1.6.2...v1.6.3) (2023-10-12)
 
 
