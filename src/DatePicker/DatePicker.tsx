@@ -7,7 +7,6 @@ import {
   useFloating,
   useInteractions,
   Placement,
-  autoPlacement,
   shift,
 } from "@floating-ui/react";
 import { faAngleLeft, faAngleRight } from "@fortawesome/pro-light-svg-icons";

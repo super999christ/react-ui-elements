@@ -122,10 +122,17 @@ export const CheckboxFullExample: Story = {
   }
 };
 
+type IdType = "react" | "angular" | "vue";
+
+interface FrameworkInterface {
+  id: IdType;
+  value: string;
+}
+
 export const CheckboxFullExampleWithState: Story = {
   render: () => {
-    const frameworks = [{id: 'react', value: 'React'}, {id: 'angular', value: 'Angular'}, {id: 'vue', value: 'Vue'}];
-    const [selected, setSelected] = React.useState<string[]>([]);
+    const frameworks: FrameworkInterface[] = [{id: 'react', value: 'React'}, {id: 'angular', value: 'Angular'}, {id: 'vue', value: 'Vue'}];
+    const [selected, setSelected] = React.useState<IdType[]>([]);
 
     return (
       <div className='flex flex-col w-full justify-center gap-1'>

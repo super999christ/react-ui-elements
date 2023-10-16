@@ -6,7 +6,9 @@ import Tooltip from './Tooltip';
 
 const TooltipButton = () => {
   return <Tooltip>
-    <Tooltip.Trigger><Button variant='primary'>Button CTA</Button></Tooltip.Trigger>
+    <Tooltip.Trigger>
+      <span>Hover over this text</span>
+    </Tooltip.Trigger>
     <Tooltip.Content>Show something nice on hover!</Tooltip.Content>
   </Tooltip>
 }

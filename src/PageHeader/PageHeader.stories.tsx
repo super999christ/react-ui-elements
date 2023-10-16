@@ -35,7 +35,7 @@ export const Simple: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>
   },
@@ -57,7 +57,7 @@ export const Avatar: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>,
     variant: 'avatar'
@@ -78,7 +78,7 @@ export const BannerSimple: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>,
     variant: 'banner-simple'
@@ -101,7 +101,7 @@ export const BannerAvatar: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>,
     variant: 'banner-avatar'
@@ -124,7 +124,7 @@ export const BannerSimpleCentered: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>,
     variant: 'banner-simple-centered'
@@ -149,7 +149,7 @@ export const BannerAvatarCentered: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>,
     variant: 'banner-avatar-centered'
@@ -175,7 +175,7 @@ export const BannerAvatarCenteredWithCustomBackground: Story = {
         <Button size='md' variant='primary'>Primary</Button>
       </div>
       <div className='w-full sm:w-[320px]' >
-        <InputField placeholder='Search' PrefixIcon={() => <FontAwesomeIcon icon={faSearch} className='text-gray-500' />} />
+        <InputField placeholder='Search' />
       </div>
     </div>,
     variant: 'banner-avatar-centered'

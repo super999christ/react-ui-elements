@@ -132,16 +132,21 @@ export const RadioFullExample: Story = {
   },
 };
 
-export const RadioFullStateExample: Story = {
+type IdType = "react" | "angular" | "vue";
+
+interface FrameworkInterface {
+  id: IdType;
+  value: string;
+}
+
+export const RadioFullExampleWithState: Story = {
   render: () => {
-    const frameworks = [
+    const frameworks: FrameworkInterface[] = [
       { id: "react", value: "React" },
       { id: "angular", value: "Angular" },
       { id: "vue", value: "Vue" },
     ];
-    const [selected, setSelected] = React.useState<
-      "react" | "angular" | "vue" | undefined
-    >();
+    const [selected, setSelected] = React.useState<IdType>();
 
     return (
       <div className="flex flex-col w-full justify-center gap-1">
@@ -153,6 +158,7 @@ export const RadioFullStateExample: Story = {
             id={framework.id}
             value={framework.value}
             Text={framework.value}
+            onChange={(e) => setSelected(framework.id)}
           />
         ))}
       </div>
