@@ -131,3 +131,6 @@ build
 .pnp.*
 
 *.module.css.json
+
+storybook-static
+**/*.css.json

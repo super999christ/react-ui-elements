@@ -53,5 +53,8 @@
   "peacock.color": "#0d375e",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   } // Don't run prettier for files listed in .gitignore
 }
