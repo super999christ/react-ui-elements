@@ -64,7 +64,6 @@ export default function ImageEditor({
       editImage(
         files[0],
         (response) => {
-          console.log(response)
           if (onImageUpload) {
             onImageUpload(response);
           }

@@ -1,0 +1,31 @@
+.container {
+  @apply flex gap-1 items-end w-full;
+}
+
+.color {
+  @apply flex flex-col items-center;
+}
+
+.input {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  width: 45px !important;
+  height: 45px !important;
+  border: none !important;
+  cursor: pointer !important;
+  background: white;
+  margin-bottom: -4px;
+}
+
+.input::-webkit-color-swatch {
+  @apply rounded-[4px] border-none;
+}
+
+.input::-moz-color-swatch {
+  @apply rounded-[4px] border-none;
+}
+
+.hash {
+  @apply text-gray-600;
+}

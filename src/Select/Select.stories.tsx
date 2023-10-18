@@ -81,7 +81,6 @@ export const MultiSelectFullExampleWithState: Story = {
       { value: 'vanilla', label: 'Vanilla' },
     ];
     const [selectedOptions, setSelectedOptions] = React.useState<ValueType[]>([]);
-    console.log('selectedOptions: ', selectedOptions);
 
     return (
       <>

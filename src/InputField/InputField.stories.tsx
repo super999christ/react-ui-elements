@@ -145,6 +145,7 @@ export const InputFieldFullExampleWithState: Story = {
         <div className='w-1/2'>
           <InputField
             PrefixIcon={() => <FontAwesomeIcon icon={faMailbox} />}
+            value={text}
             onChange={(e) => setText(e.target.value)}
             label='Email'
             placeholder='Type in your email here'
