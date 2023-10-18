@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMailbox } from '@fortawesome/pro-light-svg-icons';
 
 import InputField from './InputField';
 
@@ -69,6 +71,71 @@ export const withLabelAndPlaceholderAndErrorMessage: Story = {
   }
 };
 
+export const WithPrefix: Story = {
+  args: {
+    label: 'Email',
+    placeholder: 'Type in your email here',
+    hint: 'This is an error message.',
+    // hasError: true,
+    PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+  }
+};
+
+export const WithSuffix: Story = {
+  args: {
+    label: 'Email',
+    placeholder: 'Type in your email here',
+    hint: 'This is an error message.',
+    // hasError: true,
+    SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+  }
+};
+
+export const WithPrefixAndSuffix: Story = {
+  args: {
+    label: 'Email',
+    placeholder: 'Type in your email here',
+    hint: 'This is an error message.',
+    // hasError: true,
+    PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+    SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />
+  }
+};
+
+export const WithPrefixAndDivider: Story = {
+  args: {
+    label: 'Email',
+    placeholder: 'Type in your email here',
+    hint: 'This is an error message.',
+    // hasError: true,
+    PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+    withDivider: true,
+  }
+};
+
+export const WithSuffixAndDivider: Story = {
+  args: {
+    label: 'Email',
+    placeholder: 'Type in your email here',
+    hint: 'This is an error message.',
+    // hasError: true,
+    SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+    withDivider: true,
+  }
+};
+
+export const WithPrefixAndSuffixAndDivider: Story = {
+  args: {
+    label: 'Email',
+    placeholder: 'Type in your email here',
+    hint: 'This is an error message.',
+    // hasError: true,
+    PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+    SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
+    withDivider: true,
+  }
+};
+
 export const InputFieldFullExampleWithState: Story = {
   render: () => {
     const [text, setText] = React.useState<string | undefined>();
@@ -77,6 +144,7 @@ export const InputFieldFullExampleWithState: Story = {
         Text: {text}
         <div className='w-1/2'>
           <InputField
+            PrefixIcon={() => <FontAwesomeIcon icon={faMailbox} />}
             onChange={(e) => setText(e.target.value)}
             label='Email'
             placeholder='Type in your email here'
