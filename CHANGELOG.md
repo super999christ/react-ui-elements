@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/pickleballinc/react-ui/compare/v1.7.3...v1.7.4) (2023-10-18)
+
+
+### Bug Fixes
+
+* add prefixicon, suffixicon and withdivider props to the inputfield ([927eb8c](https://github.com/pickleballinc/react-ui/commit/927eb8c20514b843047cf8e303ec85309bc1d3af))
+
 ## [1.7.3](https://github.com/pickleballinc/react-ui/compare/v1.7.2...v1.7.3) (2023-10-13)
 
 
