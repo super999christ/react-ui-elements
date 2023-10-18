@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/pickleballinc/react-ui/compare/v1.7.4...v1.8.0) (2023-10-18)
+
+
+### Features
+
+* added color picker component ([4d98d9d](https://github.com/pickleballinc/react-ui/commit/4d98d9dbbae3f53d3ba55fa96a8ff3a332e33418))
+
 ## [1.7.4](https://github.com/pickleballinc/react-ui/compare/v1.7.3...v1.7.4) (2023-10-18)
 
 
