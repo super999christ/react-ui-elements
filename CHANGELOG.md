@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/pickleballinc/react-ui/compare/v1.8.0...v1.8.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* babel config to build esm modules ([7d1cbff](https://github.com/pickleballinc/react-ui/commit/7d1cbff22714d54b462c80cc150cf53fa7e9f928))
+
 # [1.8.0](https://github.com/pickleballinc/react-ui/compare/v1.7.4...v1.8.0) (2023-10-18)
 
 
