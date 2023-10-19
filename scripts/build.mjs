@@ -34,7 +34,7 @@ async function run(argv) {
     BABEL_ENV: bundle,
     MUI_BUILD_VERBOSE: verbose,
   };
-  const babelConfigPath = path.resolve(getWorkspaceRoot(), 'babel.config.build.js');
+  const babelConfigPath = path.resolve(getWorkspaceRoot(), 'babel.build.config.js');
   const srcDir = path.resolve('./src');
   const extensions = ['.js', '.ts', '.tsx'];
   const ignore = [

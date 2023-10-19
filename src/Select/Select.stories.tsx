@@ -1,12 +1,12 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react';
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import Select from './Select';
+import Select from "./Select";
 
 const meta = {
-  title: 'Design System/Select',
+  title: "Design System/Select",
   component: Select,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
   },
@@ -18,23 +18,27 @@ type Story = StoryObj<typeof Select>;
 export const Primary: Story = {
   render: () => {
     const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' },
+      { value: "chocolate", label: "Chocolate" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
     ];
 
     return (
-      <Select id="example_1" options={options}/>
+      <Select
+        id="example_1"
+        options={options}
+        menuPortalTarget={document.body}
+      />
     );
-  }
+  },
 };
 
 export const FullExampleWithState: Story = {
   render: () => {
     const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' },
+      { value: "chocolate", label: "Chocolate" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
     ];
 
     const [selectedOption, setSelectedOption] = React.useState<string>();
@@ -46,24 +50,23 @@ export const FullExampleWithState: Story = {
           id="example_2"
           options={options}
           onChange={(e: any) => setSelectedOption(e ? e.value : undefined)}
+          menuPortalTarget={document.body}
         />
       </>
-    )
-  }
+    );
+  },
 };
 
 export const MultiSelect: Story = {
   render: () => {
     const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' },
+      { value: "chocolate", label: "Chocolate" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
     ];
 
-    return (
-      <Select id="example_3" options={options} isMulti />
-    );
-  }
+    return <Select id="example_3" options={options} isMulti menuPortalTarget={document.body} />;
+  },
 };
 
 type ValueType = "chocolate" | "strawberry" | "vanilla";
@@ -76,9 +79,9 @@ interface OptionsInterface {
 export const MultiSelectFullExampleWithState: Story = {
   render: () => {
     const options: OptionsInterface[] = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' },
+      { value: "chocolate", label: "Chocolate" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
     ];
     const [selectedOptions, setSelectedOptions] = React.useState<ValueType[]>([]);
 
@@ -88,10 +91,13 @@ export const MultiSelectFullExampleWithState: Story = {
         <Select
           id="example_4"
           options={options}
-          onChange={(items: any) => setSelectedOptions([...items.map((item) => item.value)])}
+          onChange={(items: any) =>
+            setSelectedOptions([...items.map((item) => item.value)])
+          }
           isMulti
+          menuPortalTarget={document.body}
         />
       </>
-    )
-  }
+    );
+  },
 };
