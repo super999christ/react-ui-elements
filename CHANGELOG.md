@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/pickleballinc/react-ui/compare/v1.8.1...v1.8.2) (2023-10-19)
+
+
+### Bug Fixes
+
+* revert css scoped names ([287fcac](https://github.com/pickleballinc/react-ui/commit/287fcacf05ff216f8ca92fb36d29327e19beaeac))
+
 ## [1.8.1](https://github.com/pickleballinc/react-ui/compare/v1.8.0...v1.8.1) (2023-10-19)
 
 
