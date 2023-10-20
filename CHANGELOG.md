@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/pickleballinc/react-ui/compare/v1.8.2...v1.9.0) (2023-10-20)
+
+
+### Features
+
+* exported colorpicker and reordered exports alphabetically ([e4c80c3](https://github.com/pickleballinc/react-ui/commit/e4c80c3dd8d9650efa1442b59f929fbeb54d69a1))
+
 ## [1.8.2](https://github.com/pickleballinc/react-ui/compare/v1.8.1...v1.8.2) (2023-10-19)
 
 
