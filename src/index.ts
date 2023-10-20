@@ -101,14 +101,6 @@ export { default as Pagination } from "./application/Pagination";
 export * from "./application/Pagination";
 
 // pickleball
-// MatchCard
-export { default as MatchCard } from "./pickleball/MatchCard";
-export * from "./pickleball/MatchCard";
-
-// MatchCard
-export { default as MatchCardV2 } from "./pickleball/MatchCardV2";
-export * from "./pickleball/MatchCardV2";
-
 // ButtonsContainer
 export { default as ButtonsContainer } from "./pickleball/ButtonsContainer";
 export * from "./pickleball/ButtonsContainer";
@@ -128,6 +120,14 @@ export * from "./pickleball/FeaturedPlayersContainer";
 // LoginCard
 export { default as LoginCard } from "./pickleball/LoginCard";
 export * from "./pickleball/LoginCard";
+
+// MatchCard
+export { default as MatchCard } from "./pickleball/MatchCard";
+export * from "./pickleball/MatchCard";
+
+// MatchCardV2
+export { default as MatchCardV2 } from "./pickleball/MatchCardV2";
+export * from "./pickleball/MatchCardV2";
 
 // MatchCardsContainer
 export { default as MatchCardsContainer } from "./pickleball/MatchCardsContainer";
