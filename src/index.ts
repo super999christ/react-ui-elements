@@ -24,6 +24,10 @@ export * from "./CardHeader";
 export { default as Checkbox } from "./Checkbox";
 export * from "./Checkbox";
 
+// ColorPicker
+export { default as ColorPicker } from "./ColorPicker";
+export * from "./ColorPicker";
+
 // DatePicker 
 export { default as DatePicker } from "./DatePicker";
 export * from "./DatePicker";
