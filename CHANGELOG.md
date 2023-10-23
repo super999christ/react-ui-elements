@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/pickleballinc/react-ui/compare/v1.9.0...v1.9.1) (2023-10-23)
+
+
+### Bug Fixes
+
+* react prop errors on match card v2 ([fa2a72c](https://github.com/pickleballinc/react-ui/commit/fa2a72c98d6afb41c39190da6d3aa552583b9aef))
+
 # [1.9.0](https://github.com/pickleballinc/react-ui/compare/v1.8.2...v1.9.0) (2023-10-20)
 
 
