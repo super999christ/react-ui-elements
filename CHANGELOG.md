@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/pickleballinc/react-ui/compare/v1.9.3...v1.9.4) (2023-10-23)
+
+
+### Bug Fixes
+
+* revert container classname and add input props classname ([de3edbb](https://github.com/pickleballinc/react-ui/commit/de3edbbbf015e7010b169d23c5d63a6d8b114f18))
+
 ## [1.9.3](https://github.com/pickleballinc/react-ui/compare/v1.9.2...v1.9.3) (2023-10-23)
 
 
