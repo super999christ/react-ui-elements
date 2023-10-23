@@ -14,22 +14,25 @@ interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   PrefixIcon?: () => React.ReactNode;
   SuffixIcon?: () => React.ReactNode;
   withDivider?: boolean;
+  inputProps: {
+    className: string
+  }
 }
 
 const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   function InputField(props, ref) {
-    const { className, disabled, label, hasError, hint, PrefixIcon, SuffixIcon, withDivider, type = 'text', ...rest } = props;
+    const { className, disabled, label, hasError, hint, PrefixIcon, SuffixIcon, withDivider, type = 'text', inputProps, ...rest } = props;
 
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     const inputContainerClasses = clsx(styles.input__container, {
       [styles['input__container--disabled']]: disabled,
       [styles['input__container--has-error']]: hasError,
-    });
+    }, className);
     const inputClasses = clsx(styles.input, {
       [styles['input--with-prefix-divider']]: PrefixIcon && withDivider,
       [styles['input--with-suffix-divider']]: SuffixIcon && withDivider,
-    }, className);
+    }, inputProps.className);
     const prefixClasses = clsx(styles.prefix);
     const suffixClasses = clsx(styles.suffix);
 
