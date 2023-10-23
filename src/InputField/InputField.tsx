@@ -25,11 +25,11 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     const inputContainerClasses = clsx(styles.input__container, {
       [styles['input__container--disabled']]: disabled,
       [styles['input__container--has-error']]: hasError,
-    }, className);
+    });
     const inputClasses = clsx(styles.input, {
       [styles['input--with-prefix-divider']]: PrefixIcon && withDivider,
       [styles['input--with-suffix-divider']]: SuffixIcon && withDivider,
-    });
+    }, className);
     const prefixClasses = clsx(styles.prefix);
     const suffixClasses = clsx(styles.suffix);
 
