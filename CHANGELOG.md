@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/pickleballinc/react-ui/compare/v1.9.2...v1.9.3) (2023-10-23)
+
+
+### Bug Fixes
+
+* move classname from container to input field ([8c97ef9](https://github.com/pickleballinc/react-ui/commit/8c97ef9d0c5bff29539f5e0a6dbbe3b16818b067))
+
 ## [1.9.2](https://github.com/pickleballinc/react-ui/compare/v1.9.1...v1.9.2) (2023-10-23)
 
 
