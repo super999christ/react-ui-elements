@@ -1,13 +1,10 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { Match, MatchTeam } from "src/types/Match";
 import styles from "./MatchCardV2.module.css";
-import { TeamInfo } from "../MatchCard/types";
 import Avatar from "../../Avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faTimes, faUser } from "@fortawesome/pro-light-svg-icons";
-import { faBadge } from "@fortawesome/pro-solid-svg-icons";
+import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
-import { match } from "assert";
 
 function getPartNames(name: string) {
   return name.split(" ");
@@ -30,8 +27,8 @@ const ClockIcon = ({ width, height }: IconProps) => (
       <path
         d="M7.99992 3.99967V7.99967L10.6666 9.33301M14.6666 7.99967C14.6666 11.6816 11.6818 14.6663 7.99992 14.6663C4.31802 14.6663 1.33325 11.6816 1.33325 7.99967C1.33325 4.31778 4.31802 1.33301 7.99992 1.33301C11.6818 1.33301 14.6666 4.31778 14.6666 7.99967Z"
         stroke="#101828"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>
@@ -58,8 +55,8 @@ const NotWinnerIcon = ({ width, height }: IconProps) => (
       <path
         d="M8.5 3.5L3.5 8.5M3.5 3.5L8.5 8.5"
         stroke="white"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>
@@ -84,8 +81,8 @@ const WinnerIcon = ({ width, height }: IconProps) => (
         fill="#099250"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M8.34995 4.42755C8.43011 4.30164 8.45697 4.14904 8.42462 4.00333C8.39227 3.85761 8.30336 3.73071 8.17745 3.65055C8.05153 3.57039 7.89894 3.54353 7.75322 3.57588C7.6075 3.60823 7.48061 3.69714 7.40045 3.82305L5.1977 7.2843L4.1897 6.0243C4.09651 5.90774 3.96083 5.83297 3.81251 5.81644C3.66419 5.79992 3.51538 5.84299 3.39882 5.93618C3.28226 6.02937 3.20749 6.16504 3.19096 6.31336C3.17444 6.46168 3.21751 6.61049 3.3107 6.72705L4.8107 8.60205C4.8666 8.67202 4.9384 8.72762 5.02012 8.76425C5.10185 8.80087 5.19114 8.81745 5.28056 8.81261C5.36999 8.80777 5.45696 8.78164 5.53426 8.73641C5.61155 8.69118 5.67692 8.62814 5.72495 8.55255L8.34995 4.42755Z"
         fill="white"
       />
@@ -163,7 +160,7 @@ const TeamInfoRow = ({
                   key={player.playerId}
                   className={styles["player-info-name"]}
                 >
-                  <div className={styles['player-names-wrapper']}>
+                  <div className={styles["player-names-wrapper"]}>
                     {name[0] && (
                       <span className={nameClasses}>
                         {shortenName ? `${name[0].charAt(0)}.` : name[0]}
