@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/pickleballinc/react-ui/compare/v1.9.1...v1.9.2) (2023-10-23)
+
+
+### Bug Fixes
+
+* svg icons props in react ([868a95c](https://github.com/pickleballinc/react-ui/commit/868a95c1bac4c87911deb3cbcecf2ee1470bf4cf))
+
 ## [1.9.1](https://github.com/pickleballinc/react-ui/compare/v1.9.0...v1.9.1) (2023-10-23)
 
 
