@@ -1,5 +1,5 @@
 .match-card {
-  @apply border border-gray-300 rounded flex flex-row w-full;
+  @apply border border-gray-300 rounded flex flex-row w-full bg-white;
 }
 
 .match-card__number {
@@ -83,7 +83,7 @@
 }
 
 .player-percentage {
-  @apply text-xs text-gray-500 flex items-center;
+  @apply text-sm font-semibold text-gray-500 flex items-center;
 }
 
 .player-names-wrapper {
@@ -95,7 +95,7 @@
 }
 
 .player-percentage--winner {
-  @apply text-green-500;
+  @apply text-green-700;
 }
 
 .player-info {
