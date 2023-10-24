@@ -1,3 +1,10 @@
+## [1.9.5](https://github.com/pickleballinc/react-ui/compare/v1.9.4...v1.9.5) (2023-10-24)
+
+
+### Bug Fixes
+
+* winning percentage color on match card v2 ([5c44686](https://github.com/pickleballinc/react-ui/commit/5c446860ffd8d9b1eb000342c08bc1b275e08ec5))
+
 ## [1.9.4](https://github.com/pickleballinc/react-ui/compare/v1.9.3...v1.9.4) (2023-10-23)
 
 
