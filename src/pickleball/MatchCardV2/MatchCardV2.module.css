@@ -95,7 +95,7 @@
 }
 
 .player-percentage--winner {
-  @apply text-green-700;
+  @apply text-green-800;
 }
 
 .player-info {
