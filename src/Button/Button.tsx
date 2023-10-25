@@ -5,7 +5,7 @@ import React, { forwardRef } from 'react';
 
 import styles from './Button.module.css';
 
-type ButtonVariant =
+export type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'secondary-color'
