@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/pickleballinc/react-ui/compare/v1.11.0...v1.11.1) (2023-10-25)
+
+
+### Bug Fixes
+
+* added a cursor-pointer class to the top right x icon to notification component ([ef979fb](https://github.com/pickleballinc/react-ui/commit/ef979fb249de891cf96fbd59cc16dc95dc433118))
+
 # [1.11.0](https://github.com/pickleballinc/react-ui/compare/v1.10.0...v1.11.0) (2023-10-25)
 
 
