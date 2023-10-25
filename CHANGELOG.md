@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/pickleballinc/react-ui/compare/v1.10.0...v1.11.0) (2023-10-25)
+
+
+### Features
+
+* added a tabs component with many examples ([dc4f68f](https://github.com/pickleballinc/react-ui/commit/dc4f68f903bb1a04fb3900e228b1e9d7b4fe0309))
+
 # [1.10.0](https://github.com/pickleballinc/react-ui/compare/v1.9.5...v1.10.0) (2023-10-25)
 
 
