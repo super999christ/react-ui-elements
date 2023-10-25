@@ -149,6 +149,10 @@ export * from "./pickleball/Partners";
 export { default as ResultCard } from "./pickleball/ResultCard";
 export * from "./pickleball/ResultCard";
 
+// Sidebar
+export { default as Sidebar } from "./Sidebar";
+export * from "./Sidebar";
+
 // SideNewsContainer
 export { default as SideNewsContainer } from "./pickleball/SideNewsContainer";
 export * from "./pickleball/SideNewsContainer";

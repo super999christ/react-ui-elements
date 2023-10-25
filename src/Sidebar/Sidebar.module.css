@@ -1,0 +1,19 @@
+.container {
+  @apply flex flex-col h-full shrink-0 overflow-y-auto;
+}
+
+.icon__container {
+  @apply flex w-full items-center pt-6;
+}
+
+.icon__container--collapsed {
+  @apply justify-center;
+}
+
+.icon__container--not-collapsed {
+  @apply justify-end px-3;
+}
+
+.icon {
+  @apply text-gray-500 hover:cursor-pointer;
+}
