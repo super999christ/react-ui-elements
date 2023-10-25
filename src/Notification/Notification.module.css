@@ -104,5 +104,5 @@
 }
 
 .close__icon {
-  @apply text-gray-500;
+  @apply text-gray-500 cursor-pointer;
 }
