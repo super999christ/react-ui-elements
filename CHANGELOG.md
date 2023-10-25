@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/pickleballinc/react-ui/compare/v1.9.5...v1.10.0) (2023-10-25)
+
+
+### Features
+
+* added a sidebar component ([1f3ab6a](https://github.com/pickleballinc/react-ui/commit/1f3ab6ac920624a122c3d404b6633da1f5e8b9ca))
+
 ## [1.9.5](https://github.com/pickleballinc/react-ui/compare/v1.9.4...v1.9.5) (2023-10-24)
 
 
