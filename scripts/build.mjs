@@ -46,6 +46,7 @@ async function run(argv) {
     '**/*.stories.ts',
     '**/*.stories.tsx',
     '**/*.d.ts',
+    '.babelrc.json'
   ];
 
   const topLevelNonIndexFiles = glob

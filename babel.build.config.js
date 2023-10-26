@@ -1,5 +1,4 @@
 const path = require("path");
-const crypto = require("crypto");
 const {
   generateScopedNameFactory,
 } = require("@dr.pogodin/babel-plugin-react-css-modules/utils");
