@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/pickleballinc/react-ui/compare/v1.11.1...v1.11.2) (2023-10-26)
+
+
+### Bug Fixes
+
+* added modal backdrop click option ([0966ad5](https://github.com/pickleballinc/react-ui/commit/0966ad5608e9d17ebed633c65476aaaf75cceebb))
+
 ## [1.11.1](https://github.com/pickleballinc/react-ui/compare/v1.11.0...v1.11.1) (2023-10-25)
 
 
