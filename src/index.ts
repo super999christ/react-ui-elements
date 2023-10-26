@@ -84,6 +84,10 @@ export * from "./Select";
 export { default as Switch } from "./Switch";
 export * from "./Switch";
 
+// Tabs 
+export { default as Tabs } from "./Tabs";
+export * from "./Tabs";
+
 // TextArea 
 export { default as TextArea } from "./TextArea";
 export * from "./TextArea";
