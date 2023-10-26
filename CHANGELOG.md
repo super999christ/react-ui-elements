@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/pickleballinc/react-ui/compare/v1.11.2...v1.11.3) (2023-10-26)
+
+
+### Bug Fixes
+
+* exported tabs ([43a0321](https://github.com/pickleballinc/react-ui/commit/43a032184005a86c2e63ddee1a6e9b06feaef647))
+
 ## [1.11.2](https://github.com/pickleballinc/react-ui/compare/v1.11.1...v1.11.2) (2023-10-26)
 
 
