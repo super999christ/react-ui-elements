@@ -53,6 +53,48 @@ export const ModalControlled = () => {
   );
 };
 
+export const ModalControlledNoBackdropClose = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)} size="sm">
+        Open
+      </Button>
+      <Modal open={open} onOpenChange={(opened) => setOpen(false)} backdropClose={false}>
+        <ModalContent
+          className="flex flex-col justify-center"
+          style={{ width: 400 }}
+        >
+          <ModalHeading className="w-full flex items-center justify-between">
+            <div className="flex-1 text-lg font-semibold leading-7">
+              Delete blog post
+            </div>
+            <ModalClose className="ml-auto">
+              <FontAwesomeIcon
+                icon={faTimes}
+                size="xl"
+                className="text-gray-500"
+              />
+            </ModalClose>
+          </ModalHeading>
+          <ModalDescription className="mt-4 text-base font-normal text-gray-600">
+            Are you sure you want to delete this post?
+          </ModalDescription>
+          <div className="flex justify-end gap-2 pt-6">
+            <Button variant="secondary" size="sm" onClick={() => setOpen(false)}>
+              Cancel
+            </Button>
+            <Button variant="primary" size="sm" destructive>
+              Delete
+            </Button>
+          </div>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
+
 const meta = {
   title: 'Application/Modal',
   component: ModalControlled,

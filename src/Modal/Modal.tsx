@@ -19,12 +19,14 @@ export interface ModalOptions {
   initialOpen?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
+  backdropClose?: boolean;
 }
 
 export function useModal({
   initialOpen = false,
   open: controlledOpen,
   onOpenChange: setControlledOpen,
+  backdropClose = true,
 }: ModalOptions = {}) {
   const [uncontrolledOpen, setUncontrolledOpen] = React.useState(initialOpen);
   const [labelId, setLabelId] = React.useState<string | undefined>();
@@ -45,10 +47,14 @@ export function useModal({
   const click = useClick(context, {
     enabled: controlledOpen == null,
   });
-  const dismiss = useDismiss(context, { outsidePressEvent: "mousedown" });
+  const dismiss = useDismiss(context, { outsidePressEvent: "mousedown", outsidePress: backdropClose });
   const role = useRole(context);
 
-  const interactions = useInteractions([click, dismiss, role]);
+  const interactions = useInteractions([
+    click,
+    dismiss, 
+    role,
+  ]);
 
   return React.useMemo(
     () => ({
