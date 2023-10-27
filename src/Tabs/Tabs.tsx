@@ -17,8 +17,9 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   active: string;
   className?: string;
   fullWidth?: boolean;
+  menuPortalTarget?: HTMLElement | null | undefined;
   options: TabInterface[];
-  size: TabSize;
+  size?: TabSize;
   tabClassname?: string;
   type?: TabsType;
   variant?: TabVariant;
@@ -31,8 +32,9 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       active,
       className,
       fullWidth,
+      menuPortalTarget,
       options,
-      size,
+      size = 'md',
       tabClassname,
       type = 'horizontal',
       variant = 'primary',
@@ -79,7 +81,7 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         </div>
         <Select
           className={selectClasses}
-          menuPortalTarget={document.body}
+          menuPortalTarget={menuPortalTarget}
           onChange={onChange}
           options={options}
         />

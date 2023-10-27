@@ -45,6 +45,7 @@ export const Primary: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -74,6 +75,7 @@ export const PrimaryMD: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -104,6 +106,7 @@ export const PrimaryMDFullWidth: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -140,6 +143,7 @@ export const PrimarySMWithState: Story = {
           onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
           active={selectedOption}
           size="sm"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -184,6 +188,7 @@ export const PrimaryMDFullWidthWithState: Story = {
           active={selectedOption}
           fullWidth={true}
           size="md"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -250,6 +255,7 @@ export const GrayMD: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -281,6 +287,7 @@ export const GrayMDFullWidth: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -318,6 +325,7 @@ export const GraySMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="gray"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -363,6 +371,7 @@ export const GrayMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="gray"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -399,6 +408,7 @@ export const WhiteBorder: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -429,6 +439,7 @@ export const WhiteBorderMD: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -460,6 +471,7 @@ export const WhiteBorderMDFullWidth: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -497,6 +509,7 @@ export const WhiteBorderSMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="white-border"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -542,6 +555,7 @@ export const WhiteBorderMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="white-border"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -578,6 +592,7 @@ export const Underline: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -608,6 +623,7 @@ export const UnderlineMD: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -639,6 +655,7 @@ export const UnderlineMDFullWidth: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -676,6 +693,7 @@ export const UnderlineSMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="underline"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -721,6 +739,7 @@ export const UnderlineMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="underline"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -757,6 +776,7 @@ export const UnderlineFilled: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -787,6 +807,7 @@ export const UnderlineFilledMD: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -818,6 +839,7 @@ export const UnderlineFilledMDFullWidth: Story = {
         label: "Tournaments",
       },
     ],
+    menuPortalTarget: document.body,
   },
 };
 
@@ -855,6 +877,7 @@ export const UnderlineFilledSMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -912,6 +935,7 @@ export const UnderlineFilledLGFullWidthWithState: Story = {
           fullWidth={true}
           size="lg"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -969,6 +993,7 @@ export const UnderlineFilledXLFullWidthWithState: Story = {
           fullWidth={true}
           size="xl"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1026,6 +1051,7 @@ export const UnderlineFilled2XLFullWidthWithState: Story = {
           fullWidth={true}
           size="2xl"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1082,6 +1108,7 @@ export const TypeVerticalSMWithState: Story = {
           onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
           active={selectedOption}
           size="sm"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1139,6 +1166,7 @@ export const TypeVerticalMDFullWidthWithState: Story = {
           active={selectedOption}
           fullWidth={true}
           size="md"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1196,6 +1224,7 @@ export const TypeVerticalGraySMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="gray"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1254,6 +1283,7 @@ export const TypeVerticalGrayMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="gray"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1311,6 +1341,7 @@ export const TypeVerticalUnderlineSMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="underline"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1369,6 +1400,7 @@ export const TypeVerticalUnderlineFMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="underline"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1426,6 +1458,7 @@ export const TypeVerticalUnderlineFilledSMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1484,6 +1517,7 @@ export const TypeVerticalUnderlineFilledMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1541,6 +1575,7 @@ export const TypeVerticalWhiteBorderFilledSMWithState: Story = {
           active={selectedOption}
           size="sm"
           variant="white-border"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1599,6 +1634,7 @@ export const TypeVerticalWhiteBorderFilledMDFullWidthWithState: Story = {
           fullWidth={true}
           size="md"
           variant="white-border"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1644,6 +1680,7 @@ export const UnderlineFilledSMWithStateWithCustomWidth: Story = {
           active={selectedOption}
           size="sm"
           variant="underline-filled"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
@@ -1703,6 +1740,7 @@ export const TypeVerticalWhiteBorderFilledSMWithStateWithCustomHeight: Story = {
           size="sm"
           variant="white-border"
           tabClassname="mr-2"
+          menuPortalTarget={document.body}
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
