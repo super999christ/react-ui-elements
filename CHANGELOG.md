@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/pickleballinc/react-ui/compare/v1.11.3...v1.11.4) (2023-10-27)
+
+
+### Bug Fixes
+
+* added menuportaltarget prop to tabs for select which is showing on smaller screens, fixed bouncing effect when hovering over tab by adding transparent border ([8cb605e](https://github.com/pickleballinc/react-ui/commit/8cb605ef2fda2d722a53432d3ddb922cde22b7c1))
+
 ## [1.11.3](https://github.com/pickleballinc/react-ui/compare/v1.11.2...v1.11.3) (2023-10-26)
 
 
