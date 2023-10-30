@@ -3,12 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Documetation from './Documentation.mdx';
 
 import ImageEditor from "./ImageEditor";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/pro-light-svg-icons";
 
 const ImageEditorWrapper = () => {
   return (
     <div className="flex gap-8">
       <div className="w-[400px]">
-        <ImageEditor />
+        <ImageEditor isCircle width={120} height={120} onClearImage={() => console.log('Cleared')}>
+          <FontAwesomeIcon icon={faUser} size="xl" />
+        </ImageEditor>
       </div>
     </div>
   );

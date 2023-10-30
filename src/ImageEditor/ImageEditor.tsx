@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect, useCallback } from "react";
 
 import styles from "./ImageEditor.module.css";
@@ -13,18 +14,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/pro-light-svg-icons";
 
 interface ImageEditorProps {
+  children?: React.ReactNode;
   disabled?: boolean;
   editorConfig?: EditorConfig;
+  isCircle?: boolean;
+  width?: number;
   height?: number;
   initialImages?: string[];
   multiple?: boolean;
   store?: ImageStore; // store to upload image
   token?: string;
-  uploadUrl?: string
+  uploadUrl?: string;
   onImageUpload?: (response: DoneCallback) => void;
+  onClearImage?: () => void;
 }
 
 export default function ImageEditor({
+  children,
+  isCircle,
+  width,
   height,
   disabled,
   multiple,
@@ -33,7 +41,8 @@ export default function ImageEditor({
   token,
   initialImages,
   onImageUpload,
-  uploadUrl
+  uploadUrl,
+  onClearImage,
 }: ImageEditorProps) {
   const [files, setFiles] = useState<FileType[]>([]);
   const [processedFiles, setProcessedFiles] = useState<string[]>(() => {
@@ -102,7 +111,12 @@ export default function ImageEditor({
         <div className={styles["thumbnail--overlay"]}>
           <span
             className={styles["overlay--button"]}
-            onClick={() => removeImage(file)}
+            onClick={() => {
+              if (onClearImage) {
+                onClearImage();
+              }
+              removeImage(file);
+            }}
           >
             <FontAwesomeIcon icon={faTimes} size="sm" />
           </span>
@@ -114,11 +128,11 @@ export default function ImageEditor({
 
   useEffect(
     () => () => {
-        // Make sure to revoke the Object URL to avoid memory leaks
-        processedFiles.forEach((file) => URL.revokeObjectURL(file));
+      // Make sure to revoke the Object URL to avoid memory leaks
+      processedFiles.forEach((file) => URL.revokeObjectURL(file));
     },
     [processedFiles]
-);
+  );
 
   useEffect(
     () => () => {
@@ -128,21 +142,34 @@ export default function ImageEditor({
     [files]
   );
 
+  const wrapperClasses = clsx(styles["dropzone-wrapper"]);
+
   const dropzoneClasses = clsx(styles.dropzone, {
     [styles["dropzone--disabled"]]: disabled,
+    [styles["circle-wrapper"]]: isCircle,
+  });
+
+  const processedFileClasses = clsx(styles["processed-files--wrapper"], {
+    [styles["processed-circle-wrapper"]]: isCircle,
   });
 
   return (
-    <div className={styles['dropzone-wrapper']} style={{ height }}>
+    <div className={wrapperClasses} style={{ width, height, ...(isCircle ? { flexShrink: 0 } : {}) }}>
       {(multiple || (!multiple && processedFiles.length === 0)) && (
         <div className={dropzoneClasses} {...getRootProps()} style={{ height }}>
-          <input {...getInputProps()} className={styles['dropzone--input']} />
-          Drag and Drop your image or
-          <span className={styles['dropzone--underline ']}>Browse</span>
+          <input {...getInputProps()} className={styles["dropzone--input"]} />
+          {children ? (
+            children
+          ) : (
+            <>
+              Drag and Drop your image or
+              <span className={styles["dropzone--underline "]}>Browse</span>
+            </>
+          )}
         </div>
       )}
       {processedFiles.length > 0 && (
-        <div className={styles['processed-files--wrapper']}>{thumbs}</div>
+        <div className={processedFileClasses}>{thumbs}</div>
       )}
     </div>
   );

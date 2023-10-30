@@ -53,6 +53,10 @@
   @apply hover:border-gray-400;
 }
 
+.circle-wrapper {
+  @apply rounded-full;
+}
+
 .dropzone--disabled {
   @apply opacity-40;
   @apply cursor-not-allowed;
@@ -71,4 +75,9 @@
   @apply flex;
   @apply flex-col;
   @apply gap-2;
+}
+
+.processed-circle-wrapper {
+  @apply overflow-hidden;
+  @apply rounded-full;
 }
