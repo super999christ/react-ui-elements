@@ -1,3 +1,10 @@
+## [1.11.5](https://github.com/pickleballinc/react-ui/compare/v1.11.4...v1.11.5) (2023-10-30)
+
+
+### Bug Fixes
+
+* add image editor circle cropper and on image clear handler ([76fdeba](https://github.com/pickleballinc/react-ui/commit/76fdeba396668446237ffdc41dad248656d1cf6b))
+
 ## [1.11.4](https://github.com/pickleballinc/react-ui/compare/v1.11.3...v1.11.4) (2023-10-27)
 
 
