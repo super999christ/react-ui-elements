@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/pickleballinc/react-ui/compare/v1.12.0...v1.12.1) (2023-11-01)
+
+
+### Bug Fixes
+
+* made close x icon optional in the alert and notification components ([e8b52ce](https://github.com/pickleballinc/react-ui/commit/e8b52ce99835fb0518b3a89cfb67f844d4c6e930))
+
 # [1.12.0](https://github.com/pickleballinc/react-ui/compare/v1.11.5...v1.12.0) (2023-11-01)
 
 
