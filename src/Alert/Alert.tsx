@@ -24,6 +24,7 @@ type AlertTypeTypes =
 export interface AlertProps {
   children?: React.ReactNode;
   FeaturedIcon?: () => React.ReactNode;
+  isCloseable?: boolean;
   SupportingText?: string | (() => React.ReactNode);
   Text: string | (() => React.ReactNode);
   type?: AlertTypeTypes;
@@ -35,6 +36,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
     const {
       children,
       FeaturedIcon,
+      isCloseable = false,
       SupportingText,
       Text = 'Text',
       type = 'default',
@@ -117,17 +119,19 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
                 />
               )}
             </div>
-            <div
-              className={iconContainerClasses}
-              onClick={() => onClose && onClose()}
-            >
-              <FontAwesomeIcon
-                className={closeIconClasses}
-                icon={faXmark}
-                width={20}
-                height={20}
-              />
-            </div>
+            {isCloseable && onClose &&
+              <div
+                className={iconContainerClasses}
+                onClick={() => onClose()}
+              >
+                <FontAwesomeIcon
+                  className={closeIconClasses}
+                  icon={faXmark}
+                  width={20}
+                  height={20}
+                />
+              </div>
+            }
           </div>
           <div className={mobileContentContainerClasses}>
             <div className={textContainerClasses}>
@@ -181,17 +185,19 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
             </div>
             {children}
           </div>
-          <div
-            className={iconContainerClasses}
-            onClick={() => onClose && onClose()}
-          >
-            <FontAwesomeIcon
-              className={closeIconClasses}
-              icon={faXmark}
-              width={20}
-              height={20}
-            />
-          </div>
+          {isCloseable && onClose && 
+            <div
+              className={iconContainerClasses}
+              onClick={() => onClose()}
+            >
+              <FontAwesomeIcon
+                className={closeIconClasses}
+                icon={faXmark}
+                width={20}
+                height={20}
+              />
+            </div>
+          }
         </div>
       </div>
     );

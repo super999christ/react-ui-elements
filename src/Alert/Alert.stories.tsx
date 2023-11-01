@@ -113,6 +113,7 @@ export const SuccessWithCustomFeaturedIcon: Story = {
     SupportingText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.',
     Text: 'Successfully updated profile',
     type: 'success',
+    isCloseable: true,
     onClose: () => console.log('Close the alert...'),
   }
 }
@@ -126,6 +127,7 @@ export const SuccessWithCustomIconAndState: Story = {
         {isOpened ?
           <Alert
             FeaturedIcon={() => <FontAwesomeIcon icon={faComputer} className='text-success-700' />}
+            isCloseable
             onClose={() => setIsOpened(false)}
             SupportingText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.'
             Text='Successfully updated profile'

@@ -166,6 +166,7 @@ export interface NotificationProps extends React.HTMLProps<HTMLDivElement> {
   CustomIcon?: () => React.ReactNode;
   imageAlt?: string;
   imageLink?: string;
+  isCloseable?: boolean;
   onClose?: () => void;
   ProgressIndicator?: () => React.ReactNode;
   SupportingText?: string | (() => React.ReactNode);
@@ -183,6 +184,7 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
       CustomIcon,
       imageAlt,
       imageLink,
+      isCloseable = false,
       onClose,
       ProgressIndicator,
       SupportingText,
@@ -259,17 +261,19 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
                   )}
                 </div>
               )}
-              <div
-                className={closeIconContainerClasses}
-                onClick={() => onClose && onClose()}
-              >
-                <FontAwesomeIcon
-                  className={closeIconClasses}
-                  icon={faXmark}
-                  width={20}
-                  height={20}
-                />
-              </div>
+              {isCloseable && onClose &&
+                <div
+                  className={closeIconContainerClasses}
+                  onClick={() => onClose()}
+                >
+                  <FontAwesomeIcon
+                    className={closeIconClasses}
+                    icon={faXmark}
+                    width={20}
+                    height={20}
+                  />
+                </div>
+              }
             </div>
           )}
           <div className={mobileContentContainerClasses}>
@@ -283,10 +287,10 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
                   )}
                   {time && <span className={timeClasses}>{time}</span>}
                 </div>
-                {(type === 'no-icon' || type === 'image') && (
+                {(type === 'no-icon' || type === 'image') && isCloseable && onClose && (
                   <div
                     className={closeIconContainerClassesNoIconOrImage}
-                    onClick={() => onClose && onClose()}
+                    onClick={() => onClose()}
                   >
                     <FontAwesomeIcon
                       className={closeIconClasses}
@@ -373,17 +377,19 @@ const Notification = React.forwardRef<HTMLDivElement, NotificationProps>(
               ProgressIndicator()}
             {children && children}
           </div>
-          <div
-            className={closeIconContainerClasses}
-            onClick={() => onClose && onClose()}
-          >
-            <FontAwesomeIcon
-              className={closeIconClasses}
-              icon={faXmark}
-              width={20}
-              height={20}
-            />
-          </div>
+          {isCloseable && onClose &&
+            <div
+              className={closeIconContainerClasses}
+              onClick={() => onClose()}
+            >
+              <FontAwesomeIcon
+                className={closeIconClasses}
+                icon={faXmark}
+                width={20}
+                height={20}
+              />
+            </div>
+          }
         </div>
       </div>
     );

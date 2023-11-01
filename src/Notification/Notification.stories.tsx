@@ -148,6 +148,7 @@ export const SuccessWithCustomIcon: Story = {
         <Button className='!text-primary-700' size='sm' variant='link'>View changes</Button>
        </div>,
     CustomIcon: () => <FontAwesomeIcon icon={faComputer} className='text-experiment' />,
+    isCloseable: true,
     onClose: () => console.log('Close the notification...'),
     SupportingText: 'Your changes have been saved and your profile is live. Your team can make edits.',
     Text: 'Successfully updated profile',
@@ -163,6 +164,7 @@ export const SuccessWithCustomIconAndState: Story = {
         {isOpened ?
           <Notification
             CustomIcon ={() => <FontAwesomeIcon icon={faComputer} className='text-experiment' />}
+            isCloseable
             onClose={() => setIsOpened(false)}
             SupportingText='Your changes have been saved and your profile is live. Your team can make edits.'
             Text='Successfully updated profile'
