@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/pickleballinc/react-ui/compare/v1.11.5...v1.12.0) (2023-11-01)
+
+
+### Features
+
+* changed the primary button colors to purple, old variant primary is now variant blue ([514da65](https://github.com/pickleballinc/react-ui/commit/514da654d67e744979b7b5b4451442bea4ed67ca))
+
 ## [1.11.5](https://github.com/pickleballinc/react-ui/compare/v1.11.4...v1.11.5) (2023-10-30)
 
 
