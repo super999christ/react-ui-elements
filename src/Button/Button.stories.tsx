@@ -32,6 +32,21 @@ export const PrimaryDisabled: Story = {
   }
 };
 
+export const Blue: Story = {
+  args: {
+    children: 'Blue',
+    variant: 'blue'
+  }
+};
+
+export const BlueDisabled: Story = {
+  args: {
+    children: 'Blue',
+    variant: 'blue',
+    disabled: true
+  }
+};
+
 export const Secondary: Story = {
   args: {
     children: 'Secondary',
@@ -79,6 +94,14 @@ export const DesctructivePrimary: Story = {
     children: 'Primary',
     destructive: true,
     variant: 'primary',
+  }
+};
+
+export const DesctructiveBlue: Story = {
+  args: {
+    children: 'Blue',
+    destructive: true,
+    variant: 'blue',
   }
 };
 
@@ -148,6 +171,15 @@ export const PrimaryWithIcons: Story = {
   }
 };
 
+export const BlueWithIcons: Story = {
+  args: {
+    children: 'Blue',
+    variant: 'blue',
+    prefixIcon: <FontAwesomeIcon icon={faArrowLeft} />,
+    suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
+  }
+};
+
 export const SecondaryWithIcons: Story = {
   args: {
     children: 'Secondary',
@@ -207,6 +239,16 @@ export const DesctructivePrimaryWithIcons: Story = {
     children: 'Primary',
     destructive: true,
     variant: 'primary',
+    prefixIcon: <FontAwesomeIcon icon={faArrowLeft} />,
+    suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
+  }
+};
+
+export const DesctructiveBlueWithIcons: Story = {
+  args: {
+    children: 'Blue',
+    destructive: true,
+    variant: 'blue',
     prefixIcon: <FontAwesomeIcon icon={faArrowLeft} />,
     suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
   }

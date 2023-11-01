@@ -7,6 +7,7 @@ import styles from './Button.module.css';
 
 export type ButtonVariant =
   | 'primary'
+  | 'blue'
   | 'secondary'
   | 'secondary-color'
   | 'tertiary'
@@ -56,6 +57,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         [styles['button--tertiary-color']]: variant === 'tertiary-color',
         [styles['button--link']]: variant === 'link' || variant === 'link-gray',
         [styles['button--link-gray']]: variant === 'link-gray',
+        [styles['button--blue']]: variant === 'blue',
       },
       className,
     );

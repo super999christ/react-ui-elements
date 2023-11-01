@@ -53,22 +53,59 @@
   @apply cursor-default;
 }
 
-.button--primary {
+.button--blue {
   @apply bg-primary-600;
   @apply text-white;
 }
 
-.button--primary:not(.button--disabled):hover {
+.button--blue:not(.button--disabled):hover {
   @apply bg-primary-700;
   @apply text-white;
 }
 
-.button--primary:not(.button--disabled):focus {
+.button--blue:not(.button--disabled):focus {
   @apply shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
 }
 
-.button--primary.button--disabled {
+.button--blue.button--disabled {
   @apply bg-primary-200;
+  @apply text-white;
+}
+
+.button--blue.button--destructive {
+  @apply bg-error-600;
+  @apply text-white;
+}
+
+.button--blue.button--destructive:not(.button--disabled):hover {
+  @apply bg-error-700;
+  @apply text-white;
+}
+
+.button--blue.button--destructive:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.error.100/100%")];
+}
+
+.button--blue.button--destructive.button--disabled {
+  @apply bg-error-200;
+}
+
+.button--primary {
+  @apply bg-experiment;
+  @apply text-white;
+}
+
+.button--primary:not(.button--disabled):hover {
+  @apply bg-brand-700;
+  @apply text-white;
+}
+
+.button--primary:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.brand.100/100%")];
+}
+
+.button--primary.button--disabled {
+  @apply bg-brand-200;
   @apply text-white;
 }
 
