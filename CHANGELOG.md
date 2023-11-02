@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/pickleballinc/react-ui/compare/v1.12.1...v1.13.0) (2023-11-02)
+
+
+### Features
+
+* upgraded configs to v1.2.0 and switched primary and blue colors as necessary ([0b8b734](https://github.com/pickleballinc/react-ui/commit/0b8b734e3a431bb2dffbfd42935e6a3015453c37))
+
 ## [1.12.1](https://github.com/pickleballinc/react-ui/compare/v1.12.0...v1.12.1) (2023-11-01)
 
 
