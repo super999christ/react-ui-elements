@@ -61,7 +61,7 @@
     "@fortawesome/pro-regular-svg-icons": "^6.4.2",
     "@fortawesome/pro-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@pickleballinc/configs": "^1.1.0",
+    "@pickleballinc/configs": "^1.2.0",
     "@rollup/plugin-alias": "^5.0.0",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.3",

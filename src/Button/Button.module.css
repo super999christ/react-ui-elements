@@ -54,21 +54,21 @@
 }
 
 .button--blue {
-  @apply bg-primary-600;
+  @apply bg-blue-600;
   @apply text-white;
 }
 
 .button--blue:not(.button--disabled):hover {
-  @apply bg-primary-700;
+  @apply bg-blue-700;
   @apply text-white;
 }
 
 .button--blue:not(.button--disabled):focus {
-  @apply shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
+  @apply shadow-[0_0_0_4px_theme("colors.blue.100/100%")];
 }
 
 .button--blue.button--disabled {
-  @apply bg-primary-200;
+  @apply bg-blue-200;
   @apply text-white;
 }
 
@@ -91,21 +91,21 @@
 }
 
 .button--primary {
-  @apply bg-experiment;
+  @apply bg-primary-600;
   @apply text-white;
 }
 
 .button--primary:not(.button--disabled):hover {
-  @apply bg-brand-700;
+  @apply bg-primary-700;
   @apply text-white;
 }
 
 .button--primary:not(.button--disabled):focus {
-  @apply shadow-[0_0_0_4px_theme("colors.brand.100/100%")];
+  @apply shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
 }
 
 .button--primary.button--disabled {
-  @apply bg-brand-200;
+  @apply bg-primary-200;
   @apply text-white;
 }
 
