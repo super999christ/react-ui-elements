@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { Match, MatchTeam } from "src/types/Match";
 import styles from "./MatchCardV2.module.css";
 import Avatar from "../../Avatar";
