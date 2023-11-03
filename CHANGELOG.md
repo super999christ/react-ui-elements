@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/pickleballinc/react-ui/compare/v1.13.0...v1.13.1) (2023-11-03)
+
+
+### Bug Fixes
+
+* fixed error on navbar and matchcardv2 storybook examples ([56d6ad0](https://github.com/pickleballinc/react-ui/commit/56d6ad0a03515ec9849d962d96189126cbc85410))
+
 # [1.13.0](https://github.com/pickleballinc/react-ui/compare/v1.12.1...v1.13.0) (2023-11-02)
 
 
