@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/pickleballinc/react-ui/compare/v1.13.1...v1.13.2) (2023-11-05)
+
+
+### Bug Fixes
+
+* primary button bg color change ([b93225a](https://github.com/pickleballinc/react-ui/commit/b93225a82d9399655f61bc484726b075caa886b6))
+
 ## [1.13.1](https://github.com/pickleballinc/react-ui/compare/v1.13.0...v1.13.1) (2023-11-03)
 
 
