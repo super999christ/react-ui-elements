@@ -91,12 +91,12 @@
 }
 
 .button--primary {
-  @apply bg-primary-600;
+  @apply bg-primary-700;
   @apply text-white;
 }
 
 .button--primary:not(.button--disabled):hover {
-  @apply bg-primary-700;
+  @apply bg-primary-800;
   @apply text-white;
 }
 
