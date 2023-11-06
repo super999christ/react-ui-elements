@@ -18,7 +18,7 @@ const CaretDownIcon = () => {
   );
 };
 
-const ClearIcon = ({ innerProps }: any) => {
+const MultiValueRemoveIcon = ({ innerProps }: any) => {
   return (
     <div {...innerProps} className={styles["clear-icon"]}>
       <FontAwesomeIcon
@@ -30,12 +30,23 @@ const ClearIcon = ({ innerProps }: any) => {
   );
 };
 
+const ClearIcon = ({ innerProps }: any) => {
+  return (
+    <div {...innerProps} style={{ paddingInline: 10, cursor: 'pointer' }}>
+      <FontAwesomeIcon
+        icon={faTimes}
+      />
+    </div>
+  );
+};
+
 const Select = ({ ...props }: SelectProps) => {
   return (
     <ReactSelect
       components={{
         DropdownIndicator: CaretDownIcon,
-        MultiValueRemove: ClearIcon,
+        MultiValueRemove: MultiValueRemoveIcon,
+        ClearIndicator: ClearIcon
       }}
       styles={{
         control(base, state) {
