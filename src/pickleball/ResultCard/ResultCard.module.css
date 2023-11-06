@@ -1,5 +1,5 @@
 .wrapper {
-  @apply w-full border-b border-solid border-gray-200;
+  @apply w-full border-y border-solid border-gray-200;
 }
 
 .header {
@@ -11,7 +11,11 @@
 }
 
 .content {
-  @apply flex flex-row justify-center;
+  @apply hidden sm:flex flex-row justify-center;
+}
+
+.mobile__content {
+  @apply flex sm:hidden flex-col;
 }
 
 .final {
@@ -44,7 +48,7 @@
 }
 
 .team__info {
-  @apply flex w-full gap-2.5;
+  @apply flex w-full gap-2;
 }
 
 .team__info--reversed {
@@ -72,7 +76,7 @@
 }
 
 .team__container--duo {
-  @apply py-[9px] gap-1;
+  @apply py-[9px] gap-0.5;
 }
 
 .trophy {
@@ -137,12 +141,12 @@
 }
 
 .winner {
-  @apply hidden text-left text-[10px] font-semibold leading-4 tracking-normal text-success-600;
+  @apply text-center pr-3 hidden text-[10px] font-semibold leading-[14px] tracking-normal text-success-600;
   @apply sm:block;
 }
 
 .winner--team2 {
-  @apply text-right;
+  @apply text-center pl-4 pr-0;
 }
 
 .winner--reversed-duo {
@@ -200,4 +204,84 @@
 
 .loser__middle {
   @apply border-x border-solid border-gray-100;
+}
+
+.avatar {
+  @apply border;
+}
+
+.avatar--winner {
+  @apply border-green-500;
+}
+
+.avatar--loser {
+  @apply border-error-500;
+}
+
+.avatar--indicator {
+  @apply absolute -bottom-[2px] -right-[2px];
+}
+
+.icon--color {
+  @apply text-gray-600;
+}
+
+.row__wrapper {
+  @apply grid grid-cols-[minmax(0,1fr)_5px_minmax(0,1fr)];
+}
+
+.avatar__wrapper {
+  @apply flex flex-[1_0_0] flex-row items-center gap-1 p-1;
+}
+
+.avatar__wrapper-2 {
+  @apply flex flex-[1_0_0] flex-row-reverse items-center gap-1 p-1;
+}
+
+.name__container {
+  @apply overflow-hidden whitespace-nowrap;
+}
+
+.first__name__first__letter {
+  @apply text-sm font-normal not-italic leading-[18px] text-gray-900;
+}
+
+.last__name__mobile {
+  @apply text-sm font-semibold not-italic leading-5 text-gray-900;
+}
+
+.row__one__divider {
+  @apply flex w-[5px] justify-center border-x border-solid border-gray-100;
+}
+
+.row__one__divider__content {
+  @apply h-full w-[1px] bg-gray-300;
+}
+
+.scores__container {
+  @apply grid grid-cols-[minmax(0,1fr)_64px_minmax(0,1fr)] border border-solid border-gray-100;
+}
+
+.scores__wrapper {
+  @apply flex flex-row;
+}
+
+.green__classes {
+  @apply bg-success-50 text-green-600;
+}
+
+.grey__classes {
+  @apply bg-white text-gray-400;
+}
+
+.final__wrapper {
+  @apply flex items-center justify-center bg-white text-xs font-semibold not-italic leading-[18px] text-gray-900;
+}
+
+.set__one {
+  @apply flex-[1_0_0] border-r border-solid border-gray-100 w-6 py-[5px] text-center text-sm font-bold not-italic leading-5;
+}
+
+.set__two {
+  @apply flex-[1_0_0] border-l border-solid border-gray-100 w-6 py-[5px] text-center text-sm font-bold not-italic leading-5;
 }

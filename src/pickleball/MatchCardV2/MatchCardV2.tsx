@@ -107,7 +107,7 @@ const TeamInfoRow = ({
   compact?: boolean;
 }) => {
   const avatarClasses = clsx(styles["avatar"], {
-    [styles["avatar--loser"]]: !team.isWinner,
+    [styles["avatar--loser"]]: team.isWinner !== undefined && !team.isWinner,
     [styles["avatar--winner"]]: team.isWinner,
   });
 
@@ -130,7 +130,7 @@ const TeamInfoRow = ({
                 className={avatarClasses}
                 key={player.playerId}
                 size={compact ? "xs" : "sm"}
-                src={player.image}
+                imageUrl={player.image}
                 customIconRender={() => (
                   <FontAwesomeIcon icon={faUser} size="xs" />
                 )}
@@ -138,9 +138,9 @@ const TeamInfoRow = ({
                   <div className={styles["avatar--indicator"]}>
                     {team.isWinner ? (
                       <WinnerIcon width={iconSize} height={iconSize} />
-                    ) : (
+                    ) : team.isWinner !== undefined ? (
                       <NotWinnerIcon width={iconSize} height={iconSize} />
-                    )}
+                    ) : null}
                   </div>
                 }
               />
@@ -177,7 +177,7 @@ const TeamInfoRow = ({
             })}
           </div>
           {derivedPercentage && (
-            <div className={percentageClasses}>{`${derivedPercentage}%`}</div>
+            <div className={percentageClasses}>{`${Math.round(derivedPercentage * 10) / 10}%`}</div>
           )}
           {team.retired && <div className={styles["player-tag"]}>Retired</div>}
           {team.withdrawn && (
