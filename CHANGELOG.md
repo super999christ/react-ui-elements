@@ -1,3 +1,10 @@
+## [1.13.6](https://github.com/pickleballinc/react-ui/compare/v1.13.5...v1.13.6) (2023-11-06)
+
+
+### Bug Fixes
+
+* clear icon on select ([e216316](https://github.com/pickleballinc/react-ui/commit/e216316efe537fd59341671086151ff2d2901dbe))
+
 ## [1.13.5](https://github.com/pickleballinc/react-ui/compare/v1.13.4...v1.13.5) (2023-11-06)
 
 
