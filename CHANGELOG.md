@@ -1,3 +1,10 @@
+## [1.13.4](https://github.com/pickleballinc/react-ui/compare/v1.13.3...v1.13.4) (2023-11-06)
+
+
+### Bug Fixes
+
+* select focus field ([9307569](https://github.com/pickleballinc/react-ui/commit/9307569cfaf402c62b66ac53dda5c0b8b2486cd3))
+
 ## [1.13.3](https://github.com/pickleballinc/react-ui/compare/v1.13.2...v1.13.3) (2023-11-06)
 
 
