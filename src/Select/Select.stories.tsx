@@ -51,7 +51,6 @@ export const FullExampleWithState: Story = {
           options={options}
           onChange={(e: any) => setSelectedOption(e ? e.value : undefined)}
           menuPortalTarget={document.body}
-          menuIsOpen
         />
       </>
     );
