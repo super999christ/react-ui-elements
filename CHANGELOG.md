@@ -1,3 +1,10 @@
+## [1.13.7](https://github.com/pickleballinc/react-ui/compare/v1.13.6...v1.13.7) (2023-11-06)
+
+
+### Bug Fixes
+
+* fullstate select example wasnt closing ([906da05](https://github.com/pickleballinc/react-ui/commit/906da05d23895c078156baa8d3a4af347f7ced60))
+
 ## [1.13.6](https://github.com/pickleballinc/react-ui/compare/v1.13.5...v1.13.6) (2023-11-06)
 
 
