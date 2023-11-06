@@ -9,6 +9,7 @@ export interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   collapsed?: boolean;
+  collapsedContent?: React.ReactNode;
   collapsingIconClasses?: string;
   collapsedWidth?: number;
   uncollapsedWidth?: number;
@@ -23,6 +24,7 @@ const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
       children,
       className,
       collapsed,
+      collapsedContent,
       collapsingIconClasses,
       collapsedWidth = 40,
       uncollapsedWidth = 256,
@@ -57,7 +59,7 @@ const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
                 onClick={() => setClose(!close)}
               />
             </div>
-            {!close && children}
+            {close ? collapsedContent : children}
           </>
         ) : children}
       </div>

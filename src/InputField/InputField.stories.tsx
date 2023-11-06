@@ -75,8 +75,7 @@ export const WithPrefix: Story = {
   args: {
     label: 'Email',
     placeholder: 'Type in your email here',
-    hint: 'This is an error message.',
-    // hasError: true,
+    hint: 'This is a hint message.',
     PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
   }
 };
@@ -85,8 +84,7 @@ export const WithSuffix: Story = {
   args: {
     label: 'Email',
     placeholder: 'Type in your email here',
-    hint: 'This is an error message.',
-    // hasError: true,
+    hint: 'This is a hint message.',
     SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
   }
 };
@@ -95,8 +93,7 @@ export const WithPrefixAndSuffix: Story = {
   args: {
     label: 'Email',
     placeholder: 'Type in your email here',
-    hint: 'This is an error message.',
-    // hasError: true,
+    hint: 'This is a hint message.',
     PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
     SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />
   }
@@ -106,8 +103,7 @@ export const WithPrefixAndDivider: Story = {
   args: {
     label: 'Email',
     placeholder: 'Type in your email here',
-    hint: 'This is an error message.',
-    // hasError: true,
+    hint: 'This is a hint message.',
     PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
     withDivider: true,
   }
@@ -117,8 +113,7 @@ export const WithSuffixAndDivider: Story = {
   args: {
     label: 'Email',
     placeholder: 'Type in your email here',
-    hint: 'This is an error message.',
-    // hasError: true,
+    hint: 'This is a hint message.',
     SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
     withDivider: true,
   }
@@ -128,8 +123,7 @@ export const WithPrefixAndSuffixAndDivider: Story = {
   args: {
     label: 'Email',
     placeholder: 'Type in your email here',
-    hint: 'This is an error message.',
-    // hasError: true,
+    hint: 'This is a hint message.',
     PrefixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
     SuffixIcon: () => <FontAwesomeIcon icon={faMailbox} />,
     withDivider: true,

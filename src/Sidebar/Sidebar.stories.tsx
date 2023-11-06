@@ -3,6 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Sidebar from './Sidebar';
 import React from 'react';
 import clsx from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fa1, fa3, fa2, fa4, fa5 } from '@fortawesome/pro-light-svg-icons';
 
 const meta = {
   title: 'Design System/Sidebar',
@@ -105,7 +107,48 @@ export const SidebarWithNavbar: Story = {
   }
 };
 
-export const SidebarWithNavbarWithSidebarInside: Story = {
+export const SidebarWithNavbarAndCollapsedContent: Story = {
+  render: () => {
+    const [collapsed, setCollapsed] = React.useState<boolean>(true);
+
+    const wrapperClasses = clsx('grid grid-cols-[255px_auto] grid-rows-[56px_auto] h-screen', {
+      'grid-cols-[40px_auto]': collapsed,
+    });
+
+    return (
+      <div 
+        className={wrapperClasses}
+        style={{gridTemplateAreas: `"p-top_nav p-top_nav" "p-workspace__sidebar p-workspace__primary_view"`}}
+      >
+        <div style={{gridArea: 'p-top_nav'}}>
+          Navigation
+        </div>
+        <Sidebar className='bg-brand-400' style={{gridArea: 'p-workspace__sidebar'}} isCollapsible collapsed={collapsed} onOpenChange={() => setCollapsed(!collapsed)} 
+          collapsedContent={
+            <ul className='pt-4 flex flex-col items-center'>
+              <li><FontAwesomeIcon icon={fa1} /></li>
+              <li><FontAwesomeIcon icon={fa2} /></li>
+              <li><FontAwesomeIcon icon={fa3} /></li>
+            </ul>
+          }
+        >
+          <div className='w-full flex flex-col p-4'>
+            <div className='w-full'>1. First item</div>
+            <div className='w-full'>2. Second item</div>
+            <div className='w-full'>3. Third item</div>
+            <div className='w-full'>4. Fourth item</div>
+            <div className='w-full'>5. Fifth item</div>
+          </div>
+        </Sidebar>
+        <div className='overflow-y-auto p-4' style={{gridArea: 'p-workspace__primary_view'}}>
+          Content goes here...
+        </div>
+      </div>
+    );
+  }
+};
+
+export const SidebarWithNavbarWithSidebarInsideAndCollapsedContent: Story = {
   render: () => {
     const [collapsed, setCollapsed] = React.useState<boolean>(true);
 
@@ -130,7 +173,17 @@ export const SidebarWithNavbarWithSidebarInside: Story = {
           </div>
         </Sidebar>
         <div className='overflow-y-auto flex' style={{gridArea: 'p-workspace__primary_view'}}>
-          <Sidebar className='bg-gray-100' isCollapsible collapsed={collapsed} onOpenChange={() => setCollapsed(!collapsed)}>
+          <Sidebar className='bg-gray-100' isCollapsible collapsed={collapsed} onOpenChange={() => setCollapsed(!collapsed)}
+            collapsedContent={
+              <ul className='pt-4 flex flex-col items-center'>
+                <li><FontAwesomeIcon icon={fa1} /></li>
+                <li><FontAwesomeIcon icon={fa2} /></li>
+                <li><FontAwesomeIcon icon={fa3} /></li>
+                <li><FontAwesomeIcon icon={fa4} /></li>
+                <li><FontAwesomeIcon icon={fa5} /></li>
+              </ul>
+            }
+          >
             <div className='w-full flex flex-col p-4'>
               <h3>Sidebar 2</h3>
               <div className='w-full'>6. First item</div>
