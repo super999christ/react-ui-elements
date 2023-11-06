@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Select from "./Select";
@@ -51,6 +51,7 @@ export const FullExampleWithState: Story = {
           options={options}
           onChange={(e: any) => setSelectedOption(e ? e.value : undefined)}
           menuPortalTarget={document.body}
+          menuIsOpen
         />
       </>
     );

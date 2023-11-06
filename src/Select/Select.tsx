@@ -43,9 +43,14 @@ const Select = ({ ...props }: SelectProps) => {
             ...base,
             display: "flex",
             border: state.isFocused
-              ? "1px solid #84A9FF"
+              ? "1px solid #AB95EA"
               : "1px solid rgb(234 236 240)",
-            boxShadow: state.isFocused ? "0px 0px 0px 4px #D6E4FF" : "none",
+            boxShadow: state.isFocused ? "0px 0px 0px 4px #CCBFF2" : "none",
+            "&:hover": {
+              border: state.isFocused
+              ? "1px solid #AB95EA"
+              : "1px solid rgb(234 236 240)",
+            },
             borderRadius: 4,
             fontSize: 14,
             fontWeight: 400,
@@ -56,6 +61,19 @@ const Select = ({ ...props }: SelectProps) => {
             ...base,
             fontSize: 14,
           };
+        },
+        input(base, props) {
+          return {
+            ...base,
+            "> input": {
+              border: 'none !important',
+              boxShadow: "none !important",
+              "&:focus": {
+                border: 'none !important',
+                boxShadow: "none !important",
+              }
+            }
+          }
         },
         indicatorSeparator(base) {
           return {
@@ -107,17 +125,17 @@ const Select = ({ ...props }: SelectProps) => {
           return {
             ...base,
             // eslint-disable-next-line no-nested-ternary
-            backgroundColor: state.isFocused
-              ? "#ebf8ff"
-              : state.isSelected
-              ? "#ebf8ff"
+            backgroundColor: state.isSelected
+              ? "#CCBFF2"
+              : state.isFocused
+              ? "#EEE9FA"
               : "transparent",
             color: state.isFocused ? "" : state.isSelected ? "#000000" : "",
             "&:active": {
-              backgroundColor: state.isFocused
-                ? "#ebf8ff"
-                : state.isSelected
-                ? "#ebf8ff"
+              backgroundColor: state.isSelected
+                ? "#CCBFF2"
+                : state.isFocused
+                ? "#EEE9FA"
                 : "transparent",
             },
           };
