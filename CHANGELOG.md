@@ -1,3 +1,10 @@
+## [1.13.5](https://github.com/pickleballinc/react-ui/compare/v1.13.4...v1.13.5) (2023-11-06)
+
+
+### Bug Fixes
+
+* input focus field state ([16b6ebd](https://github.com/pickleballinc/react-ui/commit/16b6ebdc8dae471117ca8cb2704f7783f318bbdd))
+
 ## [1.13.4](https://github.com/pickleballinc/react-ui/compare/v1.13.3...v1.13.4) (2023-11-06)
 
 
