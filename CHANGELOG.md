@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/pickleballinc/react-ui/compare/v1.13.7...v1.14.0) (2023-11-06)
+
+
+### Features
+
+* recreated the result card and fixed match card img and falsy indicator for winning and losing team ([f786197](https://github.com/pickleballinc/react-ui/commit/f7861972b9b97a5093193591b05fc47d9fc7f678))
+
 ## [1.13.7](https://github.com/pickleballinc/react-ui/compare/v1.13.6...v1.13.7) (2023-11-06)
 
 
