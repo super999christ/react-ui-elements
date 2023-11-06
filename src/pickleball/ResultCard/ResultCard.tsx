@@ -110,7 +110,7 @@ export interface ResultCardProps {
 
 const ResultCard = ({ match, rounded }: ResultCardProps) => {
   const wrapperClasses = clsx(styles.wrapper, {
-    'hover:rounded-xl': rounded,
+    [styles['wrapper__hovering']]: rounded,
   });
   const contentClasses = clsx(styles.content);
   const mobileContentClasses = clsx(styles.mobile__content);
@@ -159,7 +159,7 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
           teamLabel="team1"
         />
         <div className={finalClasses}>
-          {match.team1.isWinner === undefined && match.team2.isWinner === undefined ? <span className='text-error-600'>LIVE</span> : 'Final'}
+          {match.team1.isWinner === undefined && match.team2.isWinner === undefined ? <span className={styles['live__text']}>LIVE</span> : 'Final'}
         </div>
         <MatchSide
           team={match.team2}

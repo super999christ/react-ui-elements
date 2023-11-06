@@ -2,6 +2,10 @@
   @apply w-full border-y border-solid border-gray-200;
 }
 
+.wrapper__hovering {
+  @apply hover:rounded-xl;
+}
+
 .header {
   @apply flex w-full items-center justify-center rounded-t-xl text-xs font-semibold leading-[18px] tracking-normal text-white;
 }
@@ -284,4 +288,8 @@
 
 .set__two {
   @apply flex-[1_0_0] border-l border-solid border-gray-100 w-6 py-[5px] text-center text-sm font-bold not-italic leading-5;
+}
+
+.live__text {
+  @apply text-error-600;
 }

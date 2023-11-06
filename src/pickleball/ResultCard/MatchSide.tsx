@@ -51,34 +51,34 @@ const MatchSide = ({ oppositeTeam, team, teamLabel }: MatchSideProps) => {
   const teamNumberOfPlayers = team.players.length;
 
   const matchSideClasses = clsx(styles.match__side, {
-    [styles['match__side--reversed'] as any]: reversed,
-    [styles['match__side--not-reversed'] as any]: !reversed,
-    [styles['match__side--duo'] as any]: teamNumberOfPlayers === 2,
-    [styles['match__side--solo'] as any]: teamNumberOfPlayers !== 2,
+    [styles['match__side--reversed']]: reversed,
+    [styles['match__side--not-reversed']]: !reversed,
+    [styles['match__side--duo']]: teamNumberOfPlayers === 2,
+    [styles['match__side--solo']]: teamNumberOfPlayers !== 2,
   });
 
   const teamInfoClasses = clsx(styles.team__info, {
-    [styles['team__info--reversed'] as any]: reversed,
-    [styles['team__ino--not-rversed'] as any]: !reversed,
-    [styles['team__info--duo'] as any]: teamNumberOfPlayers === 2,
-    [styles['team__info--solo'] as any]: teamNumberOfPlayers !== 2,
+    [styles['team__info--reversed']]: reversed,
+    [styles['team__ino--not-rversed']]: !reversed,
+    [styles['team__info--duo']]: teamNumberOfPlayers === 2,
+    [styles['team__info--solo']]: teamNumberOfPlayers !== 2,
   });
 
   const teamContainerClasses = clsx(styles.team__container, {
-    [styles['team__container--winner'] as any]: team.isWinner,
-    [styles['team__container--duo'] as any]: teamNumberOfPlayers > 1,
+    [styles['team__container--winner']]: team.isWinner,
+    [styles['team__container--duo']]: teamNumberOfPlayers > 1,
   });
 
   const trophyClasses = clsx(styles.trophy);
 
   const playerInfoClasses = clsx(styles.player__info, {
-    [styles['player__info--reversed-duo'] as any]:
+    [styles['player__info--reversed-duo']]:
       reversed && teamNumberOfPlayers > 1,
-    [styles['player__info--reversed-solo'] as any]:
+    [styles['player__info--reversed-solo']]:
       reversed && teamNumberOfPlayers <= 1,
-    [styles['player__info--not-reversed-duo'] as any]:
+    [styles['player__info--not-reversed-duo']]:
       !reversed && teamNumberOfPlayers > 1,
-    [styles['player__info--not-reversed-solo'] as any]:
+    [styles['player__info--not-reversed-solo']]:
       !reversed && teamNumberOfPlayers <= 1,
   });
 
@@ -87,28 +87,28 @@ const MatchSide = ({ oppositeTeam, team, teamLabel }: MatchSideProps) => {
   const lastNameClasses = clsx(styles.last__name);
 
   const playerImageClasses = clsx(styles.player__image, {
-    [styles['player__image--duo'] as any]: teamNumberOfPlayers > 1,
-    [styles['player__image--solo'] as any]: teamNumberOfPlayers <= 1,
+    [styles['player__image--duo']]: teamNumberOfPlayers > 1,
+    [styles['player__image--solo']]: teamNumberOfPlayers <= 1,
   });
 
   const playerImgClasses = clsx(styles.player__img);
 
   const winnerClasses = clsx(styles.winner, {
-    [styles['winner--reversed-duo'] as any]:
+    [styles['winner--reversed-duo']]:
       reversed && teamNumberOfPlayers > 1,
-    [styles['winner--not-reversed-duo'] as any]:
+    [styles['winner--not-reversed-duo']]:
       !reversed && teamNumberOfPlayers > 1,
-    [styles['winner--team2'] as any]: teamLabel === 'team2' && team.isWinner,
+    [styles['winner--team2']]: teamLabel === 'team2' && team.isWinner,
   });
 
   const setWrapperClasses = clsx(styles.set__wrapper, {
-    [styles['set__wrapper--reversed'] as any]: reversed,
-    [styles['set__wrapper--not-reversed'] as any]: !reversed,
+    [styles['set__wrapper--reversed']]: reversed,
+    [styles['set__wrapper--not-reversed']]: !reversed,
   });
 
   const setClasses = clsx(styles.set, {
-    [styles['set--winner'] as any]: team.isWinner,
-    [styles['set--loser'] as any]: !team.isWinner,
+    [styles['set--winner']]: team.isWinner,
+    [styles['set--loser']]: !team.isWinner,
   });
 
   const grayBgClasses = clsx(styles.gray__bg);
