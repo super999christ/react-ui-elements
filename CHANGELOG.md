@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/pickleballinc/react-ui/compare/v1.13.2...v1.13.3) (2023-11-06)
+
+
+### Bug Fixes
+
+* added collapsedcontent prop to sidebar and fixed bug in input field when in focused state ([1d00c9b](https://github.com/pickleballinc/react-ui/commit/1d00c9bfc8c0f88f691eaf70650a179af41bb4f4))
+
 ## [1.13.2](https://github.com/pickleballinc/react-ui/compare/v1.13.1...v1.13.2) (2023-11-05)
 
 
