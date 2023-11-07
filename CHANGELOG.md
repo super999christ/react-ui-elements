@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/pickleballinc/react-ui/compare/v1.14.0...v1.14.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* resultcard classes seperating fix ([841f013](https://github.com/pickleballinc/react-ui/commit/841f0138db7a5b7079e0fa79303ba47ecacc5261))
+
 # [1.14.0](https://github.com/pickleballinc/react-ui/compare/v1.13.7...v1.14.0) (2023-11-06)
 
 
