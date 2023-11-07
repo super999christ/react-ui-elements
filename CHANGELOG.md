@@ -1,3 +1,10 @@
+## [1.14.7](https://github.com/pickleballinc/react-ui/compare/v1.14.6...v1.14.7) (2023-11-07)
+
+
+### Bug Fixes
+
+* resultcard formating ([7e5effa](https://github.com/pickleballinc/react-ui/commit/7e5effa04c35f1ded2abab52a892fba304abd0c3))
+
 ## [1.14.6](https://github.com/pickleballinc/react-ui/compare/v1.14.5...v1.14.6) (2023-11-07)
 
 
