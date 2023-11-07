@@ -5,6 +5,7 @@ import Avatar from "../../Avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
+import { match } from "assert";
 
 function getPartNames(name: string) {
   return name.split(" ");
@@ -265,6 +266,14 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   </span>
                 )}
               </div>
+              {(match.matchStatus === 2 || match.matchStatus === 3) &&
+                <span className={styles["info--item"]}>
+                  {
+                    match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
+                    match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> : null
+                  }
+                </span>
+              }
             </div>
           )}
           {match.team1 && match.team2 && (

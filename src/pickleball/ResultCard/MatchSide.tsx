@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import React from 'react';
 
-import type { MatchTeam } from './ResultCard';
 import styles from './ResultCard.module.css';
+import { MatchTeam } from 'src/types/Match';
 
 export function getPartNames(name: string) {
   return name.split(' ');

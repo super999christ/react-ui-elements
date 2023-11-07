@@ -1,27 +1,38 @@
 export interface MatchTeamPlayer {
-  playerId: string
-  name: string
-  image: string
+  playerId: string;
+  name: string;
+  image: string;
 }
 
 export interface MatchTeam {
-  isWinner: boolean
-  percentage: number
-  players: MatchTeamPlayer[]
-  retired?: boolean
-  withdrawn?: boolean
-  scores: number[]
+  isWinner: boolean;
+  percentage: number;
+  players: MatchTeamPlayer[];
+  retired?: boolean;
+  withdrawn?: boolean;
+  scores: number[];
 }
 
 export interface Match {
+  id?: string;
   courtNumber?: string;
   eventTitle?: string;
   matchNumber?: number;
   matchTimeStart?: string;
-  timezoneAbbreviation?: string
-  matchTime?: string
+  matchStatus?: 0 | 1 | 2 | 3 | 4 | -1;
+  timezoneAbbreviation?: string;
+  matchTime?: string;
   roundNumber?: number;
   tournamentTitle?: string;
-  team1: MatchTeam
-  team2: MatchTeam
+  team1: MatchTeam;
+  team2: MatchTeam;
 }
+/*
+  From protos:
+  UNDEFINED_MATCH_STATUS = 0,
+  SCHEDULED_MATCH_STATUS = 1,
+  IN_PROGRESS_MATCH_STATUS = 2,
+  DELAYED_MATCH_STATUS = 3,
+  COMPLETED_MATCH_STATUS = 4,
+  UNRECOGNIZED = -1,
+*/

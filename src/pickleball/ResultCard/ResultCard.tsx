@@ -9,7 +9,7 @@ import clsx from 'clsx';
 
 import MatchSide, { getPartNames } from './MatchSide';
 import styles from './ResultCard.module.css';
-import { match } from 'assert';
+import { Match } from "src/types/Match";
 
 const customIconRender = () => <FontAwesomeIcon icon={faUser} size="xs" />;
 
@@ -74,35 +74,6 @@ const WinnerIcon = ({ width, height }: IconProps) => (
   </svg>
 );
 
-export interface MatchTeamPlayer {
-  playerId: string;
-  name: string;
-  image: string;
-}
-
-export interface MatchTeam {
-  isWinner?: boolean;
-  percentage?: number;
-  players: MatchTeamPlayer[];
-  retired?: boolean;
-  withdrawn?: boolean;
-  scores: number[];
-}
-
-export interface Match {
-  id?: string;
-  courtNumber?: string;
-  eventTitle?: string;
-  matchNumber?: number;
-  matchTimeStart?: string;
-  timezoneAbbreviation?: string;
-  matchTime?: string;
-  roundNumber?: number;
-  tournamentTitle?: string;
-  team1: MatchTeam;
-  team2: MatchTeam;
-}
-
 export interface ResultCardProps {
   match: Match;
   rounded?: boolean;
@@ -159,7 +130,12 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
           teamLabel="team1"
         />
         <div className={finalClasses}>
-          {match.team1.isWinner === undefined && match.team2.isWinner === undefined ? <span className={styles['live__text']}>LIVE</span> : 'Final'}
+          { 
+            match.matchStatus === 1 ? <span className={styles['soon__text']}>Scheduled</span> :
+            match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
+            match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> :
+            match.matchStatus === 4 ? 'Final' : 'Unknown'
+          }
         </div>
         <MatchSide
           team={match.team2}
@@ -256,7 +232,12 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
               })}
           </div>
           <div className={styles['final__wrapper']}>
-            {match.team1.isWinner === undefined && match.team2.isWinner === undefined ? <span className='text-error-600'>LIVE</span> : 'Final'}
+            { 
+              match.matchStatus === 1 ? <span className={styles['soon__text']}>Scheduled</span> :
+              match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
+              match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> :
+              match.matchStatus === 4 ? 'Final' : 'Unknown'
+            }
           </div>
           <div className={styles['scores__wrapper']}>
             {match.team2.scores.length > 0 &&

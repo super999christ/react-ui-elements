@@ -26,6 +26,7 @@ export const SoloLeftWinner: Story = {
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtNumber: '',
       roundNumber: 4,
+      matchStatus: 4,
       team1: {
         players: [{
           playerId: '909FE413-39D0-4838-8F1A-C24F6871EBEB',
@@ -61,6 +62,7 @@ export const SoloRightWinner: Story = {
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtNumber: '',
       roundNumber: 4,
+      matchStatus: 4,
       team1: {
         players: [{
           playerId: '909FE413-39D0-4838-8F1A-C24F6871EBEB',
@@ -97,6 +99,7 @@ export const DuoLeftWinner: Story = {
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtNumber: '',
       roundNumber: 4,
+      matchStatus: 4,
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -143,6 +146,7 @@ export const DuoRightWinner: Story = {
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtNumber: '',
       roundNumber: 4,
+      matchStatus: 4,
       team1: {
         players: [{
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
@@ -177,7 +181,7 @@ export const DuoRightWinner: Story = {
   }
 };
 
-export const DuoNotStarted: Story = {
+export const DuoScheduled: Story = {
   args: {
     shortenName: true,
     compact: true,
@@ -186,9 +190,11 @@ export const DuoNotStarted: Story = {
       timezoneAbbreviation: 'EST',
       matchTimeStart: 'Jun 26 - 12:50 AM ',
       matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      tournamentTitle: 'PPA Tour: Las Vegas Nevada USA Extra Extra Text',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age) Extra Text Test',
       courtNumber: '',
       roundNumber: 4,
+      matchStatus: 1,
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -223,7 +229,7 @@ export const DuoNotStarted: Story = {
   }
 };
 
-export const DuoInProgress: Story = {
+export const DuoLive: Story = {
   args: {
     shortenName: true,
     compact: true,
@@ -235,6 +241,7 @@ export const DuoInProgress: Story = {
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtNumber: '',
       roundNumber: 4,
+      matchStatus: 2,
       team1: {
         players: [{
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
@@ -264,6 +271,54 @@ export const DuoInProgress: Story = {
         percentage: 30,
         isWinner: undefined,
         scores: [7, 5, 0]
+      }
+    }
+  }
+};
+
+
+export const DuoDelayed: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtNumber: '',
+      roundNumber: 4,
+      matchStatus: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          name: 'Matt Glatt',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          name: 'Spencer Hart',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: undefined,
+        scores: [0, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          name: 'Kevin Coutant',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          name: 'Mitch Pomerance',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: undefined,
+        scores: [0, 0, 0,]
       }
     }
   }

@@ -23,7 +23,7 @@
 }
 
 .header--text {
-  @apply text-sm font-semibold leading-5 text-gray-900;
+  @apply text-sm font-semibold leading-5 text-gray-900 line-clamp-1;
 }
 
 .match-card--compact .header--text {
@@ -31,7 +31,7 @@
 }
 
 .content--info {
-  @apply py-2 border-t border-gray-300;
+  @apply py-2 border-t border-gray-300 flex flex-row justify-between;
 }
 
 .match-card--compact .content--info {
@@ -180,4 +180,16 @@
 
 .match-card--compact .footer--time {
   @apply text-xs
+}
+
+.live__text {
+  @apply text-error-600 font-semibold;
+}
+
+.delayed__text {
+  @apply text-gray-600 font-semibold;
+}
+
+.soon__text {
+  @apply text-warning-400 font-semibold;
 }

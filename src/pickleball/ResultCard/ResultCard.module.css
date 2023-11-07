@@ -293,3 +293,11 @@
 .live__text {
   @apply text-error-600;
 }
+
+.delayed__text {
+  @apply text-gray-600;
+}
+
+.soon__text {
+  @apply text-warning-400;
+}
