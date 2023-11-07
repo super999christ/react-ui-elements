@@ -1,3 +1,11 @@
+## [1.14.4](https://github.com/pickleballinc/react-ui/compare/v1.14.3...v1.14.4) (2023-11-07)
+
+
+### Bug Fixes
+
+* nothing class added ([29435c7](https://github.com/pickleballinc/react-ui/commit/29435c7769c1056760f9178b07190944923611a2))
+* shadow is made important ([4416c2f](https://github.com/pickleballinc/react-ui/commit/4416c2fbc76689ee38b06289467a1d97b716e093))
+
 ## [1.14.3](https://github.com/pickleballinc/react-ui/compare/v1.14.2...v1.14.3) (2023-11-07)
 
 
