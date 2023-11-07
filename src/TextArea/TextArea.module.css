@@ -19,13 +19,14 @@
 }
 
 .textarea {
-  @apply disabled:bg-gray-50 w-full rounded border bg-white px-[10px] py-2 text-sm font-normal text-gray-900 transition-all duration-150 placeholder:text-gray-500 focus:outline-none;
+  @apply disabled:bg-gray-50 w-full border border-solid !border-gray-200 rounded bg-white px-[10px] py-2 text-sm font-normal text-gray-900 transition-all duration-150 placeholder:text-gray-500 !outline-none !shadow-[none] focus:!outline-none;
+  box-shadow: none !important;
 }
 
 .textarea--no-error {
-  @apply border-gray-200 focus:border-primary-300 focus:shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
+  @apply !border-gray-200 focus:!border-primary-300 focus:!shadow-[0_0_0_4px_theme("colors.primary.100/100%")];
 }
 
 .textarea--has-error {
-  @apply border-error-300 focus:shadow-[0_0_0_4px_theme("colors.error.100/100%")];
+  @apply !border-error-300 focus:!shadow-[0_0_0_4px_theme("colors.error.100/100%")];
 }
