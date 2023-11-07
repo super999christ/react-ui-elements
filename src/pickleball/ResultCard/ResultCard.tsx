@@ -74,6 +74,93 @@ const WinnerIcon = ({ width, height }: IconProps) => (
   </svg>
 );
 
+interface PlayersRowInterface {
+  match: Match;
+  playerIndex: number;
+  player1Name: string[] | string;
+  player2Name: string[] | string;
+}
+
+const PlayersRow = ({match, playerIndex, player1Name, player2Name} : PlayersRowInterface) => {
+  const rowWrapperClasses = clsx(styles.row__wrapper);
+
+  const avatarTeam1Classes = clsx(styles.avatar, {
+    [styles['avatar--loser'] as any]: match.team1.isWinner !== undefined && !match.team1.isWinner,
+    [styles['avatar--winner'] as any]: match.team1.isWinner,
+  });
+
+  const avatarTeam2Classes = clsx(styles.avatar, {
+    [styles['avatar--loser'] as any]: match.team2.isWinner !== undefined && !match.team2.isWinner,
+    [styles['avatar--winner'] as any]: match.team2.isWinner,
+  });
+
+  return (
+    <div className={rowWrapperClasses}>
+      {match.team1.players[playerIndex] && (
+        <div className={styles['avatar__wrapper']}>
+          <Avatar
+            className={avatarTeam1Classes}
+            key={match.team1.players[playerIndex].playerId}
+            size="xs"
+            imageUrl={match.team1.players[playerIndex].image}
+            customIconRender={customIconRender}
+            onlineIndicator={
+              <div className={styles['avatar--indicator']}>
+                {match.team1.isWinner ? (
+                  <WinnerIcon width={14} height={14} />
+                ) : match.team1.isWinner !== undefined ?(
+                  <NotWinnerIcon width={14} height={14} />
+                ) : null}
+              </div>
+            }
+          />
+          <div className={styles['name__container']}>
+            <span className={styles['first__name__first__letter']}>
+              {player1Name[0] &&
+                `${player1Name[0].charAt(0).toUpperCase()}.`}
+            </span>{` `}
+            <span className={styles['last__name__mobile']}>
+              {player1Name[1]}
+            </span>
+          </div>
+        </div>
+      )}
+      <div className={styles['row__one__divider']}>
+        <div className={styles['row__one__divider__content']} />
+      </div>
+      {match.team2.players[playerIndex] && (
+        <div className={styles['avatar__wrapper-2']}>
+          <Avatar
+            className={avatarTeam2Classes}
+            key={match.team2.players[playerIndex].playerId}
+            size="xs"
+            imageUrl={match.team2.players[playerIndex].image}
+            customIconRender={customIconRender}
+            onlineIndicator={
+              <div className={styles['avatar--indicator']}>
+                {match.team2.isWinner ? (
+                  <WinnerIcon width={14} height={14} />
+                ) : match.team2.isWinner !== undefined ?(
+                  <NotWinnerIcon width={14} height={14} />
+                ) : null}
+              </div>
+            }
+          />
+          <div className={styles['name__container']}>
+            <span className={styles['first__name__first__letter']}>
+              {player2Name[0] &&
+                `${player2Name[0].charAt(0).toUpperCase()}.`}
+            </span>{` `}
+            <span className={styles['last__name__mobile']}>
+              {player2Name[1]}
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 export interface ResultCardProps {
   match: Match;
   rounded?: boolean;
@@ -86,18 +173,6 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
   const contentClasses = clsx(styles.content);
   const mobileContentClasses = clsx(styles.mobile__content);
   const finalClasses = clsx(styles.final);
-
-  const avatarTeam1Classes = clsx(styles.avatar, {
-    [styles['avatar--loser'] as any]: match.team1.isWinner !== undefined && !match.team1.isWinner,
-    [styles['avatar--winner'] as any]: match.team1.isWinner,
-  });
-
-  const avatarTeam2Classes = clsx(styles.avatar, {
-    [styles['avatar--loser'] as any]: match.team2.isWinner !== undefined && !match.team2.isWinner,
-    [styles['avatar--winner'] as any]: match.team2.isWinner,
-  });
-
-  const rowWrapperClasses = clsx(styles.row__wrapper);
 
   const setClasses = clsx(styles.set__one);
   const set2Classes = clsx(styles.set__two);
@@ -131,10 +206,9 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
         />
         <div className={finalClasses}>
           { 
-            match.matchStatus === 1 ? <span className={styles['soon__text']}>Scheduled</span> :
             match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
             match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> :
-            match.matchStatus === 4 ? 'Final' : 'Unknown'
+            match.matchStatus === 4 ? 'Final' : ''
           }
         </div>
         <MatchSide
@@ -144,69 +218,12 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
         />
       </div>
       <div className={mobileContentClasses}>
-        <div className={rowWrapperClasses}>
-          {match.team1.players[0] && (
-            <div className={styles['avatar__wrapper']}>
-              <Avatar
-                className={avatarTeam1Classes}
-                key={match.team1.players[0].playerId}
-                size="xs"
-                imageUrl={match.team1.players[0].image}
-                customIconRender={customIconRender}
-                onlineIndicator={
-                  <div className={styles['avatar--indicator']}>
-                    {match.team1.isWinner ? (
-                      <WinnerIcon width={14} height={14} />
-                    ) : match.team1.isWinner !== undefined ?(
-                      <NotWinnerIcon width={14} height={14} />
-                    ) : null}
-                  </div>
-                }
-              />
-              <div className={styles['name__container']}>
-                <span className={styles['first__name__first__letter']}>
-                  {teamOnePlayerOneName[0] &&
-                    `${teamOnePlayerOneName[0].charAt(0).toUpperCase()}.`}
-                </span>{` `}
-                <span className={styles['last__name__mobile']}>
-                  {teamOnePlayerOneName[1]}
-                </span>
-              </div>
-            </div>
-          )}
-          <div className={styles['row__one__divider']}>
-            <div className={styles['row__one__divider__content']} />
-          </div>
-          {match.team2.players[0] && (
-            <div className={styles['avatar__wrapper-2']}>
-              <Avatar
-                className={avatarTeam2Classes}
-                key={match.team2.players[0].playerId}
-                size="xs"
-                imageUrl={match.team2.players[0].image}
-                customIconRender={customIconRender}
-                onlineIndicator={
-                  <div className={styles['avatar--indicator']}>
-                    {match.team2.isWinner ? (
-                      <WinnerIcon width={14} height={14} />
-                    ) : match.team2.isWinner !== undefined ?(
-                      <NotWinnerIcon width={14} height={14} />
-                    ) : null}
-                  </div>
-                }
-              />
-              <div className={styles['name__container']}>
-                <span className={styles['first__name__first__letter']}>
-                  {teamTwoPlayerOneName[0] &&
-                    `${teamTwoPlayerOneName[0].charAt(0).toUpperCase()}.`}
-                </span>{` `}
-                <span className={styles['last__name__mobile']}>
-                  {teamTwoPlayerOneName[1]}
-                </span>
-              </div>
-            </div>
-          )}
-        </div>
+        <PlayersRow
+          match={match}
+          playerIndex={0}
+          player1Name={teamOnePlayerOneName}
+          player2Name={teamTwoPlayerOneName}
+        />
         <div className={styles['scores__container']}>
           <div className={styles['scores__wrapper']}>
             {match.team1.scores.length > 0 &&
@@ -233,10 +250,9 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
           </div>
           <div className={styles['final__wrapper']}>
             { 
-              match.matchStatus === 1 ? <span className={styles['soon__text']}>Scheduled</span> :
               match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
               match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> :
-              match.matchStatus === 4 ? 'Final' : 'Unknown'
+              match.matchStatus === 4 ? 'Final' : ''
             }
           </div>
           <div className={styles['scores__wrapper']}>
@@ -266,69 +282,12 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
               })}
           </div>
         </div>
-        <div className={rowWrapperClasses}>
-          {match.team1.players[1] && (
-            <div className={styles['avatar__wrapper']}>
-              <Avatar
-                className={avatarTeam1Classes}
-                key={match.team1.players[1].playerId}
-                size="xs"
-                imageUrl={match.team1.players[1].image}
-                customIconRender={customIconRender}
-                onlineIndicator={
-                  <div className={styles['avatar--indicator']}>
-                    {match.team1.isWinner ? (
-                      <WinnerIcon width={14} height={14} />
-                    ) : match.team1.isWinner !== undefined ?(
-                      <NotWinnerIcon width={14} height={14} />
-                    ) : null}
-                  </div>
-                }
-              />
-              <div className={styles['name__container']}>
-                <span className={styles['first__name__first__letter']}>
-                  {teamOnePlayerTwoName[0] &&
-                    `${teamOnePlayerTwoName[0].charAt(0).toUpperCase()}.`}
-                </span>{` `}
-                <span className={styles['last__name__mobile']}>
-                  {teamOnePlayerTwoName[1]}
-                </span>
-              </div>
-            </div>
-          )}
-          <div className={styles['row__one__divider']}>
-            <div className={styles['row__one__divider__content']} />
-          </div>
-          {match.team2.players[1] && (
-            <div className={styles['avatar__wrapper-2']}>
-              <Avatar
-                className={avatarTeam2Classes}
-                key={match.team2.players[1].playerId}
-                size="xs"
-                imageUrl={match.team2.players[1].image}
-                customIconRender={customIconRender}
-                onlineIndicator={
-                  <div className={styles['avatar--indicator']}>
-                    {match.team2.isWinner ? (
-                      <WinnerIcon width={14} height={14} />
-                    ) : match.team2.isWinner !== undefined ?(
-                      <NotWinnerIcon width={14} height={14} />
-                    ) : null}
-                  </div>
-                }
-              />
-              <div className={styles['name__container']}>
-                <span className={styles['first__name__first__letter']}>
-                  {teamTwoPlayerTwoName[0] &&
-                    `${teamTwoPlayerTwoName[0].charAt(0).toUpperCase()}.`}
-                </span>{` `}
-                <span className={styles['last__name__mobile']}>
-                  {teamTwoPlayerTwoName[1]}
-                </span>
-              </div>
-            </div>
-          )}
-        </div>
+        <PlayersRow
+          match={match}
+          playerIndex={1}
+          player1Name={teamOnePlayerTwoName}
+          player2Name={teamTwoPlayerTwoName}
+        />
       </div>
     </div>
   );

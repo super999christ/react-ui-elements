@@ -291,13 +291,9 @@
 }
 
 .live__text {
-  @apply text-error-600;
+  @apply text-error-600 font-semibold;
 }
 
 .delayed__text {
-  @apply text-gray-600;
-}
-
-.soon__text {
-  @apply text-warning-400;
+  @apply text-gray-500 font-semibold;
 }
