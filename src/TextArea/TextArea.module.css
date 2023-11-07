@@ -19,7 +19,7 @@
 }
 
 .textarea {
-  @apply disabled:bg-gray-50 w-full border border-solid !border-gray-200 rounded bg-white px-[10px] py-2 text-sm font-normal text-gray-900 transition-all duration-150 placeholder:text-gray-500 !outline-none !shadow-[none] focus:!outline-none;
+  @apply disabled:bg-gray-50 w-full border border-solid !border-gray-200 rounded bg-white px-[10px] py-2 text-sm font-normal text-gray-900 transition-all duration-150 placeholder:text-gray-500 !outline-none focus:!outline-none;
   box-shadow: none !important;
 }
 
