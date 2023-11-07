@@ -5,7 +5,6 @@ import Avatar from "../../Avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
-import { match } from "assert";
 
 function getPartNames(name: string) {
   return name.split(" ");
