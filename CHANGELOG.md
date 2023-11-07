@@ -1,3 +1,10 @@
+## [1.14.6](https://github.com/pickleballinc/react-ui/compare/v1.14.5...v1.14.6) (2023-11-07)
+
+
+### Bug Fixes
+
+* match card fixes ([d14f19c](https://github.com/pickleballinc/react-ui/commit/d14f19ca9732ef3ea37a9320c18072120af8f014))
+
 ## [1.14.5](https://github.com/pickleballinc/react-ui/compare/v1.14.4...v1.14.5) (2023-11-07)
 
 
