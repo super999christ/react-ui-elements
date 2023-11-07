@@ -171,6 +171,11 @@ const TeamInfoRow = ({
                         {name[1]}
                       </span>
                     )}
+                    {name[2] && (
+                      <span className={styles["player-sufix-name"]}>
+                        {name[2]}
+                      </span>
+                    )}
                   </div>
                 </div>
               );
@@ -216,14 +221,19 @@ export interface MatchCardV2Props {
   match: Match;
   shortenName?: boolean;
   compact?: boolean;
+  hideMatchTimeStartRow?: boolean;
 }
 
 const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
   (props, ref) => {
-    const { match, shortenName, compact } = props;
+    const { match, shortenName, compact, hideMatchTimeStartRow } = props;
 
     const cardClasses = clsx(styles["match-card"], {
       [styles["match-card--compact"]]: compact,
+    });
+
+    const cardFooterClasses = clsx(styles['card--footer'], {
+      [styles['card--footer--hidden']]: hideMatchTimeStartRow,
     });
 
     return (
@@ -237,12 +247,34 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
           {(match.tournamentTitle || match.eventTitle) && (
             <div className={styles["content__header"]}>
               {match.tournamentTitle && (
-                <div className={styles["header--text"]}>
-                  {match.tournamentTitle}
+                <div className={styles["header--text--wrapper"]}>
+                  <span className={styles["header--text"]}>
+                    {match.tournamentTitle}
+                  </span>
+                  {(match.matchStatus === 2 || match.matchStatus === 3) &&
+                    (
+                      match.matchStatus === 2 ? 
+                        <span className={`${styles["info--item"]} ${styles['live__text']}`}>LIVE</span> :
+                      match.matchStatus === 3 ? 
+                        <span className={`${styles["info--item"]} ${styles['live__text']}`}>DELAYED</span> : null
+                    )
+                  }
                 </div>
               )}
               {match.eventTitle && (
-                <div className={styles["header--text"]}>{match.eventTitle}</div>
+                <div className={styles["header--text--wrapper"]}>
+                  <span className={styles["header--text"]}>
+                    {match.eventTitle}
+                  </span>
+                  {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3) &&
+                    (
+                      match.matchStatus === 2 ? 
+                        <span className={`${styles["info--item"]} ${styles['live__text']}`}>LIVE</span> :
+                      match.matchStatus === 3 ? 
+                        <span className={`${styles["info--item"]} ${styles['delayed__text']}`}>DELAYED</span> : null
+                    )
+                  }
+                </div>
               )}
             </div>
           )}
@@ -265,14 +297,6 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   </span>
                 )}
               </div>
-              {(match.matchStatus === 2 || match.matchStatus === 3) &&
-                <span className={styles["info--item"]}>
-                  {
-                    match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
-                    match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> : null
-                  }
-                </span>
-              }
             </div>
           )}
           {match.team1 && match.team2 && (
@@ -292,18 +316,16 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
             </>
           )}
           {match.matchTimeStart && (
-            <div className={styles["card--footer"]}>
-              {match.matchTimeStart && (
-                <div className={styles["footer--time"]}>
-                  <ClockIcon
-                    width={compact ? 18 : 16}
-                    height={compact ? 18 : 16}
-                  />
-                  {`${match.matchTimeStart || ""} ${
-                    match.timezoneAbbreviation || ""
-                  }`}
-                </div>
-              )}
+            <div className={cardFooterClasses}>
+              <div className={styles["footer--time"]}>
+                <ClockIcon
+                  width={compact ? 18 : 16}
+                  height={compact ? 18 : 16}
+                />
+                {`${match.matchTimeStart || ""} ${
+                  match.timezoneAbbreviation || ""
+                }`}
+              </div>
             </div>
           )}
         </div>

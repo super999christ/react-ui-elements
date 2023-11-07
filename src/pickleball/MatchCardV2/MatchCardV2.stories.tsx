@@ -276,7 +276,6 @@ export const DuoLive: Story = {
   }
 };
 
-
 export const DuoDelayed: Story = {
   args: {
     shortenName: true,
@@ -323,3 +322,100 @@ export const DuoDelayed: Story = {
     }
   }
 };
+
+export const DuoHideMatchTimeStartRow: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    hideMatchTimeStartRow: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtNumber: '',
+      roundNumber: 4,
+      matchStatus: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          name: 'Matt Glatt',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          name: 'Spencer Hart',
+          image: ''
+        }],
+        percentage: 20,
+        isWinner: false,
+        scores: [9, 10, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          name: 'Kevin Coutant',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          name: 'Mitch Pomerance',
+          image: ''
+        }],
+        percentage: 80,
+        isWinner: true,
+        scores: [11, 12, 0,]
+      }
+    }
+  }
+};
+
+export const DuoLiveHideMatchTimeStartRowWithSuffixNames: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    hideMatchTimeStartRow: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtNumber: '',
+      roundNumber: 4,
+      matchStatus: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          name: 'Matt Glatt Sr.',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          name: 'Spencer Hart Jr.',
+          image: ''
+        }],
+        percentage: 50,
+        isWinner: undefined,
+        scores: [9, 12, 10]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          name: 'Kevin Coutant Sr.',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          name: 'Mitch Pomerance Sr.',
+          image: ''
+        }],
+        percentage: 50,
+        isWinner: undefined,
+        scores: [11, 10, 10]
+      }
+    }
+  }
+};
+

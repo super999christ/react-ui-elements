@@ -22,6 +22,10 @@
   @apply p-1;
 }
 
+.header--text--wrapper {
+  @apply flex flex-row justify-between;
+}
+
 .header--text {
   @apply text-sm font-semibold leading-5 text-gray-900 line-clamp-1;
 }
@@ -134,6 +138,10 @@
   @apply font-semibold;
 }
 
+.player-sufix-name {
+  @apply font-normal;
+}
+
 .player-tag {
   @apply rounded-full text-xs px-4 h-6 inline-flex items-center py-1 bg-gray-900 text-white;
 }
@@ -187,9 +195,9 @@
 }
 
 .delayed__text {
-  @apply text-gray-600 font-semibold;
+  @apply text-gray-500 font-semibold;
 }
 
-.soon__text {
-  @apply text-warning-400 font-semibold;
+.card--footer--hidden {
+  @apply hidden sm:flex;
 }
