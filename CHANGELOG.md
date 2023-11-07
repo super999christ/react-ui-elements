@@ -1,3 +1,11 @@
+## [1.14.2](https://github.com/pickleballinc/react-ui/compare/v1.14.1...v1.14.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* tailwind class for shadow removed ([ef0ac4c](https://github.com/pickleballinc/react-ui/commit/ef0ac4c8a9247dadfc711c3c60f53513e87f93d8))
+* textarea shadow removed ([af57e3f](https://github.com/pickleballinc/react-ui/commit/af57e3f21543dfd491ec5115520a48120c60fd91))
+
 ## [1.14.1](https://github.com/pickleballinc/react-ui/compare/v1.14.0...v1.14.1) (2023-11-06)
 
 
