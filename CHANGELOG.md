@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/pickleballinc/react-ui/compare/v1.14.2...v1.14.3) (2023-11-07)
+
+
+### Bug Fixes
+
+* border in textarea is no longer important ([15e0c6e](https://github.com/pickleballinc/react-ui/commit/15e0c6e54872a94e338d73fa415de1bc5cf37219))
+
 ## [1.14.2](https://github.com/pickleballinc/react-ui/compare/v1.14.1...v1.14.2) (2023-11-07)
 
 
