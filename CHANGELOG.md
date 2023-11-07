@@ -1,3 +1,11 @@
+## [1.14.5](https://github.com/pickleballinc/react-ui/compare/v1.14.4...v1.14.5) (2023-11-07)
+
+
+### Bug Fixes
+
+* added placeholder for match depending on status in resultcard and matchcardv2, tournamenttitle and eventtitle now dont break intwo multiple rows ([887ffc7](https://github.com/pickleballinc/react-ui/commit/887ffc7869988e2a7625875db6a4317cfa225b04))
+* removed unused import in matchcardv2 ([ffc5ce4](https://github.com/pickleballinc/react-ui/commit/ffc5ce42b9419b06ad19a84afa06283a6c97b92d))
+
 ## [1.14.4](https://github.com/pickleballinc/react-ui/compare/v1.14.3...v1.14.4) (2023-11-07)
 
 
