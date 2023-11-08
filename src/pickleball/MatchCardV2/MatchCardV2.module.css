@@ -175,7 +175,7 @@
 }
 
 .card--footer {
-  @apply flex border-t border-gray-300 px-[6px] h-10;
+  @apply flex justify-between border-t border-gray-300 px-[6px] h-10;
 }
 
 .match-card--compact .card--footer {
@@ -200,4 +200,16 @@
 
 .card--footer--hidden {
   @apply hidden sm:flex;
+}
+
+.card--footer--end {
+  @apply justify-end;
+}
+
+.details--URL {
+  @apply text-experiment text-sm not-italic font-medium leading-5 px-2;
+}
+
+.details--URL--compact {
+  @apply text-experiment text-xs not-italic font-medium leading-[18px] px-1;
 }

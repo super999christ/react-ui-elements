@@ -6,10 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
 
-function getPartNames(name: string) {
-  return name.split(" ");
-}
-
 interface IconProps {
   width: number;
   height: number;
@@ -150,7 +146,6 @@ const TeamInfoRow = ({
         <div className={styles["player-info"]}>
           <div className={styles["player-names"]}>
             {team.players.map((player) => {
-              const name = getPartNames(player.name);
               const nameClasses = clsx(styles["player-first-name"], {
                 [styles["player-first-name-short"]]: shortenName,
               });
@@ -161,19 +156,19 @@ const TeamInfoRow = ({
                   className={styles["player-info-name"]}
                 >
                   <div className={styles["player-names-wrapper"]}>
-                    {name[0] && (
+                    {player.firstName && (
                       <span className={nameClasses}>
-                        {shortenName ? `${name[0].charAt(0)}.` : name[0]}
+                        {shortenName ? `${player.firstName.charAt(0)}.` : player.firstName}
                       </span>
                     )}
-                    {name[1] && (
+                    {player.lastName && (
                       <span className={styles["player-last-name"]}>
-                        {name[1]}
+                        {player.lastName}
                       </span>
                     )}
-                    {name[2] && (
+                    {player.suffixName && (
                       <span className={styles["player-sufix-name"]}>
-                        {name[2]}
+                        {player.suffixName}
                       </span>
                     )}
                   </div>
@@ -218,22 +213,29 @@ const TeamInfoRow = ({
 };
 
 export interface MatchCardV2Props {
+  compact?: boolean;
+  hideMatchTimeStartRowOnPhones?: boolean;
   match: Match;
   shortenName?: boolean;
-  compact?: boolean;
-  hideMatchTimeStartRow?: boolean;
+  sponsors?: React.ReactNode;
 }
 
 const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
   (props, ref) => {
-    const { match, shortenName, compact, hideMatchTimeStartRow } = props;
+    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors} = props;
 
     const cardClasses = clsx(styles["match-card"], {
       [styles["match-card--compact"]]: compact,
     });
 
     const cardFooterClasses = clsx(styles['card--footer'], {
-      [styles['card--footer--hidden']]: hideMatchTimeStartRow,
+      [styles['card--footer--end']]: !match.matchTimeStart && sponsors,
+      [styles['card--footer--hidden']]: hideMatchTimeStartRowOnPhones,
+    });
+
+    const detailsClasses = clsx({
+      [styles['details--URL']]: !compact,
+      [styles['details--URL--compact']]: compact,
     });
 
     return (
@@ -268,9 +270,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   </span>
                   {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3) &&
                     (
-                      match.matchStatus === 2 ? 
+                      match.matchStatus === 2 ?
                         <span className={`${styles["info--item"]} ${styles['live__text']}`}>LIVE</span> :
-                      match.matchStatus === 3 ? 
+                      match.matchStatus === 3 ?
                         <span className={`${styles["info--item"]} ${styles['delayed__text']}`}>DELAYED</span> : null
                     )
                   }
@@ -278,12 +280,12 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
               )}
             </div>
           )}
-          {(match.courtNumber || match.roundNumber || match.matchTime) && (
+          {(match.courtName || match.roundNumber || match.matchTime || match.detailsURL) && (
             <div className={styles["content--info"]}>
               <div className={styles["info--inner"]}>
-                {match.courtNumber && (
+                {match.courtName && (
                   <span className={styles["info--item"]}>
-                    {`Court ${match.courtNumber}`}
+                    {match.courtName}
                   </span>
                 )}
                 {match.roundNumber && (
@@ -297,6 +299,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   </span>
                 )}
               </div>
+              {match.detailsURL &&
+                <a className={detailsClasses} href={match.detailsURL} rel="noopener noreferrer" target="_blank">See details</a>
+              }
             </div>
           )}
           {match.team1 && match.team2 && (
@@ -315,17 +320,20 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
               />
             </>
           )}
-          {match.matchTimeStart && (
+          {(match.matchTimeStart || sponsors) && (
             <div className={cardFooterClasses}>
-              <div className={styles["footer--time"]}>
-                <ClockIcon
-                  width={compact ? 18 : 16}
-                  height={compact ? 18 : 16}
-                />
-                {`${match.matchTimeStart || ""} ${
-                  match.timezoneAbbreviation || ""
-                }`}
-              </div>
+              {match.matchTimeStart &&
+                <div className={styles["footer--time"]}>
+                  <ClockIcon
+                    width={compact ? 16 : 18}
+                    height={compact ? 16 : 18}
+                  />
+                  {`${match.matchTimeStart || ""} ${
+                    match.timezoneAbbreviation || ""
+                  }`}
+                </div>
+              }
+              {sponsors}
             </div>
           )}
         </div>

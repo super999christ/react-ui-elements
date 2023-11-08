@@ -1,6 +1,8 @@
 export interface MatchTeamPlayer {
   playerId: string;
-  name: string;
+  firstName: string;
+  lastName: string;
+  suffixName: string;
   image: string;
 }
 
@@ -15,8 +17,9 @@ export interface MatchTeam {
 
 export interface Match {
   id?: string;
-  courtNumber?: string;
+  courtName?: string;
   eventTitle?: string;
+  detailsURL?: string;
   matchNumber?: number;
   matchTimeStart?: string;
   matchStatus?: 0 | 1 | 2 | 3 | 4 | -1;
