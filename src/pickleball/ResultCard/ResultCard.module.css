@@ -294,9 +294,9 @@
 }
 
 .live__text {
-  @apply text-[#E31B54] font-medium text-xs sm:text-sm not-italic leading-4 sm:leading-[18px];
+  @apply text-[#E31B54] font-semibold text-xs sm:text-sm not-italic leading-4 sm:leading-[18px];
 }
 
 .delayed__text {
-  @apply text-gray-500 font-medium text-xs sm:text-sm not-italic leading-4 sm:leading-[18px];
+  @apply text-gray-500 font-semibold text-xs sm:text-sm not-italic leading-4 sm:leading-[18px];
 }
