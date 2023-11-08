@@ -1,3 +1,10 @@
+## [1.14.9](https://github.com/pickleballinc/react-ui/compare/v1.14.8...v1.14.9) (2023-11-08)
+
+
+### Bug Fixes
+
+* matchcardv2 classes completely matching the design, resultcar ([9e01934](https://github.com/pickleballinc/react-ui/commit/9e0193494a6b0f3586be68261f037aa79ba4beb4))
+
 ## [1.14.8](https://github.com/pickleballinc/react-ui/compare/v1.14.7...v1.14.8) (2023-11-08)
 
 
