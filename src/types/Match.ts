@@ -7,7 +7,7 @@ export interface MatchTeamPlayer {
 }
 
 export interface MatchTeam {
-  isWinner: boolean;
+  isWinner?: boolean;
   percentage: number;
   players: MatchTeamPlayer[];
   retired?: boolean;
@@ -22,7 +22,7 @@ export interface Match {
   detailsURL?: string;
   matchNumber?: number;
   matchTimeStart?: string;
-  matchStatus?: 0 | 1 | 2 | 3 | 4 | -1;
+  matchStatus?: number;
   timezoneAbbreviation?: string;
   matchTime?: string;
   roundNumber?: number;
