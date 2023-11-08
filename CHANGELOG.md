@@ -1,3 +1,10 @@
+## [1.14.10](https://github.com/pickleballinc/react-ui/compare/v1.14.9...v1.14.10) (2023-11-08)
+
+
+### Bug Fixes
+
+* fixed text weights on matchcardv2 and resultcard ([f192fe6](https://github.com/pickleballinc/react-ui/commit/f192fe612a2fc80434d5d176b5198177108dfb78))
+
 ## [1.14.9](https://github.com/pickleballinc/react-ui/compare/v1.14.8...v1.14.9) (2023-11-08)
 
 
