@@ -1,3 +1,10 @@
+## [1.14.12](https://github.com/pickleballinc/react-ui/compare/v1.14.11...v1.14.12) (2023-11-08)
+
+
+### Bug Fixes
+
+* removed gap-2 now its gap-1 in matchcardv2 class ([62663e7](https://github.com/pickleballinc/react-ui/commit/62663e7f9694ab66cfa7f9f33d5c3c00775077a7))
+
 ## [1.14.11](https://github.com/pickleballinc/react-ui/compare/v1.14.10...v1.14.11) (2023-11-08)
 
 
