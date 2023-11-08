@@ -196,13 +196,17 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
   });
   const contentClasses = clsx(styles.content);
   const mobileContentClasses = clsx(styles.mobile__content);
-  const finalClasses = clsx(styles.final);
+  const finalClasses = clsx(styles.final, {
+    [styles['final--delayed']]: match.matchStatus === 3,
+  });
 
   const setClasses = clsx(styles.set__one);
   const set2Classes = clsx(styles.set__two);
 
   const teamTwoScoresCopy = [...match.team2.scores];
   const teamTwoScoresReversed = [...teamTwoScoresCopy.reverse()];
+
+  const finalWrapperClasses = clsx(styles.final__wrapper);
 
   return (
     <div className={wrapperClasses}>
@@ -262,7 +266,7 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
                 );
               })}
           </div>
-          <div className={styles['final__wrapper']}>
+          <div className={finalWrapperClasses}>
             { 
               match.matchStatus === 2 ? <span className={styles['live__text']}>Live</span> :
               match.matchStatus === 3 ? <span className={styles['delayed__text']}>Delayed</span> :

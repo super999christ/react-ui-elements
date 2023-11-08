@@ -27,7 +27,7 @@
 }
 
 .header--text {
-  @apply text-sm not-italic font-semibold leading-5 text-gray-900 line-clamp-1;
+  @apply text-sm not-italic font-semibold leading-5 text-gray-900 overflow-hidden line-clamp-1;
 }
 
 .match-card--compact .header--text {
@@ -47,7 +47,7 @@
 }
 
 .info--item {
-  @apply font-medium text-sm leading-5 pl-1;
+  @apply font-normal text-sm leading-5 pl-1;
 }
 
 .info--inner span:first-child {
@@ -99,7 +99,7 @@
 }
 
 .player-percentage {
-  @apply text-sm leading-5 font-medium text-gray-500 flex items-center;
+  @apply text-sm leading-5 font-normal text-gray-500 flex items-center;
 }
 
 .player-names-wrapper {
@@ -199,15 +199,15 @@
 }
 
 .live__text {
-  @apply text-[#E31B54] text-sm not-italic font-semibold leading-5;
+  @apply min-w-[57px] table-cell bg-[#E31B54] rounded-xl px-2 text-white text-sm not-italic font-semibold align-middle;
 }
 
 .delayed__text {
-  @apply text-gray-500 text-sm not-italic font-semibold leading-5;
+  @apply min-w-[57px] table-cell bg-gray-500 rounded-xl px-2 text-white text-sm not-italic font-semibold align-middle;
 }
 
 .match-card--compact .live__text, .match-card--compact .delayed__text {
-  @apply text-xs leading-[18px] pr-0.5;
+  @apply min-w-[47px] h-[17px] text-xs leading-[18px] px-1.5;
 }
 
 .card--footer--hidden {

@@ -404,7 +404,7 @@ export const DuoHideMatchTimeStartRowOnPhones: Story = {
           suffixName: '',
           image: ''
         }],
-        percentage: 20,
+        percentage: 0,
         isWinner: false,
         scores: [9, 10, 0]
       },
@@ -423,7 +423,7 @@ export const DuoHideMatchTimeStartRowOnPhones: Story = {
           suffixName: '',
           image: ''
         }],
-        percentage: 80,
+        percentage: 100,
         isWinner: true,
         scores: [11, 12, 0,]
       }

@@ -180,7 +180,7 @@ const TeamInfoRow = ({
                 </div>
             ))}
           </div>
-          {derivedPercentage && (
+          {derivedPercentage !== undefined && (
             <div className={percentageClasses}>{`${Math.round(derivedPercentage * 10) / 10}%`}</div>
           )}
           {team.retired && <div className={styles["player-tag"]}>Retired</div>}
@@ -260,7 +260,10 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   {(match.matchStatus === 2 || match.matchStatus === 3) &&
                     (
                       match.matchStatus === 2 ? 
-                        <span className={styles['live__text']}>LIVE</span> :
+                        <span className={styles['live__text']}>
+                          &#x2022;
+                          LIVE
+                        </span> :
                       match.matchStatus === 3 ? 
                         <span className={styles['delayed__text']}>DELAYED</span> : null
                     )
@@ -275,7 +278,10 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3) &&
                     (
                       match.matchStatus === 2 ?
-                        <span className={styles['live__text']}>LIVE</span> :
+                        <span className={styles['live__text']}>
+                          &#x2022;
+                          LIVE
+                        </span> :
                       match.matchStatus === 3 ?
                         <span className={styles['delayed__text']}>DELAYED</span> : null
                     )

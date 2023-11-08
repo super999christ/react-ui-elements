@@ -26,7 +26,9 @@
   @apply w-14 max-w-[64px] flex items-center justify-center text-center text-sm font-semibold leading-[18px] tracking-normal text-gray-900;
 }
 
-/* MatchSide classes */
+.final--delayed {
+  @apply max-w-[unset] w-[72px];
+}
 
 .match__side {
   flex: 1 1 0px;
