@@ -1,3 +1,10 @@
+## [1.14.11](https://github.com/pickleballinc/react-ui/compare/v1.14.10...v1.14.11) (2023-11-08)
+
+
+### Bug Fixes
+
+* changed live and delayed indicator, fixed zero percentage winrate ([710ff60](https://github.com/pickleballinc/react-ui/commit/710ff60779a48828b20f4d210c0107a55a70cd40))
+
 ## [1.14.10](https://github.com/pickleballinc/react-ui/compare/v1.14.9...v1.14.10) (2023-11-08)
 
 
