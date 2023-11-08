@@ -1,3 +1,11 @@
+## [1.14.8](https://github.com/pickleballinc/react-ui/compare/v1.14.7...v1.14.8) (2023-11-08)
+
+
+### Bug Fixes
+
+* major fixes in matchcardv2 ([828d20c](https://github.com/pickleballinc/react-ui/commit/828d20cb881aae1491282373931332e16730fb04))
+* resultcard interface wrong ([fb3f1cc](https://github.com/pickleballinc/react-ui/commit/fb3f1ccf8c0f027f226910cd5ea4761048fb371e))
+
 ## [1.14.7](https://github.com/pickleballinc/react-ui/compare/v1.14.6...v1.14.7) (2023-11-07)
 
 
