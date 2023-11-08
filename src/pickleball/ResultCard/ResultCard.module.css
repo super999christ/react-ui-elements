@@ -23,8 +23,7 @@
 }
 
 .final {
-  @apply flex items-center justify-center px-2 text-center text-xs font-semibold leading-4 tracking-normal text-gray-900;
-  @apply sm:px-[26px];
+  @apply w-14 max-w-[64px] flex items-center justify-center text-center text-sm font-semibold leading-[18px] tracking-normal text-gray-900;
 }
 
 /* MatchSide classes */
@@ -44,7 +43,7 @@
 }
 
 .match__side--duo {
-  @apply gap-1 sm:gap-4;
+  @apply gap-1;
 }
 
 .match__side--solo {
@@ -52,7 +51,7 @@
 }
 
 .team__info {
-  @apply flex w-full gap-2;
+  @apply flex w-full gap-1;
 }
 
 .team__info--reversed {
@@ -114,7 +113,7 @@
 }
 
 .name {
-  @apply line-clamp-1;
+  @apply flex flex-nowrap;
 }
 
 .first__name {
@@ -254,6 +253,10 @@
   @apply text-sm font-semibold not-italic leading-5 text-gray-900;
 }
 
+.suffix__name__mobile {
+  @apply text-sm font-normal not-italic leading-[18px] text-gray-900;
+}
+
 .row__one__divider {
   @apply flex w-[5px] justify-center border-x border-solid border-gray-100;
 }
@@ -279,7 +282,7 @@
 }
 
 .final__wrapper {
-  @apply flex items-center justify-center bg-white text-xs font-semibold not-italic leading-[18px] text-gray-900;
+  @apply flex items-center justify-center bg-white text-xs font-semibold not-italic leading-4 text-gray-900;
 }
 
 .set__one {
@@ -291,9 +294,9 @@
 }
 
 .live__text {
-  @apply text-error-600 font-semibold;
+  @apply text-[#E31B54] font-medium text-xs sm:text-sm not-italic leading-4 sm:leading-[18px];
 }
 
 .delayed__text {
-  @apply text-gray-500 font-semibold;
+  @apply text-gray-500 font-medium text-xs sm:text-sm not-italic leading-4 sm:leading-[18px];
 }

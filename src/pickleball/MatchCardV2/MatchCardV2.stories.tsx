@@ -51,6 +51,7 @@ export const SoloLeftWinner: Story = {
           image: ''
         }],
         isWinner: false,
+        percentage: 30.7,
         scores: [11, 6, 7]
       }
     }
@@ -550,12 +551,68 @@ export const DuoLiveWithSuffixNamesDetailsURLSponsors2: Story = {
   args: {
     shortenName: true,
     compact: true,
-    sponsors: <div className="flex gap-1">
+    sponsors: <div className="flex items-center gap-1">
       <a><FontAwesomeIcon icon={faYoutube} /></a>
       <a><FontAwesomeIcon icon={faTwitch} /></a>
     </div>,
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      detailsURL: 'https://ppatour.com',
+      timezoneAbbreviation: 'EST',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      matchStatus: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: 'Sr.',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: 'Jr.',
+          image: '',
+        }],
+        percentage: 50,
+        isWinner: undefined,
+        scores: [9, 12, 10]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: 'Sr.',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: 'Sr.',
+          image: ''
+        }],
+        percentage: 50,
+        isWinner: undefined,
+        scores: [11, 10, 10]
+      }
+    }
+  }
+};
+
+export const DuoLiveWithSuffixNamesDetailsURLSponsorsNotCompactMatchNumber: Story = {
+  args: {
+    shortenName: true,
+    sponsors: <div className="flex items-center gap-1">
+      <a><FontAwesomeIcon icon={faYoutube} /></a>
+      <a><FontAwesomeIcon icon={faTwitch} /></a>
+    </div>,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      matchNumber: 7,
       detailsURL: 'https://ppatour.com',
       timezoneAbbreviation: 'EST',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',

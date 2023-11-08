@@ -27,27 +27,31 @@
 }
 
 .header--text {
-  @apply text-sm font-semibold leading-5 text-gray-900 line-clamp-1;
+  @apply text-sm not-italic font-medium leading-5 text-gray-900 line-clamp-1;
 }
 
 .match-card--compact .header--text {
-  @apply text-xs;
+  @apply text-xs leading-[18px];
 }
 
 .content--info {
-  @apply py-2 border-t border-gray-300 flex flex-row justify-between;
+  @apply p-2 border-t border-gray-300 flex flex-row justify-between;
 }
 
 .match-card--compact .content--info {
-  @apply py-1;
+  @apply p-1;
 }
 
 .info--inner {
-  @apply flex divide-x divide-gray-300;
+  @apply flex gap-1 divide-x divide-gray-300;
 }
 
 .info--item {
-  @apply font-normal text-sm leading-5 px-2;
+  @apply font-normal text-sm leading-5 pl-1;
+}
+
+.info--inner span:first-child {
+  @apply pl-0;
 }
 
 .match-card--compact .info--item {
@@ -55,7 +59,7 @@
 }
 
 .team-row {
-  @apply h-14 flex flex-1 gap-2 border-t border-gray-300;;
+  @apply h-14 flex flex-1 justify-between border-t border-gray-300;
 }
 
 .match-card--compact .team-row {
@@ -67,19 +71,27 @@
 }
 
 .avatar--winner {
-  @apply border-green-500;
+  @apply border-green-600;
 }
 
 .avatar--loser {
-  @apply border-error-500;
+  @apply border-error-600;
 }
 
 .avatar--indicator {
-  @apply absolute -bottom-[2px] -right-[2px];
+  @apply absolute -bottom-[0.5px] -right-[0.5px];
+}
+
+.match-card--compact .avatar--indicator {
+  @apply absolute bottom-[0px] right-[0px];
 }
 
 .team-row-info {
-  @apply flex flex-1 items-center px-2 gap-1;
+  @apply flex flex-1 items-center pl-2 gap-1;
+}
+
+.match-card--compact .team-row-info {
+  @apply pl-1;
 }
 
 .team-avatars {
@@ -87,7 +99,7 @@
 }
 
 .player-percentage {
-  @apply text-sm font-semibold text-gray-500 flex items-center;
+  @apply text-sm leading-5 font-normal text-gray-500 flex items-center;
 }
 
 .player-names-wrapper {
@@ -95,11 +107,11 @@
 } 
 
 .match-card--compact .player-percentage {
-  @apply text-[10px];
+  @apply text-xs leading-4;
 }
 
-.player-percentage--winner {
-  @apply text-green-800;
+.player-percentage--larger {
+  @apply text-green-600;
 }
 
 .player-info {
@@ -123,11 +135,7 @@
 }
 
 .player-first-name {
-  @apply font-normal w-1 inline-flex justify-end;
-}
-
-.player-first-name-short {
-  @apply w-4;
+  @apply font-normal inline-flex;
 }
 
 .match-card--compact .player-first-name {
@@ -143,11 +151,11 @@
 }
 
 .player-tag {
-  @apply rounded-full text-xs px-4 h-6 inline-flex items-center py-1 bg-gray-900 text-white;
+  @apply rounded-full text-xs pt-0.5 px-4 h-[22px] inline-flex items-center bg-gray-900 text-white;
 }
 
 .match-card--compact .player-tag {
-  @apply rounded-full text-[10px] h-5 px-2 inline-flex items-center bg-gray-900 text-white;
+  @apply pt-0;
 }
 
 .scores-container {
@@ -155,7 +163,7 @@
 }
 
 .scores {
-  @apply relative text-sm leading-5 font-bold inline-flex justify-center items-center w-7 border-l border-gray-100;
+  @apply relative text-sm leading-5 font-bold inline-flex justify-center items-center w-[26px] border-l border-gray-100;
 }
 
 .match-card--compact .scores {
@@ -191,11 +199,15 @@
 }
 
 .live__text {
-  @apply text-error-600 font-semibold;
+  @apply text-[#E31B54] text-sm not-italic font-medium leading-5;
 }
 
 .delayed__text {
-  @apply text-gray-500 font-semibold;
+  @apply text-gray-500 text-sm not-italic font-medium leading-5;
+}
+
+.match-card--compact .live__text, .match-card--compact .delayed__text {
+  @apply text-xs leading-[18px] pr-0.5;
 }
 
 .card--footer--hidden {
@@ -207,9 +219,9 @@
 }
 
 .details--URL {
-  @apply text-experiment text-sm not-italic font-medium leading-5 px-2;
+  @apply text-experiment  text-sm not-italic font-medium leading-5 line-clamp-1;
 }
 
 .details--URL--compact {
-  @apply text-experiment text-xs not-italic font-medium leading-[18px] px-1;
+  @apply text-experiment text-xs not-italic font-medium leading-[18px] line-clamp-1;
 }

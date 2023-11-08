@@ -9,10 +9,6 @@ import React from 'react';
 import styles from './ResultCard.module.css';
 import { MatchTeam } from 'src/types/Match';
 
-export function getPartNames(name: string) {
-  return name.split(' ');
-}
-
 const TrophyIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -133,11 +129,22 @@ const MatchSide = ({ oppositeTeam, team, teamLabel }: MatchSideProps) => {
             return (
               <div key={index} className={playerInfoClasses}>
                 <div className={nameClasses}>
-                  <span className={firstNameClasses}>
-                    {player.firstName && player.firstName.charAt(0).toUpperCase()}
-                  </span>
-                  {`, `}
-                  <span className={lastNameClasses}>{player.lastName && player.lastName}</span>
+                  {player.firstName && 
+                    <span className={firstNameClasses}>
+                      {player.firstName.charAt(0).toUpperCase()}
+                      {`.`}&nbsp;
+                    </span>
+                  }
+                  {player.lastName && 
+                    <span className={lastNameClasses}>
+                      {player.lastName}
+                    </span>}
+                  {player.suffixName &&
+                    <span className={styles['first__name']}>
+                      &nbsp;
+                      {player.suffixName}
+                    </span>
+                  }
                 </div>
                 <div className={playerImageClasses}>
                   {player.image ? (

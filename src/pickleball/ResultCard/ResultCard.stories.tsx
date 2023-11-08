@@ -83,6 +83,24 @@ export const DuoLeftWinner: Story = {
       matchStatus: 4,
       team1: {
         players: [{
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        }],
+        isWinner: true,
+        scores: [11, 11, 7, 9, 11]
+      },
+      team2: {
+        players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
           firstName: 'Matt',
           lastName: 'Glatt',
@@ -93,24 +111,6 @@ export const DuoLeftWinner: Story = {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
           firstName: 'Spencer',
           lastName: 'Hart',
-          suffixName: '',
-          image: ''
-        }],
-        isWinner: true,
-        scores: [11, 11, 7, 9, 11]
-      },
-      team2: {
-        players: [{
-          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
-          firstName: 'Mitch',
-          lastName: 'Pomerancejsjsjsjsdsasdsa',
-          suffixName: '',
-          image: ''
-        },
-        {
-          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
-          firstName: 'Kevin',
-          lastName: 'Coutant',
           suffixName: '',
           image: ''
         }],
@@ -130,7 +130,7 @@ export const DuoRightWinner: Story = {
         players: [{
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
           firstName: 'Mitch',
-          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          lastName: 'Pomerance',
           suffixName: '',
           image: ''
         },
@@ -200,7 +200,7 @@ export const DuoScheduled: Story = {
         {
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
           firstName: 'Mitch',
-          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          lastName: 'Pomerance',
           suffixName: '',
           image: ''
         }],
@@ -227,7 +227,7 @@ export const DuoLive: Story = {
         {
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
           firstName: 'Mitch',
-          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          lastName: 'Pomerance',
           suffixName: '',
           image: ''
         }],
@@ -290,12 +290,57 @@ export const DuoDelayed: Story = {
         {
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
           firstName: 'Mitch',
-          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          lastName: 'Pomerance',
           suffixName: '',
           image: ''
         }],
         isWinner: undefined,
         scores: [0, 0, 0,]
+      }
+    }
+  }
+};
+
+export const DuoLiveWithSuffixNames: Story = {
+  args: {
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      matchStatus: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: 'Sr.',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: 'Jr.',
+          image: '',
+        }],
+        isWinner: undefined,
+        scores: [9, 12, 10]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: 'Sr.',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: 'Sr.',
+          image: ''
+        }],
+        isWinner: undefined,
+        scores: [11, 10, 10]
       }
     }
   }

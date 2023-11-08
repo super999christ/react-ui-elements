@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Avatar from './../../Avatar/Avatar';
 import clsx from 'clsx';
 
-import MatchSide, { getPartNames } from './MatchSide';
+import MatchSide from './MatchSide';
 import styles from './ResultCard.module.css';
 import { Match } from "src/types/Match";
 
@@ -119,13 +119,23 @@ const PlayersRow = ({match, playerIndex, player1FirstName, player1LastName, play
             }
           />
           <div className={styles['name__container']}>
-            <span className={styles['first__name__first__letter']}>
-              {player1FirstName &&
-                `${player1FirstName.charAt(0).toUpperCase()}.`}
-            </span>{` `}
-            <span className={styles['last__name__mobile']}>
-              {player1LastName}
-            </span>
+            {player1FirstName &&
+              <span className={styles['first__name__first__letter']}>
+                {player1FirstName.charAt(0).toUpperCase()}.
+                &nbsp;
+              </span>
+            }
+            {player1LastName &&
+              <span className={styles['last__name__mobile']}>
+                {player1LastName}
+              </span>
+            }{` `}
+            {player1SuffixName &&
+              <span className={styles['suffix__name__mobile']}>
+                &nbsp;
+                {player1SuffixName}
+              </span>
+            }
           </div>
         </div>
       )}
@@ -151,13 +161,23 @@ const PlayersRow = ({match, playerIndex, player1FirstName, player1LastName, play
             }
           />
           <div className={styles['name__container']}>
-            <span className={styles['first__name__first__letter']}>
-              {player2FirstName &&
-                `${player1FirstName.charAt(0).toUpperCase()}.`}
-            </span>{` `}
-            <span className={styles['last__name__mobile']}>
-              {player2LastName}
-            </span>
+            {player2FirstName &&
+              <span className={styles['first__name__first__letter']}>
+                {player2FirstName.charAt(0).toUpperCase()}.
+                &nbsp;
+              </span>
+            }
+            {player2LastName &&
+              <span className={styles['last__name__mobile']}>
+                {player2LastName}
+              </span>
+            }
+            {player2SuffixName &&
+              <span className={styles['suffix__name__mobile']}>
+                &nbsp;
+                {player2SuffixName}
+              </span>
+            }
           </div>
         </div>
       )}
