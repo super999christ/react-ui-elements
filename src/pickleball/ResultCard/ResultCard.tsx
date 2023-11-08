@@ -77,11 +77,15 @@ const WinnerIcon = ({ width, height }: IconProps) => (
 interface PlayersRowInterface {
   match: Match;
   playerIndex: number;
-  player1Name: string[] | string;
-  player2Name: string[] | string;
+  player1FirstName: string;
+  player1LastName: string;
+  player1SuffixName: string;
+  player2FirstName: string;
+  player2LastName: string;
+  player2SuffixName: string;
 }
 
-const PlayersRow = ({match, playerIndex, player1Name, player2Name} : PlayersRowInterface) => {
+const PlayersRow = ({match, playerIndex, player1FirstName, player1LastName, player1SuffixName, player2FirstName, player2LastName, player2SuffixName} : PlayersRowInterface) => {
   const rowWrapperClasses = clsx(styles.row__wrapper);
 
   const avatarTeam1Classes = clsx(styles.avatar, {
@@ -116,11 +120,11 @@ const PlayersRow = ({match, playerIndex, player1Name, player2Name} : PlayersRowI
           />
           <div className={styles['name__container']}>
             <span className={styles['first__name__first__letter']}>
-              {player1Name[0] &&
-                `${player1Name[0].charAt(0).toUpperCase()}.`}
+              {player1FirstName &&
+                `${player1FirstName.charAt(0).toUpperCase()}.`}
             </span>{` `}
             <span className={styles['last__name__mobile']}>
-              {player1Name[1]}
+              {player1LastName}
             </span>
           </div>
         </div>
@@ -148,11 +152,11 @@ const PlayersRow = ({match, playerIndex, player1Name, player2Name} : PlayersRowI
           />
           <div className={styles['name__container']}>
             <span className={styles['first__name__first__letter']}>
-              {player2Name[0] &&
-                `${player2Name[0].charAt(0).toUpperCase()}.`}
+              {player2FirstName &&
+                `${player1FirstName.charAt(0).toUpperCase()}.`}
             </span>{` `}
             <span className={styles['last__name__mobile']}>
-              {player2Name[1]}
+              {player2LastName}
             </span>
           </div>
         </div>
@@ -180,22 +184,6 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
   const teamTwoScoresCopy = [...match.team2.scores];
   const teamTwoScoresReversed = [...teamTwoScoresCopy.reverse()];
 
-  const teamOnePlayerOneName = match.team1.players[0]
-    ? getPartNames(match.team1.players[0].name)
-    : '';
-
-  const teamOnePlayerTwoName = match.team1.players[1]
-    ? getPartNames(match.team1.players[1].name)
-    : '';
-
-  const teamTwoPlayerOneName = match.team2.players[0]
-    ? getPartNames(match.team2.players[0].name)
-    : '';
-
-  const teamTwoPlayerTwoName = match.team2.players[1]
-    ? getPartNames(match.team2.players[1].name)
-    : '';
-
   return (
     <div className={wrapperClasses}>
       <div className={contentClasses}>
@@ -218,12 +206,18 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
         />
       </div>
       <div className={mobileContentClasses}>
-        <PlayersRow
-          match={match}
-          playerIndex={0}
-          player1Name={teamOnePlayerOneName}
-          player2Name={teamTwoPlayerOneName}
-        />
+        {match.team1.players[0] && match.team2.players[0] && 
+          <PlayersRow
+            match={match}
+            playerIndex={0}
+            player1FirstName={match.team1.players[0].firstName}
+            player1LastName={match.team1.players[0].lastName}
+            player1SuffixName={match.team1.players[0].suffixName}
+            player2FirstName={match.team2.players[0].firstName}
+            player2LastName={match.team2.players[0].lastName}
+            player2SuffixName={match.team2.players[0].suffixName}
+          />
+          }
         <div className={styles['scores__container']}>
           <div className={styles['scores__wrapper']}>
             {match.team1.scores.length > 0 &&
@@ -282,12 +276,18 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
               })}
           </div>
         </div>
-        <PlayersRow
-          match={match}
-          playerIndex={1}
-          player1Name={teamOnePlayerTwoName}
-          player2Name={teamTwoPlayerTwoName}
-        />
+        {match.team1.players[1] && match.team2.players[1] && 
+          <PlayersRow
+            match={match}
+            playerIndex={1}
+            player1FirstName={match.team1.players[1].firstName}
+            player1LastName={match.team1.players[1].lastName}
+            player1SuffixName={match.team1.players[1].suffixName}
+            player2FirstName={match.team2.players[1].firstName}
+            player2LastName={match.team2.players[1].lastName}
+            player2SuffixName={match.team2.players[1].suffixName}
+          />
+        }
       </div>
     </div>
   );

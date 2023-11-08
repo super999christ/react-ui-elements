@@ -18,17 +18,13 @@ export const SoloLeftWinner: Story = {
   args:  {
     match: {
       id: '386e642f-ebbe-48c2-bbd0-097b52bca520',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 4,
       team1: {
         players: [{
           playerId: '909FE413-39D0-4838-8F1A-C24F6871EBEB',
-          name: 'Ben Johns',
+          firstName: 'Ben',
+          lastName: 'Johns',
+          suffixName: '',
           image: 'https://www.ppatour.com/wp-content/uploads/2023/06/Ben-Johns-HS.png'
         }],
         isWinner: true,
@@ -37,7 +33,9 @@ export const SoloLeftWinner: Story = {
       team2: {
         players: [ {
           playerId: '909FE413-39D0-4838-8F1A-C24F6871EBEB',
-          name: 'Ethan Rappaport',
+          firstName: 'Ethan',
+          lastName: 'Rappaport',
+          suffixName: '',
           image: ''
         }],
         isWinner: false,
@@ -51,17 +49,13 @@ export const SoloRightWinner: Story = {
   args:  {
     match: {
       id: '386e642f-ebbe-48c2-bbd0-097b52bca520',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 4,
       team1: {
         players: [{
           playerId: '909FE413-39D0-4838-8F1A-C24F6871EBEB',
-          name: 'Ethan Rappaport',
+          firstName: 'Ethan',
+          lastName: 'Rappaport',
+          suffixName: '',
           image: ''
         }],
         isWinner: false,
@@ -70,7 +64,9 @@ export const SoloRightWinner: Story = {
       team2: {
         players: [ {
           playerId: '909FE413-39D0-4838-8F1A-C24F6871EBEB',
-          name: 'Ben Johns',
+          firstName: 'Ben',
+          lastName: 'Johns',
+          suffixName: '',
           image: 'https://www.ppatour.com/wp-content/uploads/2023/06/Ben-Johns-HS.png'
         }],
         isWinner: true,
@@ -84,22 +80,20 @@ export const DuoLeftWinner: Story = {
   args: {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 4,
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
-          name: 'Matt Glatt',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
-          name: 'Spencer Hart',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
           image: ''
         }],
         isWinner: true,
@@ -108,12 +102,16 @@ export const DuoLeftWinner: Story = {
       team2: {
         players: [{
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
-          name: 'Mitch Pomerancejsjsjsjsdsasdsa',
+          firstName: 'Mitch',
+          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
-          name: 'Kevin Coutant',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
           image: ''
         }],
         isWinner: false,
@@ -127,22 +125,20 @@ export const DuoRightWinner: Story = {
   args: {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 4,
       team1: {
         players: [{
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
-          name: 'Mitch Pomerancejsjsjsjsdsasdsa',
+          firstName: 'Mitch',
+          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
-          name: 'Kevin Coutant',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
           image: ''
         }],
         isWinner: false,
@@ -151,12 +147,16 @@ export const DuoRightWinner: Story = {
       team2: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
-          name: 'Matt Glatt',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
-          name: 'Spencer Hart',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
           image: ''
         }],
         isWinner: true,
@@ -170,22 +170,20 @@ export const DuoScheduled: Story = {
   args: {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 1,
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
-          name: 'Matt Glatt',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
-          name: 'Spencer Hart',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
           image: ''
         }],
         isWinner: undefined,
@@ -194,12 +192,16 @@ export const DuoScheduled: Story = {
       team2: {
         players: [{
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
-          name: 'Kevin Coutant',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
-          name: 'Mitch Pomerancejsjsjsjsdsasdsa',
+          firstName: 'Mitch',
+          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          suffixName: '',
           image: ''
         }],
         isWinner: undefined,
@@ -213,22 +215,20 @@ export const DuoLive: Story = {
   args: {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 2,
       team1: {
         players: [{
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
-          name: 'Kevin Coutant',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
-          name: 'Mitch Pomerancejsjsjsjsdsasdsa',
+          firstName: 'Mitch',
+          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          suffixName: '',
           image: ''
         }],
         isWinner: undefined,
@@ -237,12 +237,16 @@ export const DuoLive: Story = {
       team2: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
-          name: 'Matt Glatt',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
-          name: 'Spencer Hart',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
           image: ''
         }],
         isWinner: undefined,
@@ -256,22 +260,20 @@ export const DuoDelayed: Story = {
   args: {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
-      timezoneAbbreviation: 'EST',
-      matchTimeStart: 'Jun 26 - 12:50 AM ',
-      matchTime: '12:50 AM ',
-      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
-      courtNumber: '',
-      roundNumber: 4,
       matchStatus: 3,
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
-          name: 'Matt Glatt',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
-          name: 'Spencer Hart',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
           image: ''
         }],
         isWinner: undefined,
@@ -280,12 +282,16 @@ export const DuoDelayed: Story = {
       team2: {
         players: [{
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
-          name: 'Kevin Coutant',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
           image: ''
         },
         {
           playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
-          name: 'Mitch Pomerancejsjsjsjsdsasdsa',
+          firstName: 'Mitch',
+          lastName: 'Pomerancejsjsjsjsdsasdsa',
+          suffixName: '',
           image: ''
         }],
         isWinner: undefined,

@@ -128,17 +128,16 @@ const MatchSide = ({ oppositeTeam, team, teamLabel }: MatchSideProps) => {
         )}
         <div className={teamContainerClasses}>
           {team.players.map((player, index: number) => {
-            const name = getPartNames(player.name);
             const duos = team.players.length > 1;
 
             return (
               <div key={index} className={playerInfoClasses}>
                 <div className={nameClasses}>
                   <span className={firstNameClasses}>
-                    {name[0] && name[0].charAt(0).toUpperCase()}
+                    {player.firstName && player.firstName.charAt(0).toUpperCase()}
                   </span>
                   {`, `}
-                  <span className={lastNameClasses}>{name[1] && name[1]}</span>
+                  <span className={lastNameClasses}>{player.lastName && player.lastName}</span>
                 </div>
                 <div className={playerImageClasses}>
                   {player.image ? (
