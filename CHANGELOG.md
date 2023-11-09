@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/pickleballinc/react-ui/compare/v1.14.13...v1.15.0) (2023-11-09)
+
+
+### Features
+
+* added icon and iconposition prop to tabs option, exported tourneycard, textarea border fix ([3bd159c](https://github.com/pickleballinc/react-ui/commit/3bd159ca81a43b4e8f193e1e9021efc42f0f1a3b))
+
 ## [1.14.13](https://github.com/pickleballinc/react-ui/compare/v1.14.12...v1.14.13) (2023-11-08)
 
 
