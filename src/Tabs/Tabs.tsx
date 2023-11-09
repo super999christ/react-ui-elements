@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import clsx from 'clsx';
 
-import Tab, { TabSize, TabVariant } from './Tab';
+import Tab, { TabIconPosition, TabSize, TabVariant } from './Tab';
 import Select from './../Select';
 
 import styles from './Tabs.module.css';
@@ -9,6 +9,8 @@ import styles from './Tabs.module.css';
 export interface TabInterface {
   value: string;
   label: string;
+  icon?: React.ReactNode;
+  iconPosition?: TabIconPosition;
 }
 
 export type TabsType = 'horizontal' | 'vertical';
@@ -68,6 +70,8 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
                   key={option.value}
                   active={active === option.value}
                   className={tabClasses}
+                  icon={option.icon}
+                  iconPosition={option.iconPosition}
                   onClick={onChange}
                   size={size}
                   value={option.value}
@@ -83,7 +87,17 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
           className={selectClasses}
           menuPortalTarget={menuPortalTarget}
           onChange={onChange}
-          options={options}
+          options={options.map(option => ({ 
+            value: option.value,
+            label: 
+              option.icon && option.iconPosition ?
+                option.iconPosition === 'prefix' ?
+                  <span>{option.icon} {option.label}</span>
+                  :
+                  <span>{option.label} {option.icon}</span> 
+                :
+                <span>{option.label}</span>
+          }))}
         />
       </>
     );

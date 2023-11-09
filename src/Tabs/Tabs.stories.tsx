@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 import Tabs from "./Tabs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFootball, faHome, faRankingStar, faTrophy, faUsers } from "@fortawesome/pro-light-svg-icons";
 
 const meta = {
   title: "Design System/Tabs",
@@ -18,6 +20,8 @@ type Story = StoryObj<typeof Tabs>;
 interface OptionsInterface {
   value: string;
   label: string;
+  icon?: React.ReactNode;
+  iconPosition?: 'prefix' | 'suffix';
 }
 
 export const Primary: Story = {
@@ -1744,6 +1748,171 @@ export const TypeVerticalWhiteBorderFilledSMWithStateWithCustomHeight: Story = {
         />
         <div className="w-full h-full p-4">
           <span>Selected option value: {selectedOption.toString()}</span>
+          <h1>Render content depending on the selected option</h1>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const UnderlineFilledSMWithStateWithSuffixIcons: Story = {
+  render: () => {
+    const options: OptionsInterface[] = [
+      {
+        value: "home",
+        label: "Home",
+        icon: <FontAwesomeIcon icon={faHome} />,
+        iconPosition: 'suffix',
+      },
+      {
+        value: "leagues",
+        label: "Leagues",
+        icon: <FontAwesomeIcon icon={faFootball} />,
+        iconPosition: 'suffix',
+      },
+      {
+        value: "players",
+        label: "Players",
+        icon: <FontAwesomeIcon icon={faFootball} />,
+        iconPosition: 'suffix',
+      },
+      {
+        value: "results",
+        label: "Results",
+        icon: <FontAwesomeIcon icon={faRankingStar} />,
+        iconPosition: 'suffix',
+      },
+      {
+        value: "tournaments",
+        label: "Tournaments",
+        icon: <FontAwesomeIcon icon={faTrophy} />,
+        iconPosition: 'suffix',
+      },
+    ];
+    const [selectedOption, setSelectedOption] = React.useState<string>(options[0].value);
+
+    return (
+      <div className="flex flex-col">
+        <Tabs
+          options={options}
+          onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
+          active={selectedOption}
+          size="sm"
+          variant="underline-filled"
+          menuPortalTarget={document.body}
+        />
+        <div className="w-full h-20 p-4">
+          <span>Selected option value: {selectedOption}</span>
+          <h1>Render content depending on the selected option</h1>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const UnderlineFilledSMWithStateWithPrefixIcons: Story = {
+  render: () => {
+    const options: OptionsInterface[] = [
+      {
+        value: "home",
+        label: "Home",
+        icon: <FontAwesomeIcon icon={faHome} />,
+        iconPosition: 'prefix',
+      },
+      {
+        value: "leagues",
+        label: "Leagues",
+        icon: <FontAwesomeIcon icon={faFootball} />,
+        iconPosition: 'prefix',
+      },
+      {
+        value: "players",
+        label: "Players",
+        icon: <FontAwesomeIcon icon={faFootball} />,
+        iconPosition: 'prefix',
+      },
+      {
+        value: "results",
+        label: "Results",
+        icon: <FontAwesomeIcon icon={faRankingStar} />,
+        iconPosition: 'prefix',
+      },
+      {
+        value: "tournaments",
+        label: "Tournaments",
+        icon: <FontAwesomeIcon icon={faTrophy} />,
+        iconPosition: 'prefix',
+      },
+    ];
+    const [selectedOption, setSelectedOption] = React.useState<string>(options[0].value);
+
+    return (
+      <div className="flex flex-col">
+        <Tabs
+          options={options}
+          onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
+          active={selectedOption}
+          size="sm"
+          variant="underline-filled"
+          menuPortalTarget={document.body}
+        />
+        <div className="w-full h-20 p-4">
+          <span>Selected option value: {selectedOption}</span>
+          <h1>Render content depending on the selected option</h1>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const UnderlineFilledSMWithStateWithMixIconPositions: Story = {
+  render: () => {
+    const options: OptionsInterface[] = [
+      {
+        value: "home",
+        label: "Home",
+        icon: <FontAwesomeIcon icon={faHome} />,
+        iconPosition: 'prefix',
+      },
+      {
+        value: "leagues",
+        label: "Leagues",
+        icon: <FontAwesomeIcon icon={faFootball} />,
+        iconPosition: 'suffix',
+      },
+      {
+        value: "players",
+        label: "Players",
+        icon: <FontAwesomeIcon icon={faFootball} />,
+        iconPosition: 'prefix',
+      },
+      {
+        value: "results",
+        label: "Results",
+        icon: <FontAwesomeIcon icon={faRankingStar} />,
+        iconPosition: 'suffix',
+      },
+      {
+        value: "tournaments",
+        label: "Tournaments",
+        icon: <FontAwesomeIcon icon={faTrophy} />,
+        iconPosition: 'prefix',
+      },
+    ];
+    const [selectedOption, setSelectedOption] = React.useState<string>(options[0].value);
+
+    return (
+      <div className="flex flex-col">
+        <Tabs
+          options={options}
+          onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
+          active={selectedOption}
+          size="sm"
+          variant="underline-filled"
+          menuPortalTarget={document.body}
+        />
+        <div className="w-full h-20 p-4">
+          <span>Selected option value: {selectedOption}</span>
           <h1>Render content depending on the selected option</h1>
         </div>
       </div>

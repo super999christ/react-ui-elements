@@ -177,6 +177,10 @@ export * from "./pickleball/Standings";
 export { default as ToursList } from "./pickleball/ToursList";
 export * from "./pickleball/ToursList";
 
+// TourneyCard
+export { default as TourneyCard } from "./TourneyCard";
+export * from "./TourneyCard";
+
 // TourTitle
 export { default as TourTitle } from "./pickleball/TourTitle";
 export * from "./pickleball/TourTitle";

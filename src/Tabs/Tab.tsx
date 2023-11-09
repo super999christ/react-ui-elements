@@ -7,6 +7,7 @@ import styles from './Tabs.module.css';
 
 export type TabVariant = 'primary' | 'gray' | 'underline' | 'underline-filled' | 'white-border';
 export type TabSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type TabIconPosition = 'prefix' | 'suffix';
 
 export interface TabProps extends React.HTMLAttributes<HTMLButtonElement> {
   active: boolean;
@@ -15,6 +16,8 @@ export interface TabProps extends React.HTMLAttributes<HTMLButtonElement> {
   size: TabSize;
   value: string;
   variant: TabVariant;
+  icon?: React.ReactNode;
+  iconPosition?: TabIconPosition;
 }
 
 const Tab = forwardRef<HTMLButtonElement, TabProps>(
@@ -23,6 +26,8 @@ const Tab = forwardRef<HTMLButtonElement, TabProps>(
       active,
       children,
       className,
+      icon,
+      iconPosition = 'suffix',
       size = 'sm',
       value,
       variant = 'primary',
@@ -48,9 +53,18 @@ const Tab = forwardRef<HTMLButtonElement, TabProps>(
       [styles['button--underline-filled']]: !active && variant === 'underline-filled',
       [styles['button--underline-filled-active']]: active && variant === 'underline-filled',
     }, className);
-
+  
     return (
-      <Button className={buttonClasses} size={size} value={value} variant={buttonVariant} ref={ref} {...rest}>
+      <Button
+        className={buttonClasses}
+        prefixIcon={icon && iconPosition && iconPosition === 'prefix' ? icon : undefined}
+        size={size}
+        suffixIcon={icon && iconPosition && iconPosition === 'suffix' ? icon : undefined}
+        value={value}
+        variant={buttonVariant}
+        ref={ref}
+        {...rest}
+      >
         {children}
       </Button>
     );
