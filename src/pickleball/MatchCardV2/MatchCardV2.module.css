@@ -199,33 +199,15 @@
 }
 
 .live__text {
-  @apply min-w-[57px] table-cell bg-[#E31B54] rounded-xl px-2 text-white text-sm not-italic font-semibold align-middle;
-  font-size: 10px;
-  display: inline-flex;
-  justify-content: center;
-  height: 17px;
-  line-height: 1rem;
-  line-height: 18px;
-  min-width: 48px;
-  padding-left: .375rem;
-  padding-right: .375rem;
+  @apply inline-flex text-[10px] justify-center h-[17px] min-w-[50px] bg-[#E31B54] leading-[18px] rounded-xl px-1.5 text-white not-italic font-semibold align-middle;
 }
 
 .delayed__text {
-  @apply min-w-[57px] table-cell bg-gray-500 rounded-xl px-2 text-white text-sm not-italic font-semibold align-middle;
-  font-size: 10px;
-  display: inline-flex;
-  justify-content: center;
-  height: 17px;
-  line-height: 1rem;
-  line-height: 18px;
-  min-width: 57px;
-  padding-left: .375rem;
-  padding-right: .375rem;
+  @apply inline-flex bg-gray-500 text-[10px] justify-center h-[17px] min-w-[58px] leading-[18px] rounded-xl px-1.5 text-white not-italic font-semibold align-middle;
 }
 
 .match-card--compact .live__text, .match-card--compact .delayed__text {
-  @apply min-w-[47px] h-[17px] text-xs leading-[18px] px-1.5;
+  @apply min-w-[50px] h-[17px] text-[10px] leading-[18px] px-1.5;
 }
 
 .card--footer--hidden {
