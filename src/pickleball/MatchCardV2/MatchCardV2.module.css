@@ -200,10 +200,28 @@
 
 .live__text {
   @apply min-w-[57px] table-cell bg-[#E31B54] rounded-xl px-2 text-white text-sm not-italic font-semibold align-middle;
+  font-size: 10px;
+  display: inline-flex;
+  justify-content: center;
+  height: 17px;
+  line-height: 1rem;
+  line-height: 18px;
+  min-width: 48px;
+  padding-left: .375rem;
+  padding-right: .375rem;
 }
 
 .delayed__text {
   @apply min-w-[57px] table-cell bg-gray-500 rounded-xl px-2 text-white text-sm not-italic font-semibold align-middle;
+  font-size: 10px;
+  display: inline-flex;
+  justify-content: center;
+  height: 17px;
+  line-height: 1rem;
+  line-height: 18px;
+  min-width: 56px;
+  padding-left: .375rem;
+  padding-right: .375rem;
 }
 
 .match-card--compact .live__text, .match-card--compact .delayed__text {
