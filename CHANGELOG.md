@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/pickleballinc/react-ui/compare/v1.15.0...v1.15.1) (2023-11-10)
+
+
+### Bug Fixes
+
+* games shouldnt be green when game is not completed ([6b5c380](https://github.com/pickleballinc/react-ui/commit/6b5c380d446f7d5f18b4979d4251165b27cf1f50))
+
 # [1.15.0](https://github.com/pickleballinc/react-ui/compare/v1.14.13...v1.15.0) (2023-11-09)
 
 
