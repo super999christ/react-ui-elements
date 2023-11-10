@@ -1,3 +1,11 @@
+## [1.15.2](https://github.com/pickleballinc/react-ui/compare/v1.15.1...v1.15.2) (2023-11-10)
+
+
+### Bug Fixes
+
+* live and delayed labels fixed ([b1f88cd](https://github.com/pickleballinc/react-ui/commit/b1f88cd18afad135d742d45a91c4b1cbce7e31fd))
+* live and delayed labels fixed ([5bd5a11](https://github.com/pickleballinc/react-ui/commit/5bd5a11f11202537ebf358bad4613c578cb959bc))
+
 ## [1.15.1](https://github.com/pickleballinc/react-ui/compare/v1.15.0...v1.15.1) (2023-11-10)
 
 
