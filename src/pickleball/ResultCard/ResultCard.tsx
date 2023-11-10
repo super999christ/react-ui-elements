@@ -203,9 +203,6 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
   const setClasses = clsx(styles.set__one);
   const set2Classes = clsx(styles.set__two);
 
-  const teamTwoScoresCopy = [...match.team2.scores];
-  const teamTwoScoresReversed = [...teamTwoScoresCopy.reverse()];
-
   const finalWrapperClasses = clsx(styles.final__wrapper);
 
   return (
@@ -215,6 +212,12 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
           team={match.team1}
           oppositeTeam={match.team2}
           teamLabel="team1"
+          matchStatus={match.matchStatus}
+          gameOneEndDate={match.gameOneEndDate}
+          gameTwoEndDate={match.gameTwoEndDate}
+          gameThreeEndDate={match.gameThreeEndDate}
+          gameFourEndDate={match.gameFourEndDate}
+          gameFiveEndDate={match.gameFiveEndDate}
         />
         <div className={finalClasses}>
           { 
@@ -227,6 +230,12 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
           team={match.team2}
           oppositeTeam={match.team1}
           teamLabel="team2"
+          matchStatus={match.matchStatus}
+          gameOneEndDate={match.gameOneEndDate}
+          gameTwoEndDate={match.gameTwoEndDate}
+          gameThreeEndDate={match.gameThreeEndDate}
+          gameFourEndDate={match.gameFourEndDate}
+          gameFiveEndDate={match.gameFiveEndDate}
         />
       </div>
       <div className={mobileContentClasses}>
@@ -250,13 +259,31 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
                   setValue === 0 && match.team2.scores[index] === 0
                     ? '-'
                     : setValue;
+    
+                let isGameOver = false;
+    
+                if (match.matchStatus === 4 ){
+                  isGameOver = true;
+                } else if (index === 0 && match.gameOneEndDate) {
+                  isGameOver = true;
+                } else if (index === 1 && match.gameTwoEndDate) {
+                  isGameOver = true;
+                } else if (index === 2 && match.gameThreeEndDate) {
+                  isGameOver = true;
+                } else if (index === 3 && match.gameFourEndDate) {
+                  isGameOver = true;
+                } else if (index === 4 && match.gameFiveEndDate) {
+                  isGameOver = true;
+                }
+    
+                const isGameWinner = setValue > match.team2.scores[index];
 
                 return (
                   <div
                     key={index}
                     className={
                       `${setClasses}
-                        ${setValue > (match.team2.scores[index] as number)
+                        ${isGameOver && isGameWinner
                           ? styles['green__classes']
                           : styles['grey__classes']}
                     `}
@@ -273,23 +300,40 @@ const ResultCard = ({ match, rounded }: ResultCardProps) => {
               match.matchStatus === 4 ? 'Final' : ''
             }
           </div>
-          <div className={styles['scores__wrapper']}>
+          <div className={styles['scores__wrapper__reverse']}>
             {match.team2.scores.length > 0 &&
-              teamTwoScoresReversed.map((setValue, index: number) => {
+              match.team2.scores.map((setValue, index: number) => {
                 const value =
                   setValue === 0 &&
-                  match.team1.scores[match.team2.scores.length - index - 1] ===
+                  match.team1.scores[index] ===
                     0
                     ? '-'
                     : setValue;
+    
+                let isGameOver = false;
+    
+                if (match.matchStatus === 4 ){
+                  isGameOver = true;
+                } else if (index === 0 && match.gameOneEndDate) {
+                  isGameOver = true;
+                } else if (index === 1 && match.gameTwoEndDate) {
+                  isGameOver = true;
+                } else if (index === 2 && match.gameThreeEndDate) {
+                  isGameOver = true;
+                } else if (index === 3 && match.gameFourEndDate) {
+                  isGameOver = true;
+                } else if (index === 4 && match.gameFiveEndDate) {
+                  isGameOver = true;
+                }
+    
+                const isGameWinner = setValue > match.team1.scores[index];
 
                 return (
                   <div
                     key={index}
                     className={
                       `${set2Classes}
-                      ${setValue > (match.team1.scores[
-                        match.team2.scores.length - index - 1] as number)
+                      ${isGameOver && isGameWinner
                         ? styles['green__classes']
                         : styles['grey__classes']}
                     `}

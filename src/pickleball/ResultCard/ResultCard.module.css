@@ -275,6 +275,10 @@
   @apply flex flex-row;
 }
 
+.scores__wrapper__reverse {
+  @apply flex flex-row-reverse;
+}
+
 .green__classes {
   @apply bg-success-50 text-green-600;
 }

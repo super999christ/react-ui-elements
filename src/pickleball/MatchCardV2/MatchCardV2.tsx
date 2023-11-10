@@ -102,17 +102,31 @@ const SmallWinnerIcon = () => {
   );
 };
 
+interface TeamInfoRowProps {
+  team: MatchTeam;
+  oppositeTeam: MatchTeam;
+  shortenName?: boolean;
+  compact?: boolean;
+  matchStatus?: number;
+  gameOneEndDate?: Date;
+  gameTwoEndDate?: Date;
+  gameThreeEndDate?: Date;
+  gameFourEndDate?: Date;
+  gameFiveEndDate?: Date;
+}
+
 const TeamInfoRow = ({
   team,
   oppositeTeam,
   shortenName,
   compact,
-}: {
-  team: MatchTeam;
-  oppositeTeam: MatchTeam;
-  shortenName?: boolean;
-  compact?: boolean;
-}) => {
+  matchStatus,
+  gameOneEndDate,
+  gameTwoEndDate,
+  gameThreeEndDate,
+  gameFourEndDate,
+  gameFiveEndDate,
+}: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
     [styles["avatar--loser"]]: team.isWinner !== undefined && !team.isWinner,
     [styles["avatar--winner"]]: team.isWinner,
@@ -194,15 +208,33 @@ const TeamInfoRow = ({
           {team.scores.map((score, index) => {
             const value =
               score === 0 && oppositeTeam.scores[index] === 0 ? "-" : score;
-            const isWinner = score > oppositeTeam.scores[index];
+            let isGameOver = false;
+  
+            if (matchStatus === 4 ){
+              isGameOver = true;
+            } else if (index === 0 && gameOneEndDate) {
+              isGameOver = true;
+            } else if (index === 1 && gameTwoEndDate) {
+              isGameOver = true;
+            } else if (index === 2 && gameThreeEndDate) {
+              isGameOver = true;
+            } else if (index === 3 && gameFourEndDate) {
+              isGameOver = true;
+            } else if (index === 4 && gameFiveEndDate) {
+              isGameOver = true;
+            }
+
+            const isGameWinner = score > oppositeTeam.scores[index];
+
             const scoreClasses = clsx(styles["scores"], {
-              [styles["scores-winner"]]: isWinner,
-              [styles["scores-loser"]]: !isWinner,
+              [styles["scores-winner"]]: isGameOver && isGameWinner,
+              [styles["scores-loser"]]: isGameOver && !isGameWinner,
+              [styles["scores-in-progress"]]: !isGameOver,
             });
 
             return (
               <div key={index} className={scoreClasses}>
-                {isWinner ? (
+                {isGameWinner ? (
                   <div className={styles["scores-winner-inner"]}>{value}</div>
                 ) : (
                   value
@@ -321,12 +353,24 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 oppositeTeam={match.team2}
                 shortenName={shortenName}
                 compact={compact}
+                matchStatus={match.matchStatus}
+                gameOneEndDate={match.gameOneEndDate}
+                gameTwoEndDate={match.gameTwoEndDate}
+                gameThreeEndDate={match.gameThreeEndDate}
+                gameFourEndDate={match.gameFourEndDate}
+                gameFiveEndDate={match.gameFiveEndDate}
               />
               <TeamInfoRow
                 team={match.team2}
                 oppositeTeam={match.team1}
                 shortenName={shortenName}
                 compact={compact}
+                matchStatus={match.matchStatus}
+                gameOneEndDate={match.gameOneEndDate}
+                gameTwoEndDate={match.gameTwoEndDate}
+                gameThreeEndDate={match.gameThreeEndDate}
+                gameFourEndDate={match.gameFourEndDate}
+                gameFiveEndDate={match.gameFiveEndDate}
               />
             </>
           )}

@@ -205,7 +205,7 @@ export const DuoScheduled: Story = {
           image: ''
         }],
         isWinner: undefined,
-        scores: [0, 0, 0,]
+        scores: [0, 0, 0]
       }
     }
   }
@@ -216,6 +216,9 @@ export const DuoLive: Story = {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       matchStatus: 2,
+      gameOneEndDate: '1',
+      gameTwoEndDate: '',
+      gameThreeEndDate: '',
       team1: {
         players: [{
           playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
@@ -232,7 +235,7 @@ export const DuoLive: Story = {
           image: ''
         }],
         isWinner: undefined,
-        scores: [11, 5, 0,]
+        scores: [11, 5, 0]
       },
       team2: {
         players: [{
@@ -250,7 +253,7 @@ export const DuoLive: Story = {
           image: ''
         }],
         isWinner: undefined,
-        scores: [7, 5, 0]
+        scores: [7, 2, 0]
       }
     }
   }
@@ -295,7 +298,7 @@ export const DuoDelayed: Story = {
           image: ''
         }],
         isWinner: undefined,
-        scores: [0, 0, 0,]
+        scores: [0, 0, 0]
       }
     }
   }
@@ -306,6 +309,9 @@ export const DuoLiveWithSuffixNames: Story = {
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       matchStatus: 2,
+      gameOneEndDate: '1',
+      gameTwoEndDate: '2',
+      gameThreeEndDate: '',
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -322,7 +328,7 @@ export const DuoLiveWithSuffixNames: Story = {
           image: '',
         }],
         isWinner: undefined,
-        scores: [9, 12, 10]
+        scores: [9, 12, 8]
       },
       team2: {
         players: [{

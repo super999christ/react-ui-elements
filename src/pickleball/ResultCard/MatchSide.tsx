@@ -40,9 +40,25 @@ export interface MatchSideProps {
   oppositeTeam: MatchTeam;
   team: MatchTeam;
   teamLabel: TeamType;
+  gameOneEndDate?: Date;
+  gameTwoEndDate?: Date;
+  gameThreeEndDate?: Date;
+  gameFourEndDate?: Date;
+  gameFiveEndDate?: Date;
+  matchStatus?: number;
 }
 
-const MatchSide = ({ oppositeTeam, team, teamLabel }: MatchSideProps) => {
+const MatchSide = ({
+    oppositeTeam,
+    team,
+    teamLabel,
+    gameOneEndDate,
+    gameTwoEndDate,
+    gameThreeEndDate,
+    gameFourEndDate,
+    gameFiveEndDate,
+    matchStatus,
+  } : MatchSideProps) => {
   const reversed = teamLabel === 'team2';
   const teamNumberOfPlayers = team.players.length;
 
@@ -178,22 +194,37 @@ const MatchSide = ({ oppositeTeam, team, teamLabel }: MatchSideProps) => {
       <div className={setWrapperClasses}>
         {team.scores.length > 0 &&
           team.scores?.map((setValue, index: number) => {
-            const isSetWinner =
-              setValue > (oppositeTeam.scores[index] as number);
-
             const value =
               setValue === 0 && oppositeTeam.scores[index] === 0
                 ? '-'
                 : setValue;
+
+            let isGameOver = false;
+
+            if (matchStatus === 4 ){
+              isGameOver = true;
+            } else if (index === 0 && gameOneEndDate) {
+              isGameOver = true;
+            } else if (index === 1 && gameTwoEndDate) {
+              isGameOver = true;
+            } else if (index === 2 && gameThreeEndDate) {
+              isGameOver = true;
+            } else if (index === 3 && gameFourEndDate) {
+              isGameOver = true;
+            } else if (index === 4 && gameFiveEndDate) {
+              isGameOver = true;
+            }
+
+            const isGameWinner = setValue > oppositeTeam.scores[index];
 
             return (
               <div
                 key={index}
                 className={`${setClasses} ${
                   index % 2 === 0 ? grayBgClasses : whiteBgClasses
-                } ${isSetWinner ? greenTxtClasses : grayTxtClasses} ${
-                  isSetWinner && index % 2 === 0 && winnerMiddleClasses
-                } ${!isSetWinner && index % 2 === 0 && loserMiddleClasses}
+                } ${isGameOver && isGameWinner ? greenTxtClasses : grayTxtClasses} ${
+                  isGameOver && isGameWinner && index % 2 === 0 && winnerMiddleClasses
+                } ${isGameOver && !isGameWinner && index % 2 === 0 && loserMiddleClasses}
               `}
               >
                 {value}

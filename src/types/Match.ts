@@ -20,6 +20,11 @@ export interface Match {
   courtName?: string;
   eventTitle?: string;
   detailsURL?: string;
+  gameOneEndDate?: Date;
+  gameTwoEndDate?: Date;
+  gameThreeEndDate?: Date;
+  gameFourEndDate?: Date;
+  gameFiveEndDate?: Date;
   matchNumber?: number;
   matchTimeStart?: string;
   matchStatus?: number;
