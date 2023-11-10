@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/pickleballinc/react-ui/compare/v1.15.2...v1.15.3) (2023-11-10)
+
+
+### Bug Fixes
+
+* fixed live and delayed indicator ([7f6e501](https://github.com/pickleballinc/react-ui/commit/7f6e5013d1eb3a0cd093faf32d88e38c397a7f98))
+
 ## [1.15.2](https://github.com/pickleballinc/react-ui/compare/v1.15.1...v1.15.2) (2023-11-10)
 
 
