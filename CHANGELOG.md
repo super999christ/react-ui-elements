@@ -1,3 +1,11 @@
+# [1.16.0](https://github.com/pickleballinc/react-ui/compare/v1.15.4...v1.16.0) (2023-11-16)
+
+
+### Features
+
+* added a new tab variant of button ([ea00136](https://github.com/pickleballinc/react-ui/commit/ea0013628123fa1c05eafc45d90205ef8c8e92bd))
+* added variant tab to button ([fe94214](https://github.com/pickleballinc/react-ui/commit/fe94214cbd8121caf50785381b7ef62746076cb7))
+
 ## [1.15.4](https://github.com/pickleballinc/react-ui/compare/v1.15.3...v1.15.4) (2023-11-16)
 
 
