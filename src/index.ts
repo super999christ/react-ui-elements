@@ -173,13 +173,13 @@ export * from "./pickleball/SocialMedia";
 export { default as Standings } from "./pickleball/Standings";
 export * from "./pickleball/Standings";
 
-// ToursList
-export { default as ToursList } from "./pickleball/ToursList";
-export * from "./pickleball/ToursList";
-
 // TourneyCard
 export { default as TourneyCard } from "./TourneyCard";
 export * from "./TourneyCard";
+
+// ToursList
+export { default as ToursList } from "./pickleball/ToursList";
+export * from "./pickleball/ToursList";
 
 // TourTitle
 export { default as TourTitle } from "./pickleball/TourTitle";
