@@ -1,38 +1,65 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Documetation from './Documentation.mdx';
 
 import ImageEditor from "./ImageEditor";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 
-const ImageEditorWrapper = () => {
-  return (
-    <div className="flex gap-8">
-      <div className="w-[400px]">
-        <ImageEditor isCircle width={120} height={120} onClearImage={() => console.log('Cleared')}>
-          <FontAwesomeIcon icon={faUser} size="xl" />
-        </ImageEditor>
-      </div>
-    </div>
-  );
-};
-
 const meta = {
   title: "Design System/ImageEditor",
-  component: ImageEditorWrapper,
+  component: ImageEditor,
   tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-    docs: {
-    },
   },
-} satisfies Meta<typeof ImageEditorWrapper>;
+} satisfies Meta<typeof ImageEditor>;
 
 export default meta;
-type Story = StoryObj<typeof ImageEditorWrapper>;
+type Story = StoryObj<typeof ImageEditor>;
 
-/* Custom close button in children prop */
-export const Editor: Story = {
-  args: {},
+export const Default: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    height: 240,
+    onClearImage: () => console.log('Cleared'),
+    width: 240,
+  }
+};
+
+export const ImageEditorCircleCenterIndicator: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    clearIndicatorPosition: 'center',
+    height: 240,
+    isCircle: true,
+    onClearImage: () => console.log('Cleared'),
+    width: 240,
+  }
+};
+
+export const ImageEditorCircleTopRightIndicator: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    clearIndicatorPosition: 'top-right',
+    height: 240,
+    isCircle: true,
+    onClearImage: () => console.log('Cleared'),
+    width: 240,
+  }
+};
+
+export const CustomEditorConfig: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    height: 200,
+    onClearImage: () => console.log('Cleared'),
+    width: 320,
+    editorConfig: {
+      aspectRatio: 1.6,
+      targetSize: {
+        width: 160,
+        height: 100,
+      },
+    }
+  }
 };

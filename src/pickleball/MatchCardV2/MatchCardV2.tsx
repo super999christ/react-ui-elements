@@ -226,10 +226,17 @@ const TeamInfoRow = ({
 
             const isGameWinner = score > oppositeTeam.scores[index];
 
+            let isPreviousGameWinner = false;
+            
+            if (index > 0) {
+              isPreviousGameWinner = team.scores[index - 1] > oppositeTeam.scores[index - 1];
+            }
+
             const scoreClasses = clsx(styles["scores"], {
               [styles["scores-winner"]]: isGameOver && isGameWinner,
               [styles["scores-loser"]]: isGameOver && !isGameWinner,
               [styles["scores-in-progress"]]: !isGameOver,
+              [styles["scores-previous-game-winner"]]: isPreviousGameWinner && isGameWinner && isGameOver,
             });
 
             return (

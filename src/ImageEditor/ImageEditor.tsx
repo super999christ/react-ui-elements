@@ -13,6 +13,8 @@ import { ImageStore } from "./ImageStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/pro-light-svg-icons";
 
+export type ClearIndicatorPositionType = 'center' | 'top-right';
+
 interface ImageEditorProps {
   children?: React.ReactNode;
   disabled?: boolean;
@@ -27,6 +29,7 @@ interface ImageEditorProps {
   uploadUrl?: string;
   onImageUpload?: (response: DoneCallback) => void;
   onClearImage?: () => void;
+  clearIndicatorPosition?: ClearIndicatorPositionType;
 }
 
 export default function ImageEditor({
@@ -43,6 +46,7 @@ export default function ImageEditor({
   onImageUpload,
   uploadUrl,
   onClearImage,
+  clearIndicatorPosition = 'center',
 }: ImageEditorProps) {
   const [files, setFiles] = useState<FileType[]>([]);
   const [processedFiles, setProcessedFiles] = useState<string[]>(() => {
@@ -105,10 +109,18 @@ export default function ImageEditor({
     [processedFiles]
   );
 
+  const thumbnailOverlayClasses = clsx(styles["thumbnail--overlay"], {
+    [styles['thumbnail--overlay-top-right']]: clearIndicatorPosition === 'top-right',
+  });
+
+  const imgClasses = clsx({
+    [styles["img-circle"]]: isCircle,
+  });
+
   const thumbs = derivedProcessedFiles.map((file, index) => {
     return (
       <div className={styles.thumbnail} key={index}>
-        <div className={styles["thumbnail--overlay"]}>
+        <div className={thumbnailOverlayClasses}>
           <span
             className={styles["overlay--button"]}
             onClick={() => {
@@ -121,7 +133,7 @@ export default function ImageEditor({
             <FontAwesomeIcon icon={faTimes} size="sm" />
           </span>
         </div>
-        <img src={file} alt="" />
+        <img className={imgClasses} src={file} alt="" />
       </div>
     );
   });
@@ -149,9 +161,7 @@ export default function ImageEditor({
     [styles["circle-wrapper"]]: isCircle,
   });
 
-  const processedFileClasses = clsx(styles["processed-files--wrapper"], {
-    [styles["processed-circle-wrapper"]]: isCircle,
-  });
+  const processedFileClasses = clsx(styles["processed-files--wrapper"]);
 
   return (
     <div className={wrapperClasses} style={{ width, height, ...(isCircle ? { flexShrink: 0 } : {}) }}>

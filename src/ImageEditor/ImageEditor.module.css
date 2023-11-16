@@ -1,6 +1,8 @@
 .thumbnail {
   @apply relative;
   @apply overflow-hidden;
+  @apply w-full;
+  @apply h-full;
 }
 
 .thumbnail img {
@@ -14,6 +16,13 @@
   @apply flex;
   @apply justify-center;
   @apply items-center;
+}
+
+.thumbnail--overlay-top-right {
+  @apply inset-[unset];
+  @apply inline-flex;
+  @apply top-0;
+  @apply right-0;
 }
 
 .overlay--button {
@@ -75,9 +84,13 @@
   @apply flex;
   @apply flex-col;
   @apply gap-2;
+  @apply w-full;
+  @apply h-full;
 }
 
-.processed-circle-wrapper {
+.img-circle {
+  @apply w-full;
+  @apply h-full;
   @apply overflow-hidden;
   @apply rounded-full;
 }
