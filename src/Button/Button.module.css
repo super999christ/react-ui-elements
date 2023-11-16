@@ -127,6 +127,43 @@
   @apply bg-error-200;
 }
 
+.button--tab {
+  @apply bg-gray-900;
+  @apply text-white;
+}
+
+.button--tab:not(.button--disabled):hover {
+  @apply bg-gray-700;
+  @apply text-white;
+}
+
+.button--tab:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.gray.300/100%")];
+}
+
+.button--tab.button--disabled {
+  @apply bg-gray-500;
+  @apply text-white;
+}
+
+.button--tab.button--destructive {
+  @apply bg-error-600;
+  @apply text-white;
+}
+
+.button--tab.button--destructive:not(.button--disabled):hover {
+  @apply bg-error-700;
+  @apply text-white;
+}
+
+.button--tab.button--destructive:not(.button--disabled):focus {
+  @apply shadow-[0_0_0_4px_theme("colors.error.100/100%")];
+}
+
+.button--tab.button--destructive.button--disabled {
+  @apply bg-error-200;
+}
+
 .button--secondary {
   @apply bg-white;
   @apply text-gray-700;

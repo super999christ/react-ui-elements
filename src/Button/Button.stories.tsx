@@ -32,6 +32,21 @@ export const PrimaryDisabled: Story = {
   }
 };
 
+export const Tab: Story = {
+  args: {
+    children: 'Tab',
+    variant: 'tab',
+  }
+};
+
+export const TabDisabled: Story = {
+  args: {
+    children: 'Tab',
+    variant: 'tab',
+    disabled: true
+  }
+};
+
 export const Blue: Story = {
   args: {
     children: 'Blue',
@@ -94,6 +109,14 @@ export const DesctructivePrimary: Story = {
     children: 'Primary',
     destructive: true,
     variant: 'primary',
+  }
+};
+
+export const DesctructiveTab: Story = {
+  args: {
+    children: 'Tab',
+    destructive: true,
+    variant: 'tab',
   }
 };
 
@@ -171,6 +194,15 @@ export const PrimaryWithIcons: Story = {
   }
 };
 
+export const TabWithIcons: Story = {
+  args: {
+    children: 'Tab',
+    variant: 'tab',
+    prefixIcon: <FontAwesomeIcon icon={faArrowLeft} />,
+    suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
+  }
+};
+
 export const BlueWithIcons: Story = {
   args: {
     children: 'Blue',
@@ -239,6 +271,16 @@ export const DesctructivePrimaryWithIcons: Story = {
     children: 'Primary',
     destructive: true,
     variant: 'primary',
+    prefixIcon: <FontAwesomeIcon icon={faArrowLeft} />,
+    suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
+  }
+};
+
+export const DesctructiveTabWithIcons: Story = {
+  args: {
+    children: 'Tab',
+    destructive: true,
+    variant: 'tab',
     prefixIcon: <FontAwesomeIcon icon={faArrowLeft} />,
     suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
   }
