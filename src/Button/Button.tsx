@@ -8,13 +8,13 @@ import styles from './Button.module.css';
 export type ButtonVariant =
   | 'primary'
   | 'blue'
+  | 'tab'
   | 'secondary'
   | 'secondary-color'
   | 'tertiary'
   | 'tertiary-color'
   | 'link'
-  | 'link-gray'
-  | 'tab';
+  | 'link-gray';
 type ButtonSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 export interface ButtonProps
@@ -53,13 +53,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         [styles['button--size-2xl']]: size === '2xl',
         [styles['button--primary']]: variant === 'primary',
         [styles['button--blue']]: variant === 'blue',
+        [styles['button--tab']]: variant === 'tab',
         [styles['button--secondary']]: variant === 'secondary',
         [styles['button--secondary-color']]: variant === 'secondary-color',
         [styles['button--tertiary']]: variant === 'tertiary',
         [styles['button--tertiary-color']]: variant === 'tertiary-color',
         [styles['button--link']]: variant === 'link' || variant === 'link-gray',
         [styles['button--link-gray']]: variant === 'link-gray',
-        [styles['button--tab']]: variant === 'tab',
       },
       className,
     );
