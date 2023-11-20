@@ -57,6 +57,33 @@ export const FullExampleWithState: Story = {
   },
 };
 
+export const FullExampleWithStateAndDefaultValue: Story = {
+  render: () => {
+    const options = [
+      { value: "chocolate", label: "Chocolate" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
+    ];
+
+    const [selectedOption, setSelectedOption] = React.useState<string>('chocolate');
+
+    return (
+      <>
+        <span>Selected option: {selectedOption}</span>
+        <Select
+          id="example_2"
+          options={options}
+          onChange={(e: any) => setSelectedOption(e ? e.value : undefined)}
+          menuPortalTarget={document.body}
+          value={options.filter(
+            (option) => option.value === selectedOption,
+          )}
+        />
+      </>
+    );
+  },
+};
+
 export const MultiSelect: Story = {
   render: () => {
     const options = [
