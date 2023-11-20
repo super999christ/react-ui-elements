@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/pickleballinc/react-ui/compare/v1.16.0...v1.16.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* added an example with default value ([f043e23](https://github.com/pickleballinc/react-ui/commit/f043e237e91b6226d5a839928aa8d3f8a8411ea8))
+
 # [1.16.0](https://github.com/pickleballinc/react-ui/compare/v1.15.4...v1.16.0) (2023-11-16)
 
 
