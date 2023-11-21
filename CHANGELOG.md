@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/pickleballinc/react-ui/compare/v1.16.1...v1.17.0) (2023-11-21)
+
+
+### Features
+
+* added one or two dots after player name in a matchcardv2 depending on if that player is serving (one dot) and if he is a second server (two dots) ([8d3de28](https://github.com/pickleballinc/react-ui/commit/8d3de282541eee6343de326c2f587a1746f9f47e))
+
 ## [1.16.1](https://github.com/pickleballinc/react-ui/compare/v1.16.0...v1.16.1) (2023-11-20)
 
 
