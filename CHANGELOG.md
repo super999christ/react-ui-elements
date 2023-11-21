@@ -1,3 +1,11 @@
+## [1.17.1](https://github.com/pickleballinc/react-ui/compare/v1.17.0...v1.17.1) (2023-11-21)
+
+
+### Bug Fixes
+
+* export classname property to module css file in matchcardv2 ([ed342c3](https://github.com/pickleballinc/react-ui/commit/ed342c34f9466ec759623fcc87b5e724d3f81b05))
+* export classname property to module css file in matchcardv2 ([aefc0fd](https://github.com/pickleballinc/react-ui/commit/aefc0fda62a6cbeae77f91d1d840aa93d1bdbee4))
+
 # [1.17.0](https://github.com/pickleballinc/react-ui/compare/v1.16.1...v1.17.0) (2023-11-21)
 
 
