@@ -142,6 +142,7 @@ const TeamInfoRow = ({
   const percentageClasses = clsx(styles["player-percentage"], {
     [styles["player-percentage--larger"]]: team.percentage > oppositeTeam.percentage,
   });
+  const serverWrapperClasses = clsx(styles['server__wrapper']);
   const serverDotClasses = clsx(styles['server__dot']);
 
   const derivedPercentage = team.percentage
@@ -198,7 +199,7 @@ const TeamInfoRow = ({
                         {player.suffixName}
                       </span>
                     )}
-                    <div className="flex items-center gap-0.5 pb-0.5 h-full w-full">
+                    <div className={serverWrapperClasses}>
                       {index === 0 && playerOneIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
                       {index === 0 && playerOneIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
                       {index === 1 && playerTwoIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
