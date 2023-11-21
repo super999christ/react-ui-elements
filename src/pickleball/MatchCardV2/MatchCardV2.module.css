@@ -229,3 +229,7 @@
 .details--URL--compact {
   @apply text-experiment text-xs not-italic font-semibold leading-[18px] line-clamp-1;
 }
+
+.server__dot {
+  @apply text-[#E31B54];
+}

@@ -5,6 +5,7 @@ import Avatar from "../../Avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
+import { faCircle, faDotCircle } from "@fortawesome/pro-solid-svg-icons";
 
 interface IconProps {
   width: number;
@@ -113,6 +114,9 @@ interface TeamInfoRowProps {
   gameThreeEndDate?: Date;
   gameFourEndDate?: Date;
   gameFiveEndDate?: Date;
+  playerOneIsServer?: boolean;
+  playerTwoIsServer?: boolean;
+  secondServerDot?: boolean;
 }
 
 const TeamInfoRow = ({
@@ -126,6 +130,9 @@ const TeamInfoRow = ({
   gameThreeEndDate,
   gameFourEndDate,
   gameFiveEndDate,
+  playerOneIsServer,
+  playerTwoIsServer,
+  secondServerDot,
 }: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
     [styles["avatar--loser"]]: team.isWinner !== undefined && !team.isWinner,
@@ -135,6 +142,7 @@ const TeamInfoRow = ({
   const percentageClasses = clsx(styles["player-percentage"], {
     [styles["player-percentage--larger"]]: team.percentage > oppositeTeam.percentage,
   });
+  const serverDotClasses = clsx(styles['server__dot']);
 
   const derivedPercentage = team.percentage
     ? team.percentage
@@ -169,7 +177,7 @@ const TeamInfoRow = ({
         </div>
         <div className={styles["player-info"]}>
           <div className={styles["player-names"]}>
-            {team.players.map((player) => (
+            {team.players.map((player, index) => (
                 <div
                   key={player.playerId}
                   className={styles["player-info-name"]}
@@ -190,6 +198,12 @@ const TeamInfoRow = ({
                         {player.suffixName}
                       </span>
                     )}
+                    <div className="flex items-center gap-0.5 pb-0.5 h-full w-full">
+                      {index === 0 && playerOneIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                      {index === 0 && playerOneIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                      {index === 1 && playerTwoIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                      {index === 1 && playerTwoIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                    </div>
                   </div>
                 </div>
             ))}
@@ -366,6 +380,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 gameThreeEndDate={match.gameThreeEndDate}
                 gameFourEndDate={match.gameFourEndDate}
                 gameFiveEndDate={match.gameFiveEndDate}
+                playerOneIsServer={match.server === 1 && match.serverFromTeam === 1}
+                playerTwoIsServer={match.server === 2 && match.serverFromTeam === 1}
+                secondServerDot={match.serverFromTeam === 1 && match.currentServingNumber === 2}
               />
               <TeamInfoRow
                 team={match.team2}
@@ -378,6 +395,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 gameThreeEndDate={match.gameThreeEndDate}
                 gameFourEndDate={match.gameFourEndDate}
                 gameFiveEndDate={match.gameFiveEndDate}
+                playerOneIsServer={match.server === 1 && match.serverFromTeam === 2}
+                playerTwoIsServer={match.server === 2 && match.serverFromTeam === 2}
+                secondServerDot={match.serverFromTeam === 2 && match.currentServingNumber === 2}
               />
             </>
           )}

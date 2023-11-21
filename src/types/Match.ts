@@ -34,6 +34,9 @@ export interface Match {
   tournamentTitle?: string;
   team1: MatchTeam;
   team2: MatchTeam;
+  server?: number;
+  serverFromTeam?: number;
+  currentServingNumber?: number;
 }
 /*
   From protos:
