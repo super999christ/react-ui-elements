@@ -1,3 +1,10 @@
+## [1.17.2](https://github.com/pickleballinc/react-ui/compare/v1.17.1...v1.17.2) (2023-11-24)
+
+
+### Bug Fixes
+
+* added examples of use to switch component ([934dca7](https://github.com/pickleballinc/react-ui/commit/934dca704a9a34cddb952e4455424503f4a0cf49))
+
 ## [1.17.1](https://github.com/pickleballinc/react-ui/compare/v1.17.0...v1.17.1) (2023-11-21)
 
 
