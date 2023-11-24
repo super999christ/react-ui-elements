@@ -63,3 +63,27 @@ export const CustomEditorConfig: Story = {
     }
   }
 };
+
+export const CustomEditorConfigWithMinMaxCropWidthAndMinMaxCropHeight: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    height: 100,
+    onClearImage: () => console.log('Cleared'),
+    width: 160,
+    editorConfig: {
+      aspectRatio: 1.6,
+      targetSize: {
+        width: 160,
+        height: 100,
+      },
+      imageCropMinSize: {
+        width: 80,
+        height: 50,
+      },
+      imageCropMaxSize: {
+        width: 320,
+        height: 200,
+      }
+    }
+  }
+};

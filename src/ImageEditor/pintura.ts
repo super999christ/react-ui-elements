@@ -45,6 +45,8 @@ export const editImage = (
     }),
 
     ...(editorConfig?.aspectRatio && { imageCropAspectRatio: editorConfig.aspectRatio }),
+    ...(editorConfig?.imageCropMinSize && { imageCropMinSize: editorConfig.imageCropMinSize }),
+    ...(editorConfig?.imageCropMaxSize && { imageCropMaxSize: editorConfig.imageCropMaxSize }),
 
     // Set Markup Editor defaults
     ...markup_editor_defaults,

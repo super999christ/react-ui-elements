@@ -19,6 +19,14 @@ export interface EditorConfig {
     width?: number;
     height?: number;
   };
+  imageCropMinSize?: {
+    width: number;
+    height: number;
+  };
+  imageCropMaxSize?: {
+    width: number;
+    height: number;
+  };
 }
 
 export interface FileType extends File {
