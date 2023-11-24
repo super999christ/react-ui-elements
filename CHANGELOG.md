@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/pickleballinc/react-ui/compare/v1.18.1...v1.18.2) (2023-11-24)
+
+
+### Bug Fixes
+
+* width and height in imageditor example fixed, was low quality because it was reversed ([6264278](https://github.com/pickleballinc/react-ui/commit/6264278f10fbe0cb000bce043b121417502893a8))
+
 ## [1.18.1](https://github.com/pickleballinc/react-ui/compare/v1.18.0...v1.18.1) (2023-11-24)
 
 
