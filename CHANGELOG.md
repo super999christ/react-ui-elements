@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/pickleballinc/react-ui/compare/v1.18.0...v1.18.1) (2023-11-24)
+
+
+### Bug Fixes
+
+* roundNumber is now of string type ([c579c2f](https://github.com/pickleballinc/react-ui/commit/c579c2f5c133e9f802c880a977a98f2e12bcb66d))
+
 # [1.18.0](https://github.com/pickleballinc/react-ui/compare/v1.17.2...v1.18.0) (2023-11-24)
 
 
