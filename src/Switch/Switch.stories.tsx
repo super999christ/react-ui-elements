@@ -1,35 +1,46 @@
-import React, { useState } from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import Switch from './Switch';
-
-const SwitchWrapper = () => {
-  const authorName = "Demo"
-  const [checked, setChecked] = useState<boolean>()
-  const derived = checked !== undefined ? checked : authorName && authorName.length > 0 ? true : !!authorName
-
-  return <>
-    <Switch size='xs' id="switch" checked={derived} onChange={(checked) => setChecked(checked)} />
-  </>
-}
+import Switch from "./Switch";
 
 const meta = {
-  title: 'Design System/Switch',
-  component: SwitchWrapper,
-  tags: ['autodocs'],
-  parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
-  },
-} satisfies Meta<typeof SwitchWrapper>;
+  title: "Design System/Switch",
+  component: Switch,
+  tags: ["autodocs"],
+} satisfies Meta<typeof Switch>;
 
 export default meta;
-type Story = StoryObj<typeof SwitchWrapper>;
+type Story = StoryObj<typeof Switch>;
+
+export const SwitchXS: Story = {
+  args: {
+    size: "xs",
+  },
+};
 
 export const SwitchSM: Story = {
   args: {
-    id: 'switch_1',
-    size: 'sm',
-    onChange: undefined
-  }
+    size: "sm",
+  },
 };
 
+export const SwitchMD: Story = {
+  args: {
+    size: "md",
+  },
+};
+
+export const SwitchMDDisabled: Story = {
+  args: {
+    size: "md",
+    disabled: true,
+  },
+};
+
+export const SwitchFullStateExample: Story = {
+  render: () => {
+    const [checked, setChecked] = React.useState<boolean>(false);
+  
+    return <Switch size='sm' id="switch" checked={checked} onChange={(checked) => setChecked(checked)} />;
+  }
+}

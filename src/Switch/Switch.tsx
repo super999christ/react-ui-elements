@@ -4,7 +4,7 @@ import React, { forwardRef, useEffect, useRef, useState } from 'react';
 
 import styles from './Switch.module.css';
 
-type SwitchSize = 'xs' | 'sm' | 'md';
+export type SwitchSize = 'xs' | 'sm' | 'md';
 
 export interface SwitchProps {
   checked?: boolean;
