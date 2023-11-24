@@ -51,14 +51,14 @@ export const ImageEditorCircleTopRightIndicator: Story = {
 export const CustomEditorConfig: Story = {
   args: {
     children: <FontAwesomeIcon icon={faUser} size="xl" />,
-    height: 200,
+    height: 100,
     onClearImage: () => console.log('Cleared'),
-    width: 320,
+    width: 160,
     editorConfig: {
       aspectRatio: 1.6,
       targetSize: {
-        width: 160,
-        height: 100,
+        width: 320,
+        height: 200,
       },
     }
   }
