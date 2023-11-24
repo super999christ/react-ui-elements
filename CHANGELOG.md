@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/pickleballinc/react-ui/compare/v1.17.2...v1.18.0) (2023-11-24)
+
+
+### Features
+
+* added min and max crop width and min and max crop height properties ([d41f641](https://github.com/pickleballinc/react-ui/commit/d41f641741d3174108b82f7f580f4b42b30444b7))
+
 ## [1.17.2](https://github.com/pickleballinc/react-ui/compare/v1.17.1...v1.17.2) (2023-11-24)
 
 
