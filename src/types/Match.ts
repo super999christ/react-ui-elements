@@ -30,7 +30,7 @@ export interface Match {
   matchStatus?: number;
   timezoneAbbreviation?: string;
   matchTime?: string;
-  roundNumber?: number;
+  roundNumber?: string;
   tournamentTitle?: string;
   team1: MatchTeam;
   team2: MatchTeam;

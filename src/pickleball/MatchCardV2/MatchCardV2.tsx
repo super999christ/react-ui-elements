@@ -354,7 +354,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 )}
                 {match.roundNumber && (
                   <span className={styles["info--item"]}>
-                    {`Round ${match.roundNumber}`}
+                    {match.roundNumber}
                   </span>
                 )}
                 {match.matchTime && (

@@ -28,7 +28,7 @@ export const SoloLeftWinner: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 4,
       team1: {
         players: [{
@@ -69,7 +69,7 @@ export const SoloRightWinner: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 4,
       team1: {
         players: [{
@@ -110,7 +110,7 @@ export const DuoLeftWinner: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 4,
       team1: {
         players: [{
@@ -165,7 +165,7 @@ export const DuoRightWinner: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 4,
       team1: {
         players: [{
@@ -221,7 +221,7 @@ export const DuoScheduled: Story = {
       tournamentTitle: 'PPA Tour: Las Vegas Nevada USA Extra Extra Text',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age) Extra Text Test',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 1,
       team1: {
         players: [{
@@ -276,7 +276,7 @@ export const DuoLive: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -334,7 +334,7 @@ export const DuoLiveWithDotsTeamOnePlayerOneFirstServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -395,7 +395,7 @@ export const DuoLiveWithDotsTeamOnePlayerOneSecondServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -456,7 +456,7 @@ export const DuoLiveWithDotsTeamOnePlayerTwoFirstServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -517,7 +517,7 @@ export const DuoLiveWithDotsTeamOnePlayerTwoSecondServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -578,7 +578,7 @@ export const DuoLiveWithDotsTeamTwoPlayerOneFirstServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -639,7 +639,7 @@ export const DuoLiveWithDotsTeamTwoPlayerOneSecondServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -700,7 +700,7 @@ export const DuoLiveWithDotsTeamTwoPlayerTwoFirstServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -761,7 +761,7 @@ export const DuoLiveWithDotsTeamTwoPlayerTwoSecondServe: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '',
@@ -822,7 +822,7 @@ export const DuoDelayed: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 3,
       team1: {
         players: [{
@@ -878,7 +878,7 @@ export const DuoHideMatchTimeStartRowOnPhones: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 4,
       team1: {
         players: [{
@@ -934,7 +934,7 @@ export const DuoLiveHideMatchTimeStartRowOnPhonesWithSuffixNames: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '2',
@@ -997,7 +997,7 @@ export const DuoLiveWithSuffixNamesDetailsURLSponsors: Story = {
       matchTime: '12:50 AM ',
       eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
       courtName: 'Court 5',
-      roundNumber: 4,
+      roundNumber: 'Round 4',
       matchStatus: 2,
       gameOneEndDate: '1',
       gameTwoEndDate: '2',
