@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/pickleballinc/react-ui/compare/v1.18.2...v1.19.0) (2023-11-27)
+
+
+### Features
+
+* added links property to matchcardv2 ([259bae0](https://github.com/pickleballinc/react-ui/commit/259bae0fcb1dc5c7f55fe3573144b7e95294e9bc))
+
 ## [1.18.2](https://github.com/pickleballinc/react-ui/compare/v1.18.1...v1.18.2) (2023-11-24)
 
 
