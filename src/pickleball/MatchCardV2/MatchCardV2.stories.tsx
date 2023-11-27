@@ -21,6 +21,10 @@ export const SoloLeftWinner: Story = {
   args:  {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      archivedURL: 'https://youtube.com',
+    },
     match: {
       id: '386e642f-ebbe-48c2-bbd0-097b52bca520',
       timezoneAbbreviation: 'EST',
@@ -62,6 +66,10 @@ export const SoloRightWinner: Story = {
   args:  {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      archivedURL: 'https://youtube.com',
+    },
     match: {
       id: '386e642f-ebbe-48c2-bbd0-097b52bca520',
       timezoneAbbreviation: 'EST',
@@ -103,6 +111,10 @@ export const DuoLeftWinner: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      archivedURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -158,6 +170,10 @@ export const DuoRightWinner: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      archivedURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -213,6 +229,9 @@ export const DuoScheduled: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -269,6 +288,10 @@ export const DuoLive: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -327,6 +350,10 @@ export const DuoLiveWithDotsTeamOnePlayerOneFirstServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -388,6 +415,10 @@ export const DuoLiveWithDotsTeamOnePlayerOneSecondServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -449,6 +480,10 @@ export const DuoLiveWithDotsTeamOnePlayerTwoFirstServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -510,6 +545,10 @@ export const DuoLiveWithDotsTeamOnePlayerTwoSecondServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -571,6 +610,10 @@ export const DuoLiveWithDotsTeamTwoPlayerOneFirstServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -632,6 +675,10 @@ export const DuoLiveWithDotsTeamTwoPlayerOneSecondServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -693,6 +740,10 @@ export const DuoLiveWithDotsTeamTwoPlayerTwoFirstServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -754,6 +805,10 @@ export const DuoLiveWithDotsTeamTwoPlayerTwoSecondServe: Story = {
   args: {
     shortenName: true,
     compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -871,6 +926,10 @@ export const DuoHideMatchTimeStartRowOnPhones: Story = {
     shortenName: true,
     compact: true,
     hideMatchTimeStartRowOnPhones: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      archivedURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -927,6 +986,10 @@ export const DuoLiveHideMatchTimeStartRowOnPhonesWithSuffixNames: Story = {
     shortenName: true,
     compact: true,
     hideMatchTimeStartRowOnPhones: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -989,6 +1052,10 @@ export const DuoLiveWithSuffixNamesDetailsURLSponsors: Story = {
       <a><FontAwesomeIcon icon={faYoutube} /></a>
       <a><FontAwesomeIcon icon={faTwitch} /></a>
     </div>,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       detailsURL: 'https://ppatour.com',
@@ -1052,6 +1119,10 @@ export const DuoLiveWithSuffixNamesDetailsURLSponsors2: Story = {
       <a><FontAwesomeIcon icon={faYoutube} /></a>
       <a><FontAwesomeIcon icon={faTwitch} /></a>
     </div>,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       detailsURL: 'https://ppatour.com',
@@ -1111,6 +1182,10 @@ export const DuoLiveWithSuffixNamesDetailsURLSponsorsFiveGames: Story = {
       <a><FontAwesomeIcon icon={faYoutube} /></a>
       <a><FontAwesomeIcon icon={faTwitch} /></a>
     </div>,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       detailsURL: 'https://ppatour.com',
@@ -1171,6 +1246,10 @@ export const DuoLiveWithSuffixNamesDetailsURLSponsorsNotCompactMatchNumber: Stor
       <a><FontAwesomeIcon icon={faYoutube} /></a>
       <a><FontAwesomeIcon icon={faTwitch} /></a>
     </div>,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       matchNumber: 7,

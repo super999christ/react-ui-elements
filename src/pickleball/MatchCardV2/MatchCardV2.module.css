@@ -1,9 +1,21 @@
 .match-card {
-  @apply border border-gray-300 rounded flex flex-row w-full bg-white;
+  @apply border border-gray-300 rounded flex flex-row w-full bg-white relative;
 }
 
 .match-card__number {
   @apply text-sm font-semibold leading-none w-8 inline-flex items-center justify-center border-r border-gray-300;
+}
+
+.match-card__links {
+  @apply bg-gray-200 z-50 absolute top-0 left-0 flex flex-col justify-evenly items-center w-full h-full opacity-95;
+}
+
+.link__item {
+  @apply w-full flex items-center justify-center hover:bg-gray-300 h-full text-sm font-medium not-italic;
+}
+
+.link__item:not(:first-child) {
+  @apply border-t border-solid border-gray-400;
 }
 
 .match-card--compact .match-card__number {

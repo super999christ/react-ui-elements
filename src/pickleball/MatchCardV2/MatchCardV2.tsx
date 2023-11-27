@@ -5,7 +5,7 @@ import Avatar from "../../Avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
-import { faCircle, faDotCircle } from "@fortawesome/pro-solid-svg-icons";
+import { faCircle } from "@fortawesome/pro-solid-svg-icons";
 
 interface IconProps {
   width: number;
@@ -270,17 +270,25 @@ const TeamInfoRow = ({
   );
 };
 
+export interface LinkInterface {
+  matchStatsURL?: string;
+  liveURL?: string;
+  archivedURL?: string;
+}
+
 export interface MatchCardV2Props {
   compact?: boolean;
   hideMatchTimeStartRowOnPhones?: boolean;
   match: Match;
   shortenName?: boolean;
   sponsors?: React.ReactNode;
+  links?: LinkInterface;
 }
 
 const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
   (props, ref) => {
-    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors} = props;
+    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors, links } = props;
+    const [showLinks, setShowLinks] = React.useState<boolean>(false);
 
     const cardClasses = clsx(styles["match-card"], {
       [styles["match-card--compact"]]: compact,
@@ -297,7 +305,31 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
     });
 
     return (
-      <div className={cardClasses} ref={ref}>
+      <div 
+        onMouseEnter={() => links && setShowLinks(true)}
+        onMouseLeave={() => links && setShowLinks(false)} 
+        className={cardClasses}
+        ref={ref}
+      >
+        {links && showLinks &&
+          <div className={styles['match-card__links']}>
+            {links.matchStatsURL &&
+              <a href={links.matchStatsURL} className={styles['link__item']}>
+                MATCH STATS
+              </a>
+            }
+            {match.matchStatus === 2 && links.liveURL &&
+              <a href={links.liveURL} className={styles['link__item']}>
+                WATCH LIVE
+              </a>
+            }
+            {match.matchStatus === 4 && links.archivedURL &&
+              <a href={links.archivedURL} className={styles['link__item']}>
+                WATCH VIDEO
+              </a>
+            }
+          </div>
+        }
         {match.matchNumber && (
           <div className={styles["match-card__number"]}>
             {match.matchNumber}
