@@ -179,9 +179,11 @@ const DatePicker = ({
                 decreaseMonth,
                 increaseMonth,
               }) => {
+                const getMinYear = moment(props.minDate).get('year') || moment().subtract(110, 'years').get('year')
+                const getMaxYear = moment(props.maxDate) || moment()
                 const years = getYearsObject(
-                  moment().set("year", 1990).toDate(),
-                  moment().toDate(),
+                  moment().set("year", getMinYear).toDate(),
+                  getMaxYear.toDate(),
                   false
                 );
                 const months = [

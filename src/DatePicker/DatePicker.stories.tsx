@@ -47,6 +47,8 @@ export const DatePickerFullExampleWithState: Story = {
         selected={date ? new Date(date) : null}
         showTimeSelect={true}
         placement="bottom"
+        minDate={new Date('01/10/1990')}
+        maxDate={new Date('01/10/1991')}
         onChange={(date) => 
           setDate(
             moment(date).utc().format("YYYY-MM-DDTHH:mm:ss.SSS[Z]")
