@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/pickleballinc/react-ui/compare/v1.19.1...v1.20.0) (2023-12-11)
+
+
+### Features
+
+* pressing label for checkbox will check/uncheck it, pressing label for radio will check it (uncheck other radios with same key), datepicker fixed when minDate/maxDate arent sent in as a prop, added one example for it, renamed the existing example with minDate and maxDate props ([94eac86](https://github.com/pickleballinc/react-ui/commit/94eac86a93e382117b4e9297a2a752958a477e08))
+
 ## [1.19.1](https://github.com/pickleballinc/react-ui/compare/v1.19.0...v1.19.1) (2023-12-07)
 
 
