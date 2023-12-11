@@ -49,15 +49,25 @@ export const CheckboxMDDisabled: Story = {
   },
 };
 
+export const CheckboxMDDisabledWithText: Story = {
+  args: {
+    size: 'md',
+    disabled: true,
+    Text: 'This is a disabled checkbox',
+  },
+};
+
 export const CheckboxMDChecked: Story = {
   args: {
     size: 'md',
+    defaultChecked: true,
   },
 };
 
 export const CheckboxMDCheckedAndDisabled: Story = {
   args: {
     size: 'md',
+    defaultChecked: true,
     disabled: true,
   },
 };
@@ -111,12 +121,22 @@ export const CheckboxSMCheckedAndDisabled: Story = {
 
 export const CheckboxFullExample: Story = {
   render: () => {
-    const frameworks = [{id: 'react', value: 'React'}, {id: 'angular', value: 'Angular'}, {id: 'vue', value: 'Vue'}];
+    const socialMedias = [
+      { id: "facebook", value: "Facebook" },
+      { id: "Instagram", value: "Instagram" },
+      { id: "x/twitter", value: "X/Twitter" },
+    ];
     return (
       <div className='flex w-full justify-center gap-2'>
-        {
-          frameworks.map((framework) => <Checkbox key={framework.id} name='Front_end_framework_1' id={framework.id} value={framework.value} Text={framework.value} />)
-        }
+        {socialMedias.map((socialMedia) => (
+          <Checkbox
+            key={socialMedia.id}
+            name="Social_media"
+            id={socialMedia.id}
+            value={socialMedia.value}
+            Text={socialMedia.value}
+          />
+        ))}
       </div>
     );
   }
@@ -155,7 +175,7 @@ export const CheckboxFullExampleWithState: Story = {
                   setSelected([...selected, framework.id]);
                 }
               }}
-            /> 
+            />
           ))
         }
       </div>

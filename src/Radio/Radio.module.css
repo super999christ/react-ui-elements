@@ -3,6 +3,7 @@
   @apply items-start;
   @apply gap-3;
 }
+
 .wrapper--size-sm {
   @apply gap-2;
 }
@@ -27,11 +28,14 @@
   @apply transition-[120ms];
   @apply duration-[transform];
   @apply ease-[ease-in-out];
+  @apply w-2;
+  @apply h-2;
+}
+
+.wrapper__radio:checked::before {
   @apply shadow-[inset_1em_1em_#254EDB];
   @apply bg-[CanvasText]; 
   @apply scale-0;
-  @apply w-2;
-  @apply h-2;
   @apply rounded-[50%];
 }
 

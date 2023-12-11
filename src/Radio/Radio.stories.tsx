@@ -49,15 +49,25 @@ export const RadioMDDisabled: Story = {
   },
 };
 
+export const RadioMDDisabledWithText: Story = {
+  args: {
+    size: "md",
+    disabled: true,
+    Text: 'This is a disabled radio',
+  },
+};
+
 export const RadioMDChecked: Story = {
   args: {
     size: "md",
+    defaultChecked: true,
   },
 };
 
 export const RadioMDCheckedAndDisabled: Story = {
   args: {
     size: "md",
+    defaultChecked: true,
     disabled: true,
   },
 };
@@ -111,20 +121,20 @@ export const RadioSMCheckedAndDisabled: Story = {
 
 export const RadioFullExample: Story = {
   render: () => {
-    const frameworks = [
-      { id: "react", value: "React" },
-      { id: "angular", value: "Angular" },
-      { id: "vue", value: "Vue" },
+    const socialMedias = [
+      { id: "facebook", value: "Facebook" },
+      { id: "Instagram", value: "Instagram" },
+      { id: "x/twitter", value: "X/Twitter" },
     ];
     return (
       <div className="flex w-full justify-center gap-2">
-        {frameworks.map((framework) => (
+        {socialMedias.map((socialMedia) => (
           <Radio
-            key={framework.id}
-            name="Front_end_framework_1"
-            id={framework.id}
-            value={framework.value}
-            Text={framework.value}
+            key={socialMedia.id}
+            name="Social_media"
+            id={socialMedia.id}
+            value={socialMedia.value}
+            Text={socialMedia.value}
           />
         ))}
       </div>
@@ -148,6 +158,10 @@ export const RadioFullExampleWithState: Story = {
     ];
     const [selected, setSelected] = React.useState<IdType>();
 
+    const handleOptionChange = (event) => {
+      setSelected(event.target.value);
+    };
+
     return (
       <div className="flex flex-col w-full justify-center gap-1">
         Selected: {selected && selected.toString()}
@@ -158,7 +172,7 @@ export const RadioFullExampleWithState: Story = {
             id={framework.id}
             value={framework.value}
             Text={framework.value}
-            onChange={(e) => setSelected(framework.id)}
+            onChange={handleOptionChange}
           />
         ))}
       </div>

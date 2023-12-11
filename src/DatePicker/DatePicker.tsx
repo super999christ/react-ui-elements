@@ -11,7 +11,7 @@ import {
 } from "@floating-ui/react";
 import { faAngleLeft, faAngleRight } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import moment from "moment";
+import moment, { months } from "moment";
 import React, { useEffect, useRef, useState } from "react";
 import type { ReactDatePickerProps } from "react-datepicker";
 import ReactDatePicker from "react-datepicker";
@@ -179,8 +179,8 @@ const DatePicker = ({
                 decreaseMonth,
                 increaseMonth,
               }) => {
-                const getMinYear = moment(props.minDate).get('year') || moment().subtract(110, 'years').get('year')
-                const getMaxYear = moment(props.maxDate) || moment()
+                const getMinYear = props.minDate ? moment(props.minDate).get('year') : moment().subtract(110, 'years').get('year')
+                const getMaxYear = props.maxDate ? moment(props.maxDate) : moment()
                 const years = getYearsObject(
                   moment().set("year", getMinYear).toDate(),
                   getMaxYear.toDate(),

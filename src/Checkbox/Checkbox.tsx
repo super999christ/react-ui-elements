@@ -50,19 +50,21 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       [styles['wrapper__supporting__text--size-sm']]: size === 'sm',
     });
 
+    const randomNumber = Math.random();
+
     return (
       <div className={wrapperClasses}>
         <input
           type="checkbox"
           className={checkboxClasses}
           disabled={disabled}
-          id={id}
+          id={id || `${randomNumber}`}
           name={name}
           ref={ref}
           value={value}
           {...rest}
         />
-        <div>
+        <label htmlFor={id || `${randomNumber}`}>
           {Text &&
             (typeof Text === 'string' ? (
               <p className={textClasses}>{Text}</p>
@@ -75,7 +77,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             ) : (
               SupportingText()
             ))}
-        </div>
+        </label>
       </div>
     );
   },

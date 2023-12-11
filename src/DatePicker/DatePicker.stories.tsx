@@ -47,6 +47,28 @@ export const DatePickerFullExampleWithState: Story = {
         selected={date ? new Date(date) : null}
         showTimeSelect={true}
         placement="bottom"
+        onChange={(date) => 
+          setDate(
+            moment(date).utc().format("YYYY-MM-DDTHH:mm:ss.SSS[Z]")
+          )
+        }
+      >
+        <span>{date ? moment(date).format("MMM DD, YYYY") : "Click to open"}</span>
+      </DatePicker>
+    );
+  }
+};
+
+export const DatePickerMinDateMaxDateFullExampleWithState: Story = {
+  render: () => {
+    const [date, setDate] = useState<string>();
+
+    return (
+      <DatePicker
+        label="From"
+        selected={date ? new Date(date) : null}
+        showTimeSelect={true}
+        placement="bottom"
         minDate={new Date('01/10/1990')}
         maxDate={new Date('01/10/1991')}
         onChange={(date) => 
