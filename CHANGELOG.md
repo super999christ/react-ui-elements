@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/pickleballinc/react-ui/compare/v1.20.0...v1.20.1) (2023-12-12)
+
+
+### Bug Fixes
+
+* checkbox and radio interface changes and removed unused variable from datepicker ([ebc2233](https://github.com/pickleballinc/react-ui/commit/ebc22337938756ce6bd62f1c4db0d6f69271d047))
+
 # [1.20.0](https://github.com/pickleballinc/react-ui/compare/v1.19.1...v1.20.0) (2023-12-11)
 
 
