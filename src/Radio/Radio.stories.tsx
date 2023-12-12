@@ -39,6 +39,7 @@ export const RadioMDWithTextAndSupportingText: Story = {
 export const RadioMDUnchecked: Story = {
   args: {
     size: "md",
+    checked: false,
   },
 };
 
@@ -60,15 +61,22 @@ export const RadioMDDisabledWithText: Story = {
 export const RadioMDChecked: Story = {
   args: {
     size: "md",
-    defaultChecked: true,
+    checked: true,
   },
 };
 
 export const RadioMDCheckedAndDisabled: Story = {
   args: {
     size: "md",
-    defaultChecked: true,
+    checked: true,
     disabled: true,
+  },
+};
+
+export const RadioMDDefaultChecked: Story = {
+  args: {
+    size: 'md',
+    defaultChecked: true,
   },
 };
 
@@ -96,6 +104,7 @@ export const RadioSMWithTextAndSupportingText: Story = {
 export const RadioSMUnchecked: Story = {
   args: {
     size: "sm",
+    checked: false,
   },
 };
 
@@ -115,7 +124,15 @@ export const RadioSMChecked: Story = {
 export const RadioSMCheckedAndDisabled: Story = {
   args: {
     size: "sm",
+    checked: true,
     disabled: true,
+  },
+};
+
+export const RadioSMDefaultChecked: Story = {
+  args: {
+    size: 'sm',
+    defaultChecked: true,
   },
 };
 

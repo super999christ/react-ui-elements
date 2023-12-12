@@ -5,13 +5,10 @@ import styles from './Radio.module.css';
 
 type RadioSizeTypes = 'sm' | 'md';
 
-export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
-  disabled?: boolean;
-  name?: string;
+export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   size?: RadioSizeTypes;
   SupportingText?: string | (() => React.ReactNode);
   Text?: string | (() => React.ReactNode);
-  value?: string;
 }
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>(

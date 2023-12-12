@@ -5,14 +5,11 @@ import styles from './Checkbox.module.css';
 
 type CheckboxSizeTypes = 'sm' | 'md';
 
-export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
-  disabled?: boolean;
+export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   indeterminate?: boolean;
-  name?: string;
   size?: CheckboxSizeTypes;
   SupportingText?: string | (() => React.ReactNode);
   Text?: string | (() => React.ReactNode);
-  value?: string;
 }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(

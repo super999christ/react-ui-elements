@@ -39,6 +39,7 @@ export const CheckboxMDWithTextAndSupportingText: Story = {
 export const CheckboxMDUnchecked: Story = {
   args: {
     size: 'md',
+    checked: false,
   },
 };
 
@@ -60,15 +61,22 @@ export const CheckboxMDDisabledWithText: Story = {
 export const CheckboxMDChecked: Story = {
   args: {
     size: 'md',
-    defaultChecked: true,
+    checked: true,
   },
 };
 
 export const CheckboxMDCheckedAndDisabled: Story = {
   args: {
     size: 'md',
-    defaultChecked: true,
+    checked: true,
     disabled: true,
+  },
+};
+
+export const CheckboxMDDefaultChecked: Story = {
+  args: {
+    size: 'md',
+    defaultChecked: true,
   },
 };
 
@@ -96,6 +104,7 @@ export const CheckboxSMWithTextAndSupportingText: Story = {
 export const CheckboxSMUnchecked: Story = {
   args: {
     size: 'sm',
+    checked: false,
   },
 };
 
@@ -109,13 +118,22 @@ export const CheckboxSMDisabled: Story = {
 export const CheckboxSMChecked: Story = {
   args: {
     size: 'sm',
+    checked: true,
   },
 };
 
 export const CheckboxSMCheckedAndDisabled: Story = {
   args: {
     size: 'sm',
+    checked: true,
     disabled: true,
+  },
+};
+
+export const CheckboxSMDefaultChecked: Story = {
+  args: {
+    size: 'sm',
+    defaultChecked: true,
   },
 };
 

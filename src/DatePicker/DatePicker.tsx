@@ -145,8 +145,6 @@ const DatePicker = ({
     dismiss,
   ]);
 
-  const isToday = moment(props.selected).isSame(new Date(), "day");
-
   return (
     <>
       {React.isValidElement(children) && (
