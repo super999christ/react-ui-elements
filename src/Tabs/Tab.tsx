@@ -6,7 +6,7 @@ import Button, { ButtonVariant } from './../Button';
 import styles from './Tabs.module.css';
 
 export type TabVariant = 'primary' | 'gray' | 'underline' | 'underline-filled' | 'white-border';
-export type TabSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type TabSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type TabIconPosition = 'prefix' | 'suffix';
 
 export interface TabProps extends React.HTMLAttributes<HTMLButtonElement> {

@@ -1919,3 +1919,97 @@ export const UnderlineFilledSMWithStateWithMixIconPositions: Story = {
     );
   },
 };
+
+export const UnderlineSMFullWidthDisabledDropdownWithState: Story = {
+  render: () => {
+    const options: OptionsInterface[] = [
+      {
+        value: "xl",
+        label: "XL",
+      },
+      {
+        value: "lg",
+        label: "LG",
+      },
+      {
+        value: "md",
+        label: "MD",
+      },
+      {
+        value: "sm",
+        label: "SM",
+      },
+      {
+        value: "xs",
+        label: "XS",
+      },
+    ];
+    const [selectedOption, setSelectedOption] = React.useState<string>(options[0].value);
+
+    return (
+      <div className="flex flex-col">
+        <Tabs
+          options={options}
+          onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
+          active={selectedOption}
+          fullWidth={true}
+          size="sm"
+          variant="underline"
+          menuPortalTarget={document.body}
+          disableDropdown
+        />
+        <div className="w-full h-20 p-4">
+          <span>Selected option value: {selectedOption.toString()}</span>
+          <h1>Render content depending on the selected option</h1>
+        </div>
+      </div>
+    );
+  },
+};
+
+export const UnderlineXSFullWidthDisabledDropdownWithState: Story = {
+  render: () => {
+    const options: OptionsInterface[] = [
+      {
+        value: "xl",
+        label: "XL",
+      },
+      {
+        value: "lg",
+        label: "LG",
+      },
+      {
+        value: "md",
+        label: "MD",
+      },
+      {
+        value: "sm",
+        label: "SM",
+      },
+      {
+        value: "xs",
+        label: "XS",
+      },
+    ];
+    const [selectedOption, setSelectedOption] = React.useState<string>(options[0].value);
+
+    return (
+      <div className="flex flex-col">
+        <Tabs
+          options={options}
+          onChange={(e: any) => setSelectedOption(e.value || e.target.value)}
+          active={selectedOption}
+          fullWidth={true}
+          size="xs"
+          variant="underline"
+          menuPortalTarget={document.body}
+          disableDropdown
+        />
+        <div className="w-full h-20 p-4">
+          <span>Selected option value: {selectedOption.toString()}</span>
+          <h1>Render content depending on the selected option</h1>
+        </div>
+      </div>
+    );
+  },
+};

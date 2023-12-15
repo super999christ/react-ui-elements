@@ -3,6 +3,10 @@
   @apply hidden sm:flex w-fit p-1;
 }
 
+.tabs--disabled-dropdown {
+  @apply flex;
+}
+
 .tabs--type-horizontal {
   @apply flex-row gap-2 overflow-x-auto;
 }

@@ -15,7 +15,7 @@ export type ButtonVariant =
   | 'tertiary-color'
   | 'link'
   | 'link-gray';
-type ButtonSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -47,6 +47,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       {
         [styles['button--disabled']]: disabled,
         [styles['button--destructive']]: destructive,
+        [styles['button--size-xs']]: size === 'xs',
         [styles['button--size-sm']]: size === 'sm',
         [styles['button--size-lg']]: size === 'lg',
         [styles['button--size-xl']]: size === 'xl',

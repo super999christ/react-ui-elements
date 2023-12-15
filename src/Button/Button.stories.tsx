@@ -355,3 +355,51 @@ export const DesctructiveLinkGrayWithIcons: Story = {
     suffixIcon: <FontAwesomeIcon icon={faArrowRight} />
   }
 };
+
+export const SecondaryXS: Story = {
+  args: {
+    children: 'Secondary',
+    variant: 'secondary',
+    size: 'xs',
+  }
+};
+
+export const PrimarySM: Story = {
+  args: {
+    children: 'Primary',
+    variant: 'primary',
+    size: 'sm',
+  }
+};
+
+export const SecondaryMD: Story = {
+  args: {
+    children: 'Secondary',
+    variant: 'secondary',
+    size: 'md',
+  }
+};
+
+export const PrimaryLG: Story = {
+  args: {
+    children: 'Primary',
+    variant: 'primary',
+    size: 'lg',
+  }
+};
+
+export const SecondaryXL: Story = {
+  args: {
+    children: 'Secondary',
+    variant: 'secondary',
+    size: 'xl',
+  }
+};
+
+export const Primary2XL: Story = {
+  args: {
+    children: 'Primary',
+    variant: 'primary',
+    size: '2xl',
+  }
+};

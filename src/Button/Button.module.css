@@ -25,6 +25,13 @@
   @apply outline-none;
 }
 
+.button--size-xs {
+  @apply px-[10px];
+  @apply py-[8px];
+  @apply text-xs;
+  @apply leading-4;
+}
+
 .button--size-sm {
   @apply px-[14px];
   @apply py-[8px];

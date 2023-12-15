@@ -26,6 +26,7 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: TabsType;
   variant?: TabVariant;
   onChange?: (e: any) => void;
+  disableDropdown?: boolean;
 }
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>(
@@ -41,6 +42,7 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       type = 'horizontal',
       variant = 'primary',
       onChange,
+      disableDropdown = false,
       ...rest
     } = props;
 
@@ -51,6 +53,7 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       [styles['tabs--underline']]: type === 'horizontal' && (variant === 'underline' || variant === 'underline-filled'),
       [styles['tabs--white-border']]: variant === 'white-border',
       [styles['tabs--white-border-vertical']]: type === 'vertical' && variant === 'white-border',
+      [styles['tabs--disabled-dropdown']]: disableDropdown,
     }, className);
 
     const selectClasses = clsx(styles.select, className);
@@ -83,22 +86,24 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
             })
           }
         </div>
-        <Select
-          className={selectClasses}
-          menuPortalTarget={menuPortalTarget}
-          onChange={onChange}
-          options={options.map(option => ({ 
-            value: option.value,
-            label: 
-              option.icon && option.iconPosition ?
-                option.iconPosition === 'prefix' ?
-                  <span>{option.icon} {option.label}</span>
+        {!disableDropdown &&
+          <Select
+            className={selectClasses}
+            menuPortalTarget={menuPortalTarget}
+            onChange={onChange}
+            options={options.map(option => ({ 
+              value: option.value,
+              label: 
+                option.icon && option.iconPosition ?
+                  option.iconPosition === 'prefix' ?
+                    <span>{option.icon} {option.label}</span>
+                    :
+                    <span>{option.label} {option.icon}</span> 
                   :
-                  <span>{option.label} {option.icon}</span> 
-                :
-                <span>{option.label}</span>
-          }))}
-        />
+                  <span>{option.label}</span>
+            }))}
+          />
+        }
       </>
     );
   },
