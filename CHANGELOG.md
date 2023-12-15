@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/pickleballinc/react-ui/compare/v1.20.1...v1.21.0) (2023-12-15)
+
+
+### Features
+
+* add label and labelposition props to switch component ([0ecd208](https://github.com/pickleballinc/react-ui/commit/0ecd208ac55e8a9f3538c4170de83dab8bb18df9))
+
 ## [1.20.1](https://github.com/pickleballinc/react-ui/compare/v1.20.0...v1.20.1) (2023-12-12)
 
 
