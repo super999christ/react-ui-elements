@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/pickleballinc/react-ui/compare/v1.21.0...v1.22.0) (2023-12-15)
+
+
+### Features
+
+* added xs variant to button and tabs components ([6e511c1](https://github.com/pickleballinc/react-ui/commit/6e511c110163c60813babc6fef47ddc40c15c74e))
+
 # [1.21.0](https://github.com/pickleballinc/react-ui/compare/v1.20.1...v1.21.0) (2023-12-15)
 
 
