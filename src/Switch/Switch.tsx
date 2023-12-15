@@ -1,10 +1,11 @@
-import cx from 'clsx';
+import cx, { clsx } from 'clsx';
 import type { CSSProperties } from 'react';
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
 
 import styles from './Switch.module.css';
 
 export type SwitchSize = 'xs' | 'sm' | 'md';
+export type SwitchLabelPosition = 'left' | 'right';
 
 export interface SwitchProps {
   checked?: boolean;
@@ -20,6 +21,8 @@ export interface SwitchProps {
     id: string,
   ) => void;
   size?: SwitchSize;
+  label?: string | React.ReactNode;
+  labelPosition?: SwitchLabelPosition;
 }
 
 const SWITCH_SIZES = {
@@ -208,30 +211,46 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
       : 'background-color 0.25s, transform 0.25s, box-shadow 0.15s',
   } as CSSProperties;
 
+  const textClasses = clsx(styles.text, {
+    [styles['text--size-sm']]: size === 'sm',
+    [styles['text--size-xs']]: size === 'xs',
+  });
+
+  const randomNumber = Math.random();
+
   return (
-    <div className={styles.switch} ref={ref}>
-      <div
-        className={bgClasses}
-        aria-hidden="true"
-        onClick={props.disabled ? undefined : onClick}
-        onMouseDown={(e) => e.preventDefault()}
-        style={bgStyle}
-      />
-      <div
-        className={handlerClasses}
-        aria-hidden="true"
-        onClick={(e) => e.preventDefault()}
-        onMouseDown={props.disabled ? undefined : onMouseDown}
-        style={handleStyle}
-      />
-      <input
-        type="checkbox"
-        role="switch"
-        aria-checked={isChecked}
-        className={styles.switch__input}
-        onChange={onInputChange}
-        ref={inputRef}
-      />
+    <div className={styles.wrapper}>
+      {props.label && props.labelPosition === 'left' && (
+        <label className={textClasses} htmlFor={`${randomNumber}`}>{props.label}</label>
+      )}
+      <div className={styles.switch} ref={ref}>
+        <div
+          className={bgClasses}
+          aria-hidden="true"
+          onClick={props.disabled ? undefined : onClick}
+          onMouseDown={(e) => e.preventDefault()}
+          style={bgStyle}
+        />
+        <div
+          className={handlerClasses}
+          aria-hidden="true"
+          onClick={(e) => e.preventDefault()}
+          onMouseDown={props.disabled ? undefined : onMouseDown}
+          style={handleStyle}
+        />
+        <input
+          type="checkbox"
+          role="switch"
+          aria-checked={isChecked}
+          className={styles.switch__input}
+          onChange={onInputChange}
+          ref={inputRef}
+          id={`${randomNumber}`}
+        />
+      </div>
+      {props.label && props.labelPosition !== 'left' && (
+        <label className={textClasses} htmlFor={`${randomNumber}`}>{props.label}</label>
+      )}
     </div>
   );
 });

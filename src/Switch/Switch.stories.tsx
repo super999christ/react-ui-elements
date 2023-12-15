@@ -30,6 +30,13 @@ export const SwitchMD: Story = {
   },
 };
 
+export const SwitchMDWithLabel: Story = {
+  args: {
+    size: "md",
+    label: "This is a switch",
+  },
+};
+
 export const SwitchMDDisabled: Story = {
   args: {
     size: "md",
@@ -41,6 +48,63 @@ export const SwitchFullStateExample: Story = {
   render: () => {
     const [checked, setChecked] = React.useState<boolean>(false);
   
-    return <Switch size='sm' id="switch" checked={checked} onChange={(checked) => setChecked(checked)} />;
+    return (
+      <Switch 
+        size='sm' 
+        id="switch" 
+        checked={checked} 
+        onChange={(checked) => setChecked(checked)} 
+      />
+    );
+  }
+}
+
+export const SwitchLabelRightFullStateExample: Story = {
+  render: () => {
+    const [checked, setChecked] = React.useState<boolean>(false);
+  
+    return (
+      <Switch 
+        size='sm' 
+        id="switch_1" 
+        checked={checked} 
+        onChange={(checked) => setChecked(checked)}
+        label="This is a switch"
+      />
+    );
+  }
+}
+
+export const SwitchLabelLeftFullStateExample: Story = {
+  render: () => {
+    const [checked, setChecked] = React.useState<boolean>(false);
+  
+    return (
+      <Switch 
+        size='sm' 
+        id="switch_2" 
+        checked={checked} 
+        onChange={(checked) => setChecked(checked)}
+        label="This is a switch"
+        labelPosition="left"
+      />
+    );
+  }
+}
+
+export const SwitchCustomLabelFullStateExample: Story = {
+  render: () => {
+    const [checked, setChecked] = React.useState<boolean>(false);
+  
+    return (
+      <Switch 
+        size='sm' 
+        id="switch_2" 
+        checked={checked} 
+        onChange={(checked) => setChecked(checked)}
+        label={<p className="text-md font-bold text-primary-700">This is a custom label</p>}
+        labelPosition="right"
+      />
+    );
   }
 }

@@ -1,3 +1,7 @@
+.wrapper {
+  @apply inline-flex items-center gap-2;
+}
+
 .switch {
   @apply relative;
   @apply inline-block;
@@ -54,4 +58,23 @@
   @apply p-0;
   @apply absolute;
   clip: rect(0px, 0px, 0px, 0px);
+}
+
+.text {
+  @apply text-base;
+  @apply not-italic;
+  @apply leading-6;
+  @apply self-stretch;
+  @apply text-gray-700;
+  @apply font-medium;
+}
+
+.text--size-sm {
+  @apply text-sm;
+  @apply leading-5;
+}
+
+.text--size-xs {
+  @apply text-sm;
+  @apply leading-[18px];
 }
