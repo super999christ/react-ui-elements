@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/pickleballinc/react-ui/compare/v1.22.0...v1.23.0) (2023-12-20)
+
+
+### Features
+
+* added custom clearindicator prop to imageeditor, added name prop to switch, added examples of use for both ([367d58a](https://github.com/pickleballinc/react-ui/commit/367d58a72e0e8371ca371af060d96a3f36c0e764))
+
 # [1.22.0](https://github.com/pickleballinc/react-ui/compare/v1.21.0...v1.22.0) (2023-12-15)
 
 
