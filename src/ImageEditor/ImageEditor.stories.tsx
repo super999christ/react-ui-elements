@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import ImageEditor from "./ImageEditor";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/pro-light-svg-icons";
+import { faTimes, faUser } from "@fortawesome/pro-light-svg-icons";
 
 const meta = {
   title: "Design System/ImageEditor",
@@ -85,5 +85,34 @@ export const CustomEditorConfigWithMinMaxCropWidthAndMinMaxCropHeight: Story = {
         height: 200,
       }
     }
+  }
+};
+
+export const CustomEditorConfigWithMinMaxCropWidthAndMinMaxCropHeightAndCustomClearIndicator: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    height: 100,
+    onClearImage: () => console.log('Cleared'),
+    width: 160,
+    editorConfig: {
+      aspectRatio: 1.6,
+      targetSize: {
+        width: 160,
+        height: 100,
+      },
+      imageCropMinSize: {
+        width: 80,
+        height: 50,
+      },
+      imageCropMaxSize: {
+        width: 320,
+        height: 200,
+      }
+    },
+    clearIndicator: (
+      <div className="border border-solid border-gray-300 flex justify-center items-center rounded-full w-5 h-5 bg-gray-200 hover:bg-gray-300">
+        <FontAwesomeIcon icon={faTimes} size="sm" />
+      </div>
+    )
   }
 };

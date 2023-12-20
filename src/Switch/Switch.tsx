@@ -11,6 +11,9 @@ export interface SwitchProps {
   checked?: boolean;
   disabled?: boolean;
   id: string;
+  label?: string | React.ReactNode;
+  labelPosition?: SwitchLabelPosition;
+  name?: string;
   offset?: number;
   onChange?: (
     checked: boolean,
@@ -21,8 +24,6 @@ export interface SwitchProps {
     id: string,
   ) => void;
   size?: SwitchSize;
-  label?: string | React.ReactNode;
-  labelPosition?: SwitchLabelPosition;
 }
 
 const SWITCH_SIZES = {
@@ -246,6 +247,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
           onChange={onInputChange}
           ref={inputRef}
           id={`${randomNumber}`}
+          name={props.name}
         />
       </div>
       {props.label && props.labelPosition !== 'left' && (

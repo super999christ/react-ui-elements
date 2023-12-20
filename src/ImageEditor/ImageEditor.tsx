@@ -29,6 +29,7 @@ interface ImageEditorProps {
   uploadUrl?: string;
   onImageUpload?: (response: DoneCallback) => void;
   onClearImage?: () => void;
+  clearIndicator?: React.ReactNode;
   clearIndicatorPosition?: ClearIndicatorPositionType;
 }
 
@@ -46,6 +47,7 @@ export default function ImageEditor({
   onImageUpload,
   uploadUrl,
   onClearImage,
+  clearIndicator,
   clearIndicatorPosition = 'center',
 }: ImageEditorProps) {
   const [files, setFiles] = useState<FileType[]>([]);
@@ -117,12 +119,17 @@ export default function ImageEditor({
     [styles["img-circle"]]: isCircle,
   });
 
+  const clearIndicatorClasses = clsx({
+    [styles["clear--indicator"]]: clearIndicator,
+    [styles["overlay--button"]]: !clearIndicator,
+  });
+
   const thumbs = derivedProcessedFiles.map((file, index) => {
     return (
       <div className={styles.thumbnail} key={index}>
         <div className={thumbnailOverlayClasses}>
           <span
-            className={styles["overlay--button"]}
+            className={clearIndicatorClasses}
             onClick={() => {
               if (onClearImage) {
                 onClearImage();
@@ -130,7 +137,11 @@ export default function ImageEditor({
               removeImage(file);
             }}
           >
-            <FontAwesomeIcon icon={faTimes} size="sm" />
+            {clearIndicator ? 
+              clearIndicator
+              :
+              <FontAwesomeIcon icon={faTimes} size="sm" />
+            }
           </span>
         </div>
         <img className={imgClasses} src={file} alt="" />

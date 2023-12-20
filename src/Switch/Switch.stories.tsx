@@ -104,6 +104,7 @@ export const SwitchCustomLabelFullStateExample: Story = {
         onChange={(checked) => setChecked(checked)}
         label={<p className="text-md font-bold text-primary-700">This is a custom label</p>}
         labelPosition="right"
+        name="switch_2"
       />
     );
   }

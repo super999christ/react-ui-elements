@@ -25,6 +25,10 @@
   @apply right-0;
 }
 
+.clear--indicator {
+  @apply inline-flex;
+}
+
 .overlay--button {
   @apply bg-black/80;
   @apply w-10;
