@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/pickleballinc/react-ui/compare/v1.23.0...v1.24.0) (2023-12-21)
+
+
+### Features
+
+* added imagealttext prop to avatar ([37443c5](https://github.com/pickleballinc/react-ui/commit/37443c5ac21a5c08d7ed177d2050e81fed155da4))
+
 # [1.23.0](https://github.com/pickleballinc/react-ui/compare/v1.22.0...v1.23.0) (2023-12-20)
 
 
