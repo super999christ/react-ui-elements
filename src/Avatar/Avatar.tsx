@@ -22,6 +22,7 @@ export interface AvatarProps
   customImageRender?: (imageUrl: string) => React.ReactNode;
   focusable?: boolean;
   imageUrl?: string;
+  imageAltText?: string;
   onlineIndicator?: React.ReactNode | boolean;
   size?: AvatarSizeTypes;
 }
@@ -34,6 +35,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       customIconRender,
       customImageRender,
       imageUrl,
+      imageAltText,
       focusable = false,
       onlineIndicator,
       size = 'md',
@@ -85,7 +87,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         return (
           <img
             src={imageUrl}
-            alt=""
+            alt={imageAltText}
             className="absolute inset-0 h-full w-full object-cover"
           />
         );

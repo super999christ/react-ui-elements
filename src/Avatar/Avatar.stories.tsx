@@ -87,6 +87,14 @@ export const WithImage3XL: Story = {
   },
 };
 
+export const WithImageAndImageAltText3XL: Story = {
+  args: {
+    size: '3xl',
+    imageUrl: 'https://www.ppatour.com/wp-content/uploads/2023/06/Ben-Johns-HS.png',
+    imageAltText: 'Ben Johns portrait',
+  },
+};
+
 export const OnlineWithImage3XL: Story = {
   args: {
     size: '3xl',
