@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/pickleballinc/react-ui/compare/v1.24.0...v1.24.1) (2023-12-26)
+
+
+### Bug Fixes
+
+* added prop dropdownbreakpoint to tabs component ([2174f60](https://github.com/pickleballinc/react-ui/commit/2174f60d1e8a26afdc772d5f1620cf924e41786a))
+
 # [1.24.0](https://github.com/pickleballinc/react-ui/compare/v1.23.0...v1.24.0) (2023-12-21)
 
 
