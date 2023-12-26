@@ -1,6 +1,14 @@
 /* Tabs classes */
 .tabs {
-  @apply hidden sm:flex w-fit p-1;
+  @apply hidden w-fit p-1;
+}
+
+.tabs--dropdown__breakpoint--sm {
+  @apply sm:flex;
+}
+
+.tabs--dropdown__breakpoint--md {
+  @apply md:flex;
 }
 
 .tabs--disabled-dropdown {
@@ -35,8 +43,12 @@
   @apply p-1;
 }
 
-.select {
+.select--dropdown__breakpoint--sm {
   @apply sm:hidden;
+}
+
+.select--dropdown__breakpoint--md {
+  @apply md:hidden;
 }
 
 .tab--full-width {

@@ -1910,6 +1910,7 @@ export const UnderlineFilledSMWithStateWithMixIconPositions: Story = {
           size="sm"
           variant="underline-filled"
           menuPortalTarget={document.body}
+          dropdownBreakpoint="md"
         />
         <div className="w-full h-20 p-4">
           <span>Selected option value: {selectedOption}</span>

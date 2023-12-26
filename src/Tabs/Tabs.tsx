@@ -14,10 +14,13 @@ export interface TabInterface {
 }
 
 export type TabsType = 'horizontal' | 'vertical';
+export type TabsDropdownBreakpoint = 'sm' | 'md';
 
 export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   active: string;
   className?: string;
+  disableDropdown?: boolean;
+  dropdownBreakpoint?: TabsDropdownBreakpoint;
   fullWidth?: boolean;
   menuPortalTarget?: HTMLElement | null | undefined;
   options: TabInterface[];
@@ -26,7 +29,6 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: TabsType;
   variant?: TabVariant;
   onChange?: (e: any) => void;
-  disableDropdown?: boolean;
 }
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>(
@@ -34,6 +36,8 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     const {
       active,
       className,
+      disableDropdown = false,
+      dropdownBreakpoint = 'sm',
       fullWidth,
       menuPortalTarget,
       options,
@@ -42,11 +46,12 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       type = 'horizontal',
       variant = 'primary',
       onChange,
-      disableDropdown = false,
       ...rest
     } = props;
 
     const tabsClasses = clsx(styles.tabs, {
+      [styles['tabs--dropdown__breakpoint--sm']]: dropdownBreakpoint === 'sm',
+      [styles['tabs--dropdown__breakpoint--md']]: dropdownBreakpoint === 'md',
       [styles['tabs--type-horizontal']]: type === 'horizontal',
       [styles['tabs--type-vertical']]: type === 'vertical',
       [styles['tabs--full-width']]: fullWidth,
@@ -56,7 +61,10 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       [styles['tabs--disabled-dropdown']]: disableDropdown,
     }, className);
 
-    const selectClasses = clsx(styles.select, className);
+    const selectClasses = clsx(styles.select, {
+      [styles['select--dropdown__breakpoint--sm']]: dropdownBreakpoint === 'sm',
+      [styles['select--dropdown__breakpoint--md']]: dropdownBreakpoint === 'md',
+    }, className);
 
     const tabClasses = clsx({
       [styles['tab--full-width']]: fullWidth,
