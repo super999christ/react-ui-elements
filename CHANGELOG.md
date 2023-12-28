@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/pickleballinc/react-ui/compare/v1.24.1...v1.25.0) (2023-12-28)
+
+
+### Features
+
+* made switch component have all props from native input html element with type checkbox and role switch ([0b1f3f5](https://github.com/pickleballinc/react-ui/commit/0b1f3f5f1cab1477ee1f02104a772de586d3e359))
+
 ## [1.24.1](https://github.com/pickleballinc/react-ui/compare/v1.24.0...v1.24.1) (2023-12-26)
 
 
