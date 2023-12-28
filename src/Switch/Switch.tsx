@@ -7,7 +7,7 @@ import styles from './Switch.module.css';
 export type SwitchSize = 'xs' | 'sm' | 'md';
 export type SwitchLabelPosition = 'left' | 'right';
 
-export interface SwitchProps {
+export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size'> {
   checked?: boolean;
   disabled?: boolean;
   id: string;
@@ -42,10 +42,21 @@ const SWITCH_SIZES = {
 };
 
 const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
-  const size = props.size ?? 'md';
+  const {
+    checked,
+    disabled,
+    id,
+    label,
+    labelPosition = 'right',
+    name,
+    offset,
+    onChange,
+    size = 'md',
+    ...rest
+  } = props;
   const width = SWITCH_SIZES[size].WIDTH;
   const height = SWITCH_SIZES[size].HEIGHT;
-  const handleOffset = props.offset ?? 4;
+  const handleOffset = offset ?? 4;
   const handleDiameter = height - handleOffset;
   const checkedPos = Math.max(
     width - height,
@@ -62,7 +73,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const isDragging = useRef(false);
 
   const [uncontrolled, setUncontrolled] = useState(false);
-  const isChecked = props.checked !== undefined ? props.checked : uncontrolled;
+  const isChecked = checked !== undefined ? checked : uncontrolled;
 
   const [isMounted, setIsMounted] = useState(false);
   const [pos, setPos] = useState(isChecked ? checkedPos : uncheckedPos);
@@ -80,14 +91,14 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
     memPos.current = pos;
   }, [pos]);
 
-  const onChange = (
+  const onChangeInternal = (
     event:
       | React.SyntheticEvent<Element, MouseEvent | KeyboardEvent>
       | React.ChangeEvent<HTMLInputElement>
       | MouseEvent,
   ) => {
-    if (props.onChange) {
-      props.onChange(!isChecked, event, props.id);
+    if (onChange) {
+      onChange(!isChecked, event, id);
     }
     setUncontrolled(!uncontrolled);
   };
@@ -95,12 +106,12 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const onClick = (event: React.MouseEvent<Element, MouseEvent>) => {
     event.preventDefault();
     inputRef.current?.focus();
-    onChange(event);
+    onChangeInternal(event);
   };
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (Date.now() - lastDragAt.current > 50) {
-      onChange(event);
+      onChangeInternal(event);
       // Prevent clicking label, but not key activation from setting outline to true - yes, this is absurd
       if (Date.now() - lastKeyUpAt.current > 50) {
         if (isMounted) {
@@ -145,7 +156,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
       (!checked && memPos.current >= halfwayCheckpoint);
 
     if (isSimulatedClick || isDraggedHalfway) {
-      onChange(event);
+      onChangeInternal(event);
     }
 
     if (isMounted) {
@@ -195,7 +206,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
     height: handleDiameter,
     width: handleDiameter,
     display: 'inline-block',
-    cursor: props.disabled ? 'default' : 'pointer',
+    cursor: disabled ? 'default' : 'pointer',
     position: 'absolute',
     transform: `translateX(${pos}px)`,
     top: Math.max(0, (height - handleDiameter) / 2),
@@ -221,14 +232,14 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
 
   return (
     <div className={styles.wrapper}>
-      {props.label && props.labelPosition === 'left' && (
-        <label className={textClasses} htmlFor={`${randomNumber}`}>{props.label}</label>
+      {label && labelPosition === 'left' && (
+        <label className={textClasses} htmlFor={`${randomNumber}`}>{label}</label>
       )}
       <div className={styles.switch} ref={ref}>
         <div
           className={bgClasses}
           aria-hidden="true"
-          onClick={props.disabled ? undefined : onClick}
+          onClick={disabled ? undefined : onClick}
           onMouseDown={(e) => e.preventDefault()}
           style={bgStyle}
         />
@@ -236,7 +247,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
           className={handlerClasses}
           aria-hidden="true"
           onClick={(e) => e.preventDefault()}
-          onMouseDown={props.disabled ? undefined : onMouseDown}
+          onMouseDown={disabled ? undefined : onMouseDown}
           style={handleStyle}
         />
         <input
@@ -247,11 +258,12 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
           onChange={onInputChange}
           ref={inputRef}
           id={`${randomNumber}`}
-          name={props.name}
+          name={name}
+          {...rest}
         />
       </div>
-      {props.label && props.labelPosition !== 'left' && (
-        <label className={textClasses} htmlFor={`${randomNumber}`}>{props.label}</label>
+      {label && labelPosition === 'right' && (
+        <label className={textClasses} htmlFor={`${randomNumber}`}>{label}</label>
       )}
     </div>
   );
