@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/pickleballinc/react-ui/compare/v1.25.0...v1.26.0) (2024-01-03)
+
+
+### Features
+
+* added top property of position prop to drawer component ([87891a6](https://github.com/pickleballinc/react-ui/commit/87891a64bcff148c36c8d4e9c85354dfaa667d2f))
+
 # [1.25.0](https://github.com/pickleballinc/react-ui/compare/v1.24.1...v1.25.0) (2023-12-28)
 
 
