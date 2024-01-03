@@ -8,7 +8,7 @@ import React, { forwardRef } from 'react';
 import Button from '../Button';
 import styles from './Drawer.module.css';
 
-type DrawerPositionTypes = 'left' | 'right';
+type DrawerPositionTypes = 'left' | 'right' | 'top';
 
 export interface DrawerProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
@@ -46,8 +46,10 @@ const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
       styles.wrapper,
       {
         [styles['wrapper--position-left']]: position === 'left',
+        [styles['wrapper--position-top']]: position === 'top',
         [styles['wrapper--open']]: open && position === 'right',
         [styles['wrapper--open-position-left']]: open && position === 'left',
+        [styles['wrapper--open-position-top']]: open && position === 'top',
       },
       wrapperClassname,
     );

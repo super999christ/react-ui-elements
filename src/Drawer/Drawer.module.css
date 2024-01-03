@@ -5,7 +5,6 @@
 .backdrop--open {
   pointer-events: all;
   backdrop-filter: blur(8px);
-  /* @apply bg-[rgba(0,0,0,0.5)]; */
 }
 
 .wrapper {
@@ -18,12 +17,22 @@
   transition: left 500ms, opacity 500ms;
 }
 
+.wrapper--position-top {
+  @apply -top-full left-[50%] right-[unset] w-auto h-auto;
+  transition: top 700ms, opacity 700ms;
+  transform: translate(-50%, -50%);
+}
+
 .wrapper--open {
   @apply right-0;
 }
 
 .wrapper--open-position-left {
   @apply left-0;
+}
+
+.wrapper--open-position-top {
+  @apply top-[50%];
 }
 
 .header {
