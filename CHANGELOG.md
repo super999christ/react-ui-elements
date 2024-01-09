@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/pickleballinc/react-ui/compare/v1.26.0...v1.27.0) (2024-01-09)
+
+
+### Features
+
+* added Swiper component, adapted NewsCard component, added wrapperzindex prop to datepicker ([dd14768](https://github.com/pickleballinc/react-ui/commit/dd14768436febb7e4783c9a40ee934888ed1fa01))
+
 # [1.26.0](https://github.com/pickleballinc/react-ui/compare/v1.25.0...v1.26.0) (2024-01-03)
 
 
