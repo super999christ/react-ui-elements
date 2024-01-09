@@ -108,3 +108,30 @@ export const DatePickerFullExampleWithStateAndCustomPlaceholder: Story = {
     );
   }
 };
+
+export const DatePickerFullExampleWithStateAndCustomPlaceholderAndCustomZIndex: Story = {
+  render: () => {
+    const [date, setDate] = useState<string>();
+
+    return (
+      <DatePicker
+        label="From"
+        selected={date ? new Date(date) : null}
+        showTimeSelect={true}
+        placement="bottom"
+        onChange={(date) => 
+          setDate(
+            moment(date).utc().format("YYYY-MM-DDTHH:mm:ss.SSS[Z]")
+          )
+        }
+        wrapperZIndex="60"
+      >
+        {date ? 
+          <div className="flex w-fit px-3 py-1 bg-brand-100">{moment(date).format("MMM DD, YYYY")}</div>
+          : 
+          <span className="underline hover:cursor-pointer">Click to open</span>
+        }
+      </DatePicker>
+    );
+  }
+};

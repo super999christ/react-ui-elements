@@ -1,0 +1,47 @@
+.swiper-container {
+  @apply w-full max-w-full overflow-hidden relative;
+  touch-action: pan-y;
+}
+
+.chevron-left-container {
+  @apply absolute inset-y-0 left-0.5 z-30 w-8 sm:w-10 flex items-center justify-start;
+}
+
+.chevron-right-container {
+  @apply absolute inset-y-0 right-0.5 z-30 w-8 sm:w-10 flex items-center justify-end;
+}
+
+.chevron-wrapper {
+  @apply cursor-pointer bg-gray-200 hover:bg-gray-500 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex justify-center items-center;
+}
+
+.chevron-icon {
+  @apply text-gray-700;
+}
+
+.chevron-wrapper:hover .chevron-icon {
+  @apply text-white; 
+}
+
+.swiper-list {
+  @apply flex flex-row p-0 m-0;
+  list-style: none;
+  transition: transform 0.3s ease-out;
+}
+
+.swiper-list.is-swiping {
+  transition: none;
+}
+
+.swiper-indicator {
+  @apply flex justify-center m-0 mt-2 sm:mt-3 p-0;
+  list-style: none;
+}
+
+.swiper-indicator-item {
+  @apply w-2 h-2 sm:w-3 sm:h-3 my-0 mx-1 rounded-[50%] bg-gray-200 cursor-pointer;
+}
+
+.swiper-indicator-item.active {
+  @apply bg-gray-500;
+}

@@ -114,6 +114,7 @@ const DatePicker = ({
   placement,
   onChange,
   closeOnSelection = true,
+  wrapperZIndex,
   ...props
 }: {
   children: React.ReactNode;
@@ -121,6 +122,7 @@ const DatePicker = ({
   placement?: Placement;
   closeOnSelection?: boolean;
   onChange: (date: Date) => void;
+  wrapperZIndex?: string;
 } & Omit<ReactDatePickerProps, "onChange">) => {
   const [open, setOpen] = useState(false);
   const { context, refs, floatingStyles } = useFloating({
@@ -162,6 +164,7 @@ const DatePicker = ({
             ref={refs.setFloating}
             {...getFloatingProps()}
             style={{
+              zIndex: wrapperZIndex,
               ...floatingStyles,
             }}
           >

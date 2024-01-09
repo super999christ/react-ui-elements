@@ -1,0 +1,12 @@
+.swiper-item {
+  @apply w-full shrink-0;
+}
+
+.swiper-item-inner-container {
+  @apply w-full h-auto pointer-events-none overflow-hidden py-0.5 px-1 sm:py-1 sm:px-2;
+  user-select: none;
+}
+
+.swiper-item-inner-container img {
+  @apply pointer-events-none;
+}
