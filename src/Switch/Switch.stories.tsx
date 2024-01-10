@@ -34,6 +34,7 @@ export const SwitchMDWithLabel: Story = {
   args: {
     size: "md",
     label: "This is a switch",
+    id: 'switch_with_label'
   },
 };
 
@@ -51,7 +52,7 @@ export const SwitchFullStateExample: Story = {
     return (
       <Switch 
         size='sm' 
-        id="switch" 
+        id="switch_0"
         checked={checked} 
         onChange={(checked) => setChecked(checked)} 
       />
@@ -81,8 +82,8 @@ export const SwitchLabelLeftFullStateExample: Story = {
   
     return (
       <Switch 
-        size='sm' 
-        id="switch_2" 
+        size='sm'
+        id="switch_2"
         checked={checked} 
         onChange={(checked) => setChecked(checked)}
         label="This is a switch"
@@ -99,12 +100,12 @@ export const SwitchCustomLabelFullStateExample: Story = {
     return (
       <Switch 
         size='sm' 
-        id="switch_2" 
+        id="switch_3" 
         checked={checked} 
         onChange={(checked) => setChecked(checked)}
         label={<p className="text-md font-bold text-primary-700">This is a custom label</p>}
         labelPosition="right"
-        name="switch_2"
+        name="switch_3"
       />
     );
   }

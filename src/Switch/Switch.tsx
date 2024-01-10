@@ -233,7 +233,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   return (
     <div className={styles.wrapper}>
       {label && labelPosition === 'left' && (
-        <label className={textClasses} htmlFor={`${randomNumber}`}>{label}</label>
+        <label className={textClasses} htmlFor={id}>{label}</label>
       )}
       <div className={styles.switch} ref={ref}>
         <div
@@ -257,13 +257,13 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
           className={styles.switch__input}
           onChange={onInputChange}
           ref={inputRef}
-          id={`${randomNumber}`}
+          id={id}
           name={name}
           {...rest}
         />
       </div>
       {label && labelPosition === 'right' && (
-        <label className={textClasses} htmlFor={`${randomNumber}`}>{label}</label>
+        <label className={textClasses} htmlFor={id}>{label}</label>
       )}
     </div>
   );
