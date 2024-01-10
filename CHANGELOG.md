@@ -1,3 +1,10 @@
+## [1.27.2](https://github.com/pickleballinc/react-ui/compare/v1.27.1...v1.27.2) (2024-01-10)
+
+
+### Bug Fixes
+
+* long name overflowing ([46227de](https://github.com/pickleballinc/react-ui/commit/46227de726b4dd92ab847cb22e17a59993e4faa4))
+
 ## [1.27.1](https://github.com/pickleballinc/react-ui/compare/v1.27.0...v1.27.1) (2024-01-10)
 
 
