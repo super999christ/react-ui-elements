@@ -127,15 +127,15 @@ export const DuoLeftWinner: Story = {
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
-          firstName: 'Matt',
-          lastName: 'Glatt',
+          firstName: 'M',
+          lastName: 'Emmrich',
           suffixName: '',
           image: ''
         },
         {
           playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
-          firstName: 'Spencer',
-          lastName: 'Hart',
+          firstName: 'D',
+          lastName: 'De La Rosa Extended',
           suffixName: '',
           image: ''
         }],

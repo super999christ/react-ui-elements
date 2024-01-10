@@ -243,9 +243,17 @@
 }
 
 .server__wrapper {
-  @apply flex items-center gap-0.5 pb-0.5 h-full w-full;
+  @apply flex items-center gap-0.5 pb-0.5 h-full max-w-full;
 }
 
 .server__dot {
   @apply text-[#E31B54];
+}
+
+.names--wrapper {
+  @apply max-w-full line-clamp-1;
+}
+
+.right--spacing {
+  @apply mr-1;
 }

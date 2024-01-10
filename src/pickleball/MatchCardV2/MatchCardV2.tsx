@@ -184,21 +184,21 @@ const TeamInfoRow = ({
                   className={styles["player-info-name"]}
                 >
                   <div className={styles["player-names-wrapper"]}>
-                    {player.firstName && (
-                      <span className={styles["player-first-name"]}>
-                        {shortenName ? `${player.firstName.charAt(0)}.` : player.firstName}
-                      </span>
-                    )}
-                    {player.lastName && (
-                      <span className={styles["player-last-name"]}>
-                        {player.lastName}
-                      </span>
-                    )}
-                    {player.suffixName && (
-                      <span className={styles["player-sufix-name"]}>
-                        {player.suffixName}
-                      </span>
-                    )}
+                    <div className={styles["names--wrapper"]}>
+                      {player.firstName && 
+                        <>
+                          {shortenName ? `${player.firstName.charAt(0)}.` : player.firstName}
+                          <span className={styles['right--spacing']} />
+                        </>
+                      }
+                      {player.lastName && 
+                        <>
+                          <b>{player.lastName}</b>
+                          <span className={styles['right--spacing']} />
+                        </>
+                      }
+                      {player.suffixName}
+                    </div>
                     <div className={serverWrapperClasses}>
                       {index === 0 && playerOneIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
                       {index === 0 && playerOneIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
