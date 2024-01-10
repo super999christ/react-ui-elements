@@ -1,3 +1,10 @@
+## [1.27.1](https://github.com/pickleballinc/react-ui/compare/v1.27.0...v1.27.1) (2024-01-10)
+
+
+### Bug Fixes
+
+* fixed id in switch ([8efea1f](https://github.com/pickleballinc/react-ui/commit/8efea1fb995208e18c47aac36c06fd662c13de26))
+
 # [1.27.0](https://github.com/pickleballinc/react-ui/compare/v1.26.0...v1.27.0) (2024-01-09)
 
 
