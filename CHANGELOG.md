@@ -1,3 +1,10 @@
+## [1.27.3](https://github.com/pickleballinc/react-ui/compare/v1.27.2...v1.27.3) (2024-01-11)
+
+
+### Bug Fixes
+
+* hide serving indicator circles when match is not live ([eebb235](https://github.com/pickleballinc/react-ui/commit/eebb23566996f20210c0af843de0344c3f5e9254))
+
 ## [1.27.2](https://github.com/pickleballinc/react-ui/compare/v1.27.1...v1.27.2) (2024-01-10)
 
 
