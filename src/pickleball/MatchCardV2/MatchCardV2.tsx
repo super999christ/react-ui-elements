@@ -199,12 +199,15 @@ const TeamInfoRow = ({
                       }
                       {player.suffixName}
                     </div>
-                    <div className={serverWrapperClasses}>
-                      {index === 0 && playerOneIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
-                      {index === 0 && playerOneIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
-                      {index === 1 && playerTwoIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
-                      {index === 1 && playerTwoIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
-                    </div>
+                    {
+                      matchStatus === 2 &&
+                        <div className={serverWrapperClasses}>
+                          {index === 0 && playerOneIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                          {index === 0 && playerOneIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                          {index === 1 && playerTwoIsServer && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                          {index === 1 && playerTwoIsServer && secondServerDot && <FontAwesomeIcon width={6} icon={faCircle} className={serverDotClasses} />}
+                        </div>
+                    }
                   </div>
                 </div>
             ))}
