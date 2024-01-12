@@ -1,3 +1,10 @@
+## [1.29.1](https://github.com/pickleballinc/react-ui/compare/v1.29.0...v1.29.1) (2024-01-12)
+
+
+### Bug Fixes
+
+* changed telinputfield example names ([9af950a](https://github.com/pickleballinc/react-ui/commit/9af950a235e10522815df7df0519566cefa8d1cb))
+
 # [1.29.0](https://github.com/pickleballinc/react-ui/compare/v1.28.0...v1.29.0) (2024-01-12)
 
 
