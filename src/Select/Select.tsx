@@ -6,7 +6,9 @@ import type { Props as ReactSelectProps } from "react-select";
 import ReactSelect from "react-select";
 import styles from "./Select.module.css";
 
-export interface SelectProps extends ReactSelectProps {}
+export interface SelectProps extends ReactSelectProps {
+  noBorder?: boolean;
+}
 
 const CaretDownIcon = () => {
   return (
@@ -53,14 +55,18 @@ const Select = ({ ...props }: SelectProps) => {
           return {
             ...base,
             display: "flex",
-            border: state.isFocused
-              ? "1px solid #AB95EA"
-              : "1px solid rgb(234 236 240)",
-            boxShadow: state.isFocused ? "0px 0px 0px 4px #CCBFF2" : "none",
+            border: props.noBorder ? 
+              "none"
+              : state.isFocused ?
+                "1px solid #AB95EA"
+                : "1px solid rgb(234 236 240)",
+            boxShadow: !props.noBorder && state.isFocused ? "0px 0px 0px 4px #CCBFF2" : "none",
             "&:hover": {
-              border: state.isFocused
-              ? "1px solid #AB95EA"
-              : "1px solid rgb(234 236 240)",
+              border: props.noBorder ? 
+                "none"
+                : state.isFocused ?
+                  "1px solid #AB95EA"
+                  : "1px solid rgb(234 236 240)",
             },
             borderRadius: 4,
             fontSize: 14,
