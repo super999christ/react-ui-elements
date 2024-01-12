@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/pickleballinc/react-ui/compare/v1.28.0...v1.29.0) (2024-01-12)
+
+
+### Features
+
+* changed examples, added menuportal to dropdown inside of telinputfield ([0c303a2](https://github.com/pickleballinc/react-ui/commit/0c303a278f790788ef0613911df9e6f315ab1b79))
+
 # [1.28.0](https://github.com/pickleballinc/react-ui/compare/v1.27.3...v1.28.0) (2024-01-12)
 
 
