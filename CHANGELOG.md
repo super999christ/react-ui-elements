@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/pickleballinc/react-ui/compare/v1.27.3...v1.28.0) (2024-01-12)
+
+
+### Features
+
+* Added TelInputField component ([803b78b](https://github.com/pickleballinc/react-ui/commit/803b78b6941d3a5c5ff54960fd9739553be28b60))
+
 ## [1.27.3](https://github.com/pickleballinc/react-ui/compare/v1.27.2...v1.27.3) (2024-01-11)
 
 
