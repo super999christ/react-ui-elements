@@ -29,6 +29,7 @@ export interface TelInputFieldProps extends React.InputHTMLAttributes<HTMLInputE
   countryValue?: CountryInterface;
   defaultCountry: CountryInterface;
   dropdownClassname?: string;
+  menuPortalTarget?: HTMLElement;
 }
 
 const TelInputField = forwardRef<HTMLInputElement, TelInputFieldProps>(
@@ -47,6 +48,7 @@ const TelInputField = forwardRef<HTMLInputElement, TelInputFieldProps>(
       countryValue,
       defaultCountry,
       dropdownClassname,
+      menuPortalTarget,
       onChange,
       ...rest
     } = props;
@@ -92,6 +94,7 @@ const TelInputField = forwardRef<HTMLInputElement, TelInputFieldProps>(
             value={countryValue}
             defaultValue={defaultCountry}
             className={dropdownClasses}
+            menuPortalTarget={menuPortalTarget}
           />
           
           <input
