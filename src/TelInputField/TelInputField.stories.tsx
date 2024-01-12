@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof TelInputField>;
 
-export const TelInputFieldFullExampleWithState: Story = {
+export const PhoneInputFieldFullExampleWithState: Story = {
   render: () => {
     const countries: CountryInterface[] = [
       { value: '1', label: 'USA (+1)' },
@@ -50,7 +50,7 @@ export const TelInputFieldFullExampleWithState: Story = {
   }
 };
 
-export const TelInputFieldFullExampleWithState2: Story = {
+export const PhoneInputFieldFullExampleWithState2: Story = {
   render: () => {
     const countries: CountryInterface[] = [
       { value: '1', label: 'USA (+1)' },
