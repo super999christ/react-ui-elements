@@ -27,7 +27,7 @@ export interface TelInputFieldProps extends React.InputHTMLAttributes<HTMLInputE
   countryList: CountryInterface[];
   countryOnChange: (event: any) => void;
   countryValue?: CountryInterface;
-  defaultCountry: CountryInterface;
+  defaultCountry?: CountryInterface;
   dropdownClassname?: string;
   menuPortalTarget?: HTMLElement;
 }
