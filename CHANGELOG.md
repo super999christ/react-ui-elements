@@ -1,3 +1,10 @@
+## [1.29.2](https://github.com/pickleballinc/react-ui/compare/v1.29.1...v1.29.2) (2024-01-16)
+
+
+### Bug Fixes
+
+* defaultCountry is now optional prop ([16565a3](https://github.com/pickleballinc/react-ui/commit/16565a3bd342444e3e0f0d1b282c78d65c3e58a4))
+
 ## [1.29.1](https://github.com/pickleballinc/react-ui/compare/v1.29.0...v1.29.1) (2024-01-12)
 
 
