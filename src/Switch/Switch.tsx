@@ -77,8 +77,6 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const [uncontrolled, setUncontrolled] = useState(defaultChecked !== undefined ? defaultChecked : false);
   const isChecked = initialLoad && defaultChecked !== undefined ? defaultChecked : checked !== undefined ? checked : uncontrolled;
 
-  console.log('isChecked: ', isChecked);
-
   const [isMounted, setIsMounted] = useState(false);
   const [pos, setPos] = useState(isChecked ? checkedPos : uncheckedPos);
 
