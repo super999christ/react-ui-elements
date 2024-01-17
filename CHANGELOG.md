@@ -1,3 +1,11 @@
+## [1.29.4](https://github.com/pickleballinc/react-ui/compare/v1.29.3...v1.29.4) (2024-01-17)
+
+
+### Bug Fixes
+
+* fixed defaultchecked prop not working ([fbff8e3](https://github.com/pickleballinc/react-ui/commit/fbff8e3efcaf973ba9a8a2a5fab83507c2e97bd4))
+* removed unecessary console.log ([a8f2c16](https://github.com/pickleballinc/react-ui/commit/a8f2c160de10fcf70de9fd40f34951ba511d13f3))
+
 ## [1.29.3](https://github.com/pickleballinc/react-ui/compare/v1.29.2...v1.29.3) (2024-01-17)
 
 
