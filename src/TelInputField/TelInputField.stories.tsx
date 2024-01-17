@@ -30,7 +30,7 @@ export const PhoneInputFieldFullExampleWithState: Story = {
     const [phoneNumber, setPhoneNumber] = React.useState<string>();
     
     return (
-      <div className='w-1/2 flex flex-col gap-2'>
+      <div className='w-full sm:w-1/2 flex flex-col gap-2'>
         <TelInputField
           countryValue={country}
           countryList={countries}
