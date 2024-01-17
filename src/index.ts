@@ -88,6 +88,10 @@ export * from "./Switch";
 export { default as Tabs } from "./Tabs";
 export * from "./Tabs";
 
+// TelInputField
+export { default as TelInputField } from "./TelInputField";
+export * from "./TelInputField";
+
 // TextArea 
 export { default as TextArea } from "./TextArea";
 export * from "./TextArea";
@@ -156,6 +160,10 @@ export * from "./pickleball/ResultCard";
 // Sidebar
 export { default as Sidebar } from "./Sidebar";
 export * from "./Sidebar";
+
+// Swiper
+export { default as Swiper } from "./Swiper";
+export * from "./Swiper";
 
 // SideNewsContainer
 export { default as SideNewsContainer } from "./pickleball/SideNewsContainer";
