@@ -44,6 +44,7 @@ const SWITCH_SIZES = {
 const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const {
     checked,
+    defaultChecked,
     disabled,
     id,
     label,
@@ -72,8 +73,11 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const memPos = useRef(0);
   const isDragging = useRef(false);
 
-  const [uncontrolled, setUncontrolled] = useState(false);
-  const isChecked = checked !== undefined ? checked : uncontrolled;
+  const [initialLoad, setInitialLoad] = useState(true);
+  const [uncontrolled, setUncontrolled] = useState(defaultChecked !== undefined ? defaultChecked : false);
+  const isChecked = initialLoad && defaultChecked !== undefined ? defaultChecked : checked !== undefined ? checked : uncontrolled;
+
+  console.log('isChecked: ', isChecked);
 
   const [isMounted, setIsMounted] = useState(false);
   const [pos, setPos] = useState(isChecked ? checkedPos : uncheckedPos);
@@ -101,6 +105,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
       onChange(!isChecked, event, id);
     }
     setUncontrolled(!uncontrolled);
+    setInitialLoad(false);
   };
 
   const onClick = (event: React.MouseEvent<Element, MouseEvent>) => {
@@ -228,8 +233,6 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
     [styles['text--size-xs']]: size === 'xs',
   });
 
-  const randomNumber = Math.random();
-
   return (
     <div className={styles.wrapper}>
       {label && labelPosition === 'left' && (
@@ -259,6 +262,7 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
           ref={inputRef}
           id={id}
           name={name}
+          defaultChecked={defaultChecked}
           {...rest}
         />
       </div>

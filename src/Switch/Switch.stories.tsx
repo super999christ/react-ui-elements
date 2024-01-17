@@ -21,6 +21,7 @@ export const SwitchXS: Story = {
 export const SwitchSM: Story = {
   args: {
     size: "sm",
+    defaultChecked: true,
   },
 };
 
@@ -106,6 +107,25 @@ export const SwitchCustomLabelFullStateExample: Story = {
         label={<p className="text-md font-bold text-primary-700">This is a custom label</p>}
         labelPosition="right"
         name="switch_3"
+      />
+    );
+  }
+}
+
+export const SwitchCustomLabelDefaultCheckedFullStateExample: Story = {
+  render: () => {
+    const [checked, setChecked] = React.useState<boolean>(false);
+  
+    return (
+      <Switch 
+        size='sm' 
+        id="switch_4" 
+        checked={checked} 
+        onChange={(checked) => setChecked(checked)}
+        label={<p className="text-md font-bold text-primary-700">This is a custom label</p>}
+        labelPosition="right"
+        name="switch_4"
+        defaultChecked
       />
     );
   }
