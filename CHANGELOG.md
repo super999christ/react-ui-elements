@@ -1,3 +1,11 @@
+## [1.29.3](https://github.com/pickleballinc/react-ui/compare/v1.29.2...v1.29.3) (2024-01-17)
+
+
+### Bug Fixes
+
+* exported swiper and telinputfield ([700543c](https://github.com/pickleballinc/react-ui/commit/700543c14028d088725acbd12a823afe5d036b26))
+* made first telinputfield example full width on smaller screens ([dc9c81c](https://github.com/pickleballinc/react-ui/commit/dc9c81c06b4efd5fa14a43b0548837af89518e67))
+
 ## [1.29.2](https://github.com/pickleballinc/react-ui/compare/v1.29.1...v1.29.2) (2024-01-16)
 
 
