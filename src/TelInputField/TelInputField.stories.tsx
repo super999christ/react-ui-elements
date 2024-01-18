@@ -78,6 +78,8 @@ export const PhoneInputFieldFullExampleWithState2: Story = {
           placeholder='Enter your phone number'
           SuffixIcon={() => <FontAwesomeIcon icon={faPhone} />}
           menuPortalTarget={document.body}
+          hasError={!phoneNumber}
+          hint={!phoneNumber ? "No number entered" : ""}
         />
         Entered phone number: {phoneNumber}
       </div>
