@@ -1,3 +1,10 @@
+## [1.29.5](https://github.com/pickleballinc/react-ui/compare/v1.29.4...v1.29.5) (2024-01-18)
+
+
+### Bug Fixes
+
+* added haserror and hint use to telinputfield second example ([3fa30cf](https://github.com/pickleballinc/react-ui/commit/3fa30cffb502cc2d8063a0ab91c45ccecec21778))
+
 ## [1.29.4](https://github.com/pickleballinc/react-ui/compare/v1.29.3...v1.29.4) (2024-01-17)
 
 
