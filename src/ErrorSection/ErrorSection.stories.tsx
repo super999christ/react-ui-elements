@@ -142,3 +142,18 @@ export const WithChildrenAndImageReversedDesktopAndMobile: Story = {
     reverseOrderMobile: true
   }
 };
+
+export const CustomHeadingWithChildrenAndImageReversedDesktopAndMobile: Story = {
+  args: {
+    heading: () => <h6 className='not-italic font-extrabold text-2xl'>We can’t find that page</h6>,
+    Subheading: '404 error',
+    supportingText: "Sorry, the page you are looking for doesn't exist or has been moved.",
+    Image: () => <img className='max-w-full sm:max-h-screen' src='https://e0.pxfuel.com/wallpapers/412/709/desktop-wallpaper-huawei-landscape-mountain-paintings-nature-vertical-mountain.jpg' />,
+    children: <div className='flex flex-start gap-3 px-4 sm:px-8'>
+      <Button prefixIcon={<FontAwesomeIcon icon={faArrowLeft} />} size='xl' variant='secondary'>Go back</Button>
+      <Button size='xl' variant='primary'>Take me home</Button>
+    </div>,
+    reverseOrderDesktop: true,
+    reverseOrderMobile: true
+  }
+};

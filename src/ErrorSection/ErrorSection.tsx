@@ -9,12 +9,12 @@ export interface ErrorSectionProps
   centeredDesktop?: boolean;
   centeredMobile?: boolean;
   className?: string;
-  heading: string;
+  heading: string | (() => React.ReactNode);
   Image?: () => React.ReactNode;
   reverseOrderDesktop?: boolean;
   reverseOrderMobile?: boolean;
   Subheading?: string | (() => React.ReactNode);
-  supportingText?: string;
+  supportingText?: string | (() => React.ReactNode);
 }
 
 const ErrorSection = forwardRef<HTMLDivElement, ErrorSectionProps>(
@@ -75,10 +75,21 @@ const ErrorSection = forwardRef<HTMLDivElement, ErrorSectionProps>(
                   <h6 className={subheadingClasses}>{Subheading}</h6>
                 ) : (
                   Subheading()
-                ))}
-              <h1 className={headingClasses}>{heading}</h1>
+                ))
+              }
+              {typeof heading === 'string' ? (
+                <h1 className={headingClasses}>{heading}</h1>
+              ) : (
+                heading()
+              )}
             </div>
-            <p className={supportingTextClasses}>{supportingText}</p>
+            {supportingText && 
+              (typeof supportingText === 'string' ? (
+                <p className={supportingTextClasses}>{supportingText}</p>
+              ) : (
+                supportingText()
+              ))
+            }
           </div>
           {children}
         </div>

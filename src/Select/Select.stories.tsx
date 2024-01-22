@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Select from "./Select";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBlueberries, faChocolateBar, faStrawberry } from "@fortawesome/pro-light-svg-icons";
 
 const meta = {
   title: "Design System/Select",
@@ -71,7 +73,34 @@ export const FullExampleWithStateAndDefaultValue: Story = {
       <>
         <span>Selected option: {selectedOption}</span>
         <Select
-          id="example_2"
+          id="example_2b"
+          options={options}
+          onChange={(e: any) => setSelectedOption(e ? e.value : undefined)}
+          menuPortalTarget={document.body}
+          value={options.filter(
+            (option) => option.value === selectedOption,
+          )}
+        />
+      </>
+    );
+  },
+};
+
+export const FullExampleWithStateAndDefaultValue2: Story = {
+  render: () => {
+    const options = [
+      { value: "chocolate", label: <div className="inline-flex justify-center items-center gap-1"><FontAwesomeIcon size="xs" icon={faChocolateBar}/> Chocolate</div> },
+      { value: "strawberry", label: <div className="inline-flex justify-center items-center gap-1"><FontAwesomeIcon size="xs" icon={faStrawberry}/> Strawberry</div> },
+      { value: "blueberries", label: <div className="inline-flex justify-center items-center gap-1"><FontAwesomeIcon size="xs" icon={faBlueberries}/> Blueberries</div> },
+    ];
+
+    const [selectedOption, setSelectedOption] = React.useState<string>('blueberries');
+
+    return (
+      <>
+        <span>Selected option: {selectedOption}</span>
+        <Select
+          id="example_2c"
           options={options}
           onChange={(e: any) => setSelectedOption(e ? e.value : undefined)}
           menuPortalTarget={document.body}
@@ -117,6 +146,39 @@ export const MultiSelectFullExampleWithState: Story = {
         <span>Selected options: {selectedOptions.toString()}</span>
         <Select
           id="example_4"
+          options={options}
+          onChange={(items: any) =>
+            setSelectedOptions([...items.map((item) => item.value)])
+          }
+          isMulti
+          menuPortalTarget={document.body}
+        />
+      </>
+    );
+  },
+};
+
+type ValueType2 = "chocolate" | "strawberry" | "blueberries";
+
+interface OptionsInterface2 {
+  value: ValueType2;
+  label: React.ReactNode;
+}
+
+export const MultiSelectFullExampleWithState2: Story = {
+  render: () => {
+    const options: OptionsInterface2[] = [
+      { value: "chocolate", label: <div className="inline-flex justify-center items-center gap-1"><FontAwesomeIcon size="xs" icon={faChocolateBar}/> Chocolate</div> },
+      { value: "strawberry", label: <div className="inline-flex justify-center items-center gap-1"><FontAwesomeIcon size="xs" icon={faStrawberry}/> Strawberry</div> },
+      { value: "blueberries", label: <div className="inline-flex justify-center items-center gap-1"><FontAwesomeIcon size="xs" icon={faBlueberries}/> Blueberries</div> },
+    ];
+    const [selectedOptions, setSelectedOptions] = React.useState<ValueType2[]>([]);
+
+    return (
+      <>
+        <span>Selected options: {selectedOptions.toString()}</span>
+        <Select
+          id="example_4b"
           options={options}
           onChange={(items: any) =>
             setSelectedOptions([...items.map((item) => item.value)])
