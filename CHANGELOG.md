@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/pickleballinc/react-ui/compare/v1.29.5...v1.30.0) (2024-01-22)
+
+
+### Features
+
+* In ErrorSection component made heading and supportingtext accept react.reactnode type. Added two examples to Select component. ([9c143de](https://github.com/pickleballinc/react-ui/commit/9c143de0906d6c23cec58d63c778294b7e19a1fd))
+
 ## [1.29.5](https://github.com/pickleballinc/react-ui/compare/v1.29.4...v1.29.5) (2024-01-18)
 
 
