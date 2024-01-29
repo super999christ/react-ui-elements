@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/pickleballinc/react-ui/compare/v1.30.0...v1.30.1) (2024-01-29)
+
+
+### Bug Fixes
+
+* rest spread operator in colorpicker ([12b8904](https://github.com/pickleballinc/react-ui/commit/12b8904b390683165697466c0220b410f950e190))
+
 # [1.30.0](https://github.com/pickleballinc/react-ui/compare/v1.29.5...v1.30.0) (2024-01-22)
 
 
