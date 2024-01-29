@@ -43,6 +43,7 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
             className={inputClasses}
             value={colorPickerValue}
             onChange={(e) => setColor ? setColor(e.target.value) : undefined}
+            {...rest}
           />
         </div>
         <div className='w-full'>
