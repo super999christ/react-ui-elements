@@ -1,3 +1,11 @@
+## [1.30.2](https://github.com/pickleballinc/react-ui/compare/v1.30.1...v1.30.2) (2024-01-31)
+
+
+### Bug Fixes
+
+* Added wrapperClassname prop to Radio and Checkbox components. ([5f4e796](https://github.com/pickleballinc/react-ui/commit/5f4e796a3409765d1b0b657f56030b9ad41a4512))
+* rest spread operator in colorpicker ([7831553](https://github.com/pickleballinc/react-ui/commit/7831553a6d6bb43db8f59f6f90dc24ca060dc41a))
+
 ## [1.30.1](https://github.com/pickleballinc/react-ui/compare/v1.30.0...v1.30.1) (2024-01-29)
 
 
