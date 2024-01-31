@@ -200,3 +200,39 @@ export const CheckboxFullExampleWithState: Story = {
     );
   }
 };
+
+export const CheckboxFullExampleWithStateCustomWrapperClassname: Story = {
+  render: () => {
+    const frameworks: FrameworkInterface[] = [{id: 'react', value: 'React'}, {id: 'angular', value: 'Angular'}, {id: 'vue', value: 'Vue'}];
+    const [selected, setSelected] = React.useState<IdType[]>([]);
+
+    return (
+      <div className='flex flex-col w-full justify-center gap-1'>
+        Selected: {selected.toString()}
+        {
+          frameworks.map((framework) => ( 
+            <Checkbox
+              key={framework.id}
+              id={framework.id}
+              name='Front_end_framework'
+              Text={framework.value}
+              value={framework.value}
+              onChange={() => {
+                const index = selected.indexOf(framework.id);
+                if (index !== -1) {
+                  const selectedCopy = [...selected];
+                  selectedCopy.splice(index, 1);
+                  setSelected(selectedCopy);
+                } else {
+                  setSelected([...selected, framework.id]);
+                }
+              }}
+              wrapperClassname='!gap-1'
+            />
+          ))
+        }
+      </div>
+    );
+  }
+};
+

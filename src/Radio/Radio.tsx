@@ -9,6 +9,7 @@ export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
   size?: RadioSizeTypes;
   SupportingText?: string | (() => React.ReactNode);
   Text?: string | (() => React.ReactNode);
+  wrapperClassname?: string;
 }
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
@@ -22,13 +23,14 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
       SupportingText,
       Text,
       value,
+      wrapperClassname,
       ...rest
     } = props;
 
     const wrapperClasses = clsx(styles.wrapper, {
       [styles['wrapper--size-sm']]: size === 'sm',
       '!gap-0': !Text && !SupportingText,
-    });
+    }, wrapperClassname);
     const radioClasses = clsx(
       styles.wrapper__radio,
       {

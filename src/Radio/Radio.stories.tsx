@@ -196,3 +196,35 @@ export const RadioFullExampleWithState: Story = {
     );
   },
 };
+
+export const RadioFullExampleWithStateCustomWrapperClassname: Story = {
+  render: () => {
+    const frameworks: FrameworkInterface[] = [
+      { id: "react", value: "React" },
+      { id: "angular", value: "Angular" },
+      { id: "vue", value: "Vue" },
+    ];
+    const [selected, setSelected] = React.useState<IdType>();
+
+    const handleOptionChange = (event) => {
+      setSelected(event.target.value);
+    };
+
+    return (
+      <div className="flex flex-col w-full justify-center gap-1">
+        Selected: {selected && selected.toString()}
+        {frameworks.map((framework) => (
+          <Radio
+            key={framework.id}
+            name="Front_end_framework"
+            id={framework.id}
+            value={framework.value}
+            Text={framework.value}
+            onChange={handleOptionChange}
+            wrapperClassname="!gap-1"
+          />
+        ))}
+      </div>
+    );
+  },
+};

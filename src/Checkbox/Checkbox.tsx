@@ -10,6 +10,7 @@ export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputE
   size?: CheckboxSizeTypes;
   SupportingText?: string | (() => React.ReactNode);
   Text?: string | (() => React.ReactNode);
+  wrapperClassname?: string;
 }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
@@ -24,13 +25,14 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       SupportingText,
       Text,
       value,
+      wrapperClassname,
       ...rest
     } = props;
 
     const wrapperClasses = clsx(styles.wrapper, {
       [styles['wrapper--size-sm']]: size === 'sm',
       '!gap-0': !Text && !SupportingText,
-    });
+    }, wrapperClassname);
     const checkboxClasses = clsx(
       styles.wrapper__checkbox,
       {
