@@ -2,12 +2,14 @@
 import { faAngleDown, faTimes } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import type { Props as ReactSelectProps } from "react-select";
+import type { GroupBase, Props as ReactSelectProps } from "react-select";
 import ReactSelect from "react-select";
 import styles from "./Select.module.css";
+import { SelectComponents } from "react-select/dist/declarations/src/components";
 
 export interface SelectProps extends ReactSelectProps {
   noBorder?: boolean;
+  noSeparator?: boolean;
 }
 
 const CaretDownIcon = () => {
@@ -43,13 +45,17 @@ const ClearIcon = ({ innerProps }: any) => {
 };
 
 const Select = ({ ...props }: SelectProps) => {
+  let components: Partial<SelectComponents<unknown, boolean, GroupBase<unknown>>> | undefined = {
+    DropdownIndicator: CaretDownIcon,
+    MultiValueRemove: MultiValueRemoveIcon,
+    ClearIndicator: ClearIcon,
+  }
+  if (props.noSeparator) {
+    components = {...components, IndicatorSeparator: () => null };
+  }
   return (
     <ReactSelect
-      components={{
-        DropdownIndicator: CaretDownIcon,
-        MultiValueRemove: MultiValueRemoveIcon,
-        ClearIndicator: ClearIcon
-      }}
+      components={components}
       styles={{
         control(base, state) {
           return {
@@ -137,6 +143,12 @@ const Select = ({ ...props }: SelectProps) => {
             width: 20,
             borderRadius: 500,
           };
+        },
+        valueContainer(base) {
+          return {
+            ...base,
+            padding: props.noSeparator ? '0 0 0 4px' : base.padding,
+          }
         },
         option(base, state) {
           return {
