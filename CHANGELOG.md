@@ -1,3 +1,16 @@
+# [1.31.0](https://github.com/pickleballinc/react-ui/compare/v1.30.2...v1.31.0) (2024-02-02)
+
+
+### Bug Fixes
+
+* added autocomplete=off to examples and on the second example where there is the validation of percentage added a condition which resets the value to an empty string when changing from other dropdown options  to % ([4b646e8](https://github.com/pickleballinc/react-ui/commit/4b646e8dfc051fb11f3f6b010bbf3d8c411b1099))
+* fixed type error in inputfieldwithdropdown ([4b0286d](https://github.com/pickleballinc/react-ui/commit/4b0286d6de682031d008dff7a06809263d5a2d11))
+
+
+### Features
+
+* implemented the inputfieldwithdropdown component ([a4bb030](https://github.com/pickleballinc/react-ui/commit/a4bb030dbdafca3efbdfd009b7a8c28ec27ed2a2))
+
 ## [1.30.2](https://github.com/pickleballinc/react-ui/compare/v1.30.1...v1.30.2) (2024-01-31)
 
 
