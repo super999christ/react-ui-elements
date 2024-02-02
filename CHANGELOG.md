@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/pickleballinc/react-ui/compare/v1.31.0...v1.31.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* exported InputFieldWithDropdown component ([7f63680](https://github.com/pickleballinc/react-ui/commit/7f63680444262ba80cba5fb15bcff972163685d9))
+
 # [1.31.0](https://github.com/pickleballinc/react-ui/compare/v1.30.2...v1.31.0) (2024-02-02)
 
 
