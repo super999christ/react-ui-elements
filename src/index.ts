@@ -48,6 +48,10 @@ export * from "./ImageEditor";
 export { default as InputField } from "./InputField";
 export * from "./InputField";
 
+// InputFieldWithDropdown
+export { default as InputFieldWithDropdown } from "./InputFieldWithDropdown";
+export * from "./InputFieldWithDropdown";
+
 // Menu
 export { default as Menu } from "./Menu";
 export * from "./Menu";
