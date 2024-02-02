@@ -27,6 +27,7 @@ export const InputFieldWithDropdownFullExampleWithState: Story = {
     return (
       <div className='w-full sm:w-1/2 flex flex-col gap-2'>
         <InputFieldWithDropdown
+          autoComplete="off"
           dropdownValue={sign}
           dropdownList={signs}
           defaultDropdownValue={signs[0]}
@@ -52,16 +53,23 @@ export const InputFieldWithDropdownFullExampleWithState2: Story = {
     ];
     const [sign, setSign] = React.useState<LabelInterface>();
     const [value, setValue] = React.useState<string>();
+    const validatePercentage = true;
     
     return (
       <div className='w-full flex flex-col gap-2'>
         <p>When % is selected the value needs to be in the range [0, 100]</p>
         Selected sign: {sign && JSON.stringify(sign)}
         <InputFieldWithDropdown
+          autoComplete="off"
           dropdownValue={sign}
           dropdownList={signs}
           defaultDropdownValue={signs[1]}
-          dropdownOnChange={(e) => setSign(e)}
+          dropdownOnChange={(e) => {
+            if (validatePercentage && e.label === '%') { // Changing from other dropdown options to '%' option needs to reset the value, since % needs to be valid (between 0 and 100)
+              setValue('');
+            }
+            setSign(e);
+          }}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           id='value_2'
