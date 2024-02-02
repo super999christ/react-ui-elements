@@ -1,3 +1,10 @@
+## [1.31.2](https://github.com/pickleballinc/react-ui/compare/v1.31.1...v1.31.2) (2024-02-02)
+
+
+### Bug Fixes
+
+* divider not showing in inputfield when withdivider prop is set to true ([22fed1b](https://github.com/pickleballinc/react-ui/commit/22fed1b4f5bb9603c7391710a108f971d617cafb))
+
 ## [1.31.1](https://github.com/pickleballinc/react-ui/compare/v1.31.0...v1.31.1) (2024-02-02)
 
 
