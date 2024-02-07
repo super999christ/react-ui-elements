@@ -19,3 +19,7 @@
   @apply px-2;
   @apply text-gray-600;
 }
+
+.label {
+  @apply mb-[6px] block text-sm font-medium leading-5 text-gray-700;
+}

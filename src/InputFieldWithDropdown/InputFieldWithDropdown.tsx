@@ -30,7 +30,7 @@ export interface InputFieldWithDropdownProps extends React.InputHTMLAttributes<H
   PrefixIcon?: () => React.ReactNode;
   withDivider?: boolean;
   dropdownList: LabelInterface[];
-  dropdownOnChange: (event: any) => void;
+  dropdownOnChange?: (event: any) => void;
   dropdownValue?: LabelInterface;
   defaultDropdownValue?: LabelInterface;
   dropdownClassname?: string;
@@ -136,7 +136,7 @@ const InputFieldWithDropdown = forwardRef<HTMLInputElement, InputFieldWithDropdo
             noBorder
             noSeparator
             options={dropdownList}
-            onChange={(option) => dropdownOnChange(option)}
+            onChange={(option) => dropdownOnChange && dropdownOnChange(option)}
             value={dropdownValue}
             defaultValue={defaultDropdownValue}
             className={dropdownClasses}

@@ -29,12 +29,13 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       [styles['input__container--disabled']]: disabled,
       [styles['input__container--has-error']]: hasError,
     }, className);
-    const inputClasses = clsx(styles.input, {
-      [styles['input--with-prefix-divider']]: PrefixIcon && withDivider,
-      [styles['input--with-suffix-divider']]: SuffixIcon && withDivider,
-    }, inputProps?.className);
-    const prefixClasses = clsx(styles.prefix);
-    const suffixClasses = clsx(styles.suffix);
+    const inputClasses = clsx(styles.input, inputProps?.className);
+    const prefixClasses = clsx(styles.prefix, {
+      [styles['prefix--with-divider']]: withDivider,
+    });
+    const suffixClasses = clsx(styles.suffix, {
+      [styles['suffix--with-divider']]:  withDivider,
+    });
 
     const handleIconClick = () => {
       const node = inputRef.current;

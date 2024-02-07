@@ -30,6 +30,7 @@ export const Primary: Story = {
         id="example_1"
         options={options}
         menuPortalTarget={document.body}
+        label="This is a select component"
       />
     );
   },

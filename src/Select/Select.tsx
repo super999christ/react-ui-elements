@@ -6,8 +6,10 @@ import type { GroupBase, Props as ReactSelectProps } from "react-select";
 import ReactSelect from "react-select";
 import styles from "./Select.module.css";
 import { SelectComponents } from "react-select/dist/declarations/src/components";
+import { SelectLabel } from "./SelectLabel";
 
 export interface SelectProps extends ReactSelectProps {
+  label?: string;
   noBorder?: boolean;
   noSeparator?: boolean;
 }
@@ -54,124 +56,127 @@ const Select = ({ ...props }: SelectProps) => {
     components = {...components, IndicatorSeparator: () => null };
   }
   return (
-    <ReactSelect
-      components={components}
-      styles={{
-        control(base, state) {
-          return {
-            ...base,
-            display: "flex",
-            border: props.noBorder ? 
-              "none"
-              : state.isFocused ?
-                "1px solid #AB95EA"
-                : "1px solid rgb(234 236 240)",
-            boxShadow: !props.noBorder && state.isFocused ? "0px 0px 0px 4px #CCBFF2" : "none",
-            "&:hover": {
+    <>
+      {props.label && <SelectLabel id={props.id}>{props.label}</SelectLabel>}
+      <ReactSelect
+        components={components}
+        styles={{
+          control(base, state) {
+            return {
+              ...base,
+              display: "flex",
               border: props.noBorder ? 
                 "none"
                 : state.isFocused ?
                   "1px solid #AB95EA"
                   : "1px solid rgb(234 236 240)",
-            },
-            borderRadius: 4,
-            fontSize: 14,
-            fontWeight: 400,
-          };
-        },
-        placeholder(base) {
-          return {
-            ...base,
-            fontSize: 14,
-          };
-        },
-        input(base, props) {
-          return {
-            ...base,
-            "> input": {
-              border: 'none !important',
-              boxShadow: "none !important",
-              "&:focus": {
+              boxShadow: !props.noBorder && state.isFocused ? "0px 0px 0px 4px #CCBFF2" : "none",
+              "&:hover": {
+                border: props.noBorder ? 
+                  "none"
+                  : state.isFocused ?
+                    "1px solid #AB95EA"
+                    : "1px solid rgb(234 236 240)",
+              },
+              borderRadius: 4,
+              fontSize: 14,
+              fontWeight: 400,
+            };
+          },
+          placeholder(base) {
+            return {
+              ...base,
+              fontSize: 14,
+            };
+          },
+          input(base, props) {
+            return {
+              ...base,
+              "> input": {
                 border: 'none !important',
                 boxShadow: "none !important",
+                "&:focus": {
+                  border: 'none !important',
+                  boxShadow: "none !important",
+                }
               }
             }
-          }
-        },
-        indicatorSeparator(base) {
-          return {
-            ...base,
-            backgroundColor: "rgb(234 236 240)",
-          };
-        },
-        menu(base) {
-          return {
-            ...base,
-            border: "1px solid rgb(234 236 240)",
-            boxShadow: "none",
-            zIndex: 100,
-          };
-        },
-        menuPortal(base) {
-          return { ...base, borderColor: "red", zIndex: 100 };
-        },
-        menuList(base) {
-          return {
-            ...base,
-            fontSize: 14,
-          };
-        },
-        multiValue(base) {
-          return {
-            ...base,
-            paddingInline: 2,
-            borderRadius: 20,
-            display: "inline-flex",
-            alignItems: "center",
-          };
-        },
-        multiValueLabel(base) {
-          return {
-            ...base,
-            fontSize: 12,
-          };
-        },
-        multiValueRemove(base) {
-          return {
-            ...base,
-            height: 20,
-            width: 20,
-            borderRadius: 500,
-          };
-        },
-        valueContainer(base) {
-          return {
-            ...base,
-            padding: props.noSeparator ? '0 0 0 4px' : base.padding,
-          }
-        },
-        option(base, state) {
-          return {
-            ...base,
-            // eslint-disable-next-line no-nested-ternary
-            backgroundColor: state.isSelected
-              ? "#CCBFF2"
-              : state.isFocused
-              ? "#EEE9FA"
-              : "transparent",
-            color: state.isFocused ? "" : state.isSelected ? "#000000" : "",
-            "&:active": {
+          },
+          indicatorSeparator(base) {
+            return {
+              ...base,
+              backgroundColor: "rgb(234 236 240)",
+            };
+          },
+          menu(base) {
+            return {
+              ...base,
+              border: "1px solid rgb(234 236 240)",
+              boxShadow: "none",
+              zIndex: 100,
+            };
+          },
+          menuPortal(base) {
+            return { ...base, borderColor: "red", zIndex: 100 };
+          },
+          menuList(base) {
+            return {
+              ...base,
+              fontSize: 14,
+            };
+          },
+          multiValue(base) {
+            return {
+              ...base,
+              paddingInline: 2,
+              borderRadius: 20,
+              display: "inline-flex",
+              alignItems: "center",
+            };
+          },
+          multiValueLabel(base) {
+            return {
+              ...base,
+              fontSize: 12,
+            };
+          },
+          multiValueRemove(base) {
+            return {
+              ...base,
+              height: 20,
+              width: 20,
+              borderRadius: 500,
+            };
+          },
+          valueContainer(base) {
+            return {
+              ...base,
+              padding: props.noSeparator ? '0 0 0 4px' : base.padding,
+            }
+          },
+          option(base, state) {
+            return {
+              ...base,
+              // eslint-disable-next-line no-nested-ternary
               backgroundColor: state.isSelected
                 ? "#CCBFF2"
                 : state.isFocused
                 ? "#EEE9FA"
                 : "transparent",
-            },
-          };
-        },
-      }}
-      {...props}
-    />
+              color: state.isFocused ? "" : state.isSelected ? "#000000" : "",
+              "&:active": {
+                backgroundColor: state.isSelected
+                  ? "#CCBFF2"
+                  : state.isFocused
+                  ? "#EEE9FA"
+                  : "transparent",
+              },
+            };
+          },
+        }}
+        {...props}
+      />
+    </>
   );
 };
 
