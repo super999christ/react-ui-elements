@@ -1,3 +1,10 @@
+# [1.32.0](https://github.com/pickleballinc/react-ui/compare/v1.31.2...v1.32.0) (2024-02-07)
+
+
+### Features
+
+* added label prop to select and made dropdownonchange optional, fixed divider disappearing when inputfield is focused ([8bd88c5](https://github.com/pickleballinc/react-ui/commit/8bd88c55aca99e747698118ec7e5cacd471857dd))
+
 ## [1.31.2](https://github.com/pickleballinc/react-ui/compare/v1.31.1...v1.31.2) (2024-02-02)
 
 
