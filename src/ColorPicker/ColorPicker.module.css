@@ -25,7 +25,3 @@
 .input::-moz-color-swatch {
   @apply rounded-[4px] border-none;
 }
-
-.hash {
-  @apply text-gray-600;
-}

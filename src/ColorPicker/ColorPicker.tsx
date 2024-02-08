@@ -3,15 +3,15 @@ import React, { forwardRef } from 'react';
 
 import InputField from '../InputField';
 import styles from './ColorPicker.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHashtag } from '@fortawesome/pro-solid-svg-icons';
 
 const arrayOfValidLetters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 
 const checkIsValid = (color: string) => {
+  console.log('color', color);
   for (let i = 0; i < color.length; i++) {
     if (i === 0 && color[i] === '#') continue;
-    else if (!arrayOfValidLetters.includes(color[i].toLowerCase())) {
+    else if (i === 0 && color[i] !== '#') return false;
+    if (!arrayOfValidLetters.includes(color[i].toLowerCase())) {
       return false;
     }
   }
@@ -20,18 +20,16 @@ const checkIsValid = (color: string) => {
 }
 
 export interface ColorPickerProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  color?: string;
-  setColor?: (color: string) => void;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
 const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
   function ColorPicker(props, ref) {
-    const { className, color, setColor, onChange, ...rest } = props;
+    const { className, onChange, ...rest } = props;
     const containerClasses = clsx(styles.container, className);
     const colorClasses = clsx(styles.color);
     const inputClasses = clsx(styles.input);
-    const hashClasses = clsx(styles.hash);
+    const [color, setColor] = React.useState<string>('#');
 
     return (
       <div className={containerClasses} ref={ref}>
@@ -39,23 +37,30 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
           <input
             type="color"
             className={inputClasses}
-            onChange={(e) => onChange ? onChange(e) : setColor ? setColor(e.target.value) : undefined}
+            onChange={(e) => {
+              if (onChange) {
+                onChange(e);
+                setColor(e.target.value);
+              }
+            }}
+            value={color.length === 7 ? color : undefined}
           />
         </div>
         <div className='w-full'>
           <InputField
-            maxLength={6}
+            maxLength={7}
             label="Color"
-            PrefixIcon={() => <FontAwesomeIcon className={hashClasses} icon={faHashtag} size="xs" />}
             withDivider
             onChange={(e) => {
+              console.log('e', e);
+              if (e.target.value === '') return;
               if (!checkIsValid(e.target.value)) return;
               else if (onChange) {
                 onChange(e);
-              } else if (setColor) {
-                setColor(`#${e.target.value}`);
+                setColor(e.target.value);
               }
             }}
+            value={color}
             {...rest}
           />
         </div>

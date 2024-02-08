@@ -6,7 +6,6 @@ import styles from './InputFieldWithDropdown.module.css';
 import Select from '../Select';
 import { InputFieldWithDropdownLabel } from './InputFieldWithDropdownLabel';
 import { InputFieldWithDropdownHint } from './InputFieldWithDropdownHint';
-import { type } from 'os';
 
 const allowedCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 
@@ -78,7 +77,6 @@ const InputFieldWithDropdown = forwardRef<HTMLInputElement, InputFieldWithDropdo
     };
 
     const handlePhoneInputChange = (e: any) => {
-      console.log(e);
       let deleting = false;
       if (e && e.nativeEvent && (e.nativeEvent.inputType as string) === 'deleteContentBackward') {
         deleting = true;

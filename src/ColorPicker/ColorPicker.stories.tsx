@@ -28,8 +28,7 @@ export const FullExampleWithState: Story = {
     return (
       <div className='w-60'>
         <ColorPicker
-          color={color}
-          setColor={setColor}
+          onChange={(e) => setColor(`#${e.target.value}`)}
        />
       </div>
     );
