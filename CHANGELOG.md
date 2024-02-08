@@ -1,3 +1,11 @@
+## [1.32.4](https://github.com/pickleballinc/react-ui/compare/v1.32.3...v1.32.4) (2024-02-08)
+
+
+### Bug Fixes
+
+* made input on the right of the colorpicker only display the value ([f4a4a80](https://github.com/pickleballinc/react-ui/commit/f4a4a80e7302acaa957863dc57fe0d8125262286))
+* removed default colorpicker example ([50c87a0](https://github.com/pickleballinc/react-ui/commit/50c87a05d09180891e99463030b8ae8cbfd2fb26))
+
 ## [1.32.3](https://github.com/pickleballinc/react-ui/compare/v1.32.2...v1.32.3) (2024-02-08)
 
 
