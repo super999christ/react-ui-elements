@@ -1,3 +1,11 @@
+## [1.32.3](https://github.com/pickleballinc/react-ui/compare/v1.32.2...v1.32.3) (2024-02-08)
+
+
+### Bug Fixes
+
+* colorpicker adapted fully ([3582415](https://github.com/pickleballinc/react-ui/commit/3582415cc81dc250daded532dc74c2244c3c7ab0))
+* colorpicker adapted fully ([b240300](https://github.com/pickleballinc/react-ui/commit/b240300de0010d8d05a906b082af60c4b220f665))
+
 ## [1.32.2](https://github.com/pickleballinc/react-ui/compare/v1.32.1...v1.32.2) (2024-02-08)
 
 
