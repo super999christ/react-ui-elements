@@ -4,6 +4,7 @@ import React, { forwardRef } from 'react';
 import InputField from '../InputField';
 import styles from './ColorPicker.module.css';
 
+/*
 const arrayOfValidLetters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 
 const checkIsValid = (color: string) => {
@@ -17,6 +18,7 @@ const checkIsValid = (color: string) => {
 
   return true;
 }
+*/
 
 export interface ColorPickerProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
@@ -42,24 +44,15 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
                 setColor(e.target.value);
               }
             }}
-            value={color.length === 7 ? color : undefined}
+            value={color}
+            {...rest}
           />
         </div>
         <div className='w-full'>
           <InputField
-            maxLength={7}
+            disabled
             label="Color"
-            withDivider
-            onChange={(e) => {
-              if (e.target.value === '') return;
-              if (!checkIsValid(e.target.value)) return;
-              else if (onChange) {
-                onChange(e);
-                setColor(e.target.value);
-              }
-            }}
             value={color}
-            {...rest}
           />
         </div>
       </div>
