@@ -1,3 +1,11 @@
+## [1.32.2](https://github.com/pickleballinc/react-ui/compare/v1.32.1...v1.32.2) (2024-02-08)
+
+
+### Bug Fixes
+
+* colorpicker onchange register issue ([e8bf3e4](https://github.com/pickleballinc/react-ui/commit/e8bf3e4651075caf32f9a7e249b588a5ed6ee009))
+* colorpicker onchange register issue ([970b45a](https://github.com/pickleballinc/react-ui/commit/970b45a19dbb5029966b636d2a3aaeea4ab97053))
+
 ## [1.32.1](https://github.com/pickleballinc/react-ui/compare/v1.32.0...v1.32.1) (2024-02-08)
 
 
