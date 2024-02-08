@@ -7,7 +7,6 @@ import styles from './ColorPicker.module.css';
 const arrayOfValidLetters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 
 const checkIsValid = (color: string) => {
-  console.log('color', color);
   for (let i = 0; i < color.length; i++) {
     if (i === 0 && color[i] === '#') continue;
     else if (i === 0 && color[i] !== '#') return false;
@@ -52,7 +51,6 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
             label="Color"
             withDivider
             onChange={(e) => {
-              console.log('e', e);
               if (e.target.value === '') return;
               if (!checkIsValid(e.target.value)) return;
               else if (onChange) {
