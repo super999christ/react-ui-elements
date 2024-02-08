@@ -20,7 +20,6 @@ const checkIsValid = (color: string) => {
 }
 
 export interface ColorPickerProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  color?: string;
   setColor?: (color: string) => void;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }
@@ -34,7 +33,6 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
     const hashClasses = clsx(styles.hash);
 
     const colorPickerValue = color && color.length === 7 && checkIsValid(color) ? color : undefined;
-    const inputFieldValue = color ? color?.substring(1) : setColor ? '' : undefined;
 
     return (
       <div className={containerClasses} ref={ref}>
@@ -44,7 +42,6 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
             className={inputClasses}
             value={colorPickerValue}
             onChange={(e) => onChange ? onChange(e) : setColor ? setColor(e.target.value) : undefined}
-            {...rest}
           />
         </div>
         <div className='w-full'>
@@ -57,12 +54,10 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
               if (!checkIsValid(e.target.value)) return;
               else if (onChange) {
                 onChange(e);
-              }
-              else if (setColor) {
+              } else if (setColor) {
                 setColor(`#${e.target.value}`);
               }
             }}
-            value={inputFieldValue}
             {...rest}
           />
         </div>
