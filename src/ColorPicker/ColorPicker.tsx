@@ -22,11 +22,12 @@ const checkIsValid = (color: string) => {
 export interface ColorPickerProps extends React.InputHTMLAttributes<HTMLInputElement> {
   color?: string;
   setColor?: (color: string) => void;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
 const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
   function ColorPicker(props, ref) {
-    const { className, color, setColor, ...rest } = props;
+    const { className, color, setColor, onChange, ...rest } = props;
     const containerClasses = clsx(styles.container, className);
     const colorClasses = clsx(styles.color);
     const inputClasses = clsx(styles.input);
@@ -42,7 +43,7 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
             type="color"
             className={inputClasses}
             value={colorPickerValue}
-            onChange={(e) => setColor ? setColor(e.target.value) : undefined}
+            onChange={(e) => onChange ? onChange(e) : setColor ? setColor(e.target.value) : undefined}
             {...rest}
           />
         </div>
@@ -54,6 +55,9 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
             withDivider
             onChange={(e) => {
               if (!checkIsValid(e.target.value)) return;
+              else if (onChange) {
+                onChange(e);
+              }
               else if (setColor) {
                 setColor(`#${e.target.value}`);
               }
