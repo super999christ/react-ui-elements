@@ -20,6 +20,7 @@ const checkIsValid = (color: string) => {
 }
 
 export interface ColorPickerProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  color?: string;
   setColor?: (color: string) => void;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }
@@ -32,15 +33,12 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
     const inputClasses = clsx(styles.input);
     const hashClasses = clsx(styles.hash);
 
-    const colorPickerValue = color && color.length === 7 && checkIsValid(color) ? color : undefined;
-
     return (
       <div className={containerClasses} ref={ref}>
         <div className={colorClasses}>
           <input
             type="color"
             className={inputClasses}
-            value={colorPickerValue}
             onChange={(e) => onChange ? onChange(e) : setColor ? setColor(e.target.value) : undefined}
           />
         </div>
