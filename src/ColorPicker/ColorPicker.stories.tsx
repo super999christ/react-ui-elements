@@ -15,12 +15,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof ColorPicker>;
 
-export const Default: Story = {
-  args: {
-    readOnly: true,
-  }
-};
-
 export const FullExampleWithState: Story = {
   render: () => {
     const [color, setColor] = React.useState<string>('');
