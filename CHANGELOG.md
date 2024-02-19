@@ -1,3 +1,10 @@
+## [1.32.5](https://github.com/pickleballinc/react-ui/compare/v1.32.4...v1.32.5) (2024-02-19)
+
+
+### Bug Fixes
+
+* badgeprops now extend native htmldivelement props ([e1630bd](https://github.com/pickleballinc/react-ui/commit/e1630bd5184937034eef02e71a5569dd51c7a300))
+
 ## [1.32.4](https://github.com/pickleballinc/react-ui/compare/v1.32.3...v1.32.4) (2024-02-08)
 
 
