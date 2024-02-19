@@ -38,7 +38,7 @@ const BadgeIcon = React.forwardRef<HTMLElement, BadgeIconProps>(
   },
 );
 
-export interface BadgeProps {
+export interface BadgeProps extends Omit<React.HTMLProps<HTMLDivElement>, 'size'> {
   className?: string;
   icon?: React.ReactNode;
   label: string;
