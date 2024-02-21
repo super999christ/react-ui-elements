@@ -1,0 +1,4 @@
+.generate {
+  @apply flex gap-2 items-center cursor-pointer;
+  user-select: none;
+}
