@@ -28,6 +28,10 @@ export * from "./Checkbox";
 export { default as CodeGenerator } from "./CodeGenerator";
 export * from "./CodeGenerator";
 
+// ColorPicker
+export { default as ColorPicker } from "./ColorPicker";
+export * from "./ColorPicker";
+
 // DatePicker 
 export { default as DatePicker } from "./DatePicker";
 export * from "./DatePicker";
