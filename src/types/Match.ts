@@ -8,7 +8,7 @@ export interface MatchTeamPlayer {
 
 export interface MatchTeam {
   isWinner?: boolean;
-  percentage: number;
+  percentage?: number;
   players: MatchTeamPlayer[];
   retired?: boolean;
   withdrawn?: boolean;

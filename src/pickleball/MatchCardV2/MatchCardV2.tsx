@@ -140,14 +140,14 @@ const TeamInfoRow = ({
   });
 
   const percentageClasses = clsx(styles["player-percentage"], {
-    [styles["player-percentage--larger"]]: team.percentage > oppositeTeam.percentage,
+    [styles["player-percentage--larger"]]: team.percentage && oppositeTeam.percentage && team.percentage > oppositeTeam.percentage,
   });
   const serverWrapperClasses = clsx(styles['server__wrapper']);
   const serverDotClasses = clsx(styles['server__dot']);
 
   const derivedPercentage = team.percentage
     ? team.percentage
-    : 100 - oppositeTeam.percentage;
+    : oppositeTeam.percentage ? 100 - oppositeTeam.percentage : undefined;
 
   return (
     <div className={styles["team-row"]}>
