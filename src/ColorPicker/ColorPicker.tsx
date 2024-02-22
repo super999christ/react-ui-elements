@@ -4,22 +4,6 @@ import React, { forwardRef } from 'react';
 import InputField from '../InputField';
 import styles from './ColorPicker.module.css';
 
-/*
-const arrayOfValidLetters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
-
-const checkIsValid = (color: string) => {
-  for (let i = 0; i < color.length; i++) {
-    if (i === 0 && color[i] === '#') continue;
-    else if (i === 0 && color[i] !== '#') return false;
-    if (!arrayOfValidLetters.includes(color[i].toLowerCase())) {
-      return false;
-    }
-  }
-
-  return true;
-}
-*/
-
 export interface ColorPickerProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 }
