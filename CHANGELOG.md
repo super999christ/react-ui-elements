@@ -1,3 +1,11 @@
+## [1.33.1](https://github.com/pickleballinc/react-ui/compare/v1.33.0...v1.33.1) (2024-02-22)
+
+
+### Bug Fixes
+
+* exported colorpicker component ([8ec5663](https://github.com/pickleballinc/react-ui/commit/8ec5663e21dc7ec11bc5586daf3753949e48fdce))
+* removed comment from colorpicker ([cfdb4dc](https://github.com/pickleballinc/react-ui/commit/cfdb4dc4e53aedcdcb12c580c81faacb7630c366))
+
 # [1.33.0](https://github.com/pickleballinc/react-ui/compare/v1.32.5...v1.33.0) (2024-02-21)
 
 
