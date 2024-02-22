@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/pickleballinc/react-ui/compare/v1.32.5...v1.33.0) (2024-02-21)
+
+
+### Features
+
+* created the codegenerator component ([a973e50](https://github.com/pickleballinc/react-ui/commit/a973e50ed4d4b7b3391f9f3eb56b5fd042ac060e))
+
 ## [1.32.5](https://github.com/pickleballinc/react-ui/compare/v1.32.4...v1.32.5) (2024-02-19)
 
 
