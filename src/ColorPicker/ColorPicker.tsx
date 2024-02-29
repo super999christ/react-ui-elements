@@ -14,7 +14,7 @@ const ColorPicker = forwardRef<HTMLInputElement, ColorPickerProps>(
     const containerClasses = clsx(styles.container, className);
     const colorClasses = clsx(styles.color);
     const inputClasses = clsx(styles.input);
-    const [color, setColor] = React.useState<string>('#');
+    const [color, setColor] = React.useState<string>(props.value ? props.value.toString() : '#');
 
     return (
       <div className={containerClasses} ref={ref}>
