@@ -1,3 +1,11 @@
+## [1.33.2](https://github.com/pickleballinc/react-ui/compare/v1.33.1...v1.33.2) (2024-02-22)
+
+
+### Bug Fixes
+
+* matchcardv2 can now accept team object with no percentage ([f118345](https://github.com/pickleballinc/react-ui/commit/f118345d5c7b3472f19f30c541f245c22504abea))
+* matchcardv2 can now accept team object with no percentage ([fded932](https://github.com/pickleballinc/react-ui/commit/fded93290c6acf5fe161b1880f320082c874f6e0))
+
 ## [1.33.1](https://github.com/pickleballinc/react-ui/compare/v1.33.0...v1.33.1) (2024-02-22)
 
 
