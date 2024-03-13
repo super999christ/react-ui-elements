@@ -1,3 +1,10 @@
+## [1.33.4](https://github.com/pickleballinc/react-ui/compare/v1.33.3...v1.33.4) (2024-03-13)
+
+
+### Bug Fixes
+
+* serving indicators ([4b7b6bb](https://github.com/pickleballinc/react-ui/commit/4b7b6bb28ad11b23187d8bcc9d2e8437d959a2f1))
+
 ## [1.33.3](https://github.com/pickleballinc/react-ui/compare/v1.33.2...v1.33.3) (2024-02-29)
 
 
