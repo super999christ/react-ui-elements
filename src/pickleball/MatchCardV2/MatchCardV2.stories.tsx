@@ -346,6 +346,210 @@ export const DuoLive: Story = {
   }
 };
 
+export const SingleLiveWithDotsTeamOnePlayerOneFirstServe: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 2,
+      gameOneEndDate: '1',
+      gameTwoEndDate: '',
+      gameThreeEndDate: '',
+      serverFromTeam: 1,
+      server: 1,
+      currentServingNumber: 1,
+      team1: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: undefined,
+        scores: [11, 8, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: undefined,
+        scores: [7, 5, 0]
+      }
+    }
+  }
+};
+
+export const SingleLiveWithDotsTeamOnePlayerOneSecondServe: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 2,
+      gameOneEndDate: '1',
+      gameTwoEndDate: '',
+      gameThreeEndDate: '',
+      serverFromTeam: 1,
+      server: 1,
+      currentServingNumber: 2,
+      team1: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: undefined,
+        scores: [11, 8, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: undefined,
+        scores: [7, 5, 0]
+      }
+    }
+  }
+};
+
+export const SingleLiveWithDotsTeamTwoPlayerOneFirstServe: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 2,
+      gameOneEndDate: '1',
+      gameTwoEndDate: '',
+      gameThreeEndDate: '',
+      serverFromTeam: 1,
+      server: 2,
+      currentServingNumber: 1,
+      team1: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: undefined,
+        scores: [11, 8, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: undefined,
+        scores: [7, 5, 0]
+      }
+    }
+  }
+};
+
+export const SingleLiveWithDotsTeamTwoPlayerOneSecondServe: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    links: {
+      matchStatsURL: 'https://pickleball.com',
+      liveURL: 'https://youtube.com',
+    },
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 2,
+      gameOneEndDate: '1',
+      gameTwoEndDate: '',
+      gameThreeEndDate: '',
+      serverFromTeam: 1,
+      server: 2,
+      currentServingNumber: 2,
+      team1: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: undefined,
+        scores: [11, 8, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: undefined,
+        scores: [7, 5, 0]
+      }
+    }
+  }
+};
+
 export const DuoLiveWithDotsTeamOnePlayerOneFirstServe: Story = {
   args: {
     shortenName: true,
@@ -496,8 +700,8 @@ export const DuoLiveWithDotsTeamOnePlayerTwoFirstServe: Story = {
       gameOneEndDate: '1',
       gameTwoEndDate: '',
       gameThreeEndDate: '',
-      serverFromTeam: 1,
-      server: 2,
+      serverFromTeam: 2,
+      server: 1,
       currentServingNumber: 1,
       team1: {
         players: [{
@@ -561,8 +765,8 @@ export const DuoLiveWithDotsTeamOnePlayerTwoSecondServe: Story = {
       gameOneEndDate: '1',
       gameTwoEndDate: '',
       gameThreeEndDate: '',
-      serverFromTeam: 1,
-      server: 2,
+      serverFromTeam: 2,
+      server: 1,
       currentServingNumber: 2,
       team1: {
         players: [{
@@ -626,8 +830,8 @@ export const DuoLiveWithDotsTeamTwoPlayerOneFirstServe: Story = {
       gameOneEndDate: '1',
       gameTwoEndDate: '',
       gameThreeEndDate: '',
-      serverFromTeam: 2,
-      server: 1,
+      serverFromTeam: 1,
+      server: 2,
       currentServingNumber: 1,
       team1: {
         players: [{
@@ -691,8 +895,8 @@ export const DuoLiveWithDotsTeamTwoPlayerOneSecondServe: Story = {
       gameOneEndDate: '1',
       gameTwoEndDate: '',
       gameThreeEndDate: '',
-      serverFromTeam: 2,
-      server: 1,
+      serverFromTeam: 1,
+      server: 2,
       currentServingNumber: 2,
       team1: {
         players: [{

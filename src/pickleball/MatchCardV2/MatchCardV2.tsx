@@ -417,8 +417,8 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 gameFourEndDate={match.gameFourEndDate}
                 gameFiveEndDate={match.gameFiveEndDate}
                 playerOneIsServer={match.server === 1 && match.serverFromTeam === 1}
-                playerTwoIsServer={match.server === 2 && match.serverFromTeam === 1}
-                secondServerDot={match.serverFromTeam === 1 && match.currentServingNumber === 2}
+                playerTwoIsServer={match.server === 1 && match.serverFromTeam === 2}
+                secondServerDot={match.server === 1 && match.currentServingNumber === 2}
               />
               <TeamInfoRow
                 team={match.team2}
@@ -431,9 +431,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 gameThreeEndDate={match.gameThreeEndDate}
                 gameFourEndDate={match.gameFourEndDate}
                 gameFiveEndDate={match.gameFiveEndDate}
-                playerOneIsServer={match.server === 1 && match.serverFromTeam === 2}
+                playerOneIsServer={match.server === 2 && match.serverFromTeam === 1}
                 playerTwoIsServer={match.server === 2 && match.serverFromTeam === 2}
-                secondServerDot={match.serverFromTeam === 2 && match.currentServingNumber === 2}
+                secondServerDot={match.server === 2 && match.currentServingNumber === 2}
               />
             </>
           )}
