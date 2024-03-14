@@ -1,3 +1,10 @@
+## [1.33.5](https://github.com/pickleballinc/react-ui/compare/v1.33.4...v1.33.5) (2024-03-14)
+
+
+### Bug Fixes
+
+* add onclick handler to swiperitem ([b5a8dd1](https://github.com/pickleballinc/react-ui/commit/b5a8dd12910d84b8f9d9de2c7e3b565fa3ee22bb))
+
 ## [1.33.4](https://github.com/pickleballinc/react-ui/compare/v1.33.3...v1.33.4) (2024-03-13)
 
 
