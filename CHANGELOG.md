@@ -1,3 +1,10 @@
+## [1.33.6](https://github.com/pickleballinc/react-ui/compare/v1.33.5...v1.33.6) (2024-03-15)
+
+
+### Bug Fixes
+
+* added classname prop to swiperitem ([31f9e62](https://github.com/pickleballinc/react-ui/commit/31f9e623c38b17bd5b29586c8564b912919dd612))
+
 ## [1.33.5](https://github.com/pickleballinc/react-ui/compare/v1.33.4...v1.33.5) (2024-03-14)
 
 
