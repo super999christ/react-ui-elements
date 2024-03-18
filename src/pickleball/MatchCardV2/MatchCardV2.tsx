@@ -109,6 +109,7 @@ interface TeamInfoRowProps {
   shortenName?: boolean;
   compact?: boolean;
   matchStatus?: number;
+  noWinner?: boolean;
   gameOneEndDate?: Date;
   gameTwoEndDate?: Date;
   gameThreeEndDate?: Date;
@@ -125,6 +126,7 @@ const TeamInfoRow = ({
   shortenName,
   compact,
   matchStatus,
+  noWinner,
   gameOneEndDate,
   gameTwoEndDate,
   gameThreeEndDate,
@@ -135,8 +137,8 @@ const TeamInfoRow = ({
   secondServerDot,
 }: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
-    [styles["avatar--loser"]]: team.isWinner !== undefined && !team.isWinner,
-    [styles["avatar--winner"]]: team.isWinner,
+    [styles["avatar--loser"]]: !noWinner && team.isWinner !== undefined && !team.isWinner,
+    [styles["avatar--winner"]]: !noWinner && team.isWinner,
   });
 
   const percentageClasses = clsx(styles["player-percentage"], {
@@ -346,7 +348,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   <span className={styles["header--text"]}>
                     {match.tournamentTitle}
                   </span>
-                  {(match.matchStatus === 2 || match.matchStatus === 3) &&
+                  {(match.matchStatus === 2 || match.matchStatus === 3 || (match.matchStatus === 4 && match.matchCompletedType === 6)) &&
                     (
                       match.matchStatus === 2 ? 
                         <span className={styles['live__text']}>
@@ -354,7 +356,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                           LIVE
                         </span> :
                       match.matchStatus === 3 ? 
-                        <span className={styles['delayed__text']}>DELAYED</span> : null
+                        <span className={styles['delayed__text']}>DELAYED</span> : 
+                        (match.matchStatus === 4 && match.matchCompletedType === 6) ? 
+                        <span className={styles['canceled__text']}>CANCELED</span> : null
                     )
                   }
                 </div>
@@ -364,7 +368,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   <span className={styles["header--text"]}>
                     {match.eventTitle}
                   </span>
-                  {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3) &&
+                  {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3 || (match.matchStatus === 4 && match.matchCompletedType === 6)) &&
                     (
                       match.matchStatus === 2 ?
                         <span className={styles['live__text']}>
@@ -372,7 +376,9 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                           LIVE
                         </span> :
                       match.matchStatus === 3 ?
-                        <span className={styles['delayed__text']}>DELAYED</span> : null
+                        <span className={styles['delayed__text']}>DELAYED</span> : 
+                        (match.matchStatus === 4 && match.matchCompletedType === 6) ? 
+                        <span className={styles['canceled__text']}>CANCELED</span> : null
                     )
                   }
                 </div>
@@ -411,6 +417,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 shortenName={shortenName}
                 compact={compact}
                 matchStatus={match.matchStatus}
+                noWinner={!match.team1.isWinner && !match.team2.isWinner}
                 gameOneEndDate={match.gameOneEndDate}
                 gameTwoEndDate={match.gameTwoEndDate}
                 gameThreeEndDate={match.gameThreeEndDate}
@@ -426,6 +433,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 shortenName={shortenName}
                 compact={compact}
                 matchStatus={match.matchStatus}
+                noWinner={!match.team1.isWinner && !match.team2.isWinner}
                 gameOneEndDate={match.gameOneEndDate}
                 gameTwoEndDate={match.gameTwoEndDate}
                 gameThreeEndDate={match.gameThreeEndDate}

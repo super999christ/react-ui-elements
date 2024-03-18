@@ -37,6 +37,7 @@ export interface Match {
   server?: number;
   serverFromTeam?: number;
   currentServingNumber?: number;
+  matchCompletedType?: number;
 }
 /*
   From protos:

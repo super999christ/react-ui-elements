@@ -218,11 +218,11 @@
   @apply inline-flex text-[10px] justify-center h-[17px] min-w-[50px] bg-[#E31B54] leading-[18px] rounded-xl px-1.5 text-white not-italic font-semibold align-middle;
 }
 
-.delayed__text {
+.delayed__text, .canceled__text {
   @apply inline-flex bg-gray-500 text-[10px] justify-center h-[17px] min-w-[58px] leading-[18px] rounded-xl px-1.5 text-white not-italic font-semibold align-middle;
 }
 
-.match-card--compact .live__text, .match-card--compact .delayed__text {
+.match-card--compact .live__text, .match-card--compact .delayed__text, .match-card--compact .canceled__text {
   @apply min-w-[50px] h-[17px] text-[10px] leading-[18px] px-1.5;
 }
 

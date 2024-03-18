@@ -1125,6 +1125,62 @@ export const DuoDelayed: Story = {
   }
 };
 
+export const DuoCanceled: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 6,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: undefined,
+        scores: [0, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: undefined,
+        scores: [0, 0, 0]
+      }
+    }
+  }
+};
+
 export const DuoHideMatchTimeStartRowOnPhones: Story = {
   args: {
     shortenName: true,
