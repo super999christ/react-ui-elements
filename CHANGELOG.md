@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/pickleballinc/react-ui/compare/v1.33.6...v1.34.0) (2024-03-18)
+
+
+### Features
+
+* for canceled matches showing the canceled match indicator ([de39a16](https://github.com/pickleballinc/react-ui/commit/de39a168c5384d2e40fad8141bb2672929a14ac6))
+
 ## [1.33.6](https://github.com/pickleballinc/react-ui/compare/v1.33.5...v1.33.6) (2024-03-15)
 
 
