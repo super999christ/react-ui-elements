@@ -1155,7 +1155,7 @@ export const DuoCanceled: Story = {
           image: ''
         }],
         percentage: 70,
-        isWinner: undefined,
+        isWinner: false,
         scores: [0, 0, 0]
       },
       team2: {
@@ -1174,7 +1174,7 @@ export const DuoCanceled: Story = {
           image: ''
         }],
         percentage: 30,
-        isWinner: undefined,
+        isWinner: false,
         scores: [0, 0, 0]
       }
     }

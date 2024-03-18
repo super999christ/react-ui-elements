@@ -109,7 +109,7 @@ interface TeamInfoRowProps {
   shortenName?: boolean;
   compact?: boolean;
   matchStatus?: number;
-  noWinner?: boolean;
+  winnerExists?: boolean;
   gameOneEndDate?: Date;
   gameTwoEndDate?: Date;
   gameThreeEndDate?: Date;
@@ -126,7 +126,7 @@ const TeamInfoRow = ({
   shortenName,
   compact,
   matchStatus,
-  noWinner,
+  winnerExists,
   gameOneEndDate,
   gameTwoEndDate,
   gameThreeEndDate,
@@ -137,8 +137,8 @@ const TeamInfoRow = ({
   secondServerDot,
 }: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
-    [styles["avatar--loser"]]: !noWinner && team.isWinner !== undefined && !team.isWinner,
-    [styles["avatar--winner"]]: !noWinner && team.isWinner,
+    [styles["avatar--loser"]]: winnerExists && team.isWinner !== undefined && !team.isWinner,
+    [styles["avatar--winner"]]: winnerExists && team.isWinner,
   });
 
   const percentageClasses = clsx(styles["player-percentage"], {
@@ -167,11 +167,13 @@ const TeamInfoRow = ({
                 )}
                 onlineIndicator={
                   <div className={styles['avatar--indicator']}>
-                    {team.isWinner ? (
-                      compact ? <SmallWinnerIcon /> : <WinnerIcon />
-                    ) : team.isWinner !== undefined ? (
-                      compact ? <SmallNotWinnerIcon /> : <NotWinnerIcon />
-                    ) : null}
+                    {winnerExists && (
+                      team.isWinner ? (
+                        compact ? <SmallWinnerIcon /> : <WinnerIcon />
+                      ) : team.isWinner !== undefined ? (
+                        compact ? <SmallNotWinnerIcon /> : <NotWinnerIcon />
+                      ) : null
+                    )}
                   </div>
                 }
               />
@@ -417,7 +419,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 shortenName={shortenName}
                 compact={compact}
                 matchStatus={match.matchStatus}
-                noWinner={!match.team1.isWinner && !match.team2.isWinner}
+                winnerExists={match.team1.isWinner || match.team2.isWinner}
                 gameOneEndDate={match.gameOneEndDate}
                 gameTwoEndDate={match.gameTwoEndDate}
                 gameThreeEndDate={match.gameThreeEndDate}
@@ -433,7 +435,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 shortenName={shortenName}
                 compact={compact}
                 matchStatus={match.matchStatus}
-                noWinner={!match.team1.isWinner && !match.team2.isWinner}
+                winnerExists={match.team1.isWinner || match.team2.isWinner}
                 gameOneEndDate={match.gameOneEndDate}
                 gameTwoEndDate={match.gameTwoEndDate}
                 gameThreeEndDate={match.gameThreeEndDate}
