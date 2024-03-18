@@ -1,3 +1,10 @@
+## [1.34.1](https://github.com/pickleballinc/react-ui/compare/v1.34.0...v1.34.1) (2024-03-18)
+
+
+### Bug Fixes
+
+* winner/loser indicator icon on avatar ([e7a04f3](https://github.com/pickleballinc/react-ui/commit/e7a04f3052b43b888aec4ba01c316a8d565c7ded))
+
 # [1.34.0](https://github.com/pickleballinc/react-ui/compare/v1.33.6...v1.34.0) (2024-03-18)
 
 
