@@ -31,6 +31,7 @@ export interface ImageEditorProps {
   onClearImage?: () => void;
   clearIndicator?: React.ReactNode;
   clearIndicatorPosition?: ClearIndicatorPositionType;
+  dropzoneClassName?: string;
 }
 
 export default function ImageEditor({
@@ -49,6 +50,7 @@ export default function ImageEditor({
   onClearImage,
   clearIndicator,
   clearIndicatorPosition = 'center',
+  dropzoneClassName,
 }: ImageEditorProps) {
   const [files, setFiles] = useState<FileType[]>([]);
   const [processedFiles, setProcessedFiles] = useState<string[]>(() => {
@@ -170,7 +172,7 @@ export default function ImageEditor({
   const dropzoneClasses = clsx(styles.dropzone, {
     [styles["dropzone--disabled"]]: disabled,
     [styles["circle-wrapper"]]: isCircle,
-  });
+  }, dropzoneClassName);
 
   const processedFileClasses = clsx(styles["processed-files--wrapper"]);
 

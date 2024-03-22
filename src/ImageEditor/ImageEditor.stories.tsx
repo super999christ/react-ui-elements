@@ -34,6 +34,7 @@ export const ImageEditorCircleCenterIndicator: Story = {
     isCircle: true,
     onClearImage: () => console.log('Cleared'),
     width: 240,
+    dropzoneClassName: '!border-gray-700'
   }
 };
 
