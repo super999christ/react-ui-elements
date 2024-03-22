@@ -4,11 +4,11 @@ import {
 import { ImageStore, ImageStoreConfig } from "./ImageStore";
 import { StoreResponse } from "./types";
 
-interface ImageWriterStoreState extends PinturaDefaultImageWriterStoreState {
+export interface ImageWriterStoreState extends PinturaDefaultImageWriterStoreState {
   store?: any;
 }
 
-class PickleballS3ImageStore extends ImageStore {
+export class PickleballS3ImageStore extends ImageStore {
   constructor(config: ImageStoreConfig) {
     super(config);
   }

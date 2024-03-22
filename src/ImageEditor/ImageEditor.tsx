@@ -15,7 +15,7 @@ import { faTimes } from "@fortawesome/pro-light-svg-icons";
 
 export type ClearIndicatorPositionType = 'center' | 'top-right';
 
-interface ImageEditorProps {
+export interface ImageEditorProps {
   children?: React.ReactNode;
   disabled?: boolean;
   editorConfig?: EditorConfig;
