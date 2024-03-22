@@ -1,3 +1,10 @@
+## [1.34.2](https://github.com/pickleballinc/react-ui/compare/v1.34.1...v1.34.2) (2024-03-22)
+
+
+### Bug Fixes
+
+* exported some props, classes and interfaces from ImageEditor ([049102f](https://github.com/pickleballinc/react-ui/commit/049102fe97a86ef9b8aaf7b76658fd4fd1279c2f))
+
 ## [1.34.1](https://github.com/pickleballinc/react-ui/compare/v1.34.0...v1.34.1) (2024-03-18)
 
 
