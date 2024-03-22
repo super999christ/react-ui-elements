@@ -1,3 +1,10 @@
+## [1.34.3](https://github.com/pickleballinc/react-ui/compare/v1.34.2...v1.34.3) (2024-03-22)
+
+
+### Bug Fixes
+
+* added dropzoneClassname prop to ImageEditor component ([c1a1d71](https://github.com/pickleballinc/react-ui/commit/c1a1d714d02f62c9cbce1ea143e1c1568c2b7ac3))
+
 ## [1.34.2](https://github.com/pickleballinc/react-ui/compare/v1.34.1...v1.34.2) (2024-03-22)
 
 
