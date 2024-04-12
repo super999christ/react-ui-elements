@@ -1,3 +1,10 @@
+## [1.35.1](https://github.com/pickleballinc/react-ui/compare/v1.35.0...v1.35.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* hide courtname if match has been completed ([25a29ff](https://github.com/pickleballinc/react-ui/commit/25a29ff2189b3d2ca999481ffce3ed67945e873f))
+
 # [1.35.0](https://github.com/pickleballinc/react-ui/compare/v1.34.3...v1.35.0) (2024-04-12)
 
 
