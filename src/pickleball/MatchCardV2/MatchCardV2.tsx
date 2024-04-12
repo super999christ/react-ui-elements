@@ -290,11 +290,12 @@ export interface MatchCardV2Props {
   shortenName?: boolean;
   sponsors?: React.ReactNode;
   links?: LinkInterface;
+  showCourtNameInTourTitleRow?: boolean;
 }
 
 const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
   (props, ref) => {
-    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors, links } = props;
+    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors, links, showCourtNameInTourTitleRow } = props;
     const [showLinks, setShowLinks] = React.useState<boolean>(false);
 
     const cardClasses = clsx(styles["match-card"], {
@@ -350,19 +351,26 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   <span className={styles["header--text"]}>
                     {match.tournamentTitle}
                   </span>
-                  {(match.matchStatus === 2 || match.matchStatus === 3 || (match.matchStatus === 4 && match.matchCompletedType === 6)) &&
-                    (
-                      match.matchStatus === 2 ? 
-                        <span className={styles['live__text']}>
-                          &#x2022;
-                          LIVE
-                        </span> :
-                      match.matchStatus === 3 ? 
-                        <span className={styles['delayed__text']}>DELAYED</span> : 
-                        (match.matchStatus === 4 && match.matchCompletedType === 6) ? 
-                        <span className={styles['canceled__text']}>CANCELED</span> : null
-                    )
-                  }
+                  <span className={styles["badges--wrapper"]}>
+                    {(match.matchStatus === 2 || match.matchStatus === 3 || (match.matchStatus === 4 && match.matchCompletedType === 6)) &&
+                      (
+                        match.matchStatus === 2 ? 
+                          <span className={styles['live__text']}>
+                            &#x2022;
+                            LIVE
+                          </span> :
+                        match.matchStatus === 3 ? 
+                          <span className={styles['delayed__text']}>DELAYED</span> : 
+                          (match.matchStatus === 4 && match.matchCompletedType === 6) ? 
+                          <span className={styles['canceled__text']}>CANCELED</span> : null
+                      )
+                    }
+                    {match.courtName && showCourtNameInTourTitleRow && 
+                      <span className={styles["top__court__text"]}>
+                        {match.courtName}
+                      </span>
+                    }
+                  </span>
                 </div>
               )}
               {match.eventTitle && (
@@ -370,27 +378,34 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                   <span className={styles["header--text"]}>
                     {match.eventTitle}
                   </span>
-                  {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3 || (match.matchStatus === 4 && match.matchCompletedType === 6)) &&
-                    (
-                      match.matchStatus === 2 ?
-                        <span className={styles['live__text']}>
-                          &#x2022;
-                          LIVE
-                        </span> :
-                      match.matchStatus === 3 ?
-                        <span className={styles['delayed__text']}>DELAYED</span> : 
-                        (match.matchStatus === 4 && match.matchCompletedType === 6) ? 
-                        <span className={styles['canceled__text']}>CANCELED</span> : null
-                    )
-                  }
+                  <span className={styles["badges--wrapper"]}>
+                    {!match.tournamentTitle && (match.matchStatus === 2 || match.matchStatus === 3 || (match.matchStatus === 4 && match.matchCompletedType === 6)) &&
+                      (
+                        match.matchStatus === 2 ?
+                          <span className={styles['live__text']}>
+                            &#x2022;
+                            LIVE
+                          </span> :
+                        match.matchStatus === 3 ?
+                          <span className={styles['delayed__text']}>DELAYED</span> : 
+                          (match.matchStatus === 4 && match.matchCompletedType === 6) ? 
+                          <span className={styles['canceled__text']}>CANCELED</span> : null
+                      )
+                    }
+                    {match.courtName && showCourtNameInTourTitleRow && 
+                      <span className={styles["top__court__text"]}>
+                        {match.courtName}
+                      </span>
+                    }
+                </span>
                 </div>
               )}
             </div>
           )}
-          {(match.courtName || match.roundNumber || match.matchTime || match.detailsURL) && (
+          {((match.courtName && !showCourtNameInTourTitleRow) || match.roundNumber || match.matchTime || match.detailsURL) && (
             <div className={styles["content--info"]}>
               <div className={styles["info--inner"]}>
-                {match.courtName && (
+                {match.courtName && !showCourtNameInTourTitleRow && (
                   <span className={styles["info--item"]}>
                     {match.courtName}
                   </span>

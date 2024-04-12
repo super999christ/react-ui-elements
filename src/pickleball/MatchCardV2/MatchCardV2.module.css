@@ -214,6 +214,14 @@
   @apply text-xs
 }
 
+.badges--wrapper {
+  @apply flex justify-end gap-1.5;
+}
+
+.top__court__text {
+  @apply inline-flex text-[10px] justify-center h-[17px] bg-[#333] leading-[18px] rounded-xl px-1.5 text-white not-italic font-semibold align-middle;
+}
+
 .live__text {
   @apply inline-flex text-[10px] justify-center h-[17px] min-w-[50px] bg-[#E31B54] leading-[18px] rounded-xl px-1.5 text-white not-italic font-semibold align-middle;
 }
