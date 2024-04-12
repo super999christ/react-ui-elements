@@ -1,3 +1,15 @@
+# [1.35.0](https://github.com/pickleballinc/react-ui/compare/v1.34.3...v1.35.0) (2024-04-12)
+
+
+### Bug Fixes
+
+* disable double showing the courtname if both tourtitle and eventitle exist ([b6dab25](https://github.com/pickleballinc/react-ui/commit/b6dab2547d31836a30268e7857e169f2010da5d1))
+
+
+### Features
+
+* show courtname after live/delayed badge in tour/event title row at the top ([35d849d](https://github.com/pickleballinc/react-ui/commit/35d849db4d3e153d2f5afe112979f833efa4e403))
+
 ## [1.34.3](https://github.com/pickleballinc/react-ui/compare/v1.34.2...v1.34.3) (2024-03-22)
 
 
