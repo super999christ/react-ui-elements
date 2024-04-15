@@ -1,3 +1,10 @@
+## [1.35.2](https://github.com/pickleballinc/react-ui/compare/v1.35.1...v1.35.2) (2024-04-15)
+
+
+### Bug Fixes
+
+* add timezone abbreviation after matchtime in matchinfo row ([75bae3a](https://github.com/pickleballinc/react-ui/commit/75bae3aa5293e010373560959a503440a0f15e6d))
+
 ## [1.35.1](https://github.com/pickleballinc/react-ui/compare/v1.35.0...v1.35.1) (2024-04-12)
 
 
