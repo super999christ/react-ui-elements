@@ -417,7 +417,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 )}
                 {match.matchTime && (
                   <span className={styles["info--item"]}>
-                    {match.matchTime}
+                    {`${match.matchTime || ""} ${match.timezoneAbbreviation || ""}`}
                   </span>
                 )}
               </div>
