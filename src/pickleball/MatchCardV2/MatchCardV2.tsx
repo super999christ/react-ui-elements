@@ -365,7 +365,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                           <span className={styles['canceled__text']}>CANCELED</span> : null
                       )
                     }
-                    {match.courtName && showCourtNameInTourTitleRow && 
+                    {match.courtName && showCourtNameInTourTitleRow && match.matchStatus !== 4 &&
                       <span className={styles["top__court__text"]}>
                         {match.courtName}
                       </span>
@@ -392,7 +392,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                           <span className={styles['canceled__text']}>CANCELED</span> : null
                       )
                     }
-                    {!match.tournamentTitle && match.courtName && showCourtNameInTourTitleRow && 
+                    {!match.tournamentTitle && match.courtName && showCourtNameInTourTitleRow && match.matchStatus !== 4 &&
                       <span className={styles["top__court__text"]}>
                         {match.courtName}
                       </span>
