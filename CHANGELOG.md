@@ -1,3 +1,10 @@
+## [1.35.4](https://github.com/pickleballinc/react-ui/compare/v1.35.3...v1.35.4) (2024-04-16)
+
+
+### Bug Fixes
+
+* hide courtname in tourtitle/eventitle row for matches that are completed ([5f0236c](https://github.com/pickleballinc/react-ui/commit/5f0236c69345d12e65b6a03121c371a29556114f))
+
 ## [1.35.3](https://github.com/pickleballinc/react-ui/compare/v1.35.2...v1.35.3) (2024-04-16)
 
 
