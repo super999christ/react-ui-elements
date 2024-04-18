@@ -175,7 +175,7 @@
 }
 
 .scores {
-  @apply relative text-sm leading-5 font-bold inline-flex justify-center items-center w-[26px] border-l border-gray-100;
+  @apply relative text-sm leading-5 font-bold inline-flex flex-col justify-center items-center w-[26px] border-l border-gray-100;
 }
 
 .match-card--compact .scores {

@@ -110,14 +110,10 @@ interface TeamInfoRowProps {
   compact?: boolean;
   matchStatus?: number;
   winnerExists?: boolean;
-  gameOneEndDate?: Date;
-  gameTwoEndDate?: Date;
-  gameThreeEndDate?: Date;
-  gameFourEndDate?: Date;
-  gameFiveEndDate?: Date;
   playerOneIsServer?: boolean;
   playerTwoIsServer?: boolean;
   secondServerDot?: boolean;
+  teamOne?: boolean;
 }
 
 const TeamInfoRow = ({
@@ -127,14 +123,10 @@ const TeamInfoRow = ({
   compact,
   matchStatus,
   winnerExists,
-  gameOneEndDate,
-  gameTwoEndDate,
-  gameThreeEndDate,
-  gameFourEndDate,
-  gameFiveEndDate,
   playerOneIsServer,
   playerTwoIsServer,
   secondServerDot,
+  teamOne,
 }: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
     [styles["avatar--loser"]]: winnerExists && team.isWinner !== undefined && !team.isWinner,
@@ -228,31 +220,26 @@ const TeamInfoRow = ({
       {team.scores.length > 0 && (
         <div className={styles["scores-container"]}>
           {team.scores.map((score, index) => {
-            const value =
-              score === 0 && oppositeTeam.scores[index] === 0 ? "-" : score;
-            let isGameOver = false;
-  
-            if (matchStatus === 4 ){
-              isGameOver = true;
-            } else if (index === 0 && gameOneEndDate) {
-              isGameOver = true;
-            } else if (index === 1 && gameTwoEndDate) {
-              isGameOver = true;
-            } else if (index === 2 && gameThreeEndDate) {
-              isGameOver = true;
-            } else if (index === 3 && gameFourEndDate) {
-              isGameOver = true;
-            } else if (index === 4 && gameFiveEndDate) {
-              isGameOver = true;
-            }
+            const oppositeTeamScore = oppositeTeam.scores[index];
+            let value = score === 0 && oppositeTeamScore === 0 ? "-" : `${score}`;
 
-            const isGameWinner = score > oppositeTeam.scores[index];
+            const gameStatus = team.gamesStatus && team.gamesStatus[index];
+            const statusLabel = teamOne 
+              ? gameStatus === 2 ? 'FF' : gameStatus === 3 ? 'RET' :gameStatus === 4 ? 'WD' : ''
+                : gameStatus === 7 ? 'FF' : gameStatus === 8 ? 'RET' :gameStatus === 9 ? 'WD' : '';
 
             let isPreviousGameWinner = false;
             
             if (index > 0) {
-              isPreviousGameWinner = team.scores[index - 1] > oppositeTeam.scores[index - 1];
+              const teamPreviousScore = team.scores[index - 1];
+              const oppositeTeamPreviousScore = oppositeTeam.scores[index - 1];
+
+              isPreviousGameWinner = teamPreviousScore > oppositeTeamPreviousScore;
             }
+
+            let isGameOver = value !== '-' && oppositeTeamScore !== undefined && Math.abs(score - oppositeTeamScore) >= 2 && (score >= 11 || oppositeTeamScore >= 11);
+  
+            const isGameWinner = value !== '-' && score > oppositeTeam.scores[index];
 
             const scoreClasses = clsx(styles["scores"], {
               [styles["scores-winner"]]: isGameOver && isGameWinner,
@@ -268,6 +255,7 @@ const TeamInfoRow = ({
                 ) : (
                   value
                 )}
+                {statusLabel && <span>{statusLabel}</span>}
               </div>
             );
           })}
@@ -435,14 +423,10 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 compact={compact}
                 matchStatus={match.matchStatus}
                 winnerExists={match.team1.isWinner || match.team2.isWinner}
-                gameOneEndDate={match.gameOneEndDate}
-                gameTwoEndDate={match.gameTwoEndDate}
-                gameThreeEndDate={match.gameThreeEndDate}
-                gameFourEndDate={match.gameFourEndDate}
-                gameFiveEndDate={match.gameFiveEndDate}
                 playerOneIsServer={match.server === 1 && match.serverFromTeam === 1}
                 playerTwoIsServer={match.server === 1 && match.serverFromTeam === 2}
                 secondServerDot={match.server === 1 && match.currentServingNumber === 2}
+                teamOne
               />
               <TeamInfoRow
                 team={match.team2}
@@ -451,11 +435,6 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 compact={compact}
                 matchStatus={match.matchStatus}
                 winnerExists={match.team1.isWinner || match.team2.isWinner}
-                gameOneEndDate={match.gameOneEndDate}
-                gameTwoEndDate={match.gameTwoEndDate}
-                gameThreeEndDate={match.gameThreeEndDate}
-                gameFourEndDate={match.gameFourEndDate}
-                gameFiveEndDate={match.gameFiveEndDate}
                 playerOneIsServer={match.server === 2 && match.serverFromTeam === 1}
                 playerTwoIsServer={match.server === 2 && match.serverFromTeam === 2}
                 secondServerDot={match.server === 2 && match.currentServingNumber === 2}

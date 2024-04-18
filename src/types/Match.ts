@@ -13,6 +13,7 @@ export interface MatchTeam {
   retired?: boolean;
   withdrawn?: boolean;
   scores: number[];
+  gamesStatus?: number[];
 }
 
 export interface Match {
@@ -20,11 +21,6 @@ export interface Match {
   courtName?: string;
   eventTitle?: string;
   detailsURL?: string;
-  gameOneEndDate?: Date;
-  gameTwoEndDate?: Date;
-  gameThreeEndDate?: Date;
-  gameFourEndDate?: Date;
-  gameFiveEndDate?: Date;
   matchNumber?: number;
   matchTimeStart?: string;
   matchStatus?: number;
@@ -39,7 +35,7 @@ export interface Match {
   currentServingNumber?: number;
   matchCompletedType?: number;
 }
-/*
+/* mathStatus:
   From protos:
   UNDEFINED_MATCH_STATUS = 0,
   SCHEDULED_MATCH_STATUS = 1,

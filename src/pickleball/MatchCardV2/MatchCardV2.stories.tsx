@@ -1184,6 +1184,1050 @@ export const DuoCanceled: Story = {
   }
 };
 
+export const DuoTeamOneFFGameOne: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [0, 0, 0],
+        gamesStatus: [2, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [0, 0, 0],
+        gamesStatus: [0, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneFFGameTwo: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [11, 0, 0],
+        gamesStatus: [5, 2, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [7, 0, 0],
+        gamesStatus: [5, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneFFGameThree: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [11, 10, 0],
+        gamesStatus: [5, 5, 2]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [7, 12, 0],
+        gamesStatus: [5, 5, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoFFDuringGameOne: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [7, 0, 0],
+        gamesStatus: [0, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [6, 0, 0],
+        gamesStatus: [7, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoFFDuringGameTwo: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [7, 9, 0],
+        gamesStatus: [5, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [11, 8, 0],
+        gamesStatus: [5, 7, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoFFDuringGameThree: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 2,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [7, 12, 10],
+        gamesStatus: [5, 5, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [11, 10, 10],
+        gamesStatus: [5, 5, 7]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneWDGameOne: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [0, 0, 0],
+        gamesStatus: [4, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [0, 0, 0],
+        gamesStatus: [0, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneWDGameTwo: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [11, 0, 0],
+        gamesStatus: [5, 4, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [7, 0, 0],
+        gamesStatus: [5, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneWDGameThree: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [11, 10, 0],
+        gamesStatus: [5, 5, 4]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [7, 12, 0],
+        gamesStatus: [5, 5, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoWDDuringGameOne: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [1, 0, 0],
+        gamesStatus: [0, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [1, 0, 0],
+        gamesStatus: [9, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoWDDuringGameTwo: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [7, 2, 0],
+        gamesStatus: [5, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [11, 0, 0],
+        gamesStatus: [5, 9, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoWDDuringGameThree: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 4,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [7, 12, 13],
+        gamesStatus: [5, 5, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [11, 10, 14],
+        gamesStatus: [5, 5, 9]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneRETDuringGameOne: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [1, 0, 0],
+        gamesStatus: [3, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [4, 0, 0],
+        gamesStatus: [0, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneRETDuringGameTwo: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [7, 8, 0],
+        gamesStatus: [5, 3, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [11, 2, 0],
+        gamesStatus: [5, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamOneRETDuringGameThree: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: false,
+        scores: [7, 12, 1],
+        gamesStatus: [5, 5, 3]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: true,
+        scores: [11, 10, 1],
+        gamesStatus: [5, 5, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoRETGameOne: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [0, 0, 0],
+        gamesStatus: [0, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [0, 0, 0],
+        gamesStatus: [8, 0, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoRETGameTwo: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [11, 0, 0],
+        gamesStatus: [5, 0, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [7, 0, 0],
+        gamesStatus: [5, 8, 0]
+      }
+    }
+  }
+};
+
+export const DuoTeamTwoRETGameThree: Story = {
+  args: {
+    shortenName: true,
+    compact: true,
+    match: {
+      id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
+      timezoneAbbreviation: 'EST',
+      matchTimeStart: 'Jun 26 - 12:50 AM ',
+      matchTime: '12:50 AM ',
+      eventTitle: '3 - Mens Doubles Skill 4.5+ (Any Age)',
+      courtName: 'Court 5',
+      roundNumber: 'Round 4',
+      matchStatus: 4,
+      matchCompletedType: 3,
+      team1: {
+        players: [{
+          playerId: '613f1725-0569-4a20-a856-93da9daa9478',
+          firstName: 'Matt',
+          lastName: 'Glatt',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '342B4AC2-997A-4FBE-A097-7E0A93CD758E',
+          firstName: 'Spencer',
+          lastName: 'Hart',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 70,
+        isWinner: true,
+        scores: [11, 10, 0],
+        gamesStatus: [5, 5, 0]
+      },
+      team2: {
+        players: [{
+          playerId: '77E01EA4-4DB0-4914-BE3D-DD65E5A28C8C',
+          firstName: 'Kevin',
+          lastName: 'Coutant',
+          suffixName: '',
+          image: ''
+        },
+        {
+          playerId: '4DB144E2-ADBB-4CF7-A576-AE1AE3E87E64',
+          firstName: 'Mitch',
+          lastName: 'Pomerance',
+          suffixName: '',
+          image: ''
+        }],
+        percentage: 30,
+        isWinner: false,
+        scores: [7, 12, 0],
+        gamesStatus: [5, 5, 8]
+      }
+    }
+  }
+};
+
 export const DuoHideMatchTimeStartRowOnPhones: Story = {
   args: {
     shortenName: true,
