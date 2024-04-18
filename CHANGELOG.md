@@ -1,3 +1,11 @@
+## [1.35.5](https://github.com/pickleballinc/react-ui/compare/v1.35.4...v1.35.5) (2024-04-18)
+
+
+### Bug Fixes
+
+* adapted the matchcardv2 green scores with game points instead of gameenddates (since they're often found empty) and added ff, ret and wd labels ([b2c051e](https://github.com/pickleballinc/react-ui/commit/b2c051e62d760474ab5fbd53d25af23ec10943a3))
+* match type ([02ed893](https://github.com/pickleballinc/react-ui/commit/02ed893646aaa5e6990ac13d543137d06e7c2cec))
+
 ## [1.35.4](https://github.com/pickleballinc/react-ui/compare/v1.35.3...v1.35.4) (2024-04-16)
 
 
