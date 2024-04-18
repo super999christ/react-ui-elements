@@ -40,7 +40,7 @@ export interface Match {
   matchCompletedType?: number;
   gamesStatus?: number[];
 }
-/* mathStatus:
+/* mathStatus: 
   From protos:
   UNDEFINED_MATCH_STATUS = 0,
   SCHEDULED_MATCH_STATUS = 1,
