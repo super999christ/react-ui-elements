@@ -1,3 +1,11 @@
+## [1.35.6](https://github.com/pickleballinc/react-ui/compare/v1.35.5...v1.35.6) (2024-04-18)
+
+
+### Bug Fixes
+
+* adapted gamesStatus in Match type ([8670608](https://github.com/pickleballinc/react-ui/commit/867060839f043743ad443de83000aa63e3f10dc0))
+* adapted gamesStatus in Match type ([ec194c3](https://github.com/pickleballinc/react-ui/commit/ec194c337b2a96fe6cbee961f5574cbad7051aaa))
+
 ## [1.35.5](https://github.com/pickleballinc/react-ui/compare/v1.35.4...v1.35.5) (2024-04-18)
 
 
