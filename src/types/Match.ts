@@ -13,7 +13,6 @@ export interface MatchTeam {
   retired?: boolean;
   withdrawn?: boolean;
   scores: number[];
-  gamesStatus?: number[];
 }
 
 export interface Match {
@@ -39,6 +38,7 @@ export interface Match {
   serverFromTeam?: number;
   currentServingNumber?: number;
   matchCompletedType?: number;
+  gamesStatus?: number[];
 }
 /* mathStatus:
   From protos:

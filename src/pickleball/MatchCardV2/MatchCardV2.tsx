@@ -114,6 +114,7 @@ interface TeamInfoRowProps {
   playerTwoIsServer?: boolean;
   secondServerDot?: boolean;
   teamOne?: boolean;
+  gamesStatus?: number[];
 }
 
 const TeamInfoRow = ({
@@ -127,6 +128,7 @@ const TeamInfoRow = ({
   playerTwoIsServer,
   secondServerDot,
   teamOne,
+  gamesStatus,
 }: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
     [styles["avatar--loser"]]: winnerExists && team.isWinner !== undefined && !team.isWinner,
@@ -223,10 +225,13 @@ const TeamInfoRow = ({
             const oppositeTeamScore = oppositeTeam.scores[index];
             let value = score === 0 && oppositeTeamScore === 0 ? "-" : `${score}`;
 
-            const gameStatus = team.gamesStatus && team.gamesStatus[index];
-            const statusLabel = teamOne 
-              ? gameStatus === 2 ? 'FF' : gameStatus === 3 ? 'RET' :gameStatus === 4 ? 'WD' : ''
-                : gameStatus === 7 ? 'FF' : gameStatus === 8 ? 'RET' :gameStatus === 9 ? 'WD' : '';
+            const gameStatus = gamesStatus && gamesStatus[index];
+            const statusLabel = 
+              gameStatus !== undefined 
+                ? teamOne 
+                  ? gameStatus === 2 ? 'FF' : gameStatus === 3 ? 'RET' :gameStatus === 4 ? 'WD' : ''
+                    : gameStatus === 7 ? 'FF' : gameStatus === 8 ? 'RET' :gameStatus === 9 ? 'WD' : '' 
+                    : '';
 
             let isPreviousGameWinner = false;
             
@@ -426,6 +431,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 playerOneIsServer={match.server === 1 && match.serverFromTeam === 1}
                 playerTwoIsServer={match.server === 1 && match.serverFromTeam === 2}
                 secondServerDot={match.server === 1 && match.currentServingNumber === 2}
+                gamesStatus={match.gamesStatus}
                 teamOne
               />
               <TeamInfoRow
@@ -438,6 +444,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 playerOneIsServer={match.server === 2 && match.serverFromTeam === 1}
                 playerTwoIsServer={match.server === 2 && match.serverFromTeam === 2}
                 secondServerDot={match.server === 2 && match.currentServingNumber === 2}
+                gamesStatus={match.gamesStatus}
               />
             </>
           )}

@@ -1198,6 +1198,7 @@ export const DuoTeamOneFFGameOne: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 2,
+      gamesStatus: [2, 0, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1215,8 +1216,7 @@ export const DuoTeamOneFFGameOne: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [0, 0, 0],
-        gamesStatus: [2, 0, 0]
+        scores: [0, 0, 0]
       },
       team2: {
         players: [{
@@ -1235,8 +1235,7 @@ export const DuoTeamOneFFGameOne: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [0, 0, 0],
-        gamesStatus: [0, 0, 0]
+        scores: [0, 0, 0]
       }
     }
   }
@@ -1256,6 +1255,7 @@ export const DuoTeamOneFFGameTwo: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 2,
+      gamesStatus: [5, 2, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1273,8 +1273,7 @@ export const DuoTeamOneFFGameTwo: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [11, 0, 0],
-        gamesStatus: [5, 2, 0]
+        scores: [11, 0, 0]
       },
       team2: {
         players: [{
@@ -1293,8 +1292,7 @@ export const DuoTeamOneFFGameTwo: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [7, 0, 0],
-        gamesStatus: [5, 0, 0]
+        scores: [7, 0, 0]
       }
     }
   }
@@ -1314,6 +1312,7 @@ export const DuoTeamOneFFGameThree: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 2,
+      gamesStatus: [5, 5, 2],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1331,8 +1330,7 @@ export const DuoTeamOneFFGameThree: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [11, 10, 0],
-        gamesStatus: [5, 5, 2]
+        scores: [11, 10, 0]
       },
       team2: {
         players: [{
@@ -1351,8 +1349,7 @@ export const DuoTeamOneFFGameThree: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [7, 12, 0],
-        gamesStatus: [5, 5, 0]
+        scores: [7, 12, 0]
       }
     }
   }
@@ -1372,6 +1369,7 @@ export const DuoTeamTwoFFDuringGameOne: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 2,
+      gamesStatus: [7, 0, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1389,8 +1387,7 @@ export const DuoTeamTwoFFDuringGameOne: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [7, 0, 0],
-        gamesStatus: [0, 0, 0]
+        scores: [7, 0, 0]
       },
       team2: {
         players: [{
@@ -1409,8 +1406,7 @@ export const DuoTeamTwoFFDuringGameOne: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [6, 0, 0],
-        gamesStatus: [7, 0, 0]
+        scores: [6, 0, 0]
       }
     }
   }
@@ -1430,6 +1426,7 @@ export const DuoTeamTwoFFDuringGameTwo: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 2,
+      gamesStatus: [5, 7, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1447,8 +1444,7 @@ export const DuoTeamTwoFFDuringGameTwo: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [7, 9, 0],
-        gamesStatus: [5, 0, 0]
+        scores: [7, 9, 0]
       },
       team2: {
         players: [{
@@ -1467,8 +1463,7 @@ export const DuoTeamTwoFFDuringGameTwo: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [11, 8, 0],
-        gamesStatus: [5, 7, 0]
+        scores: [11, 8, 0]
       }
     }
   }
@@ -1488,6 +1483,7 @@ export const DuoTeamTwoFFDuringGameThree: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 2,
+      gamesStatus: [5, 5, 7],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1505,8 +1501,7 @@ export const DuoTeamTwoFFDuringGameThree: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [7, 12, 10],
-        gamesStatus: [5, 5, 0]
+        scores: [7, 12, 10]
       },
       team2: {
         players: [{
@@ -1525,8 +1520,7 @@ export const DuoTeamTwoFFDuringGameThree: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [11, 10, 10],
-        gamesStatus: [5, 5, 7]
+        scores: [11, 10, 10]
       }
     }
   }
@@ -1546,6 +1540,7 @@ export const DuoTeamOneWDGameOne: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 4,
+      gamesStatus: [4, 0, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1563,8 +1558,7 @@ export const DuoTeamOneWDGameOne: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [0, 0, 0],
-        gamesStatus: [4, 0, 0]
+        scores: [0, 0, 0]
       },
       team2: {
         players: [{
@@ -1583,8 +1577,7 @@ export const DuoTeamOneWDGameOne: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [0, 0, 0],
-        gamesStatus: [0, 0, 0]
+        scores: [0, 0, 0]
       }
     }
   }
@@ -1604,6 +1597,7 @@ export const DuoTeamOneWDGameTwo: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 4,
+      gamesStatus: [5, 4, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1621,8 +1615,7 @@ export const DuoTeamOneWDGameTwo: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [11, 0, 0],
-        gamesStatus: [5, 4, 0]
+        scores: [11, 0, 0]
       },
       team2: {
         players: [{
@@ -1641,8 +1634,7 @@ export const DuoTeamOneWDGameTwo: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [7, 0, 0],
-        gamesStatus: [5, 0, 0]
+        scores: [7, 0, 0]
       }
     }
   }
@@ -1662,6 +1654,7 @@ export const DuoTeamOneWDGameThree: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 4,
+      gamesStatus: [5, 5, 4],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1679,8 +1672,7 @@ export const DuoTeamOneWDGameThree: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [11, 10, 0],
-        gamesStatus: [5, 5, 4]
+        scores: [11, 10, 0]
       },
       team2: {
         players: [{
@@ -1699,8 +1691,7 @@ export const DuoTeamOneWDGameThree: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [7, 12, 0],
-        gamesStatus: [5, 5, 0]
+        scores: [7, 12, 0]
       }
     }
   }
@@ -1720,6 +1711,7 @@ export const DuoTeamTwoWDDuringGameOne: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 4,
+      gamesStatus: [9, 0, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1737,8 +1729,7 @@ export const DuoTeamTwoWDDuringGameOne: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [1, 0, 0],
-        gamesStatus: [0, 0, 0]
+        scores: [1, 0, 0]
       },
       team2: {
         players: [{
@@ -1757,8 +1748,7 @@ export const DuoTeamTwoWDDuringGameOne: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [1, 0, 0],
-        gamesStatus: [9, 0, 0]
+        scores: [1, 0, 0]
       }
     }
   }
@@ -1778,6 +1768,7 @@ export const DuoTeamTwoWDDuringGameTwo: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 4,
+      gamesStatus: [5, 9, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1795,8 +1786,7 @@ export const DuoTeamTwoWDDuringGameTwo: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [7, 2, 0],
-        gamesStatus: [5, 0, 0]
+        scores: [7, 2, 0]
       },
       team2: {
         players: [{
@@ -1815,8 +1805,7 @@ export const DuoTeamTwoWDDuringGameTwo: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [11, 0, 0],
-        gamesStatus: [5, 9, 0]
+        scores: [11, 0, 0]
       }
     }
   }
@@ -1836,6 +1825,7 @@ export const DuoTeamTwoWDDuringGameThree: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 4,
+      gamesStatus: [5, 5, 9],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1853,8 +1843,7 @@ export const DuoTeamTwoWDDuringGameThree: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [7, 12, 13],
-        gamesStatus: [5, 5, 0]
+        scores: [7, 12, 13]
       },
       team2: {
         players: [{
@@ -1873,8 +1862,7 @@ export const DuoTeamTwoWDDuringGameThree: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [11, 10, 14],
-        gamesStatus: [5, 5, 9]
+        scores: [11, 10, 14]
       }
     }
   }
@@ -1894,6 +1882,7 @@ export const DuoTeamOneRETDuringGameOne: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 3,
+      gamesStatus: [3, 0, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1911,8 +1900,7 @@ export const DuoTeamOneRETDuringGameOne: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [1, 0, 0],
-        gamesStatus: [3, 0, 0]
+        scores: [1, 0, 0]
       },
       team2: {
         players: [{
@@ -1931,8 +1919,7 @@ export const DuoTeamOneRETDuringGameOne: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [4, 0, 0],
-        gamesStatus: [0, 0, 0]
+        scores: [4, 0, 0]
       }
     }
   }
@@ -1952,6 +1939,7 @@ export const DuoTeamOneRETDuringGameTwo: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 3,
+      gamesStatus: [5, 3, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -1969,8 +1957,7 @@ export const DuoTeamOneRETDuringGameTwo: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [7, 8, 0],
-        gamesStatus: [5, 3, 0]
+        scores: [7, 8, 0]
       },
       team2: {
         players: [{
@@ -1989,8 +1976,7 @@ export const DuoTeamOneRETDuringGameTwo: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [11, 2, 0],
-        gamesStatus: [5, 0, 0]
+        scores: [11, 2, 0]
       }
     }
   }
@@ -2010,6 +1996,7 @@ export const DuoTeamOneRETDuringGameThree: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 3,
+      gamesStatus: [5, 5, 3],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -2027,8 +2014,7 @@ export const DuoTeamOneRETDuringGameThree: Story = {
         }],
         percentage: 70,
         isWinner: false,
-        scores: [7, 12, 1],
-        gamesStatus: [5, 5, 3]
+        scores: [7, 12, 1]
       },
       team2: {
         players: [{
@@ -2047,8 +2033,7 @@ export const DuoTeamOneRETDuringGameThree: Story = {
         }],
         percentage: 30,
         isWinner: true,
-        scores: [11, 10, 1],
-        gamesStatus: [5, 5, 0]
+        scores: [11, 10, 1]
       }
     }
   }
@@ -2068,6 +2053,7 @@ export const DuoTeamTwoRETGameOne: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 3,
+      gamesStatus: [8, 0, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -2085,8 +2071,7 @@ export const DuoTeamTwoRETGameOne: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [0, 0, 0],
-        gamesStatus: [0, 0, 0]
+        scores: [0, 0, 0]
       },
       team2: {
         players: [{
@@ -2105,8 +2090,7 @@ export const DuoTeamTwoRETGameOne: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [0, 0, 0],
-        gamesStatus: [8, 0, 0]
+        scores: [0, 0, 0]
       }
     }
   }
@@ -2126,6 +2110,7 @@ export const DuoTeamTwoRETGameTwo: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 3,
+      gamesStatus: [5, 8, 0],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -2143,8 +2128,7 @@ export const DuoTeamTwoRETGameTwo: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [11, 0, 0],
-        gamesStatus: [5, 0, 0]
+        scores: [11, 0, 0]
       },
       team2: {
         players: [{
@@ -2163,8 +2147,7 @@ export const DuoTeamTwoRETGameTwo: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [7, 0, 0],
-        gamesStatus: [5, 8, 0]
+        scores: [7, 0, 0]
       }
     }
   }
@@ -2184,6 +2167,7 @@ export const DuoTeamTwoRETGameThree: Story = {
       roundNumber: 'Round 4',
       matchStatus: 4,
       matchCompletedType: 3,
+      gamesStatus: [5, 5, 8],
       team1: {
         players: [{
           playerId: '613f1725-0569-4a20-a856-93da9daa9478',
@@ -2201,8 +2185,7 @@ export const DuoTeamTwoRETGameThree: Story = {
         }],
         percentage: 70,
         isWinner: true,
-        scores: [11, 10, 0],
-        gamesStatus: [5, 5, 0]
+        scores: [11, 10, 0]
       },
       team2: {
         players: [{
@@ -2221,8 +2204,7 @@ export const DuoTeamTwoRETGameThree: Story = {
         }],
         percentage: 30,
         isWinner: false,
-        scores: [7, 12, 0],
-        gamesStatus: [5, 5, 8]
+        scores: [7, 12, 0]
       }
     }
   }
