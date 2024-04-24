@@ -36,6 +36,26 @@ export const Primary: Story = {
   },
 };
 
+export const CustomHeight: Story = {
+  render: () => {
+    const options = [
+      { value: "chocolate", label: "Chocolate" },
+      { value: "strawberry", label: "Strawberry" },
+      { value: "vanilla", label: "Vanilla" },
+    ];
+
+    return (
+      <Select
+        id="example_1"
+        options={options}
+        menuPortalTarget={document.body}
+        label="This is a select component"
+        customHeight={32}
+      />
+    );
+  },
+};
+
 export const FullExampleWithState: Story = {
   render: () => {
     const options = [
@@ -186,6 +206,7 @@ export const MultiSelectFullExampleWithState2: Story = {
           }
           isMulti
           menuPortalTarget={document.body}
+          customHeight={32}
         />
       </>
     );

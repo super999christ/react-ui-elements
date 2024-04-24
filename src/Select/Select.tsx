@@ -12,6 +12,7 @@ export interface SelectProps extends ReactSelectProps {
   label?: string;
   noBorder?: boolean;
   noSeparator?: boolean;
+  customHeight?: number;
 }
 
 const CaretDownIcon = () => {
@@ -81,6 +82,8 @@ const Select = ({ ...props }: SelectProps) => {
               borderRadius: 4,
               fontSize: 14,
               fontWeight: 400,
+              height: props.customHeight ? `${props.customHeight}px` : base.height,
+              minHeight: props.customHeight ? `${props.customHeight}px` : base.minHeight,
             };
           },
           placeholder(base) {
@@ -108,6 +111,10 @@ const Select = ({ ...props }: SelectProps) => {
               backgroundColor: "rgb(234 236 240)",
             };
           },
+          indicatorsContainer: (base, state) => ({
+            ...base,
+            height: props.customHeight ? `${props.customHeight}px` : base.height,
+          }),
           menu(base) {
             return {
               ...base,
@@ -125,6 +132,13 @@ const Select = ({ ...props }: SelectProps) => {
               fontSize: 14,
             };
           },
+          singleValue(base) {
+            return {
+              ...base,
+              height: props.customHeight ? `${props.customHeight}px` : base.height,
+              lineHeight: props.customHeight ? `${props.customHeight}px` : base.lineHeight,
+            };
+          },
           multiValue(base) {
             return {
               ...base,
@@ -132,6 +146,7 @@ const Select = ({ ...props }: SelectProps) => {
               borderRadius: 20,
               display: "inline-flex",
               alignItems: "center",
+              marginTop: props.customHeight ? '0px' : base.marginTop,
             };
           },
           multiValueLabel(base) {
@@ -151,7 +166,8 @@ const Select = ({ ...props }: SelectProps) => {
           valueContainer(base) {
             return {
               ...base,
-              padding: props.noSeparator ? '0 0 0 4px' : base.padding,
+              padding: props.noSeparator ? '0 0 0 4px' : props.customHeight ? '0 8px' : base.padding,
+              height: props.customHeight ? `${props.customHeight}px` : base.height,
             }
           },
           option(base, state) {
@@ -171,6 +187,7 @@ const Select = ({ ...props }: SelectProps) => {
                   ? "#EEE9FA"
                   : "transparent",
               },
+              padding: props.customHeight ? '5px 8px' : base.padding,
             };
           },
         }}
