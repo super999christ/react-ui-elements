@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/pickleballinc/react-ui/compare/v1.35.6...v1.36.0) (2024-04-24)
+
+
+### Features
+
+* custom height prop added to the select component ([8fcb543](https://github.com/pickleballinc/react-ui/commit/8fcb54381edbcfc0f25f048dcce3c6e97f4d0686))
+
 ## [1.35.6](https://github.com/pickleballinc/react-ui/compare/v1.35.5...v1.35.6) (2024-04-18)
 
 
