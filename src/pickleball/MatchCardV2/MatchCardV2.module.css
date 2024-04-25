@@ -206,12 +206,20 @@
   @apply h-[26px];
 }
 
+.footer--container {
+  @apply flex flex-row gap-1 items-center;
+}
+
 .footer--time {
   @apply flex items-center text-sm gap-1;
 }
 
-.match-card--compact .footer--time {
-  @apply text-xs
+.footer--round {
+  @apply text-sm border-l border-solid pl-1 border-gray-300;
+}
+
+.match-card--compact .footer--time, .match-card--compact .footer--round {
+  @apply text-xs;
 }
 
 .badges--wrapper {

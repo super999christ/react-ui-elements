@@ -283,12 +283,12 @@ export interface MatchCardV2Props {
   shortenName?: boolean;
   sponsors?: React.ReactNode;
   links?: LinkInterface;
-  showCourtNameInTourTitleRow?: boolean;
+  forTicker: boolean;
 }
 
 const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
   (props, ref) => {
-    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors, links, showCourtNameInTourTitleRow } = props;
+    const { compact, hideMatchTimeStartRowOnPhones, match, shortenName, sponsors, links, forTicker } = props;
     const [showLinks, setShowLinks] = React.useState<boolean>(false);
 
     const cardClasses = clsx(styles["match-card"], {
@@ -358,7 +358,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                           <span className={styles['canceled__text']}>CANCELED</span> : null
                       )
                     }
-                    {match.courtName && showCourtNameInTourTitleRow && match.matchStatus !== 4 &&
+                    {match.courtName && forTicker && match.matchStatus !== 4 &&
                       <span className={styles["top__court__text"]}>
                         {match.courtName}
                       </span>
@@ -385,7 +385,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                           <span className={styles['canceled__text']}>CANCELED</span> : null
                       )
                     }
-                    {!match.tournamentTitle && match.courtName && showCourtNameInTourTitleRow && match.matchStatus !== 4 &&
+                    {!match.tournamentTitle && match.courtName && forTicker && match.matchStatus !== 4 &&
                       <span className={styles["top__court__text"]}>
                         {match.courtName}
                       </span>
@@ -395,10 +395,10 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
               )}
             </div>
           )}
-          {((match.courtName && !showCourtNameInTourTitleRow) || match.roundNumber || match.matchTime || match.detailsURL) && (
+          {((match.courtName && !forTicker) || (match.roundNumber && !forTicker) || match.matchTime || match.detailsURL) && (
             <div className={styles["content--info"]}>
               <div className={styles["info--inner"]}>
-                {match.courtName && !showCourtNameInTourTitleRow && (
+                {match.courtName && !forTicker && (
                   <span className={styles["info--item"]}>
                     {match.courtName}
                   </span>
@@ -450,17 +450,24 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
           )}
           {(match.matchTimeStart || sponsors) && (
             <div className={cardFooterClasses}>
-              {match.matchTimeStart &&
-                <div className={styles["footer--time"]}>
-                  <ClockIcon
-                    width={compact ? 16 : 18}
-                    height={compact ? 16 : 18}
-                  />
-                  {`${match.matchTimeStart || ""} ${
-                    match.timezoneAbbreviation || ""
-                  }`}
-                </div>
-              }
+              <div className={styles["footer--container"]}>
+                {match.matchTimeStart &&
+                  <div className={styles["footer--time"]}>
+                    <ClockIcon
+                      width={compact ? 16 : 18}
+                      height={compact ? 16 : 18}
+                    />
+                    {`${match.matchTimeStart || ""} ${
+                      match.timezoneAbbreviation || ""
+                    }`}
+                  </div>
+                }
+                {match.roundNumber && forTicker &&
+                  <div className={styles["footer--round"]}>
+                    {match.roundNumber}
+                  </div>
+                }
+              </div>
               {sponsors}
             </div>
           )}

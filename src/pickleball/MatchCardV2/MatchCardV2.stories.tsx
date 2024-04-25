@@ -292,7 +292,7 @@ export const DuoLive: Story = {
       matchStatsURL: 'https://pickleball.com',
       liveURL: 'https://youtube.com',
     },
-    showCourtNameInTourTitleRow: true,
+    forTicker: true,
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -355,7 +355,7 @@ export const SingleLiveWithDotsTeamOnePlayerOneFirstServe: Story = {
       matchStatsURL: 'https://pickleball.com',
       liveURL: 'https://youtube.com',
     },
-    showCourtNameInTourTitleRow: true,
+    forTicker: true,
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
@@ -407,7 +407,7 @@ export const SingleLiveWithDotsTeamOnePlayerOneSecondServe: Story = {
       matchStatsURL: 'https://pickleball.com',
       liveURL: 'https://youtube.com',
     },
-    showCourtNameInTourTitleRow: true,
+    forTicker: true,
     match: {
       id: '1dbff42d-ca82-4fcc-846a-f710bf70c5fd',
       timezoneAbbreviation: 'EST',
