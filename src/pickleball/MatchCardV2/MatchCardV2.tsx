@@ -403,7 +403,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                     {match.courtName}
                   </span>
                 )}
-                {match.roundNumber && (
+                {match.roundNumber && !forTicker && (
                   <span className={styles["info--item"]}>
                     {match.roundNumber}
                   </span>
