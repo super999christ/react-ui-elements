@@ -1,3 +1,11 @@
+# [1.38.0](https://github.com/pickleballinc/react-ui/compare/v1.37.1...v1.38.0) (2024-04-25)
+
+
+### Features
+
+* added backup for team ff and wd when gamesStatus array is all zeroes ([717c6da](https://github.com/pickleballinc/react-ui/commit/717c6dacd0da8a0778a5766f8a5caf3cc4ecc0ca))
+* added backup for team ff and wd when gamesStatus array is all zeroes ([d050b0b](https://github.com/pickleballinc/react-ui/commit/d050b0b0a6b3eb42344d0e8ef58c17dbd7f4c8f7))
+
 ## [1.37.1](https://github.com/pickleballinc/react-ui/compare/v1.37.0...v1.37.1) (2024-04-25)
 
 
