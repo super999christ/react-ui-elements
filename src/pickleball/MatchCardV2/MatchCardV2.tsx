@@ -462,7 +462,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                     }`}
                   </div>
                 }
-                {match.roundNumber && forTicker &&
+                {match.roundNumber && forTicker && 
                   <div className={styles["footer--round"]}>
                     {match.roundNumber}
                   </div>
