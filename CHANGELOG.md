@@ -1,3 +1,10 @@
+# [1.39.0](https://github.com/pickleballinc/react-ui/compare/v1.38.0...v1.39.0) (2024-04-25)
+
+
+### Features
+
+* change in alignment of the last row elements when forticker prop is true ([5353f4d](https://github.com/pickleballinc/react-ui/commit/5353f4d72965411c3ac856c3b7ff0c2ea4567fa7))
+
 # [1.38.0](https://github.com/pickleballinc/react-ui/compare/v1.37.1...v1.38.0) (2024-04-25)
 
 
