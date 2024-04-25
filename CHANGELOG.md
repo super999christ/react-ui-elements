@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/pickleballinc/react-ui/compare/v1.36.0...v1.37.0) (2024-04-25)
+
+
+### Features
+
+* added forTicker prop for different look of a matchcard that appears in the ticker ([51b4b6d](https://github.com/pickleballinc/react-ui/commit/51b4b6d3fe852f32ce3a14585f77d4d2c1221009))
+
 # [1.36.0](https://github.com/pickleballinc/react-ui/compare/v1.35.6...v1.36.0) (2024-04-24)
 
 
