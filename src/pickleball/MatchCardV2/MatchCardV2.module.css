@@ -202,7 +202,24 @@
   @apply flex justify-between border-t border-gray-300 px-[6px] h-10;
 }
 
-.match-card--compact .card--footer {
+.card--footer--for--ticker {
+  @apply grid items-center border-t border-gray-300 px-[6px] h-10;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.card--footer--for--ticker .footer--time {
+  @apply text-left whitespace-nowrap overflow-hidden overflow-ellipsis;
+}
+
+.card--footer--for--ticker .footer--round {
+  @apply text-center;
+}
+
+.container .footer--sponsors {
+  @apply text-right whitespace-nowrap overflow-hidden overflow-ellipsis;
+}
+
+.match-card--compact .card--footer, .match-card--compact .card--footer--for--ticker {
   @apply h-[26px];
 }
 
@@ -215,7 +232,11 @@
 }
 
 .footer--round {
-  @apply text-sm border-l border-solid pl-1 border-gray-300;
+  @apply text-sm;
+}
+
+.footer--container > .footer--round {
+    @apply border-l border-solid pl-1 border-gray-300;
 }
 
 .match-card--compact .footer--time, .match-card--compact .footer--round {

@@ -323,6 +323,11 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
       [styles['card--footer--hidden']]: hideMatchTimeStartRowOnPhones,
     });
 
+    const cardFooterForTickerClasses = clsx(styles['card--footer--for--ticker'], {
+      [styles['card--footer--for--ticker--end']]: !match.matchTimeStart && sponsors,
+      [styles['card--footer--hidden']]: hideMatchTimeStartRowOnPhones,
+    });
+
     const detailsClasses = clsx({
       [styles['details--URL']]: !compact,
       [styles['details--URL--compact']]: compact,
@@ -472,8 +477,27 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 matchCompletedType={match.matchCompletedType}
               />
             </>
+          )} 
+          {forTicker && (match.matchTimeStart || sponsors) && (
+            <div className={cardFooterForTickerClasses}>
+              {match.matchTimeStart &&
+                <div className={styles["footer--time"]}>
+                  {`${match.matchTimeStart || ""} ${
+                    match.timezoneAbbreviation || ""
+                  }`}
+                </div>
+              }
+              {match.roundNumber && forTicker && 
+                <div className={styles["footer--round"]}>
+                  {match.roundNumber}
+                </div>
+              }
+              <div className={styles["footer--sponsors"]}>
+                {sponsors}
+              </div>
+            </div>
           )}
-          {(match.matchTimeStart || sponsors) && (
+          {!forTicker && (match.matchTimeStart || sponsors) && (
             <div className={cardFooterClasses}>
               <div className={styles["footer--container"]}>
                 {match.matchTimeStart &&
