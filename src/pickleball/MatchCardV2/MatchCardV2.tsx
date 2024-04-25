@@ -115,6 +115,7 @@ interface TeamInfoRowProps {
   secondServerDot?: boolean;
   teamOne?: boolean;
   gamesStatus?: number[];
+  matchCompletedType?: number;
 }
 
 const TeamInfoRow = ({
@@ -129,6 +130,7 @@ const TeamInfoRow = ({
   secondServerDot,
   teamOne,
   gamesStatus,
+  matchCompletedType,
 }: TeamInfoRowProps) => {
   const avatarClasses = clsx(styles["avatar"], {
     [styles["avatar--loser"]]: winnerExists && team.isWinner !== undefined && !team.isWinner,
@@ -229,17 +231,37 @@ const TeamInfoRow = ({
             const statusLabel = 
               gameStatus !== undefined 
                 ? teamOne 
-                  ? gameStatus === 2 ? 'FF' : gameStatus === 3 ? 'RET' :gameStatus === 4 ? 'WD' : ''
-                    : gameStatus === 7 ? 'FF' : gameStatus === 8 ? 'RET' :gameStatus === 9 ? 'WD' : '' 
+                  ? gameStatus === 2 ? 'FF' : gameStatus === 3 ? 'RET' : gameStatus === 4 ? 'WD' : ''
+                    : gameStatus === 7 ? 'FF' : gameStatus === 8 ? 'RET' : gameStatus === 9 ? 'WD' : '' 
                     : '';
+            let statusMark = '';
 
             let isPreviousGameWinner = false;
+            let previousGameValue = '';
+            let isPreviousGameOver = false;
             
             if (index > 0) {
               const teamPreviousScore = team.scores[index - 1];
               const oppositeTeamPreviousScore = oppositeTeam.scores[index - 1];
 
               isPreviousGameWinner = teamPreviousScore > oppositeTeamPreviousScore;
+              previousGameValue = teamPreviousScore === 0 && oppositeTeamPreviousScore === 0 ? '-' : `${teamPreviousScore}`;
+              isPreviousGameWinner = teamPreviousScore > oppositeTeamPreviousScore;
+              isPreviousGameOver = previousGameValue !== '-' && oppositeTeamPreviousScore !== undefined && Math.abs(teamPreviousScore - oppositeTeamPreviousScore) >= 2 && (teamPreviousScore >= 11 || oppositeTeamPreviousScore >= 11);  
+            } else if (oppositeTeamScore !== undefined && ((score < 11 && oppositeTeamScore < 11) || Math.abs(score - oppositeTeamScore) < 2) && winnerExists && !team.isWinner) {
+              statusMark = matchCompletedType === 2
+                ? 'FF'
+                  : matchCompletedType === 4
+                    ? 'WD': 
+                      '';
+            }
+
+            if (isPreviousGameOver && (value === '-' || (oppositeTeamScore !== undefined && ((score < 11 && oppositeTeamScore < 11) || Math.abs(score - oppositeTeamScore) < 2) && winnerExists && !team.isWinner)) && winnerExists && !team.isWinner && matchCompletedType && [2, 4].includes(matchCompletedType)) {
+              statusMark = matchCompletedType === 2
+                ? 'FF'
+                  : matchCompletedType === 4
+                    ? 'WD': 
+                      '';
             }
 
             let isGameOver = value !== '-' && oppositeTeamScore !== undefined && Math.abs(score - oppositeTeamScore) >= 2 && (score >= 11 || oppositeTeamScore >= 11);
@@ -261,6 +283,7 @@ const TeamInfoRow = ({
                   value
                 )}
                 {statusLabel && <span>{statusLabel}</span>}
+                {!statusLabel && statusMark && <span>{statusMark}</span>}
               </div>
             );
           })}
@@ -433,6 +456,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 secondServerDot={match.server === 1 && match.currentServingNumber === 2}
                 gamesStatus={match.gamesStatus}
                 teamOne
+                matchCompletedType={match.matchCompletedType}
               />
               <TeamInfoRow
                 team={match.team2}
@@ -445,6 +469,7 @@ const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
                 playerTwoIsServer={match.server === 2 && match.serverFromTeam === 2}
                 secondServerDot={match.server === 2 && match.currentServingNumber === 2}
                 gamesStatus={match.gamesStatus}
+                matchCompletedType={match.matchCompletedType}
               />
             </>
           )}
