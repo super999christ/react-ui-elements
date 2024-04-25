@@ -1,3 +1,11 @@
+## [1.37.1](https://github.com/pickleballinc/react-ui/compare/v1.37.0...v1.37.1) (2024-04-25)
+
+
+### Bug Fixes
+
+* hide roundnumber in second row if it has forTicker prop set to true ([3452e04](https://github.com/pickleballinc/react-ui/commit/3452e04195a87b40ae4228dc70ae4be0c59d12a6))
+* hide roundnumber in second row if it has forTicker prop set to true ([11f8a7c](https://github.com/pickleballinc/react-ui/commit/11f8a7cd0dff6eaa1ce37d52f7b02103225fb873))
+
 # [1.37.0](https://github.com/pickleballinc/react-ui/compare/v1.36.0...v1.37.0) (2024-04-25)
 
 
