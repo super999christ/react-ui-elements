@@ -306,7 +306,7 @@ export interface MatchCardV2Props {
   shortenName?: boolean;
   sponsors?: React.ReactNode;
   links?: LinkInterface;
-  forTicker: boolean;
+  forTicker?: boolean;
 }
 
 const MatchCardV2 = forwardRef<HTMLDivElement, MatchCardV2Props>(
