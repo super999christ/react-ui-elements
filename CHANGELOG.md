@@ -1,3 +1,10 @@
+## [1.39.1](https://github.com/pickleballinc/react-ui/compare/v1.39.0...v1.39.1) (2024-05-10)
+
+
+### Bug Fixes
+
+* forTicker prop in MatchCardV2 is now no longer a required prop ([3794a61](https://github.com/pickleballinc/react-ui/commit/3794a61c2b84646a2a5319369d0c843e356a9f52))
+
 # [1.39.0](https://github.com/pickleballinc/react-ui/compare/v1.38.0...v1.39.0) (2024-04-25)
 
 
