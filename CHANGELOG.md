@@ -1,3 +1,10 @@
+## [1.39.2](https://github.com/pickleballinc/react-ui/compare/v1.39.1...v1.39.2) (2024-05-16)
+
+
+### Bug Fixes
+
+* getTourneyLabelColorClass background color ([978ecbb](https://github.com/pickleballinc/react-ui/commit/978ecbb7413623c0a9f227f780b937b86826ad09))
+
 ## [1.39.1](https://github.com/pickleballinc/react-ui/compare/v1.39.0...v1.39.1) (2024-05-10)
 
 
