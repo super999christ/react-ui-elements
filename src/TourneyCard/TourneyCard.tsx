@@ -32,7 +32,7 @@ const usspPending =
   '/static/media/public/assets/sanctioning_bodies/ussp_pending.png';
 
 const getTourneyLabelColorClass = (tourney: TournamentFlatDataSearch) => {
-  if (tourney.CancelTourney) return 'bg-[#EA5455]'; // danger-500
+  if (tourney.CancelTourney) return '!bg-[#EA5455]'; // danger-500
 
   if (
     moment(tourney.TourneyToDate)
@@ -43,13 +43,13 @@ const getTourneyLabelColorClass = (tourney: TournamentFlatDataSearch) => {
       )
       .isBefore(moment.utc())
   )
-    return 'bg-[#141C2E]'; // primary-500
+    return '!bg-[#141C2E]'; // primary-500
 
-  if (tourney.IsRegClosed) return 'bg-[#1E9453]'; // success-700
+  if (tourney.IsRegClosed) return '!bg-[#1E9453]'; // success-700
 
-  if (tourney.CostRegistrationCurrent > 0) return 'bg-[#28C76F]'; // success-500
+  if (tourney.CostRegistrationCurrent > 0) return '!bg-[#28C76F]'; // success-500
 
-  return 'bg-[#79BFD5]'; // secondary-500
+  return '!bg-[#79BFD5]'; // secondary-500
 };
 
 export function renderTourneyCardLabels(
