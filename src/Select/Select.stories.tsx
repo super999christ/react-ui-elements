@@ -24,7 +24,7 @@ export const Primary: Story = {
       { value: "strawberry", label: "Strawberry" },
       { value: "vanilla", label: "Vanilla" },
     ];
-
+  
     return (
       <Select
         id="example_1"
