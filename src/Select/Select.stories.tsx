@@ -31,6 +31,7 @@ export const Primary: Story = {
         options={options}
         menuPortalTarget={document.body}
         label="This is a select component"
+        noBorder
       />
     );
   },

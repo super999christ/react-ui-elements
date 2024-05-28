@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/pro-light-svg-icons";
 import clsx from "clsx";
 import { faCircle } from "@fortawesome/pro-solid-svg-icons";
+import { match } from "assert";
 
 interface IconProps {
   width: number;
@@ -158,6 +159,7 @@ const TeamInfoRow = ({
                 key={player.playerId}
                 size={compact ? "xs" : "sm"}
                 imageUrl={player.image}
+                imageAltText={`${player.firstName} ${player.lastName}${player.suffixName ? ` ${player.suffixName}` : ''}`}
                 customIconRender={() => (
                   <FontAwesomeIcon icon={faUser} size="xs" />
                 )}
