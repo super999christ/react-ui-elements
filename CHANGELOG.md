@@ -1,3 +1,11 @@
+## [1.39.4](https://github.com/pickleballinc/react-ui/compare/v1.39.3...v1.39.4) (2024-05-28)
+
+
+### Bug Fixes
+
+* reverted the primary selects example border ([e1d57f0](https://github.com/pickleballinc/react-ui/commit/e1d57f0dc33219af567d439bc526cdb3e6efc996))
+* reverted the primary selects example border ([bd04bec](https://github.com/pickleballinc/react-ui/commit/bd04bec69d2167c57aa410b622b36eccdfa0e526))
+
 ## [1.39.3](https://github.com/pickleballinc/react-ui/compare/v1.39.2...v1.39.3) (2024-05-28)
 
 
