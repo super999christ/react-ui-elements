@@ -1,3 +1,10 @@
+## [1.39.3](https://github.com/pickleballinc/react-ui/compare/v1.39.2...v1.39.3) (2024-05-28)
+
+
+### Bug Fixes
+
+* add imageAltText to player images in matchcardv2 ([d999781](https://github.com/pickleballinc/react-ui/commit/d9997812abcd34d53e592bd7ed17ce6381d8de39))
+
 ## [1.39.2](https://github.com/pickleballinc/react-ui/compare/v1.39.1...v1.39.2) (2024-05-16)
 
 
