@@ -59,6 +59,30 @@ export const DatePickerFullExampleWithState: Story = {
   }
 };
 
+export const DatePickerFullExampleWithStateNonSearchableMonthAndYear: Story = {
+  render: () => {
+    const [date, setDate] = useState<string>();
+
+    return (
+      <DatePicker
+        label="From"
+        selected={date ? new Date(date) : null}
+        showTimeSelect={true}
+        placement="bottom"
+        onChange={(date) => 
+          setDate(
+            moment(date).utc().format("YYYY-MM-DDTHH:mm:ss.SSS[Z]")
+          )
+        }
+        isMonthSearchable={false}
+        isYearSearchable={false}
+      >
+        <span>{date ? moment(date).format("MMM DD, YYYY") : "Click to open"}</span>
+      </DatePicker>
+    );
+  }
+};
+
 export const DatePickerMinDateMaxDateFullExampleWithState: Story = {
   render: () => {
     const [date, setDate] = useState<string>();

@@ -115,6 +115,8 @@ const DatePicker = ({
   onChange,
   closeOnSelection = true,
   wrapperZIndex,
+  isMonthSearchable = true,
+  isYearSearchable = true,
   ...props
 }: {
   children: React.ReactNode;
@@ -123,6 +125,8 @@ const DatePicker = ({
   closeOnSelection?: boolean;
   onChange: (date: Date) => void;
   wrapperZIndex?: string;
+  isMonthSearchable?: boolean;
+  isYearSearchable?: boolean;
 } & Omit<ReactDatePickerProps, "onChange">) => {
   const [open, setOpen] = useState(false);
   const { context, refs, floatingStyles } = useFloating({
@@ -229,6 +233,7 @@ const DatePicker = ({
                         options={months}
                         onChange={(month: any) => changeMonth(month.value)}
                         styles={selectStyles}
+                        isSearchable={isMonthSearchable}
                       />
                     </div>
                     <div className={styles['header-dropdown-year']}>
@@ -243,6 +248,7 @@ const DatePicker = ({
                         options={years}
                         onChange={(month: any) => changeYear(month.value)}
                         styles={selectStyles}
+                        isSearchable={isYearSearchable}
                       />
                     </div>
                     <div className={styles["right-arrow-container"]}>
