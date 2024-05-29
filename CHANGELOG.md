@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/pickleballinc/react-ui/compare/v1.39.4...v1.40.0) (2024-05-29)
+
+
+### Features
+
+* add issearchableprops to datepicker ([5c1d023](https://github.com/pickleballinc/react-ui/commit/5c1d02386ca540ea0080394bd4d3cff60752f427))
+
 ## [1.39.4](https://github.com/pickleballinc/react-ui/compare/v1.39.3...v1.39.4) (2024-05-28)
 
 
