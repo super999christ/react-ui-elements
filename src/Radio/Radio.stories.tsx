@@ -190,6 +190,7 @@ export const RadioFullExampleWithState: Story = {
             value={framework.value}
             Text={framework.value}
             onChange={handleOptionChange}
+            size="sm"
           />
         ))}
       </div>
@@ -216,7 +217,7 @@ export const RadioFullExampleWithStateCustomWrapperClassname: Story = {
         {frameworks.map((framework) => (
           <Radio
             key={framework.id}
-            name="Front_end_framework"
+            name="Front_end_framework2"
             id={framework.id}
             value={framework.value}
             Text={framework.value}

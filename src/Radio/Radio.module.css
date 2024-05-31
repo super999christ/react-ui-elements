@@ -30,13 +30,15 @@
   @apply ease-[ease-in-out];
   @apply w-2;
   @apply h-2;
+  @apply bg-center;
+  @apply bg-no-repeat;
 }
 
 .wrapper__radio:checked::before {
-  @apply shadow-[inset_1em_1em_#254EDB];
-  @apply bg-[CanvasText]; 
-  @apply scale-0;
-  @apply rounded-[50%];
+  @apply shadow-[inset_1em_1em_#254EDB] !important;
+  @apply bg-[#254EDB] !important;
+  @apply scale-0 !important;
+  @apply rounded-[50%] !important;
 }
 
 .wrapper__radio--size-sm::before {
@@ -87,7 +89,6 @@
 .wrapper__radio--size-sm {
   @apply w-4;
   @apply h-4;
-  @apply rounded-[4px];
   @apply rounded-lg;
 }
 

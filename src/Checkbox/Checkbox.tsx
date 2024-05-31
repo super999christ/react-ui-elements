@@ -57,13 +57,13 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           type="checkbox"
           className={checkboxClasses}
           disabled={disabled}
-          id={id || `${randomNumber}`}
+          id={`${name}-${id}` || `${randomNumber}`}
           name={name}
           ref={ref}
           value={value}
           {...rest}
         />
-        <label htmlFor={id || `${randomNumber}`}>
+        <label htmlFor={`${name}-${id}` || `${randomNumber}`}>
           {Text &&
             (typeof Text === 'string' ? (
               <p className={textClasses}>{Text}</p>

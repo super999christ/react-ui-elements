@@ -214,7 +214,7 @@ export const CheckboxFullExampleWithStateCustomWrapperClassname: Story = {
             <Checkbox
               key={framework.id}
               id={framework.id}
-              name='Front_end_framework'
+              name='Front_end_framework2'
               Text={framework.value}
               value={framework.value}
               onChange={() => {
