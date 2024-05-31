@@ -1,3 +1,10 @@
+## [1.40.2](https://github.com/pickleballinc/react-ui/compare/v1.40.1...v1.40.2) (2024-05-31)
+
+
+### Bug Fixes
+
+* radio and checkbox ([4b80e38](https://github.com/pickleballinc/react-ui/commit/4b80e38eb622d3c655f742e8a19eff3731ab75ad))
+
 ## [1.40.1](https://github.com/pickleballinc/react-ui/compare/v1.40.0...v1.40.1) (2024-05-31)
 
 
