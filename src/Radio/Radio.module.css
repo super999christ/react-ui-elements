@@ -32,12 +32,13 @@
   @apply h-2;
   @apply bg-center;
   @apply bg-no-repeat;
+  @apply scale-0;
 }
 
 .wrapper__radio:checked::before {
   @apply shadow-[inset_1em_1em_#254EDB] !important;
   @apply bg-[CanvasText] !important;
-  @apply scale-0 !important;
+  @apply scale-100;
   @apply rounded-[50%] !important;
 }
 
@@ -56,10 +57,6 @@
 .wrapper__radio:checked {
   @apply border-primary-600;
   @apply bg-primary-50;
-}
-
-.wrapper__radio:checked::before {
-  @apply scale-100;
 }
 
 .wrapper__radio:hover {
