@@ -46,21 +46,19 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
       [styles['wrapper__supporting__text--size-sm']]: size === 'sm',
     });
 
-    const randomNumber = Math.random();
-
     return (
-      <div className={wrapperClasses}>
+      <label className={wrapperClasses}>
         <input
           type="radio"
           className={radioClasses}
           disabled={disabled}
-          id={`${name}-${id}` || `${randomNumber}`}
+          id={`${name}-${id}`}
           name={name}
           ref={ref}
           value={value}
           {...rest}
         />
-        <label htmlFor={`${name}-${id}` || `${randomNumber}`}>
+        <span>
           {Text &&
             (typeof Text === 'string' ? (
               <p className={textClasses}>{Text}</p>
@@ -73,8 +71,8 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
             ) : (
               SupportingText()
             ))}
-        </label>
-      </div>
+        </span>
+      </label>
     );
   },
 );

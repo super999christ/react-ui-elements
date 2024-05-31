@@ -18,6 +18,7 @@ type Story = StoryObj<typeof Radio>;
 export const RadioMD: Story = {
   args: {
     size: "md",
+    name:"RadioMD"
   },
 };
 
@@ -25,6 +26,7 @@ export const RadioMDWithText: Story = {
   args: {
     size: "md",
     Text: "This is a radio",
+    name:"RadioMDWithText"
   },
 };
 
@@ -33,6 +35,7 @@ export const RadioMDWithTextAndSupportingText: Story = {
     size: "md",
     Text: "This is a radio",
     SupportingText: "I do not know why is this a radio",
+    name:"RadioMDWithTextAndSupportingText"
   },
 };
 
@@ -40,6 +43,7 @@ export const RadioMDUnchecked: Story = {
   args: {
     size: "md",
     checked: false,
+    name:"RadioMDUnchecked"
   },
 };
 
@@ -47,6 +51,7 @@ export const RadioMDDisabled: Story = {
   args: {
     size: "md",
     disabled: true,
+    name:"RadioMDDisabled"
   },
 };
 
@@ -55,6 +60,7 @@ export const RadioMDDisabledWithText: Story = {
     size: "md",
     disabled: true,
     Text: 'This is a disabled radio',
+    name:"RadioMDDisabledWithText"
   },
 };
 
@@ -62,6 +68,7 @@ export const RadioMDChecked: Story = {
   args: {
     size: "md",
     checked: true,
+    name:"RadioMDChecked"
   },
 };
 
@@ -70,6 +77,7 @@ export const RadioMDCheckedAndDisabled: Story = {
     size: "md",
     checked: true,
     disabled: true,
+    name:"RadioMDCheckedAndDisabled"
   },
 };
 
@@ -77,12 +85,14 @@ export const RadioMDDefaultChecked: Story = {
   args: {
     size: 'md',
     defaultChecked: true,
+    name:"RadioMDDefaultChecked"
   },
 };
 
 export const RadioSM: Story = {
   args: {
     size: "sm",
+    name:"RadioSM"
   },
 };
 
@@ -90,6 +100,7 @@ export const RadioSMWithText: Story = {
   args: {
     size: "sm",
     Text: "This is a radio",
+    name:"RadioSMWithText"
   },
 };
 
@@ -98,6 +109,7 @@ export const RadioSMWithTextAndSupportingText: Story = {
     size: "sm",
     Text: "This is a radio",
     SupportingText: "I do not know why is this a radio",
+    name:"RadioSMWithTextAndSupportingText"
   },
 };
 
@@ -105,6 +117,7 @@ export const RadioSMUnchecked: Story = {
   args: {
     size: "sm",
     checked: false,
+    name:"RadioSMUnchecked"
   },
 };
 
@@ -112,12 +125,14 @@ export const RadioSMDisabled: Story = {
   args: {
     size: "sm",
     disabled: true,
+    name:"RadioSMDisabled"
   },
 };
 
 export const RadioSMChecked: Story = {
   args: {
     size: "sm",
+    name:"RadioSMChecked"
   },
 };
 
@@ -126,6 +141,7 @@ export const RadioSMCheckedAndDisabled: Story = {
     size: "sm",
     checked: true,
     disabled: true,
+    name:"RadioSMCheckedAndDisabled"
   },
 };
 
@@ -133,6 +149,7 @@ export const RadioSMDefaultChecked: Story = {
   args: {
     size: 'sm',
     defaultChecked: true,
+    name:"RadioSMDefaultChecked"
   },
 };
 

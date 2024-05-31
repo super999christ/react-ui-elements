@@ -36,7 +36,7 @@
 
 .wrapper__radio:checked::before {
   @apply shadow-[inset_1em_1em_#254EDB] !important;
-  @apply bg-[#254EDB] !important;
+  @apply bg-[CanvasText] !important;
   @apply scale-0 !important;
   @apply rounded-[50%] !important;
 }

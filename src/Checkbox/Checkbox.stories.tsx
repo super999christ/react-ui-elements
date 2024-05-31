@@ -17,14 +17,16 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const CheckboxMD: Story = {
   args: {
-    size: 'md'
+    size: 'md',
+    name:"CheckboxMD"
   },
 };
 
 export const CheckboxMDWithText: Story = {
   args: {
     size: 'md',
-    Text: 'This is a checkbox'
+    Text: 'This is a checkbox',
+    name:"CheckboxMDWithText"
   },
 };
 
@@ -32,7 +34,8 @@ export const CheckboxMDWithTextAndSupportingText: Story = {
   args: {
     size: 'md',
     Text: 'This is a checkbox',
-    SupportingText: 'I do not know why is this a checkbox'
+    SupportingText: 'I do not know why is this a checkbox',
+    name:"CheckboxMDWithTextAndSupportingText"
   },
 };
 
@@ -40,13 +43,15 @@ export const CheckboxMDUnchecked: Story = {
   args: {
     size: 'md',
     checked: false,
+    name:"CheckboxMDUnchecked"
   },
 };
 
 export const CheckboxMDDisabled: Story = {
   args: {
     size: 'md',
-    disabled: true
+    disabled: true,
+    name:"CheckboxMDDisabled"
   },
 };
 
@@ -55,6 +60,7 @@ export const CheckboxMDDisabledWithText: Story = {
     size: 'md',
     disabled: true,
     Text: 'This is a disabled checkbox',
+    name:"CheckboxMDDisabledWithText"
   },
 };
 
@@ -62,6 +68,7 @@ export const CheckboxMDChecked: Story = {
   args: {
     size: 'md',
     checked: true,
+    name:"CheckboxMDChecked"
   },
 };
 
@@ -70,6 +77,7 @@ export const CheckboxMDCheckedAndDisabled: Story = {
     size: 'md',
     checked: true,
     disabled: true,
+    name:"CheckboxMDCheckedAndDisabled"
   },
 };
 
@@ -77,19 +85,22 @@ export const CheckboxMDDefaultChecked: Story = {
   args: {
     size: 'md',
     defaultChecked: true,
+    name:"CheckboxMDDefaultChecked"
   },
 };
 
 export const CheckboxSM: Story = {
   args: {
-    size: 'sm'
+    size: 'sm',
+    name:"CheckboxSM"
   },
 };
 
 export const CheckboxSMWithText: Story = {
   args: {
     size: 'sm',
-    Text: 'This is a checkbox'
+    Text: 'This is a checkbox',
+    name:"CheckboxSMWithText"
   },
 };
 
@@ -97,7 +108,8 @@ export const CheckboxSMWithTextAndSupportingText: Story = {
   args: {
     size: 'sm',
     Text: 'This is a checkbox',
-    SupportingText: 'I do not know why is this a checkbox'
+    SupportingText: 'I do not know why is this a checkbox',
+    name:"CheckboxSMWithTextAndSupportingText"
   },
 };
 
@@ -105,13 +117,15 @@ export const CheckboxSMUnchecked: Story = {
   args: {
     size: 'sm',
     checked: false,
+    name:"CheckboxSMUnchecked"
   },
 };
 
 export const CheckboxSMDisabled: Story = {
   args: {
     size: 'sm',
-    disabled: true
+    disabled: true,
+    name:"CheckboxSMDisabled"
   },
 };
 
@@ -119,6 +133,7 @@ export const CheckboxSMChecked: Story = {
   args: {
     size: 'sm',
     checked: true,
+    name:"CheckboxSMChecked"
   },
 };
 
@@ -127,6 +142,7 @@ export const CheckboxSMCheckedAndDisabled: Story = {
     size: 'sm',
     checked: true,
     disabled: true,
+    name:"CheckboxSMCheckedAndDisabled"
   },
 };
 
@@ -134,6 +150,7 @@ export const CheckboxSMDefaultChecked: Story = {
   args: {
     size: 'sm',
     defaultChecked: true,
+    name:"CheckboxSMDefaultChecked"
   },
 };
 
