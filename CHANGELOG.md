@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/pickleballinc/react-ui/compare/v1.40.3...v1.41.0) (2024-06-13)
+
+
+### Features
+
+* circle crop feature added to imageeditor component ([2724684](https://github.com/pickleballinc/react-ui/commit/2724684025218788e4bf96c7ab18b20d6756d981))
+
 ## [1.40.3](https://github.com/pickleballinc/react-ui/compare/v1.40.2...v1.40.3) (2024-05-31)
 
 
