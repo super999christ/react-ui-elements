@@ -1,3 +1,11 @@
+## [1.41.1](https://github.com/pickleballinc/react-ui/compare/v1.41.0...v1.41.1) (2024-06-13)
+
+
+### Bug Fixes
+
+* only if isCircle prop is passed to imaageeditor and aspect ratio in editorconfig is 1 render circle croper ([8d3d2bb](https://github.com/pickleballinc/react-ui/commit/8d3d2bbd2a34fda4c71c047cc79c0a3d12a80623))
+* only if isCircle prop is passed to imaageeditor and aspect ratio in editorconfig is 1 render circle croper ([a10b73e](https://github.com/pickleballinc/react-ui/commit/a10b73eb3e25f94f3808ba49b3f9f58951614c49))
+
 # [1.41.0](https://github.com/pickleballinc/react-ui/compare/v1.40.3...v1.41.0) (2024-06-13)
 
 
