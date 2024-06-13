@@ -117,3 +117,22 @@ export const CustomEditorConfigWithMinMaxCropWidthAndMinMaxCropHeightAndCustomCl
     )
   }
 };
+
+export const ImageEditorCircleCenterIndicatorCircleCrop: Story = {
+  args: {
+    children: <FontAwesomeIcon icon={faUser} size="xl" />,
+    clearIndicatorPosition: 'center',
+    height: 240,
+    isCircle: true,
+    onClearImage: () => console.log('Cleared'),
+    width: 240,
+    dropzoneClassName: '!border-gray-700',
+    editorConfig: {
+      aspectRatio: 1,
+      imageCropMinSize: {
+        width: 50,
+        height: 50,
+      },
+    },
+  }
+};

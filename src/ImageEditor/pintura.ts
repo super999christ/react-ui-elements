@@ -67,6 +67,44 @@ export const editImage = (
       ...plugin_annotate_locale_en_gb,
       ...markup_editor_locale_en_gb,
     },
+    ...(editorConfig?.aspectRatio === 1 && {
+      willRenderCanvas: (shapes, state) => {
+        const {
+            utilVisibility,
+            selectionRect,
+            lineColor,
+            backgroundColor,
+        } = state;
+
+        // Exit if crop utils is not visible
+        if (utilVisibility.crop <= 0) return shapes;
+
+        // Get variable shortcuts to the crop selection rect
+        const { x, y, width, height } = selectionRect;
+
+        return {
+            // Copy all props from current shapes
+            ...shapes,
+
+            // Now we add an inverted ellipse shape to the interface shapes array
+            interfaceShapes: [
+                {
+                    x: x + width * 0.5,
+                    y: y + height * 0.5,
+                    rx: width * 0.5,
+                    ry: height * 0.5,
+                    opacity: utilVisibility.crop,
+                    inverted: true,
+                    backgroundColor: [...backgroundColor, 0.5],
+                    strokeWidth: 1,
+                    strokeColor: [...lineColor],
+                },
+                // Spread all existing interface shapes onto the array
+                ...shapes.interfaceShapes,
+            ],
+        };
+      }
+    }),
   });
 
   editor.on("close", () => {
