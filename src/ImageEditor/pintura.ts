@@ -68,7 +68,7 @@ export const editImage = (
       ...plugin_annotate_locale_en_gb,
       ...markup_editor_locale_en_gb,
     },
-    ...(editorConfig?.aspectRatio === 1 && isCircle && {
+    ...(editorConfig?.aspectRatio === 1 && isCircle && { 
       willRenderCanvas: (shapes, state) => {
         const {
             utilVisibility,
