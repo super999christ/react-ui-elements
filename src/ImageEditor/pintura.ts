@@ -29,7 +29,8 @@ export const editImage = (
   store?: ImageStore,
   editorConfig?: EditorConfig,
   token?: string,
-  uploadUrl?: string
+  uploadUrl?: string,
+  isCircle?: boolean
 ) => {
   const imageFile = image.pintura ? image.pintura.file : image;
   const imageState = image.pintura ? image.pintura.data : {};
@@ -67,7 +68,7 @@ export const editImage = (
       ...plugin_annotate_locale_en_gb,
       ...markup_editor_locale_en_gb,
     },
-    ...(editorConfig?.aspectRatio === 1 && {
+    ...(editorConfig?.aspectRatio === 1 && isCircle && {
       willRenderCanvas: (shapes, state) => {
         const {
             utilVisibility,

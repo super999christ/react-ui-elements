@@ -99,7 +99,8 @@ export default function ImageEditor({
         store,
         editorConfig,
         token,
-        uploadUrl
+        uploadUrl,
+        isCircle
       );
     }
   }, [files, token, uploadUrl]);
