@@ -46,6 +46,15 @@ export const SwitchMDDisabled: Story = {
   },
 };
 
+export const SwitchMDWithlabelDisabled: Story = {
+  args: {
+    size: "md",
+    label: "This is a switch",
+    id: 'switch_with_label_disabled',
+    disabled: true
+  },
+};
+
 export const SwitchFullStateExample: Story = {
   render: () => {
     const [checked, setChecked] = React.useState<boolean>(false);

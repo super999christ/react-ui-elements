@@ -229,12 +229,25 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
   const textClasses = clsx(styles.text, {
     [styles['text--size-sm']]: size === 'sm',
     [styles['text--size-xs']]: size === 'xs',
+    [styles['text--disabled']]: disabled,
   });
+
+  const onLabelClick = (event: React.MouseEvent<HTMLLabelElement, MouseEvent>) => {
+    if (disabled) {
+      event.preventDefault();
+    }
+  };
 
   return (
     <div className={styles.wrapper}>
       {label && labelPosition === 'left' && (
-        <label className={textClasses} htmlFor={id}>{label}</label>
+        <label
+          className={textClasses}
+          htmlFor={id}
+          onClick={onLabelClick}
+        >
+          {label}
+        </label>
       )}
       <div className={styles.switch} ref={ref}>
         <div
@@ -265,7 +278,13 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>((props, ref) => {
         />
       </div>
       {label && labelPosition === 'right' && (
-        <label className={textClasses} htmlFor={id}>{label}</label>
+        <label
+          className={textClasses}
+          htmlFor={id}
+          onClick={onLabelClick}
+        >
+          {label}
+        </label>
       )}
     </div>
   );
