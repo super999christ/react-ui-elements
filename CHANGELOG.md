@@ -1,3 +1,10 @@
+## [1.41.2](https://github.com/pickleballinc/react-ui/compare/v1.41.1...v1.41.2) (2024-06-26)
+
+
+### Bug Fixes
+
+* switch-label ([7776418](https://github.com/pickleballinc/react-ui/commit/77764183f09da148a020cf770640f6a7863565d3))
+
 ## [1.41.1](https://github.com/pickleballinc/react-ui/compare/v1.41.0...v1.41.1) (2024-06-13)
 
 
